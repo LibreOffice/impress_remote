@@ -8,6 +8,7 @@
  */
 package org.libreoffice.impressremote.communication;
 
+import java.util.Locale;
 import java.util.Random;
 
 import android.text.TextUtils;
@@ -90,7 +91,7 @@ final class Protocol {
         private String generatePinText() {
             int aPin = preventLeadingZeros(generatePinNumber());
 
-            return String.format(buildPinFormat(), aPin);
+            return String.format(Locale.US, buildPinFormat(), aPin);
         }
 
         private int generatePinNumber() {
