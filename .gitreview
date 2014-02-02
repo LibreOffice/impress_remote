@@ -1,0 +1,6 @@
+[gerrit]
+host=gerrit.libreoffice.org
+port=29418
+project=impress_remote
+defaultbranch=master
+defaultrebase=0
