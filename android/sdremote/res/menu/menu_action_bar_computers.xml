@@ -40,9 +40,4 @@
         android:title="@string/menu_requirements"
         compat:showAsAction="never"/>
 
-    <item
-        android:id="@+id/menu_licenses"
-        android:title="@string/menu_licenses"
-        compat:showAsAction="never"/>
-
 </menu>

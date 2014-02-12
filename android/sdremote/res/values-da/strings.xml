@@ -3,14 +3,12 @@
   <string name="application_name">Impress Fjernkontrol</string>
   <string name="title_computers">Computere</string>
   <string name="title_generic">Generisk</string>
-  <string name="title_licenses">Open source-licenser</string>
   <string name="title_settings">Indstillinger</string>
   <string name="title_requirements">Systemkrav</string>
   <string name="title_connection">Forbindelse</string>
   <string name="title_creation">Oprettelse</string>
   <string name="title_slide_show">Præsentation</string>
   <string name="title_timer">Timer</string>
-  <string name="menu_licenses">Open source-licenser</string>
   <string name="menu_settings">Indstillinger</string>
   <string name="menu_requirements">Systemkrav</string>
   <string name="menu_reconnect">Genforbind</string>

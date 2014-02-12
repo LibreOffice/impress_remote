@@ -3,14 +3,12 @@
   <string name="application_name">Impressi pult</string>
   <string name="title_computers">Arvutid</string>
   <string name="title_generic">Üldine</string>
-  <string name="title_licenses">Avatud lähtekoodi litsentsid</string>
   <string name="title_settings">Sätted</string>
   <string name="title_requirements">Nõuded</string>
   <string name="title_connection">Ühendus</string>
   <string name="title_creation">Loomine</string>
   <string name="title_slide_show">Slaidiseanss</string>
   <string name="title_timer">Taimer</string>
-  <string name="menu_licenses">Avatud lähtekoodi litsentsid</string>
   <string name="menu_settings">Sätted</string>
   <string name="menu_requirements">Nõuded</string>
   <string name="menu_reconnect">Ühenda uuesti</string>

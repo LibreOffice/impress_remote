@@ -3,14 +3,12 @@
   <string name="application_name">Pilot Impressa</string>
   <string name="title_computers">Komputery</string>
   <string name="title_generic">Ogólne</string>
-  <string name="title_licenses">Licencje Open Source</string>
   <string name="title_settings">Ustawienia</string>
   <string name="title_requirements">Wymagania</string>
   <string name="title_connection">Połączenie</string>
   <string name="title_creation">Utworzono</string>
   <string name="title_slide_show">Pokaz slajdów</string>
   <string name="title_timer">Czasomierz</string>
-  <string name="menu_licenses">Licencje Open Source</string>
   <string name="menu_settings">Ustawienia</string>
   <string name="menu_requirements">Wymagania</string>
   <string name="menu_reconnect">Połącz ponownie</string>

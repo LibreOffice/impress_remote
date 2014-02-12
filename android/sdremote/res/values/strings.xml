@@ -24,7 +24,6 @@
     <string name="title_generic">Generic</string>
     <string name="title_bluetooth" translatable="false">Bluetooth</string>
     <string name="title_wifi" translatable="false">WiFi</string>
-    <string name="title_licenses">Open source licenses</string>
     <string name="title_settings">Settings</string>
     <string name="title_requirements">Requirements</string>
     <string name="title_connection">Connection</string>
@@ -32,7 +31,6 @@
     <string name="title_slide_show">Slide show</string>
     <string name="title_timer">Timer</string>
 
-    <string name="menu_licenses">Open source licenses</string>
     <string name="menu_settings">Settings</string>
     <string name="menu_requirements">Requirements</string>
     <string name="menu_reconnect">Reconnect</string>

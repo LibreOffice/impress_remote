@@ -3,14 +3,12 @@
   <string name="application_name">Impress Remote</string>
   <string name="title_computers">Calculatoare</string>
   <string name="title_generic">Generic</string>
-  <string name="title_licenses">Licențe libere</string>
   <string name="title_settings">Setări</string>
   <string name="title_requirements">Cerințe</string>
   <string name="title_connection">Conexiune</string>
   <string name="title_creation">Creare</string>
   <string name="title_slide_show">Prezentare</string>
   <string name="title_timer">Cronometru</string>
-  <string name="menu_licenses">Licențe libere</string>
   <string name="menu_settings">Setări</string>
   <string name="menu_requirements">Cerințe</string>
   <string name="menu_reconnect">Reconectare</string>

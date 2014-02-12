@@ -3,14 +3,12 @@
   <string name="application_name">„Impress“ nuotolinis valdymas</string>
   <string name="title_computers">Kompiuteriai</string>
   <string name="title_generic">Bendrosios</string>
-  <string name="title_licenses">Atvirojo kodo licencijos</string>
   <string name="title_settings">Nuostatos</string>
   <string name="title_requirements">Reikalavimai</string>
   <string name="title_connection">Ryšys</string>
   <string name="title_creation">Sukūrimas</string>
   <string name="title_slide_show">Pateikties demonstravimas</string>
   <string name="title_timer">Laikmatis</string>
-  <string name="menu_licenses">Atvirojo kodo licencijos</string>
   <string name="menu_settings">Nuostatos</string>
   <string name="menu_requirements">Reikalavimai</string>
   <string name="menu_reconnect">Jungtis ir naujo</string>

@@ -3,14 +3,12 @@
   <string name="application_name">Impress Uzaktan Kumanda</string>
   <string name="title_computers">Bilgisayarlar</string>
   <string name="title_generic">Genel</string>
-  <string name="title_licenses">Açık kaynak lisansları</string>
   <string name="title_settings">Ayarlar</string>
   <string name="title_requirements">Gereksinimler</string>
   <string name="title_connection">Bağlantı</string>
   <string name="title_creation">Oluşturma</string>
   <string name="title_slide_show">Slayt gösterisi</string>
   <string name="title_timer">Zamanlayıcı</string>
-  <string name="menu_licenses">Açık kaynak lisansları</string>
   <string name="menu_settings">Ayarlar</string>
   <string name="menu_requirements">Gereksinimler</string>
   <string name="menu_reconnect">Yeniden bağlan</string>

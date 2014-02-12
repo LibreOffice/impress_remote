@@ -3,14 +3,12 @@
   <string name="application_name">Impress Remote</string>
   <string name="title_computers">Datamaskiner</string>
   <string name="title_generic">Generisk</string>
-  <string name="title_licenses">Åpen kildekode-lisenser</string>
   <string name="title_settings">Innstillinger</string>
   <string name="title_requirements">Krav</string>
   <string name="title_connection">Tilkobling</string>
   <string name="title_creation">Oppretting</string>
   <string name="title_slide_show">Lysbildeframvisning</string>
   <string name="title_timer">Tidtaker</string>
-  <string name="menu_licenses">Åpen kildekode-lisenser</string>
   <string name="menu_settings">Innstillinger</string>
   <string name="menu_requirements">Krav</string>
   <string name="menu_reconnect">Koble til på nytt</string>

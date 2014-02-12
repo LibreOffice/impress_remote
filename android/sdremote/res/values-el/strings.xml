@@ -3,14 +3,12 @@
   <string name="application_name">Απομακρυσμένο Impress</string>
   <string name="title_computers">Υπολογιστές</string>
   <string name="title_generic">Γενικά</string>
-  <string name="title_licenses">Άδειες ανοικτού λογισμικού</string>
   <string name="title_settings">Ρυθμίσεις</string>
   <string name="title_requirements">Απαιτήσεις</string>
   <string name="title_connection">Σύνδεση</string>
   <string name="title_creation">Δημιουργία</string>
   <string name="title_slide_show">Παρουσίαση</string>
   <string name="title_timer">Χρονόμετρο</string>
-  <string name="menu_licenses">Άδειες ανοικτού λογισμικού</string>
   <string name="menu_settings">Ρυθμίσεις</string>
   <string name="menu_requirements">Απαιτήσεις</string>
   <string name="menu_reconnect">Επανασύνδεση</string>

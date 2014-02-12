@@ -3,14 +3,12 @@
   <string name="application_name">Dálkové ovládání prezentace</string>
   <string name="title_computers">Počítače</string>
   <string name="title_generic">Obecné</string>
-  <string name="title_licenses">Licence open source</string>
   <string name="title_settings">Nastavení</string>
   <string name="title_requirements">Požadavky</string>
   <string name="title_connection">Spojení</string>
   <string name="title_creation">Vytvoření</string>
   <string name="title_slide_show">Prezentace</string>
   <string name="title_timer">Časovač</string>
-  <string name="menu_licenses">Licence open source</string>
   <string name="menu_settings">Nastavení</string>
   <string name="menu_requirements">Požadavky</string>
   <string name="menu_reconnect">Znovu připojit</string>

@@ -3,14 +3,12 @@
   <string name="application_name">Impress Remote</string>
   <string name="title_computers">Компютри</string>
   <string name="title_generic">Общи</string>
-  <string name="title_licenses">Свободни лицензи</string>
   <string name="title_settings">Настройки</string>
   <string name="title_requirements">Изисквания</string>
   <string name="title_connection">Връзка</string>
   <string name="title_creation">Създаване</string>
   <string name="title_slide_show">Прожекция</string>
   <string name="title_timer">Таймер</string>
-  <string name="menu_licenses">Свободни лицензи</string>
   <string name="menu_settings">Настройки</string>
   <string name="menu_requirements">Изисквания</string>
   <string name="menu_reconnect">Възстановяване на връзката</string>

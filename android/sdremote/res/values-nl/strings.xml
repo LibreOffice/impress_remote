@@ -3,14 +3,12 @@
   <string name="application_name">Impress Remote</string>
   <string name="title_computers">Computers</string>
   <string name="title_generic">Algemeen</string>
-  <string name="title_licenses">Open source licenties</string>
   <string name="title_settings">Instellingen</string>
   <string name="title_requirements">Vereisten</string>
   <string name="title_connection">Verbinding</string>
   <string name="title_creation">Aanmaak</string>
   <string name="title_slide_show">Diashow</string>
   <string name="title_timer">Timer</string>
-  <string name="menu_licenses">Open source licenties</string>
   <string name="menu_settings">Instellingen</string>
   <string name="menu_requirements">Vereisten</string>
   <string name="menu_reconnect">Opnieuw verbinden</string>

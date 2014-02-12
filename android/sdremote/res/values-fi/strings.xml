@@ -3,14 +3,12 @@
   <string name="application_name">Impress-kauko-ohjain</string>
   <string name="title_computers">Tietokoneet</string>
   <string name="title_generic">Yleistä</string>
-  <string name="title_licenses">Avoimen lähdekoodin lisenssit</string>
   <string name="title_settings">Asetukset</string>
   <string name="title_requirements">Vaatimukset</string>
   <string name="title_connection">Yhteys</string>
   <string name="title_creation">Tietokoneen lisäys</string>
   <string name="title_slide_show">Diaesitys</string>
   <string name="title_timer">Ajoitus</string>
-  <string name="menu_licenses">Avoimen lähdekoodin lisenssit</string>
   <string name="menu_settings">Asetukset</string>
   <string name="menu_requirements">Vaatimukset</string>
   <string name="menu_reconnect">Yhdistä uudelleen</string>

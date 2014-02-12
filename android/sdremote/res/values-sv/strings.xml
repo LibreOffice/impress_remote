@@ -3,14 +3,12 @@
   <string name="application_name">Impress-fjärrkontroll</string>
   <string name="title_computers">Datorer</string>
   <string name="title_generic">Allmänt</string>
-  <string name="title_licenses">Licenser (öppen källkod)</string>
   <string name="title_settings">Inställningar</string>
   <string name="title_requirements">Systemkrav</string>
   <string name="title_connection">Anslutning</string>
   <string name="title_creation">Upprättning</string>
   <string name="title_slide_show">Presentation</string>
   <string name="title_timer">Tidtagarur</string>
-  <string name="menu_licenses">Licenser (öppen källkod)</string>
   <string name="menu_settings">Inställningar</string>
   <string name="menu_requirements">Systemkrav</string>
   <string name="menu_reconnect">Återanslut</string>

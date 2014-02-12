@@ -3,14 +3,12 @@
   <string name="application_name">Contrôle distant Impress</string>
   <string name="title_computers">Ordinateurs</string>
   <string name="title_generic">Générique</string>
-  <string name="title_licenses">Licences Open Source</string>
   <string name="title_settings">Paramètres</string>
   <string name="title_requirements">Besoins</string>
   <string name="title_connection">Connexion</string>
   <string name="title_creation">Création</string>
   <string name="title_slide_show">Diaporama</string>
   <string name="title_timer">Minuteur</string>
-  <string name="menu_licenses">Licences open source</string>
   <string name="menu_settings">Paramètres</string>
   <string name="menu_requirements">Besoins</string>
   <string name="menu_reconnect">Reconnecter</string>

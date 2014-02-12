@@ -150,10 +150,6 @@ public class ComputersActivity extends ActionBarActivity implements ActionBar.Ta
                 callRequirementsActivity();
                 return true;
 
-            case R.id.menu_licenses:
-                callLicensesActivity();
-                return true;
-
             default:
                 return super.onOptionsItemSelected(aMenuItem);
         }
@@ -166,11 +162,6 @@ public class ComputersActivity extends ActionBarActivity implements ActionBar.Ta
 
     private void callRequirementsActivity() {
         Intent aIntent = Intents.buildRequirementsIntent(this);
-        startActivity(aIntent);
-    }
-
-    private void callLicensesActivity() {
-        Intent aIntent = Intents.buildLicensesIntent(this);
         startActivity(aIntent);
     }
 

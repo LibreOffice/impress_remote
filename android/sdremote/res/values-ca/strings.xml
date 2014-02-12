@@ -3,14 +3,12 @@
   <string name="application_name">Control remot de l\'Impress</string>
   <string name="title_computers">Ordinadors</string>
   <string name="title_generic">Genèric</string>
-  <string name="title_licenses">Llicències de codi obert</string>
   <string name="title_settings">Configuració</string>
   <string name="title_requirements">Requeriments</string>
   <string name="title_connection">Connexió</string>
   <string name="title_creation">Creació</string>
   <string name="title_slide_show">Presentació</string>
   <string name="title_timer">Temporitzador</string>
-  <string name="menu_licenses">Llicències de codi obert</string>
   <string name="menu_settings">Configuració</string>
   <string name="menu_requirements">Requirements</string>
   <string name="menu_reconnect">Torna a connectar</string>

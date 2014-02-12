@@ -3,14 +3,12 @@
   <string name="application_name">Impress Remote</string>
   <string name="title_computers">Számítógépek</string>
   <string name="title_generic">Általános</string>
-  <string name="title_licenses">Nyílt forrású licencek</string>
   <string name="title_settings">Beállítások</string>
   <string name="title_requirements">Követelmények</string>
   <string name="title_connection">Kapcsolat</string>
   <string name="title_creation">Létrehozás</string>
   <string name="title_slide_show">Diavetítés</string>
   <string name="title_timer">Időzítő</string>
-  <string name="menu_licenses">Nyílt forrású licencek</string>
   <string name="menu_settings">Beállítások</string>
   <string name="menu_requirements">Követelmények</string>
   <string name="menu_reconnect">Újrakapcsolódás</string>

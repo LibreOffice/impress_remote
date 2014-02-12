@@ -3,14 +3,12 @@
   <string name="application_name">Impress-ті қашықтан басқару</string>
   <string name="title_computers">Компьютерлер</string>
   <string name="title_generic">Жалпы</string>
-  <string name="title_licenses">Лицензиялар</string>
   <string name="title_settings">Баптаулар</string>
   <string name="title_requirements">Талаптары</string>
   <string name="title_connection">Байланыс</string>
   <string name="title_creation">Жасау</string>
   <string name="title_slide_show">Слайд-шоу</string>
   <string name="title_timer">Таймер</string>
-  <string name="menu_licenses">Лицензиялар</string>
   <string name="menu_settings">Баптаулар</string>
   <string name="menu_requirements">Талаптары</string>
   <string name="menu_reconnect">Қайта байланысу</string>

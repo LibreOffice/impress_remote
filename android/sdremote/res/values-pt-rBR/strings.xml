@@ -3,14 +3,12 @@
   <string name="application_name">Controle remoto do Impress</string>
   <string name="title_computers">Computadores</string>
   <string name="title_generic">Genérico</string>
-  <string name="title_licenses">Licenças de código aberto</string>
   <string name="title_settings">Configurações</string>
   <string name="title_requirements">Requisitos</string>
   <string name="title_connection">Conexão</string>
   <string name="title_creation">Criação</string>
   <string name="title_slide_show">Apresentação de slides</string>
   <string name="title_timer">Temporizador</string>
-  <string name="menu_licenses">Licenças de código aberto</string>
   <string name="menu_settings">Configurações</string>
   <string name="menu_requirements">Requisitos</string>
   <string name="menu_reconnect">Reconectar</string>

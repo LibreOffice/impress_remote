@@ -3,14 +3,12 @@
   <string name="application_name">Пульт ДУ Impress</string>
   <string name="title_computers">Компьютеры</string>
   <string name="title_generic">Общие</string>
-  <string name="title_licenses">Лицензии</string>
   <string name="title_settings">Настройки</string>
   <string name="title_requirements">Требования</string>
   <string name="title_connection">Подключение</string>
   <string name="title_creation">Создание</string>
   <string name="title_slide_show">Демонстрация</string>
   <string name="title_timer">Таймер</string>
-  <string name="menu_licenses">Лицензии</string>
   <string name="menu_settings">Настройки</string>
   <string name="menu_requirements">Требования</string>
   <string name="menu_reconnect">Переподключить</string>

@@ -88,11 +88,6 @@
 
         </activity>
 
-        <activity
-            android:name=".activity.LicensesActivity"
-            android:label="@string/title_licenses">
-        </activity>
-
         <service
             android:name=".communication.CommunicationService">
         </service>

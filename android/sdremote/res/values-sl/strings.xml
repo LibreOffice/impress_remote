@@ -3,14 +3,12 @@
   <string name="application_name">Daljinec za Impress</string>
   <string name="title_computers">Računalniki</string>
   <string name="title_generic">Splošno</string>
-  <string name="title_licenses">Odprto-kodna dovoljenja</string>
   <string name="title_settings">Nastavitve</string>
   <string name="title_requirements">Zahteve</string>
   <string name="title_connection">Povezava</string>
   <string name="title_creation">Ustvarjanje</string>
   <string name="title_slide_show">Projekcija</string>
   <string name="title_timer">Štoparica</string>
-  <string name="menu_licenses">Odprto-kodna dovoljenja</string>
   <string name="menu_settings">Nastavitve</string>
   <string name="menu_requirements">Zahteve</string>
   <string name="menu_reconnect">Znova poveži</string>

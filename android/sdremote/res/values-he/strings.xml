@@ -2,14 +2,12 @@
 <resources>
   <string name="title_computers">מחשבים</string>
   <string name="title_generic">כללי</string>
-  <string name="title_licenses">רישיונות קוד פתוח</string>
   <string name="title_settings">הגדרות</string>
   <string name="title_requirements">דרישות</string>
   <string name="title_connection">חיבור</string>
   <string name="title_creation">יצירה</string>
   <string name="title_slide_show">מצגת</string>
   <string name="title_timer">מתזמן</string>
-  <string name="menu_licenses">רישיונות קוד פתוח</string>
   <string name="menu_settings">הגדרות</string>
   <string name="menu_requirements">דרישות</string>
   <string name="menu_reconnect">חיבור מחדש</string>

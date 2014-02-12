@@ -3,14 +3,12 @@
   <string name="application_name">Impress-Fernsteuerung</string>
   <string name="title_computers">Rechner</string>
   <string name="title_generic">Allgemein</string>
-  <string name="title_licenses">Open-Source Lizenzen</string>
   <string name="title_settings">Einstellungen</string>
   <string name="title_requirements">Systemanforderungen</string>
   <string name="title_connection">Verbindung</string>
   <string name="title_creation">Erstellung</string>
   <string name="title_slide_show">Präsentation</string>
   <string name="title_timer">Stoppuhr</string>
-  <string name="menu_licenses">Open-Source Lizenz</string>
   <string name="menu_settings">Einstellungen</string>
   <string name="menu_requirements">Systemvoraussetzungen</string>
   <string name="menu_reconnect">Erneut verbinden</string>

@@ -3,14 +3,12 @@
   <string name="application_name">Impress Remote</string>
   <string name="title_computers">Computer</string>
   <string name="title_generic">Generici</string>
-  <string name="title_licenses">Licenze open source</string>
   <string name="title_settings">Impostazioni</string>
   <string name="title_requirements">Requisiti</string>
   <string name="title_connection">Connessione</string>
   <string name="title_creation">Creazione</string>
   <string name="title_slide_show">Presentazione</string>
   <string name="title_timer">Timer</string>
-  <string name="menu_licenses">Licenze open source</string>
   <string name="menu_settings">Impostazioni</string>
   <string name="menu_requirements">Requisiti</string>
   <string name="menu_reconnect">Riconnetti</string>
