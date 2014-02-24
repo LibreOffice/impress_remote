@@ -10,8 +10,6 @@ package org.libreoffice.impressremote.util;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 
 public final class Fragments {
     private Fragments() {
@@ -35,32 +33,22 @@ public final class Fragments {
                 return;
             }
 
-            FragmentTransaction aFragmentTransaction = beginTransaction(aActivity);
-
-            aFragmentTransaction.add(android.R.id.content, aFragment);
-
-            aFragmentTransaction.commit();
+            aActivity.getSupportFragmentManager()
+                .beginTransaction()
+                .add(android.R.id.content, aFragment)
+                .commit();
         }
 
         private static boolean isAdded(FragmentActivity aActivity) {
-            FragmentManager aFragmentManager = aActivity.getSupportFragmentManager();
-
-            return aFragmentManager.findFragmentById(android.R.id.content) != null;
-        }
-
-        private static FragmentTransaction beginTransaction(FragmentActivity aActivity) {
-            FragmentManager aFragmentManager = aActivity.getSupportFragmentManager();
-
-            return aFragmentManager.beginTransaction();
+            return aActivity.getSupportFragmentManager().findFragmentById(android.R.id.content) != null;
         }
 
         public static void replaceAnimated(FragmentActivity aActivity, Fragment aFragment) {
-            FragmentTransaction aFragmentTransaction = beginTransaction(aActivity);
-            aFragmentTransaction.setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out);
-
-            aFragmentTransaction.replace(android.R.id.content, aFragment);
-
-            aFragmentTransaction.commit();
+            aActivity.getSupportFragmentManager()
+                .beginTransaction()
+                .setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out)
+                .replace(android.R.id.content, aFragment)
+                .commit();
         }
     }
 }
