@@ -24,8 +24,8 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import org.libreoffice.impressremote.util.Intents;
 import org.libreoffice.impressremote.R;
+import org.libreoffice.impressremote.util.Intents;
 
 public class ComputerCreationActivity extends ActionBarActivity implements View.OnClickListener, TextView.OnEditorActionListener {
     @Override
@@ -38,13 +38,15 @@ public class ComputerCreationActivity extends ActionBarActivity implements View.
     }
 
     private void setUpActionBar() {
+        setUpActionBarView();
+        setUpActionBarListeners();
+    }
+
+    private void setUpActionBarView() {
         View aActionBarView = buildCustomActionBarView();
         ActionBar.LayoutParams aActionBarParams = buildCustomActionBarLayoutParams();
 
         getSupportActionBar().setCustomView(aActionBarView, aActionBarParams);
-
-        getCancelButton().setOnClickListener(this);
-        getSaveButton().setOnClickListener(this);
     }
 
     private View buildCustomActionBarView() {
@@ -60,23 +62,26 @@ public class ComputerCreationActivity extends ActionBarActivity implements View.
             ViewGroup.LayoutParams.MATCH_PARENT);
     }
 
-    private View getCancelButton() {
-        return getSupportActionBar().getCustomView().findViewById(R.id.button_cancel);
-    }
+    private void setUpActionBarListeners() {
+        View aActionBarView = getSupportActionBar().getCustomView();
 
-    private View getSaveButton() {
-        return getSupportActionBar().getCustomView().findViewById(R.id.button_save);
+        aActionBarView.findViewById(R.id.button_cancel).setOnClickListener(this);
+        aActionBarView.findViewById(R.id.button_save).setOnClickListener(this);
     }
 
     @Override
     public void onClick(View aView) {
-        if (aView.equals(getCancelButton())) {
-            cancelCreation();
-            return;
-        }
+        switch (aView.getId()) {
+            case R.id.button_cancel:
+                cancelCreation();
+                break;
 
-        if (aView.equals(getSaveButton())) {
-            saveServer();
+            case R.id.button_save:
+                saveServer();
+                break;
+
+            default:
+                break;
         }
     }
 
