@@ -75,7 +75,10 @@ public class ComputersActivity extends ActionBarActivity implements ActionBar.Ta
         aActionBar.addTab(wifiTab, true);
     }
 
+    @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
         if (requestCode == REQUEST_ENABLE_BT) {
             if (resultCode != RESULT_OK) {
                 getSupportActionBar().selectTab(wifiTab);
