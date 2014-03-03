@@ -31,6 +31,7 @@ import org.libreoffice.impressremote.communication.CommunicationService;
 import org.libreoffice.impressremote.communication.SlideShow;
 import org.libreoffice.impressremote.communication.Timer;
 import org.libreoffice.impressremote.fragment.EmptySlideFragment;
+import org.libreoffice.impressremote.fragment.PointerFragment;
 import org.libreoffice.impressremote.fragment.SlidesGridFragment;
 import org.libreoffice.impressremote.fragment.SlidesPagerFragment;
 import org.libreoffice.impressremote.fragment.TimerEditingDialog;
@@ -42,7 +43,7 @@ import org.libreoffice.impressremote.util.SavedStates;
 
 public class SlideShowActivity extends ActionBarActivity implements ServiceConnection {
     public static enum Mode {
-        PAGER, GRID, EMPTY
+        PAGER, GRID, EMPTY, STARTPOINTER, STOPPOINTER
     }
 
     private Mode mMode;
@@ -94,6 +95,9 @@ public class SlideShowActivity extends ActionBarActivity implements ServiceConne
 
             case EMPTY:
                 return EmptySlideFragment.newInstance();
+
+            case STARTPOINTER:
+                return PointerFragment.newInstance();
 
             default:
                 return SlidesPagerFragment.newInstance();
@@ -378,6 +382,8 @@ public class SlideShowActivity extends ActionBarActivity implements ServiceConne
         MenuItem aSlidesPagerMenuItem = aMenu.findItem(R.id.menu_slides_pager);
         MenuItem aSlidesGridMenuItem = aMenu.findItem(R.id.menu_slides_grid);
         MenuItem aSlideShowResumeMenuItem = aMenu.findItem(R.id.menu_resume_slide_show);
+        MenuItem aStartPointerMenuItem = aMenu.findItem(R.id.menu_start_pointer);
+        MenuItem aStopPointerMenuItem = aMenu.findItem(R.id.menu_stop_pointer);
 
         switch (mMode) {
             case PAGER:
@@ -385,6 +391,7 @@ public class SlideShowActivity extends ActionBarActivity implements ServiceConne
                 aSlidesPagerMenuItem.setVisible(false);
                 aSlidesGridMenuItem.setVisible(true);
                 aSlideShowResumeMenuItem.setVisible(false);
+                aStopPointerMenuItem.setVisible(false);
                 break;
 
             case GRID:
@@ -392,11 +399,21 @@ public class SlideShowActivity extends ActionBarActivity implements ServiceConne
                 aSlidesPagerMenuItem.setVisible(true);
                 aSlidesGridMenuItem.setVisible(false);
                 aSlideShowResumeMenuItem.setVisible(false);
+                aStartPointerMenuItem.setVisible(false);
+                aStopPointerMenuItem.setVisible(false);
                 break;
 
             case EMPTY:
                 setMenuItemsVisibility(aMenu, false);
                 aSlideShowResumeMenuItem.setVisible(true);
+                break;
+
+            case STARTPOINTER:
+                setMenuItemsVisibility(aMenu, true);
+                aStartPointerMenuItem.setVisible(false);
+                aSlidesPagerMenuItem.setVisible(true);
+                aSlidesGridMenuItem.setVisible(false);
+                aSlideShowResumeMenuItem.setVisible(false);
                 break;
 
             default:
@@ -424,6 +441,7 @@ public class SlideShowActivity extends ActionBarActivity implements ServiceConne
                 return true;
 
             case R.id.menu_slides_pager:
+            case R.id.menu_stop_pointer:
                 changeMode(Mode.PAGER);
                 return true;
 
@@ -447,6 +465,10 @@ public class SlideShowActivity extends ActionBarActivity implements ServiceConne
 
             case R.id.menu_stop_slide_show:
                 stopSlideShow();
+                return true;
+
+            case R.id.menu_start_pointer:
+                changeMode(Mode.STARTPOINTER);
                 return true;
 
             default:
