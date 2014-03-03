@@ -64,6 +64,10 @@ final class Protocol {
         public static final String PRESENTATION_START = "presentation_start";
         public static final String PRESENTATION_STOP = "presentation_stop";
 
+        public static final String POINTER_STARTED = "pointer_started";
+        public static final String POINTER_COORDINATION = "pointer_coordination";
+        public static final String POINTER_DISMISSED = "pointer_dismissed";
+
         private static final String DELIMITER_PARAMETER = "\n";
         private static final String DELIMITER_COMMAND = "\n\n";
 

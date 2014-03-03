@@ -82,6 +82,23 @@ public class CommandsTransmitter {
         writeCommand(Protocol.Commands
             .prepareCommand(Protocol.Commands.PRESENTATION_STOP));
     }
+
+    public void startPointer(float x, float y) {
+        writeCommand(Protocol.Commands
+            .prepareCommand(Protocol.Commands.POINTER_STARTED,
+                            Float.toString(x), Float.toString(y)));
+    }
+
+    public void movePointer(float x, float y) {
+        writeCommand(Protocol.Commands
+            .prepareCommand(Protocol.Commands.POINTER_COORDINATION,
+                            Float.toString(x), Float.toString(y)));
+    }
+
+    public void stopPointer() {
+        writeCommand(Protocol.Commands
+            .prepareCommand(Protocol.Commands.POINTER_DISMISSED));
+    }
 }
 
 /* vim:set shiftwidth=4 softtabstop=4 expandtab: */
