@@ -53,4 +53,14 @@
         android:title="@string/menu_stop_slide_show"
         compat:showAsAction="never"/>
 
+    <item
+        android:id="@+id/menu_start_pointer"
+        android:title="@string/menu_start_pointer"
+        compat:showAsAction="never"/>
+
+    <item
+        android:id="@+id/menu_stop_pointer"
+        android:title="@string/menu_stop_pointer"
+        compat:showAsAction="never"/>
+
 </menu>
