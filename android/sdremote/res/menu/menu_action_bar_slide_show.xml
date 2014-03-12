@@ -56,11 +56,13 @@
     <item
         android:id="@+id/menu_start_pointer"
         android:title="@string/menu_start_pointer"
-        compat:showAsAction="never"/>
+        android:icon="@drawable/ic_pointer_off"
+        compat:showAsAction="ifRoom"/>
 
     <item
         android:id="@+id/menu_stop_pointer"
         android:title="@string/menu_stop_pointer"
-        compat:showAsAction="never"/>
+        android:icon="@drawable/ic_pointer_on"
+        compat:showAsAction="ifRoom"/>
 
 </menu>
