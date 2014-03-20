@@ -1,0 +1,4 @@
+# add the following to your ~/.gitconfig or .git/config
+# [diff "localizablestrings"]
+#	textconv = "iconv -f utf-16 -t utf-8"
+*.strings diff=localizablestrings
