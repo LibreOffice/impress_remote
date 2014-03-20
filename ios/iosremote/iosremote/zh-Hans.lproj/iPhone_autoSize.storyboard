@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="qoG-TN-hN0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="qoG-TN-hN0">
     <dependencies>
         <deployment defaultVersion="1280" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Walk Through Container View Controller-->
@@ -120,8 +120,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="请将以上pin码输入到LibreOffice Impress - 幻灯片播放 - Impress远程 中" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="upW-oF-qOa">
-                                <rect key="frame" x="29" y="419.00000065254034" width="271" height="65"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="请在 Impress - 幻灯片演示 - Impress Remote 输入上方的 PIN 码" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="upW-oF-qOa">
+                                <rect key="frame" x="29" y="419" width="271" height="65"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="15"/>
                                 <color key="textColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
@@ -207,7 +207,7 @@
                                 <rect key="frame" x="0.0" y="20" width="320" height="180"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Presentation Title" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3qH-vt-uVP">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="幻灯片标题" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3qH-vt-uVP">
                                         <rect key="frame" x="20" y="20" width="280" height="140"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -221,7 +221,7 @@
                                 <rect key="frame" x="101" y="392" width="118" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="Settings" backgroundImage="buttonBackground.png">
+                                <state key="normal" title="设置" backgroundImage="buttonBackground.png">
                                     <color key="titleColor" red="1" green="0.50196078430000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -236,7 +236,7 @@
                                 <rect key="frame" x="77" y="328" width="166" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="Start Presentation" backgroundImage="buttonBackground.png">
+                                <state key="normal" title="开始演示" backgroundImage="buttonBackground.png">
                                     <color key="titleColor" red="1" green="0.50196078430000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -445,7 +445,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalCompressionResistancePriority="1000" id="bZq-z2-OKU">
-                                        <rect key="frame" x="3.0000032301155226" y="8" width="220" height="167"/>
+                                        <rect key="frame" x="3" y="8" width="220" height="167"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </imageView>
@@ -461,7 +461,7 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3BV-KX-Qla">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" text="标签" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3BV-KX-Qla">
                                         <rect key="frame" x="3" y="154" width="52" height="21"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <rect key="contentStretch" x="1.3877787807814457e-17" y="0.0" width="1" height="1"/>
@@ -476,7 +476,7 @@
                                 <rect key="frame" x="-13" y="191" width="346" height="289"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="   演讲者笔记" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Y23-iV-GJx">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="   演讲者备注" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Y23-iV-GJx">
                                         <rect key="frame" x="20" y="0.0" width="306" height="21"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="0.66274509803921566" blue="0.074509803921568626" alpha="1" colorSpace="calibratedRGB"/>
@@ -516,7 +516,7 @@
                                         <rect key="frame" x="20" y="14" width="93" height="67"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
                                         <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-2"/>
-                                        <state key="normal" title="Previous" backgroundImage="released_previous_button.png">
+                                        <state key="normal" title="上一张" backgroundImage="released_previous_button.png">
                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -531,7 +531,7 @@
                                         <rect key="frame" x="207" y="14" width="93" height="67"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
                                         <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-2"/>
-                                        <state key="normal" title="Next" backgroundImage="released_next_button.png">
+                                        <state key="normal" title="下一页" backgroundImage="released_next_button.png">
                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -547,7 +547,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="11"/>
                                         <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-2"/>
-                                        <state key="normal" title="Button" backgroundImage="pointer.png">
+                                        <state key="normal" title="激光笔" backgroundImage="pointer.png">
                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
