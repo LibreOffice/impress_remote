@@ -1,2 +1,65 @@
 <?xml version='1.0' encoding='utf-8'?>
-<resources/>
+<resources>
+  <string name="application_name">Impress Remote</string>
+  <string name="title_computers">计算机</string>
+  <string name="title_generic">常规</string>
+  <string name="title_licenses">开源许可</string>
+  <string name="title_settings">设置</string>
+  <string name="title_requirements">需求</string>
+  <string name="title_connection">连接</string>
+  <string name="title_creation">创建</string>
+  <string name="title_slide_show">幻灯片放映</string>
+  <string name="title_timer">计时器</string>
+  <string name="menu_licenses">开源许可</string>
+  <string name="menu_settings">设置</string>
+  <string name="menu_requirements">需求</string>
+  <string name="menu_reconnect">重新连接</string>
+  <string name="menu_add_computer">添加计算机</string>
+  <string name="menu_remove_computer">移除</string>
+  <string name="menu_slides_grid">幻灯片网格</string>
+  <string name="menu_slides_pager">幻灯片分页</string>
+  <string name="menu_timer">计时器</string>
+  <string name="menu_stop_slide_show">停止幻灯片放映</string>
+  <string name="menu_pause_slide_show">暂停幻灯片放映</string>
+  <string name="menu_resume_slide_show">继续幻灯片放映</string>
+  <string name="button_cancel">取消</string>
+  <string name="button_save">保存</string>
+  <string name="button_start">开始</string>
+  <string name="button_remove">移除</string>
+  <string name="message_impress_pin_validation">在 LibreOffice Impress 的 “幻灯片放映 → Impress Remote” 处输入代码。</string>
+  <string name="message_connection_failed_title">连接失败</string>
+  <string name="message_impress_remote_enabling">请确保您已经启用了远程控制。在 LibreOffice Impress 转到“工具 → 选项 → LibreOffice Impress → 常规”。</string>
+  <string name="message_impress_wifi_enabling">您应该同时在 “工具 → 选项 → LibreOffice → 高级”启用实验性功能。</string>
+  <string name="message_impress_pairing_check">如果您遇到蓝牙配对问题，请检查桌面操作系统的相关说明。</string>
+  <string name="message_ip_address_validation">请输入有效的 IP 地址。</string>
+  <string name="message_time_is_up">时间到!</string>
+  <string name="message_search_wifi">请确保 LibreOffice 在同一个 WiFi 中的计算机上正常运行。</string>
+  <string name="message_search_bluetooth">请确保运行 LibreOffice 的计算机已打开蓝牙。</string>
+  <string name="message_learn_more">
+    <a href="org.libreoffice.impressremote://requirements/">了解更多</a>
+  </string>
+  <string name="message_paused">已暂停</string>
+  <string name="message_notes_empty">暂无。</string>
+  <string name="hint_ip_address">IP 地址</string>
+  <string name="hint_name">名称 (可选)</string>
+  <string name="header_notes">备注</string>
+  <string name="mask_slide_show_progress">幻灯片 %1$d / %2$d</string>
+  <plurals name="mask_timer_progress">
+    <item quantity="other">剩余 %d 分钟</item>
+  </plurals>
+  <string name="description_pager_slide">幻灯片预览</string>
+  <string name="description_grid_slide">幻灯片预览</string>
+  <string name="description_empty_slide">空白幻灯片</string>
+  <string name="preferences_volume_keys_actions_title">音量键操作</string>
+  <string name="preferences_volume_keys_actions_summary">通过音量键切换幻灯片及播放动画</string>
+  <string name="preferences_keep_screen_on_title">保持屏幕常亮</string>
+  <string name="preferences_keep_screen_on_summary">演示时阻止手机进入待机状态</string>
+  <string name="preferences_quiet_mode_title">安静模式</string>
+  <string name="preferences_quiet_mode_summary">演示时将手机设置为震动模式</string>
+  <string name="requirements_libreoffice_version">计算机上运行的 LibreOffice 4.0.3 或更高版本。</string>
+  <string name="requirements_libreoffice_general_enabled">LibreOffice Impress 中“工具 → 选项 → LibreOffice Impress → 常规”已启用 Impress Remote。</string>
+  <string name="requirements_libreoffice_experimental_enabled">在 LibreOffice Impress 的 “工具 → 选项 → LibreOffice → 高级” 处启用实验性功能。</string>
+  <string name="requirements_network_connection">Android 设备及计算机连接到同一个网络中。</string>
+  <string name="requirements_network_ports">如果您打开了防火墙，请确保端口 1598 及 1599 处于打开状态。</string>
+  <string name="requirements_bluetooth_connection">打开蓝牙的计算机。</string>
+</resources>

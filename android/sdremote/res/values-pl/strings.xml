@@ -29,7 +29,7 @@
   <string name="message_impress_remote_enabling">Upewnij się, że włączyłeś zdalne sterowanie. Przejdź do “Narzędzia → Opcje → LibreOffice Impress → Ogólne” w LibreOffice Impress.</string>
   <string name="message_impress_wifi_enabling">Powinieneś również włączyć eksperymentalne funkcje w “Narzędzia → Opcje → LibreOffice → Zaawansowane”.</string>
   <string name="message_impress_pairing_check">Jeśli wystąpiły problemy z parowaniem urządzeń przez Bluetooth, zapoznaj się z instrukcją odpowiednią dla Twojego systemu operacyjnego.</string>
-  <string name="message_ip_address_validation">Wprowadź poprawny adres IP</string>
+  <string name="message_ip_address_validation">Wprowadź poprawny adres IP.</string>
   <string name="message_time_is_up">Koniec czasu!</string>
   <string name="message_search_wifi">Upewnij się, że LibreOffice jest uruchomiony na komputerze podłączonym do tej samej sieci WiFi.</string>
   <string name="message_search_bluetooth">Upewnij się, że LibreOffice jest uruchomiony na komputerze z włączoną technologią Bluetooth.</string>
