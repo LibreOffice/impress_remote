@@ -20,6 +20,8 @@
   <string name="menu_stop_slide_show">Stop diashow</string>
   <string name="menu_pause_slide_show">Pauzeer diashow</string>
   <string name="menu_resume_slide_show">Hervat diashow</string>
+  <string name="menu_start_pointer">Start aanwijzer</string>
+  <string name="menu_stop_pointer">Stop aanwijzer</string>
   <string name="button_cancel">Annuleer</string>
   <string name="button_save">Opslaan</string>
   <string name="button_start">Begin</string>

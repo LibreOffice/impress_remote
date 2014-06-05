@@ -13,6 +13,7 @@
   <string name="menu_requirements">Systemkrav</string>
   <string name="menu_reconnect">Återanslut</string>
   <string name="menu_add_computer">Lägg till dator</string>
+  <string name="menu_start_discovery">Sök efter enheter</string>
   <string name="menu_remove_computer">Ta bort</string>
   <string name="menu_slides_grid">Bildrutnät</string>
   <string name="menu_slides_pager">Bildbytare</string>
@@ -20,6 +21,8 @@
   <string name="menu_stop_slide_show">Stoppa presentation</string>
   <string name="menu_pause_slide_show">Pausa presentation</string>
   <string name="menu_resume_slide_show">Återuppta presentation</string>
+  <string name="menu_start_pointer">Aktivera pekare</string>
+  <string name="menu_stop_pointer">Avaktivera pekare</string>
   <string name="button_cancel">Avbryt</string>
   <string name="button_save">Spara</string>
   <string name="button_start">Start</string>

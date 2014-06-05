@@ -13,6 +13,7 @@
   <string name="menu_requirements">Zahteve</string>
   <string name="menu_reconnect">Znova poveži</string>
   <string name="menu_add_computer">Dodaj računalnik</string>
+  <string name="menu_start_discovery">Zaženi odkrivanje</string>
   <string name="menu_remove_computer">Odstrani</string>
   <string name="menu_slides_grid">Mrežni pogled</string>
   <string name="menu_slides_pager">Kalejdoskop prosojnic</string>
@@ -20,6 +21,8 @@
   <string name="menu_stop_slide_show">Ustavi projekcijo</string>
   <string name="menu_pause_slide_show">Začasno prekini projekcijo</string>
   <string name="menu_resume_slide_show">Nadaljuj s projekcijo</string>
+  <string name="menu_start_pointer">Zaženi kazalec</string>
+  <string name="menu_stop_pointer">Ustavi kazalec</string>
   <string name="button_cancel">Prekliči</string>
   <string name="button_save">Shrani</string>
   <string name="button_start">Začni</string>

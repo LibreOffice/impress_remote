@@ -13,6 +13,7 @@
   <string name="menu_requirements">Wymagania</string>
   <string name="menu_reconnect">Połącz ponownie</string>
   <string name="menu_add_computer">Dodaj komputer</string>
+  <string name="menu_start_discovery">Uruchom odkrywanie</string>
   <string name="menu_remove_computer">Usuń</string>
   <string name="menu_slides_grid">Siatka slajdów</string>
   <string name="menu_slides_pager">Pager slajdów</string>
@@ -20,6 +21,8 @@
   <string name="menu_stop_slide_show">Zatrzymaj pokaz slajdów</string>
   <string name="menu_pause_slide_show">Wstrzymaj pokaz slajdów</string>
   <string name="menu_resume_slide_show">Wznów pokaz slajdów</string>
+  <string name="menu_start_pointer">Uruchom wskaźnik</string>
+  <string name="menu_stop_pointer">Zatrzymaj wskaźnik</string>
   <string name="button_cancel">Anuluj</string>
   <string name="button_save">Zapisz</string>
   <string name="button_start">Uruchom</string>

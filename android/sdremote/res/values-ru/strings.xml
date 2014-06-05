@@ -13,6 +13,7 @@
   <string name="menu_requirements">Требования</string>
   <string name="menu_reconnect">Переподключить</string>
   <string name="menu_add_computer">Добавить компьютер</string>
+  <string name="menu_start_discovery">Поиск устройств</string>
   <string name="menu_remove_computer">Удалить компьютер</string>
   <string name="menu_slides_grid">Слайды сеткой</string>
   <string name="menu_slides_pager">Слайды постранично</string>
@@ -20,6 +21,8 @@
   <string name="menu_stop_slide_show">Остановить</string>
   <string name="menu_pause_slide_show">Пауза</string>
   <string name="menu_resume_slide_show">Продолжить</string>
+  <string name="menu_start_pointer">Включить указку</string>
+  <string name="menu_stop_pointer">Выключить указку</string>
   <string name="button_cancel">Отмена</string>
   <string name="button_save">Сохранить</string>
   <string name="button_start">Начать</string>

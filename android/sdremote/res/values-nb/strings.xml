@@ -13,6 +13,7 @@
   <string name="menu_requirements">Krav</string>
   <string name="menu_reconnect">Koble til på nytt</string>
   <string name="menu_add_computer">Legg til en datamaskin</string>
+  <string name="menu_start_discovery">Søk etter enheter</string>
   <string name="menu_remove_computer">Fjern</string>
   <string name="menu_slides_grid">Lysbilderutenett</string>
   <string name="menu_slides_pager">Lysbildebytter</string>
@@ -20,6 +21,8 @@
   <string name="menu_stop_slide_show">Stopp lysbildeframvising</string>
   <string name="menu_pause_slide_show">Sett lysbildeframvisning på pause</string>
   <string name="menu_resume_slide_show">Gjenoppta lysbildeframvisning</string>
+  <string name="menu_start_pointer">Start pekermodus</string>
+  <string name="menu_stop_pointer">Stopp pekermodus</string>
   <string name="button_cancel">Avbryt</string>
   <string name="button_save">Lagre</string>
   <string name="button_start">Start</string>

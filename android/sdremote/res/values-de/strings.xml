@@ -13,6 +13,7 @@
   <string name="menu_requirements">Systemvoraussetzungen</string>
   <string name="menu_reconnect">Erneut verbinden</string>
   <string name="menu_add_computer">Rechner hinzufügen</string>
+  <string name="menu_start_discovery">Bluethooth-Erkennung starten</string>
   <string name="menu_remove_computer">Entfernen</string>
   <string name="menu_slides_grid">Folienraster</string>
   <string name="menu_slides_pager">Folienstapel</string>
@@ -20,6 +21,8 @@
   <string name="menu_stop_slide_show">Präsentation beenden</string>
   <string name="menu_pause_slide_show">Präsentation anhalten</string>
   <string name="menu_resume_slide_show">Präsentation fortsetzen</string>
+  <string name="menu_start_pointer">Laserpointer starten</string>
+  <string name="menu_stop_pointer">Laserpointer beenden</string>
   <string name="button_cancel">Abbrechen</string>
   <string name="button_save">Speichern</string>
   <string name="button_start">Starten</string>

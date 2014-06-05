@@ -13,6 +13,7 @@
   <string name="menu_requirements">Nõuded</string>
   <string name="menu_reconnect">Ühenda uuesti</string>
   <string name="menu_add_computer">Lisa arvuti</string>
+  <string name="menu_start_discovery">Otsi Bluetooth-seadmeid</string>
   <string name="menu_remove_computer">Eemalda</string>
   <string name="menu_slides_grid">Mitu slaidi</string>
   <string name="menu_slides_pager">Üks slaid</string>
@@ -20,6 +21,8 @@
   <string name="menu_stop_slide_show">Lõpeta slaidiseanss</string>
   <string name="menu_pause_slide_show">Peata slaidiseanss</string>
   <string name="menu_resume_slide_show">Jätka slaidiseanssi</string>
+  <string name="menu_start_pointer">Lülita pointer sisse</string>
+  <string name="menu_stop_pointer">Lülita pointer välja</string>
   <string name="button_cancel">Loobu</string>
   <string name="button_save">Salvesta</string>
   <string name="button_start">Alusta</string>

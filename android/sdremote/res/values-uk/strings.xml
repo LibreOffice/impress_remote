@@ -13,6 +13,7 @@
   <string name="menu_requirements">Вимоги</string>
   <string name="menu_reconnect">Перез\'єднатися</string>
   <string name="menu_add_computer">Додати комп\'ютер</string>
+  <string name="menu_start_discovery">Розпочати пізнання</string>
   <string name="menu_remove_computer">Вилучити</string>
   <string name="menu_slides_grid">Слайди сіткою</string>
   <string name="menu_slides_pager">Слайди сторінкою</string>
@@ -20,6 +21,8 @@
   <string name="menu_stop_slide_show">Припинити показ слайдів</string>
   <string name="menu_pause_slide_show">Припинити показ слайдів</string>
   <string name="menu_resume_slide_show">Відновити показ слайдів</string>
+  <string name="menu_start_pointer">Запустити вказівник</string>
+  <string name="menu_stop_pointer">Зупинити вказівник</string>
   <string name="button_cancel">Скасувати</string>
   <string name="button_save">Зберегти</string>
   <string name="button_start">Початок</string>

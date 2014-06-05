@@ -3,7 +3,7 @@
   <string name="application_name">Control remoto de Impress</string>
   <string name="title_computers">PC</string>
   <string name="title_generic">Genérico</string>
-  <string name="title_settings">Configuraciones</string>
+  <string name="title_settings">Configuración</string>
   <string name="title_requirements">Requisitos</string>
   <string name="title_connection">Conexión</string>
   <string name="title_creation">Creación</string>
@@ -13,6 +13,7 @@
   <string name="menu_requirements">Requisitos</string>
   <string name="menu_reconnect">Volver a conectar</string>
   <string name="menu_add_computer">Añadir un PC</string>
+  <string name="menu_start_discovery">Iniciar exploración</string>
   <string name="menu_remove_computer">Quitar</string>
   <string name="menu_slides_grid">Cuadrícula de diapositivas</string>
   <string name="menu_slides_pager">Paginador de diapositivas</string>
@@ -20,6 +21,8 @@
   <string name="menu_stop_slide_show">Parar presentación</string>
   <string name="menu_pause_slide_show">Pausar presentación</string>
   <string name="menu_resume_slide_show">Reanudar presentación</string>
+  <string name="menu_start_pointer">Activar puntero</string>
+  <string name="menu_stop_pointer">Desactivar puntero</string>
   <string name="button_cancel">Cancelar</string>
   <string name="button_save">Guardar</string>
   <string name="button_start">Iniciar</string>

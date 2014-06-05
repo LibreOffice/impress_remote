@@ -13,6 +13,7 @@
   <string name="menu_requirements">Reikalavimai</string>
   <string name="menu_reconnect">Jungtis ir naujo</string>
   <string name="menu_add_computer">Pridėti kompiuterį</string>
+  <string name="menu_start_discovery">Pradėti paiešką</string>
   <string name="menu_remove_computer">Pašalinti</string>
   <string name="menu_slides_grid">Skaidrių tinklelis</string>
   <string name="menu_slides_pager">Skaidrių albumas</string>
@@ -20,6 +21,8 @@
   <string name="menu_stop_slide_show">Nutraukti demonstravimą</string>
   <string name="menu_pause_slide_show">Pristabdyti demonstravimą</string>
   <string name="menu_resume_slide_show">Tęsti demonstravimą</string>
+  <string name="menu_start_pointer">Įjungti rodyklę</string>
+  <string name="menu_stop_pointer">Išjungti rodyklę</string>
   <string name="button_cancel">Atsisakyti</string>
   <string name="button_save">Įrašyti</string>
   <string name="button_start">Pradėti</string>

@@ -13,6 +13,7 @@
   <string name="menu_requirements">Requisiti</string>
   <string name="menu_reconnect">Riconnetti</string>
   <string name="menu_add_computer">Aggiungi computer</string>
+  <string name="menu_start_discovery">Avvia ricerca</string>
   <string name="menu_remove_computer">Rimuovi</string>
   <string name="menu_slides_grid">Griglia di diapositive</string>
   <string name="menu_slides_pager">Sequenza di diapositive</string>
@@ -20,6 +21,8 @@
   <string name="menu_stop_slide_show">Ferma la presentazione</string>
   <string name="menu_pause_slide_show">Metti in pausa la presentazione</string>
   <string name="menu_resume_slide_show">Riprendi la presentazione</string>
+  <string name="menu_start_pointer">Avvia il puntatore</string>
+  <string name="menu_stop_pointer">Ferma il puntatore</string>
   <string name="button_cancel">Annulla</string>
   <string name="button_save">Salva</string>
   <string name="button_start">Avvia</string>

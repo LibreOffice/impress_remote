@@ -13,6 +13,7 @@
   <string name="menu_requirements">Követelmények</string>
   <string name="menu_reconnect">Újrakapcsolódás</string>
   <string name="menu_add_computer">Számítógép hozzáadása</string>
+  <string name="menu_start_discovery">Feltérképezés indítása</string>
   <string name="menu_remove_computer">Eltávolítás</string>
   <string name="menu_slides_grid">Diaáttekintő</string>
   <string name="menu_slides_pager">Dialapozó</string>
@@ -20,6 +21,8 @@
   <string name="menu_stop_slide_show">Diavetítés leállítása</string>
   <string name="menu_pause_slide_show">Diavetítés szüneteltetése</string>
   <string name="menu_resume_slide_show">Diavetítés folytatása</string>
+  <string name="menu_start_pointer">Mutató indítása</string>
+  <string name="menu_stop_pointer">Mutató leállítása</string>
   <string name="button_cancel">Mégse</string>
   <string name="button_save">Mentés</string>
   <string name="button_start">Kezdés</string>

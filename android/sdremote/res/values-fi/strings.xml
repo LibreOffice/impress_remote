@@ -13,6 +13,7 @@
   <string name="menu_requirements">Vaatimukset</string>
   <string name="menu_reconnect">Yhdistä uudelleen</string>
   <string name="menu_add_computer">Lisää tietokone</string>
+  <string name="menu_start_discovery">Aloita etsintä</string>
   <string name="menu_remove_computer">Poista</string>
   <string name="menu_slides_grid">Kaikki diat</string>
   <string name="menu_slides_pager">Dia kerrallaan</string>
@@ -20,6 +21,8 @@
   <string name="menu_stop_slide_show">Lopeta diaesitys</string>
   <string name="menu_pause_slide_show">Keskeytä diaesitys</string>
   <string name="menu_resume_slide_show">Jatka diaesitystä</string>
+  <string name="menu_start_pointer">Käynnistä osoitin</string>
+  <string name="menu_stop_pointer">Sammuta osoitin</string>
   <string name="button_cancel">Peruuta</string>
   <string name="button_save">Tallenna</string>
   <string name="button_start">Aloita</string>

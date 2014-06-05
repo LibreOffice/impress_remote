@@ -13,6 +13,7 @@
   <string name="menu_requirements">Požadavky</string>
   <string name="menu_reconnect">Znovu připojit</string>
   <string name="menu_add_computer">Přidat počítač</string>
+  <string name="menu_start_discovery">Spustit vyhledávání</string>
   <string name="menu_remove_computer">Odstranit</string>
   <string name="menu_slides_grid">Mřížka snímků</string>
   <string name="menu_slides_pager">Snímek na stránku</string>
@@ -20,6 +21,8 @@
   <string name="menu_stop_slide_show">Zastavit prezentaci</string>
   <string name="menu_pause_slide_show">Pozastavit prezentaci</string>
   <string name="menu_resume_slide_show">Pokračovat v prezentaci</string>
+  <string name="menu_start_pointer">Zapnout ukazatel</string>
+  <string name="menu_stop_pointer">Vypnout ukazatel</string>
   <string name="button_cancel">Zrušit</string>
   <string name="button_save">Uložit</string>
   <string name="button_start">Spustit</string>

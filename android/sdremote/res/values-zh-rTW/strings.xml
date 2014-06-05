@@ -13,6 +13,7 @@
   <string name="menu_requirements">系統需求</string>
   <string name="menu_reconnect">重新連接</string>
   <string name="menu_add_computer">加入電腦</string>
+  <string name="menu_start_discovery">開始探索</string>
   <string name="menu_remove_computer">移除</string>
   <string name="menu_slides_grid">投影片柵格</string>
   <string name="menu_slides_pager">投影片傳呼</string>
@@ -20,6 +21,8 @@
   <string name="menu_stop_slide_show">停止投影片放映</string>
   <string name="menu_pause_slide_show">暫停投影片放映</string>
   <string name="menu_resume_slide_show">接續投影片放映</string>
+  <string name="menu_start_pointer">開啟雷射筆</string>
+  <string name="menu_stop_pointer">停止雷射筆</string>
   <string name="button_cancel">取消</string>
   <string name="button_save">儲存</string>
   <string name="button_start">開始</string>

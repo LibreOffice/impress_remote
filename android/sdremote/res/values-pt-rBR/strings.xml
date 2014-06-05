@@ -13,6 +13,7 @@
   <string name="menu_requirements">Requisitos</string>
   <string name="menu_reconnect">Reconectar</string>
   <string name="menu_add_computer">Adicionar computador</string>
+  <string name="menu_start_discovery">Iniciar a descoberta</string>
   <string name="menu_remove_computer">Remover</string>
   <string name="menu_slides_grid">Grade de slides</string>
   <string name="menu_slides_pager">Paginador de slides</string>
@@ -20,6 +21,8 @@
   <string name="menu_stop_slide_show">Parar apresentação</string>
   <string name="menu_pause_slide_show">Pausar apresentação</string>
   <string name="menu_resume_slide_show">Continuar apresentação</string>
+  <string name="menu_start_pointer">Ativar ponteiro</string>
+  <string name="menu_stop_pointer">Desativar ponteiro</string>
   <string name="button_cancel">Cancelar</string>
   <string name="button_save">Salvar</string>
   <string name="button_start">Iniciar</string>

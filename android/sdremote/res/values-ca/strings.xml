@@ -13,6 +13,7 @@
   <string name="menu_requirements">Requirements</string>
   <string name="menu_reconnect">Torna a connectar</string>
   <string name="menu_add_computer">Afegeix un ordinador</string>
+  <string name="menu_start_discovery">Inicia l\'exploració</string>
   <string name="menu_remove_computer">Suprimeix</string>
   <string name="menu_slides_grid">Graella de diapositives</string>
   <string name="menu_slides_pager">Paginador de diapositives</string>
@@ -20,6 +21,8 @@
   <string name="menu_stop_slide_show">Atura la presentació de diapositives</string>
   <string name="menu_pause_slide_show">Pausa la presentació de diapositives</string>
   <string name="menu_resume_slide_show">Reprèn la presentació de diapositives</string>
+  <string name="menu_start_pointer">Inicia el punter</string>
+  <string name="menu_stop_pointer">Atura el punter</string>
   <string name="button_cancel">Cancel·la</string>
   <string name="button_save">Desa</string>
   <string name="button_start">Inicia</string>

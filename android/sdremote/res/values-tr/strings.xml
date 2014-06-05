@@ -13,6 +13,7 @@
   <string name="menu_requirements">Gereksinimler</string>
   <string name="menu_reconnect">Yeniden bağlan</string>
   <string name="menu_add_computer">Bilgisayar ekle</string>
+  <string name="menu_start_discovery">Keşfe Başla</string>
   <string name="menu_remove_computer">Kaldır</string>
   <string name="menu_slides_grid">Slayt ızgarası</string>
   <string name="menu_slides_pager">Slayt sayfalayıcı</string>
@@ -20,6 +21,8 @@
   <string name="menu_stop_slide_show">Slayt gösterisini durdur</string>
   <string name="menu_pause_slide_show">Slayt gösterisini beklet</string>
   <string name="menu_resume_slide_show">Slayt gösterisine dön</string>
+  <string name="menu_start_pointer">İşaretçiyi başlat</string>
+  <string name="menu_stop_pointer">İşaretçiyi durdur</string>
   <string name="button_cancel">İptal</string>
   <string name="button_save">Kaydet</string>
   <string name="button_start">Başlat</string>

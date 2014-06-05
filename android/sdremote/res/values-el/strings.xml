@@ -13,6 +13,7 @@
   <string name="menu_requirements">Απαιτήσεις</string>
   <string name="menu_reconnect">Επανασύνδεση</string>
   <string name="menu_add_computer">Προσθήκη υπολογιστή</string>
+  <string name="menu_start_discovery">Έναρξη ανακάλυψης</string>
   <string name="menu_remove_computer">Αφαίρεση</string>
   <string name="menu_slides_grid">Πλέγμα διαφανειών</string>
   <string name="menu_slides_pager">Σελιδοποίηση διαφανειών</string>
@@ -20,6 +21,8 @@
   <string name="menu_stop_slide_show">Διακοπή παρουσίασης</string>
   <string name="menu_pause_slide_show">Παύση παρουσίασης</string>
   <string name="menu_resume_slide_show">Συνέχιση παρουσίασης</string>
+  <string name="menu_start_pointer">Έναρξη δείκτη</string>
+  <string name="menu_stop_pointer">Παύση δείκτη</string>
   <string name="button_cancel">Ακύρωση</string>
   <string name="button_save">Αποθήκευση</string>
   <string name="button_start">Έναρξη</string>
