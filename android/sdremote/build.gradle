@@ -4,30 +4,12 @@ buildscript {
     }
 
     dependencies {
-        classpath "com.android.tools.build:gradle:0.8.+"
+        classpath "com.android.tools.build:gradle:0.12.+"
     }
 }
 
-apply plugin: "android"
-
-android {
-    compileSdkVersion 19
-    buildToolsVersion "19.0.1"
-
-    sourceSets {
-        main {
-            manifest.srcFile "AndroidManifest.xml"
-            java.srcDir "src"
-            res.srcDir "res"
-        }
-    }
-}
-
-dependencies {
+allprojects {
     repositories {
         mavenCentral()
     }
-
-    compile "com.android.support:appcompat-v7:19.0.+"
-    compile "com.android.support:support-v4:19.0.+"
 }
