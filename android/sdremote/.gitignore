@@ -2,3 +2,8 @@
 /gen/
 /translations*
 /ant.properties
+.gradle/
+build/
+*.iml
+.idea/
+local.properties
