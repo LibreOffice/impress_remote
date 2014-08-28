@@ -13,6 +13,7 @@
   <string name="menu_requirements">Vereisten</string>
   <string name="menu_reconnect">Opnieuw verbinden</string>
   <string name="menu_add_computer">Computer toevoegen</string>
+  <string name="menu_start_discovery">Discovery starten</string>
   <string name="menu_remove_computer">Verwijder</string>
   <string name="menu_slides_grid">Diaraster</string>
   <string name="menu_slides_pager">Diapager</string>

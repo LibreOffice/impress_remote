@@ -13,6 +13,7 @@
   <string name="menu_requirements">Systemkrav</string>
   <string name="menu_reconnect">Genforbind</string>
   <string name="menu_add_computer">Tilføj computer</string>
+  <string name="menu_start_discovery">Start Discovery</string>
   <string name="menu_remove_computer">Fjern</string>
   <string name="menu_slides_grid">Diasgitter</string>
   <string name="menu_slides_pager">Diassøger</string>
@@ -20,6 +21,8 @@
   <string name="menu_stop_slide_show">Stop præsentation</string>
   <string name="menu_pause_slide_show">Præsentation på pause</string>
   <string name="menu_resume_slide_show">Genoptag præsentation</string>
+  <string name="menu_start_pointer">Start pegepind</string>
+  <string name="menu_stop_pointer">Stop pegepind</string>
   <string name="button_cancel">Afbryd</string>
   <string name="button_save">Gem</string>
   <string name="button_start">Start</string>

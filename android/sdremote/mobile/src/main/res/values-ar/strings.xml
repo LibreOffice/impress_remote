@@ -2,15 +2,19 @@
 <resources>
   <string name="application_name">إمبريس عن بُعد</string>
   <string name="title_computers">الحواسيب</string>
+  <string name="title_generic">عامّ</string>
   <string name="title_settings">إعدادات</string>
   <string name="title_requirements">المتطلبات</string>
   <string name="title_connection">الاتصال</string>
+  <string name="title_creation">إنشاء</string>
   <string name="title_timer">المؤقت</string>
   <string name="menu_settings">إعدادات</string>
   <string name="menu_requirements">المتطلبات</string>
   <string name="menu_reconnect">أعد الاتصال</string>
   <string name="menu_add_computer">أضف حاسوب</string>
+  <string name="menu_start_discovery">ابدء الاكتشاف</string>
   <string name="menu_remove_computer">أزل</string>
+  <string name="menu_slides_grid">شبكة الشرائح</string>
   <string name="menu_timer">المؤقت</string>
   <string name="menu_stop_slide_show">أوقف عرض الشرائح</string>
   <string name="menu_pause_slide_show">ألبث عرض الشرائح</string>
