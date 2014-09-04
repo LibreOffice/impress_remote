@@ -43,8 +43,8 @@
     <string name="menu_stop_slide_show">Stop slide show</string>
     <string name="menu_pause_slide_show">Pause slide show</string>
     <string name="menu_resume_slide_show">Resume slide show</string>
-    <string name="menu_start_pointer">Start pointer</string>
-    <string name="menu_stop_pointer">Stop pointer</string>
+    <string name="menu_start_pointer">Laser pointer</string>
+    <string name="menu_stop_pointer">Exit laser pointer</string>
 
     <string name="button_cancel">Cancel</string>
     <string name="button_save">Save</string>
