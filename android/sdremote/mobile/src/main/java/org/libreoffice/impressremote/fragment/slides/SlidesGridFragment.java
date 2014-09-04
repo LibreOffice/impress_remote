@@ -31,9 +31,8 @@ import org.libreoffice.impressremote.R;
 import org.libreoffice.impressremote.adapter.SlidesGridAdapter;
 import org.libreoffice.impressremote.communication.CommunicationService;
 
-public class SlidesGridFragment extends Fragment implements ServiceConnection, AdapterView.OnItemClickListener {
+public class SlidesGridFragment extends AbstractSlideFragment implements ServiceConnection, AdapterView.OnItemClickListener {
     private CommunicationService mCommunicationService;
-    private BroadcastReceiver mIntentsReceiver;
 
     public static SlidesGridFragment newInstance() {
         return new SlidesGridFragment();
@@ -112,47 +111,23 @@ public class SlidesGridFragment extends Fragment implements ServiceConnection, A
     }
 
     @Override
-    public void onResume() {
-        super.onResume();
-
-        registerIntentsReceiver();
+    void slideShowStateChanged() {
+        refreshSlidesGrid();
     }
 
-    private void registerIntentsReceiver() {
-        mIntentsReceiver = new IntentsReceiver(this);
-        IntentFilter aIntentFilter = buildIntentsReceiverFilter();
-
-        getBroadcastManager().registerReceiver(mIntentsReceiver, aIntentFilter);
+    @Override
+    void slideChanged() {
+        // TODO: update the selection rectangle
     }
 
-    private static final class IntentsReceiver extends BroadcastReceiver {
-        private final SlidesGridFragment mSlidesGridFragment;
-
-        private IntentsReceiver(SlidesGridFragment aSlidesGridFragment) {
-            mSlidesGridFragment = aSlidesGridFragment;
-        }
-
-        @Override
-        public void onReceive(Context aContext, Intent aIntent) {
-            if (Intents.Actions.SLIDE_SHOW_RUNNING.equals(aIntent.getAction())) {
-                mSlidesGridFragment.refreshSlidesGrid();
-                return;
-            }
-
-            if (Intents.Actions.SLIDE_PREVIEW.equals(aIntent.getAction())) {
-                int aSlideIndex = aIntent.getIntExtra(Intents.Extras.SLIDE_INDEX, 0);
-
-                mSlidesGridFragment.refreshSlidePreview(aSlideIndex);
-            }
-        }
+    @Override
+    void previewUpdated(int nSlideIndex) {
+        refreshSlidePreview(nSlideIndex);
     }
 
-    private IntentFilter buildIntentsReceiverFilter() {
-        IntentFilter aIntentFilter = new IntentFilter();
-        aIntentFilter.addAction(Intents.Actions.SLIDE_SHOW_RUNNING);
-        aIntentFilter.addAction(Intents.Actions.SLIDE_PREVIEW);
-
-        return aIntentFilter;
+    @Override
+    void notesUpdated(int nSlideIndex) {
+        // We don't care about notes in the grid view.
     }
 
     private void refreshSlidesGrid() {
@@ -168,22 +143,6 @@ public class SlidesGridFragment extends Fragment implements ServiceConnection, A
         }
 
         aSlidesGrid.getAdapter().getView(aSlideIndex, aSlideView, aSlidesGrid);
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-
-        unregisterIntentsReceiver();
-    }
-
-    private void unregisterIntentsReceiver() {
-        try {
-            getBroadcastManager().unregisterReceiver(mIntentsReceiver);
-        } catch (IllegalArgumentException e) {
-            // Receiver not registered.
-            // Fixed in Honeycomb: Android’s issue #6191.
-        }
     }
 
     @Override
