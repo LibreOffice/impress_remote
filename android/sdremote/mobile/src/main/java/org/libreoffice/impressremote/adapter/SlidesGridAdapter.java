@@ -59,7 +59,7 @@ public class SlidesGridAdapter extends BaseAdapter {
             setUpUnknownSlidePreview(aSlideViewHolder);
         }
 
-        aSlideViewHolder.mSlideIndex.setText(buildSlideIndex(aPosition));
+        aSlideViewHolder.mSlideIndex.setText(Integer.toString(aPosition + 1));
 
         return aSlideView;
     }
@@ -106,12 +106,6 @@ public class SlidesGridAdapter extends BaseAdapter {
 
     private void setUpUnknownSlidePreview(ViewHolder aSlideViewHolder) {
         aSlideViewHolder.mSlidePreview.setImageResource(R.drawable.bg_slide_unknown);
-    }
-
-    private String buildSlideIndex(int aPosition) {
-        int aHumanSlideIndex = aPosition + 1;
-
-        return Integer.toString(aHumanSlideIndex);
     }
 }
 
