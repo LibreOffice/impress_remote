@@ -8,16 +8,12 @@
  */
 package org.libreoffice.impressremote.fragment;
 
-import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.IBinder;
-import android.support.v4.app.Fragment;
-import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.view.GestureDetectorCompat;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -37,9 +33,9 @@ import org.libreoffice.impressremote.R;
 import org.libreoffice.impressremote.adapter.SlidesPagerAdapter;
 import org.libreoffice.impressremote.communication.CommunicationService;
 
-public class SlidesPagerFragment extends Fragment implements ServiceConnection, ViewPager.OnPageChangeListener, View.OnTouchListener {
+public class SlidesPagerFragment extends AbstractSlideFragment
+        implements ServiceConnection, ViewPager.OnPageChangeListener, View.OnTouchListener {
     private CommunicationService mCommunicationService;
-    private BroadcastReceiver mIntentsReceiver;
     private GestureDetectorCompat mDetector;
 
     public static SlidesPagerFragment newInstance() {
@@ -201,74 +197,23 @@ public class SlidesPagerFragment extends Fragment implements ServiceConnection, 
     }
 
     @Override
-    public void onResume() {
-        super.onResume();
-
-        registerIntentsReceiver();
+    void slideShowStateChanged() {
+        setUpSlidesPager();
     }
 
-    private void registerIntentsReceiver() {
-        mIntentsReceiver = new IntentsReceiver(this);
-        IntentFilter aIntentFilter = buildIntentsReceiverFilter();
-
-        getBroadcastManager().registerReceiver(mIntentsReceiver, aIntentFilter);
+    @Override
+    void slideChanged() {
+        setUpCurrentSlide();
     }
 
-    private static final class IntentsReceiver extends BroadcastReceiver {
-        private final SlidesPagerFragment mSlidesPagerFragment;
-
-        private IntentsReceiver(SlidesPagerFragment aSlidesGridFragment) {
-            mSlidesPagerFragment = aSlidesGridFragment;
-        }
-
-        @Override
-        public void onReceive(Context aContext, Intent aIntent) {
-            if (Intents.Actions.SLIDE_SHOW_RUNNING.equals(aIntent.getAction())) {
-                mSlidesPagerFragment.setUpSlidesPager();
-                return;
-            }
-
-            if (Intents.Actions.SLIDE_SHOW_STOPPED.equals(aIntent.getAction())) {
-                mSlidesPagerFragment.setUpSlidesPager();
-                return;
-            }
-
-            if (Intents.Actions.SLIDE_CHANGED.equals(aIntent.getAction())) {
-                mSlidesPagerFragment.setUpCurrentSlide();
-                return;
-            }
-
-            if (Intents.Actions.SLIDE_PREVIEW.equals(aIntent.getAction())) {
-                int aSlideIndex = aIntent.getIntExtra(Intents.Extras.SLIDE_INDEX, 0);
-
-                mSlidesPagerFragment.refreshSlide(aSlideIndex);
-                return;
-            }
-
-            if (Intents.Actions.SLIDE_NOTES.equals(aIntent.getAction())) {
-                int aSlideIndex = aIntent.getIntExtra(Intents.Extras.SLIDE_INDEX, 0);
-
-                mSlidesPagerFragment.setUpSlideNotes(aSlideIndex);
-                return;
-            }
-        }
+    @Override
+    void previewUpdated(int nSlideIndex) {
+        refreshSlide(nSlideIndex);
     }
 
-    private IntentFilter buildIntentsReceiverFilter() {
-        IntentFilter aIntentFilter = new IntentFilter();
-        aIntentFilter.addAction(Intents.Actions.SLIDE_SHOW_RUNNING);
-        aIntentFilter.addAction(Intents.Actions.SLIDE_SHOW_STOPPED);
-        aIntentFilter.addAction(Intents.Actions.SLIDE_CHANGED);
-        aIntentFilter.addAction(Intents.Actions.SLIDE_PREVIEW);
-        aIntentFilter.addAction(Intents.Actions.SLIDE_NOTES);
-
-        return aIntentFilter;
-    }
-
-    private LocalBroadcastManager getBroadcastManager() {
-        Context aContext = getActivity().getApplicationContext();
-
-        return LocalBroadcastManager.getInstance(aContext);
+    @Override
+    void notesUpdated(int nSlideIndex) {
+        setUpSlideNotes(nSlideIndex);
     }
 
     private void refreshSlide(int aSlideIndex) {
@@ -297,22 +242,6 @@ public class SlidesPagerFragment extends Fragment implements ServiceConnection, 
 
     private void refreshSlidesPager() {
         getSlidesPager().getAdapter().notifyDataSetChanged();
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-
-        unregisterIntentsReceiver();
-    }
-
-    private void unregisterIntentsReceiver() {
-        try {
-            getBroadcastManager().unregisterReceiver(mIntentsReceiver);
-        } catch (IllegalArgumentException e) {
-            // Receiver not registered.
-            // Fixed in Honeycomb: Android’s issue #6191.
-        }
     }
 
     @Override
