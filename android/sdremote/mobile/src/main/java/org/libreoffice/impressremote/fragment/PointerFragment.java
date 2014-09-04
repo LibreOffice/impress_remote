@@ -15,7 +15,6 @@ import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.IBinder;
-import android.support.v4.app.Fragment;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -31,7 +30,7 @@ import org.libreoffice.impressremote.R;
 import org.libreoffice.impressremote.adapter.SlidesPagerAdapter;
 import org.libreoffice.impressremote.communication.CommunicationService;
 
-public class PointerFragment extends Fragment implements ServiceConnection, View.OnTouchListener {
+public class PointerFragment extends AbstractSlideFragment implements ServiceConnection, View.OnTouchListener {
     private CommunicationService mCommunicationService;
     private BroadcastReceiver mIntentsReceiver;
     private int displayheight, displaywidth, xoffset, yoffset;
@@ -126,6 +125,28 @@ public class PointerFragment extends Fragment implements ServiceConnection, View
         Context aContext = getActivity().getApplicationContext();
 
         return LocalBroadcastManager.getInstance(aContext);
+    }
+
+    @Override
+    void slideShowStateChanged() {
+        // TODO: we should really do something special for end of slideshow, but we don't handle
+        // that at all anywhere for now.
+        setUpCurrentSlide();
+    }
+
+    @Override
+    void slideChanged() {
+        setUpCurrentSlide();
+    }
+
+    @Override
+    void previewUpdated(int nSlideIndex) {
+        setUpCurrentSlide();
+    }
+
+    @Override
+    void notesUpdated(int nSlideIndex) {
+        // We don't show notes (yet) -- ignore.
     }
 
     @Override
