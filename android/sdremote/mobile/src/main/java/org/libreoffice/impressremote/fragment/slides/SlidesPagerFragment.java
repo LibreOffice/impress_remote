@@ -6,7 +6,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  */
-package org.libreoffice.impressremote.fragment;
+package org.libreoffice.impressremote.fragment.slides;
 
 import android.content.ComponentName;
 import android.content.Context;
@@ -219,6 +219,9 @@ public class SlidesPagerFragment extends AbstractSlideFragment
     private void refreshSlide(int aSlideIndex) {
         // Refresh only loaded slides to avoid images blinking on large slides count.
         // There is no way to invalidate only a certain slide.
+
+        // TODO: we probably want to implement what's needed (using a map) so that there is a way
+        // to "invalidate only a certain slide".
 
         int aCurrentSlideIndex = mCommunicationService.getSlideShow().getCurrentSlideIndex();
 
