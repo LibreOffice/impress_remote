@@ -32,6 +32,12 @@ import org.libreoffice.impressremote.adapter.SlidesGridAdapter;
 import org.libreoffice.impressremote.communication.CommunicationService;
 
 public class SlidesGridFragment extends AbstractSlideFragment implements ServiceConnection, AdapterView.OnItemClickListener {
+    // We need to keep track of this in order to know which slide needs 'resetting' when we change
+    // slides (i.e. the previously selected slide needs to have its highlighting removed,
+    // and the new selected slide needs to be highlighted -- there is nowhere else to retrieve which
+    // slide was previously selected for now).
+    private int mCurrentSlideIndex = 0;
+
     private CommunicationService mCommunicationService;
 
     public static SlidesGridFragment newInstance() {
@@ -72,6 +78,8 @@ public class SlidesGridFragment extends AbstractSlideFragment implements Service
 
         aSlidesGrid.setAdapter(buildSlidesAdapter());
         aSlidesGrid.setOnItemClickListener(this);
+
+        mCurrentSlideIndex = mCommunicationService.getSlideShow().getCurrentSlideIndex();
     }
 
     private GridView getSlidesGrid() {
@@ -117,7 +125,13 @@ public class SlidesGridFragment extends AbstractSlideFragment implements Service
 
     @Override
     void slideChanged() {
-        // TODO: update the selection rectangle
+        refreshSlidePreview(mCurrentSlideIndex);
+        mCurrentSlideIndex = mCommunicationService.getSlideShow().getCurrentSlideIndex();
+        refreshSlidePreview(mCurrentSlideIndex);
+        // TODO: we should probably just make the adapter cleverer so it can tell whether or not
+        // it needs to change a slide rather than brute-forcing from this end. This would also
+        // avoid completely rebuilding the view, i.e. we would know whether we need to refresh
+        // the preview independently of the highlighting changes.
     }
 
     @Override

@@ -64,6 +64,16 @@ public class SlidesGridAdapter extends BaseAdapter {
             aSlideViewHolder.mSlideIndex.setBackgroundColor(
                     aViewGroup.getResources().getColor(R.color.background_grid_slide_index_active));
             aSlideViewHolder.mSlidePreview.setBackgroundResource(R.drawable.bg_grid_slide_active);
+        } else {
+            // However we need to 'reset' the view to be non-selected otherwise: i.e. if we change
+            // slides (on the server), then the grid-view will be invalidated, but the existing
+            // views are reused -- meaning the previously (but no-longer) selected slide will
+            // still have a view with highlighted borders -- hence we need to de-highlight it.
+            // TODO: this whole class should have better state 'caching', and keep track of previews,
+            // to avoid needless updating here unless something has actually changed.
+            aSlideViewHolder.mSlideIndex.setBackgroundColor(
+                    aViewGroup.getResources().getColor(R.color.background_grid_slide_index_inactive));
+            aSlideViewHolder.mSlidePreview.setBackgroundResource(R.drawable.bg_grid_slide_inactive);
         }
 
         aSlideViewHolder.mSlideIndex.setText(Integer.toString(aPosition + 1));
