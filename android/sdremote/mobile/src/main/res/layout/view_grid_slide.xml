@@ -24,7 +24,7 @@
     <ImageView
         android:id="@+id/image_slide_preview"
         android:adjustViewBounds="true"
-        android:background="@drawable/bg_grid_slide"
+        android:background="@drawable/bg_grid_slide_inactive"
         android:contentDescription="@string/description_grid_slide"
         android:layout_alignParentTop="true"
         android:layout_width="wrap_content"
@@ -32,7 +32,7 @@
 
     <TextView
         android:id="@+id/text_slide_index"
-        android:background="@color/background_slide_index"
+        android:background="@color/background_grid_slide_index_inactive"
         android:textColor="@android:color/white"
         android:singleLine="true"
         android:layout_alignParentBottom="true"

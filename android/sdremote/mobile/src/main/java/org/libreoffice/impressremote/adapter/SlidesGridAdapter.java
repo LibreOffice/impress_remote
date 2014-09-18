@@ -59,6 +59,13 @@ public class SlidesGridAdapter extends BaseAdapter {
             setUpUnknownSlidePreview(aSlideViewHolder);
         }
 
+        // Highlight the currently selected slide for obviousness.
+        if (aPosition == mSlideShow.getCurrentSlideIndex()) {
+            aSlideViewHolder.mSlideIndex.setBackgroundColor(
+                    aViewGroup.getResources().getColor(R.color.background_grid_slide_index_active));
+            aSlideViewHolder.mSlidePreview.setBackgroundResource(R.drawable.bg_grid_slide_active);
+        }
+
         aSlideViewHolder.mSlideIndex.setText(Integer.toString(aPosition + 1));
 
         return aSlideView;
