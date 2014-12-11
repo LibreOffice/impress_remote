@@ -13,12 +13,16 @@
   <string name="menu_requirements">Cerințe</string>
   <string name="menu_reconnect">Reconectare</string>
   <string name="menu_add_computer">Adăugare calculator</string>
+  <string name="menu_start_discovery">Pornire descoperire</string>
   <string name="menu_remove_computer">Eliminare</string>
   <string name="menu_slides_grid">Afișor diapozitive</string>
+  <string name="menu_slides_pager">Paginare diapozitive</string>
   <string name="menu_timer">Cronometru</string>
   <string name="menu_stop_slide_show">Oprire prezentare</string>
   <string name="menu_pause_slide_show">Pauză prezentare</string>
   <string name="menu_resume_slide_show">Reluare prezentare</string>
+  <string name="menu_start_pointer">Pornire indicator</string>
+  <string name="menu_stop_pointer">Oprire indicator</string>
   <string name="button_cancel">Anulare</string>
   <string name="button_save">Salvare</string>
   <string name="button_start">Începe</string>

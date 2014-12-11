@@ -27,10 +27,10 @@
   <string name="button_save">Shrani</string>
   <string name="button_start">Začni</string>
   <string name="button_remove">Odstrani</string>
-  <string name="message_impress_pin_validation">V LibreOffice Impress pojdite na \"Projekcija → Daljinec za Impress\" in vnesite kodo.</string>
+  <string name="message_impress_pin_validation">V LibreOffice Impress pojdite na »Projekcija → Daljinec za Impress« in vnesite kodo.</string>
   <string name="message_connection_failed_title">Povezava ni uspela</string>
-  <string name="message_impress_remote_enabling">Preverite, da ste omogočili daljinec. Odprite \"Orodja → Možnosti → LibreOffice Impress → Splošno\" v LibreOffice Impress.</string>
-  <string name="message_impress_wifi_enabling">Prav tako omogočite poskusne funkcionalnosti v \"Orodja → Možnosti → LibreOffice → Napredno\".</string>
+  <string name="message_impress_remote_enabling">Preverite, da ste omogočili daljinec. Odprite »Orodja → Možnosti → LibreOffice Impress → Splošno« v LibreOffice Impress.</string>
+  <string name="message_impress_wifi_enabling">Prav tako omogočite poskusne funkcionalnosti v »Orodja → Možnosti → LibreOffice → Napredno«.</string>
   <string name="message_impress_pairing_check">Če imate težave pri ujemanju naprav prek vmesnika Bluetooth, preverite napotke svojega namiznega operacijskega sistema.</string>
   <string name="message_ip_address_validation">Vnesite veljaven naslov IP.</string>
   <string name="message_time_is_up">Čas je potekel!</string>
@@ -61,8 +61,8 @@
   <string name="preferences_quiet_mode_title">Tihi način</string>
   <string name="preferences_quiet_mode_summary">Nastavi, da telefon med predstavitvijo vibrira</string>
   <string name="requirements_libreoffice_version">Na računalniku nameščen LibreOffice različice 4.0.3 ali novejši.</string>
-  <string name="requirements_libreoffice_general_enabled">V LibreOffice Impress omogočen Daljinec za Impress, v \"Orodja → Možnosti → LibreOffice Impress → Splošno\".</string>
-  <string name="requirements_libreoffice_experimental_enabled">V LibreOffice Impress omogočene poskusne funkcionalnosti v \"Orodja → Možnosti → LibreOffice → Napredno\".</string>
+  <string name="requirements_libreoffice_general_enabled">V LibreOffice Impress omogočen Daljinec za Impress, v »Orodja → Možnosti → LibreOffice Impress → Splošno«.</string>
+  <string name="requirements_libreoffice_experimental_enabled">V LibreOffice Impress omogočene poskusne funkcionalnosti v »Orodja → Možnosti → LibreOffice → Napredno«.</string>
   <string name="requirements_network_connection">Napravo Android in računalnik, priključena na isto omrežje.</string>
   <string name="requirements_network_ports">Če imate požarni zid, preverite, da sta vrati 1598 in 1599 odprti.</string>
   <string name="requirements_bluetooth_connection">Računalnik z omogočenim vmesnikom Bluetooth.</string>
