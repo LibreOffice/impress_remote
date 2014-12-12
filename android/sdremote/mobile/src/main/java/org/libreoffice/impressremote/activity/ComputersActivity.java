@@ -130,14 +130,14 @@ public class ComputersActivity extends ActionBarActivity implements ActionBar.Ta
     @Override
     public boolean onPrepareOptionsMenu(Menu aMenu) {
         aMenu.findItem(R.id.menu_add_computer)
-            .setVisible(getSupportActionBar().getSelectedTab().equals(wifiTab));
+            .setVisible(wifiTab.equals(getSupportActionBar().getSelectedTab()));
 
         MenuItem btDiscovery = aMenu.findItem(R.id.menu_start_discovery);
         if( btAdapter != null && btAdapter.isDiscovering()) {
             btDiscovery.setEnabled(false);
             MenuItemCompat.setActionView(btDiscovery, R.layout.progress);
         }
-        btDiscovery.setVisible(getSupportActionBar().getSelectedTab().equals(btTab));
+        btDiscovery.setVisible(btTab.equals(getSupportActionBar().getSelectedTab()));
 
         return super.onPrepareOptionsMenu(aMenu);
     }
@@ -174,8 +174,8 @@ public class ComputersActivity extends ActionBarActivity implements ActionBar.Ta
 
         SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
-        editor.putBoolean(SELECT_BLUETOOTH, getSupportActionBar()
-                .getSelectedTab().equals(btTab));
+        editor.putBoolean(SELECT_BLUETOOTH, btTab.equals(getSupportActionBar()
+                .getSelectedTab()));
         editor.commit();
     }
 
