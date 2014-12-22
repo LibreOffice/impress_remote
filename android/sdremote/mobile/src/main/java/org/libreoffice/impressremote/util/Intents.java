@@ -48,6 +48,16 @@ public final class Intents {
         public static final String TIMER_STARTED = "TIMER_STARTED";
         public static final String TIMER_RESUMED = "TIMER_RESUMED";
         public static final String TIMER_CHANGED = "TIMER_CHANGED";
+
+        public static final String GOOGLE_API_CONNECTED="GOOGLE_API_CONNECTED";
+        public static final String WEAR_NEXT= "WEAR_NEXT";
+        public static final String WEAR_PREVIOUS= "WEAR_PREVIOUS";
+/*        public static final String WEAR_PAUSE= "WEAR_PAUSE";
+        public static final String WEAR_RESUME= "WEAR_RESUME";*/
+        public static final String WEAR_CONNECT= "WEAR_CONNECT";
+        public static final String WEAR_EXIT= "WEAR_EXIT";
+        public static final String WEAR_PAUSE_RESUME="WEAR_PAUSE_RESUME";
+
     }
 
     public static final class Extras {
@@ -109,6 +119,30 @@ public final class Intents {
         aIntent.putExtra(Extras.SLIDE_INDEX, aSlideIndex);
 
         return aIntent;
+    }
+    public static Intent buildGoogleApiConnectedIntent(){
+        return new Intent(Actions.GOOGLE_API_CONNECTED);
+    }
+    public static Intent buildWearNextIntent() {
+        return new Intent(Actions.WEAR_NEXT);
+    }
+    public static Intent buildWearPreviousIntent() {
+        return new Intent(Actions.WEAR_PREVIOUS);
+    }
+/*    public static Intent buildWearPauseIntent() {
+        return new Intent(Actions.WEAR_PAUSE);
+    }
+    public static Intent buildWearResumeIntent() {
+        return new Intent(Actions.WEAR_RESUME);
+    }*/
+    public static Intent buildWearConnectIntent() {
+        return new Intent(Actions.WEAR_CONNECT);
+    }
+    public static Intent buildWearExitIntent() {
+        return new Intent(Actions.WEAR_EXIT);
+    }
+    public static Intent buildWearPauseResumeIntent() {
+        return new Intent(Actions.WEAR_PAUSE_RESUME);
     }
 
     public static Intent buildSlidePreviewIntent(int aSlideIndex) {
