@@ -28,6 +28,7 @@ import android.view.MenuItem;
 
 import org.libreoffice.impressremote.R;
 import org.libreoffice.impressremote.communication.CommunicationService;
+import org.libreoffice.impressremote.communication.CommunicationServiceWear;
 import org.libreoffice.impressremote.communication.SlideShow;
 import org.libreoffice.impressremote.communication.Timer;
 import org.libreoffice.impressremote.fragment.slides.EmptySlideFragment;
@@ -52,6 +53,7 @@ public class SlideShowActivity extends ActionBarActivity implements ServiceConne
 
     private CommunicationService mCommunicationService;
     private IntentsReceiver mIntentsReceiver;
+
 
     @Override
     protected void onCreate(Bundle aSavedInstanceState) {
@@ -150,6 +152,9 @@ public class SlideShowActivity extends ActionBarActivity implements ServiceConne
         CommunicationService.ServiceBinder aServiceBinder = (CommunicationService.ServiceBinder) aBinder;
         mCommunicationService = aServiceBinder.getService();
 
+        //TODO check if wear api is present
+        this.startService(new Intent(this, CommunicationServiceWear.class));
+
         startSlideShow();
         resumeTimer();
     }
@@ -208,6 +213,7 @@ public class SlideShowActivity extends ActionBarActivity implements ServiceConne
 
             if (Intents.Actions.SLIDE_CHANGED.equals(aIntent.getAction())) {
                 mSlideShowActivity.setUpSlideShowInformation();
+                mSlideShowActivity.slideCountMessage();
                 return;
             }
 
@@ -234,6 +240,22 @@ public class SlideShowActivity extends ActionBarActivity implements ServiceConne
                 mSlideShowActivity.resumeTimer();
                 mSlideShowActivity.setUpSlideShowInformation();
             }
+
+            if (Intents.Actions.WEAR_NEXT.equals(aIntent.getAction())) {
+                mSlideShowActivity.nextTransition();
+            }
+            if (Intents.Actions.WEAR_PREVIOUS.equals(aIntent.getAction())) {
+                mSlideShowActivity.previousTransition();
+            }
+            if (Intents.Actions.WEAR_PAUSE.equals(aIntent.getAction())) {
+                mSlideShowActivity.pausePresentation();
+            }
+            if (Intents.Actions.WEAR_RESUME.equals(aIntent.getAction())) {
+                mSlideShowActivity.resumePresentation();
+            }
+            if (Intents.Actions.WEAR_CONNECT.equals(aIntent.getAction())) {
+                mSlideShowActivity.slideCountMessage();
+            }
         }
     }
 
@@ -245,6 +267,11 @@ public class SlideShowActivity extends ActionBarActivity implements ServiceConne
         aIntentFilter.addAction(Intents.Actions.TIMER_STARTED);
         aIntentFilter.addAction(Intents.Actions.TIMER_RESUMED);
         aIntentFilter.addAction(Intents.Actions.TIMER_CHANGED);
+        aIntentFilter.addAction(Intents.Actions.WEAR_NEXT);
+        aIntentFilter.addAction(Intents.Actions.WEAR_PREVIOUS);
+        aIntentFilter.addAction(Intents.Actions.WEAR_PAUSE);
+        aIntentFilter.addAction(Intents.Actions.WEAR_RESUME);
+        aIntentFilter.addAction(Intents.Actions.WEAR_CONNECT);
 
         return aIntentFilter;
     }
@@ -350,6 +377,9 @@ public class SlideShowActivity extends ActionBarActivity implements ServiceConne
         int aSlidesCount = mCommunicationService.getSlideShow().getSlidesCount();
 
         return aCurrentSlideIndex == aSlidesCount;
+    }
+    private boolean isFirstSlideDisplayed(){
+        return(mCommunicationService.getSlideShow().getHumanCurrentSlideIndex()==1);
     }
 
     @Override
@@ -607,6 +637,42 @@ public class SlideShowActivity extends ActionBarActivity implements ServiceConne
     public void onServiceDisconnected(ComponentName aComponentName) {
         mCommunicationService = null;
     }
+
+    /**
+     * Used in Wear control
+     */
+    private void nextTransition(){
+        if (!isLastSlideDisplayed()) {
+            mCommunicationService.getCommandsTransmitter().performNextTransition();
+        }
+    }
+    private void previousTransition(){
+        if(!isFirstSlideDisplayed()){
+            mCommunicationService.getCommandsTransmitter().performPreviousTransition();
+        }
+    }
+    private void pausePresentation(){
+        changeMode(Mode.EMPTY);
+        setUpSlideShowPausedInformation();
+        pauseSlideShow();
+        pauseTimer();
+    }
+    private void resumePresentation(){
+        changeMode(Mode.PAGER);
+        setUpSlideShowInformation();
+        resumeSlideShow();
+        resumeTimer();
+    }
+
+    private void slideCountMessage(){
+
+        //TODO check if wear api is present
+
+        String count=String.valueOf(mCommunicationService.getSlideShow().getHumanCurrentSlideIndex())
+                +"/"+String.valueOf(mCommunicationService.getSlideShow().getSlidesCount());
+        CommunicationServiceWear.sendMessage("/count",count);
+    }
+
 }
 
 /* vim:set shiftwidth=4 softtabstop=4 expandtab: */
