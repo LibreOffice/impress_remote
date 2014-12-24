@@ -39,12 +39,14 @@ def cmd_app_msg_send_bytes(pebble, args):
 
 def cmd_remote(pebble, args):
     path="/home/gulsah/cesisunum.odp"
-    runodp = args.app_name+" --show "+path
+    runodp = args.app_name+" --impress "+path
     pebble.set_nowplaying_metadata("Libreoffice Remote Control ", "Next", "Previous")
 
     try:
         pexpect.run(runodp, timeout=5)
         window_id = pexpect.run("xdotool search --sync --onlyvisible --class \"libreoffice\"")
+	fullscreen = "xdotool key --window " +window_id+" F5"
+	pexpect.run(fullscreen) 
     except Exception:
         print "Somethings are going bad"
         return False
