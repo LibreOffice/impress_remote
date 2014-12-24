@@ -6,6 +6,7 @@ import pebble as libpebble
 import subprocess
 import sys
 import time
+import pexpect
 
 MAX_ATTEMPTS = 5
 
@@ -37,42 +38,43 @@ def cmd_app_msg_send_bytes(pebble, args):
 		pebble.app_message_send_byte_array(args.app_uuid, args.key, args.tuple_bytes)
 
 def cmd_remote(pebble, args):
-    def do_oscacript(command):
-        cmd = "osascript -e 'tell application \""+args.app_name+"\" to "+command+"'"
-        try:
-            return subprocess.check_output(cmd, shell=True)
-        except subprocess.CalledProcessError:
-            print "Failed to send message to "+args.app_name+", is it running?"
-            return False
+    path="/home/gulsah/cesisunum.odp"
+    runodp = args.app_name+" --show "+path
+    pebble.set_nowplaying_metadata("Libreoffice Remote Control ", "Next", "Previous")
+
+    try:
+        pexpect.run(runodp, timeout=5)
+        window_id = pexpect.run("xdotool search --sync --onlyvisible --class \"libreoffice\"")
+    except Exception:
+        print "Somethings are going bad"
+        return False
+
+    def libreoffice_event_handler(event):
+        right_click = "xdotool key --window "+ window_id + "Right"
+        left_click = "xdotool key --window "+ window_id + "Left"
+
+        if event == "next":
+            pexpect.run(right_click)
+
+        if event == "previous":
+            pexpect.run(left_click)
 
     def music_control_handler(endpoint, resp):
         events = {
             "PLAYPAUSE": "playpause",
-            "PREVIOUS": "previous track",
-            "NEXT": "next track"
+            "PREVIOUS": "previous",
+            "NEXT": "next"
         }
-        do_oscacript(events[resp])
-        update_metadata()
 
-    def update_metadata():
-        artist = do_oscacript("artist of current track as string")
-        title = do_oscacript("name of current track as string")
-        album = do_oscacript("album of current track as string")
+        libreoffice_event_handler(events[resp])
 
-        if not artist or not title or not album:
-            pebble.set_nowplaying_metadata("No Music Found", "", "")
-        else:
-            pebble.set_nowplaying_metadata(title, album, artist)
-
-    pebble.register_endpoint("MUSIC_CONTROL", music_control_handler)
-
-    print 'waiting for music control events'
-    try:
-        while True:
-            update_metadata()
+    print "waiting for events"
+    while True:
+        try:
+            pebble.register_endpoint("MUSIC_CONTROL", music_control_handler)
             time.sleep(5)
-    except KeyboardInterrupt:
-        return
+        except KeyboardInterrupt:
+            return
 
 def cmd_logcat(pebble, args):
     print 'listening for logs...'
