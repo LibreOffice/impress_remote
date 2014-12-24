@@ -7,20 +7,31 @@
  */
 package org.libreoffice.impressremote.communication;
 
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.NotificationCompat;
+import android.support.v4.app.NotificationManagerCompat;
 import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.wearable.DataEvent;
 import com.google.android.gms.wearable.DataEventBuffer;
+import com.google.android.gms.wearable.DataMap;
+import com.google.android.gms.wearable.DataMapItem;
 import com.google.android.gms.wearable.MessageApi;
 import com.google.android.gms.wearable.MessageEvent;
 import com.google.android.gms.wearable.Node;
 import com.google.android.gms.wearable.NodeApi;
 import com.google.android.gms.wearable.Wearable;
 import com.google.android.gms.wearable.WearableListenerService;
+
+import org.libreoffice.impressremote.R;
+import org.libreoffice.impressremote.activity.MainActivity;
 
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.Charset;
@@ -30,8 +41,11 @@ public class DataLayerListenerService extends WearableListenerService implements
         GoogleApiClient.OnConnectionFailedListener {
 
     private static final String TAG = "DataLayerListenerService";
+    private static final int N_START=001;
+    private static final int N_STATUS=002;
 
     GoogleApiClient mGoogleApiClient;
+
 
     public DataLayerListenerService() {
     }
@@ -90,8 +104,29 @@ public class DataLayerListenerService extends WearableListenerService implements
 
     @Override
     public void onDataChanged(DataEventBuffer dataEvents) {
-        super.onDataChanged(dataEvents);
         Log.v(TAG, "Data Changed");
+     /*   DataMap dataMap;
+        for (DataEvent event : dataEvents) {
+            // Check the event type
+            if (event.getType() == DataEvent.TYPE_CHANGED) {
+                String path = event.getDataItem().getUri().getPath();
+                //Verify the data path, get the DataMap, and send local notification
+                if (path.equals("/wearable_start")) {
+                    // Create and send a local notification inviting the user to start the wearable app
+                    dataMap = DataMapItem.fromDataItem(event.getDataItem()).getDataMap();
+                    sendLocalNotification(N_START,dataMap.getString("title"), dataMap.getString("body"));
+                }
+                if (path.equals("/wearable_status")) {
+                    // Create and send a local notification inviting the user to start the wearable app
+                    dataMap = DataMapItem.fromDataItem(event.getDataItem()).getDataMap();
+                    sendLocalNotification(N_STATUS,dataMap.getString("title"), dataMap.getString("body"));
+                }
+            }
+            if (event.getType() == DataEvent.TYPE_DELETED) {
+
+            }
+        }
+        */
     }
 
     @Override
@@ -105,10 +140,20 @@ public class DataLayerListenerService extends WearableListenerService implements
                 aIntent.putExtra("DATA",message);
                 LocalBroadcastManager.getInstance(this).sendBroadcast(aIntent);
             }
+            if(messageEvent.getPath().equals("/wearable_start")){
+                sendLocalNotification(N_START,"Impress Remote",message);
+            }
+            if(messageEvent.getPath().equals("/wearable_status")){
+                sendLocalNotification(N_STATUS,"Presentation Running",message);
+            }
+            if(messageEvent.getPath().equals("/wearable_stop")){
+                //TODO update(or close) full screen
+                cancelNotifications();
+            }
+
         }catch(UnsupportedEncodingException e){
 
         }
-
 
     }
 
@@ -136,6 +181,41 @@ public class DataLayerListenerService extends WearableListenerService implements
                 }
             }
         }).start();
+    }
+    private void cancelNotifications(){
+        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
+        notificationManager.cancel(N_START);
+        notificationManager.cancel(N_STATUS);
+    }
+
+    private void sendLocalNotification(int id,String title, String body) {
+        Log.v(TAG, "sendLocalNotification");
+//        int notificationId = 001;
+
+        // Create a pending intent that starts this wearable app
+
+        Intent startIntent;
+        if(id==001){
+            startIntent = new Intent(this, MainActivity.class).setAction(Intent.ACTION_MAIN);
+        }else{
+            startIntent = new Intent(this, MainActivity.class).setAction(Intent.ACTION_VIEW);
+        }
+
+        PendingIntent startPendingIntent = PendingIntent.getActivity(this, 0, startIntent, 0);
+
+        Notification notify = new NotificationCompat.Builder(this)
+                .setContentTitle(title)
+                .setContentText(body)
+                .setLocalOnly(true)
+                .setOngoing(true)
+                .setSmallIcon(R.drawable.ic_launcher)
+                .setContentIntent(startPendingIntent)
+                .build();
+
+        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
+        cancelNotifications();
+        notificationManager.notify(id, notify);
+
     }
 
 }

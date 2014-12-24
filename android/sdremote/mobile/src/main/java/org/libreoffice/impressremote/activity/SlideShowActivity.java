@@ -8,6 +8,7 @@
  */
 package org.libreoffice.impressremote.activity;
 
+import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
@@ -19,9 +20,12 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.NotificationCompat;
+import android.support.v4.app.NotificationManagerCompat;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -256,6 +260,9 @@ public class SlideShowActivity extends ActionBarActivity implements ServiceConne
             if (Intents.Actions.WEAR_CONNECT.equals(aIntent.getAction())) {
                 mSlideShowActivity.slideCountMessage();
             }
+            if (Intents.Actions.WEAR_EXIT.equals(aIntent.getAction())) {
+                mSlideShowActivity.showWearNotification();
+            }
         }
     }
 
@@ -272,6 +279,7 @@ public class SlideShowActivity extends ActionBarActivity implements ServiceConne
         aIntentFilter.addAction(Intents.Actions.WEAR_PAUSE);
         aIntentFilter.addAction(Intents.Actions.WEAR_RESUME);
         aIntentFilter.addAction(Intents.Actions.WEAR_CONNECT);
+        aIntentFilter.addAction(Intents.Actions.WEAR_EXIT);
 
         return aIntentFilter;
     }
@@ -631,6 +639,8 @@ public class SlideShowActivity extends ActionBarActivity implements ServiceConne
 
     private void unbindService() {
         unbindService(this);
+
+        this.stopService(new Intent(this, CommunicationServiceWear.class));
     }
 
     @Override
@@ -671,6 +681,37 @@ public class SlideShowActivity extends ActionBarActivity implements ServiceConne
         String count=String.valueOf(mCommunicationService.getSlideShow().getHumanCurrentSlideIndex())
                 +"/"+String.valueOf(mCommunicationService.getSlideShow().getSlidesCount());
         CommunicationServiceWear.sendMessage("/count",count);
+    }
+    private String notificationCount(){
+        return "Slide "+ mCommunicationService.getSlideShow().getHumanCurrentSlideIndex()
+                +" of "+mCommunicationService.getSlideShow().getSlidesCount();
+    }
+    private void showWearNotification(){
+        Log.d("SlideShowActivity","showWearNotification");
+        CommunicationServiceWear.sendStatusNotification(notificationCount());
+        /*
+        int notificationId = 001;
+        final String NOTIFICATION_ID = "notification_id";
+// Build intent for notification content
+        Intent viewIntent = new Intent(this, SlideShowActivity.class);
+        viewIntent.putExtra(NOTIFICATION_ID, notificationId);
+        PendingIntent viewPendingIntent =
+                PendingIntent.getActivity(this, 0, viewIntent, 0);
+
+        NotificationCompat.Builder notificationBuilder =
+                new NotificationCompat.Builder(this)
+                        .setSmallIcon(R.drawable.ic_launcher)
+                        .setContentTitle("Presentation running")
+                        .setContentText(notificationCount())
+                        .setContentIntent(viewPendingIntent);
+
+// Get an instance of the NotificationManager service
+        NotificationManagerCompat notificationManager =
+                NotificationManagerCompat.from(this);
+
+// Build the notification and issues it with notification manager.
+        notificationManager.notify(notificationId, notificationBuilder.build());
+*/
     }
 
 }

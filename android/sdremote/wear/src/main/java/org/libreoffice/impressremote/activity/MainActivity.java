@@ -63,12 +63,35 @@ public class MainActivity extends Activity implements
        this.startService(new Intent(this, DataLayerListenerService.class));
 
     }
+    @Override
+    protected void onDestroy() {
+        Log.v(TAG, "onDestroy");
+//        new SendActivityPhoneMessage("/exit","").start();
+        super.onDestroy();
+    }
+
+    @Override
+     protected void onPause(){
+        Log.v(TAG, "onPause");
+        new SendActivityPhoneMessage("/appPaused","").start();
+        super.onPause();
+    }
+
+    @Override
+    protected void onStop(){
+        Log.v(TAG, "onStop");
+//        new SendActivityPhoneMessage("/exit","").start();
+        super.onStop();
+    }
+
+
     private void registerIntentsReceiver() {
         mIntentsReceiver = new IntentsReceiver(this);
         IntentFilter aIntentFilter = buildIntentsReceiverFilter();
 
         LocalBroadcastManager.getInstance(getApplicationContext()).registerReceiver(mIntentsReceiver, aIntentFilter);
     }
+
     private void unregisterIntentsReceiver() {
         try {
             LocalBroadcastManager.getInstance(getApplicationContext()).unregisterReceiver(mIntentsReceiver);
