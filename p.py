@@ -38,7 +38,7 @@ def cmd_app_msg_send_bytes(pebble, args):
 		pebble.app_message_send_byte_array(args.app_uuid, args.key, args.tuple_bytes)
 
 def cmd_remote(pebble, args):
-    path="/home/gulsah/cesisunum.odp"
+    path=args.odp_file_fullpath
     runodp = args.app_name+" --impress "+path
     pebble.set_nowplaying_metadata("Libreoffice Remote Control ", "Next", "Previous")
 
@@ -229,6 +229,7 @@ def main():
 
     remote_parser = subparsers.add_parser('remote', help='control a music app on this PC using Pebble')
     remote_parser.add_argument('app_name', type=str, help='title of application to be controlled')
+    remote_parser.add_argument('odp_file_fullpath', type=str, help='full path for libreoffice impress presentation file')
     remote_parser.set_defaults(func=cmd_remote)
 
 
