@@ -263,6 +263,9 @@ public class SlideShowActivity extends ActionBarActivity implements ServiceConne
             if (Intents.Actions.WEAR_EXIT.equals(aIntent.getAction())) {
                 mSlideShowActivity.showWearNotification();
             }
+            if (Intents.Actions.WEAR_PAUSE_RESUME.equals(aIntent.getAction())) {
+                mSlideShowActivity.pauseResumePresentation();
+            }
         }
     }
 
@@ -280,6 +283,7 @@ public class SlideShowActivity extends ActionBarActivity implements ServiceConne
         aIntentFilter.addAction(Intents.Actions.WEAR_RESUME);
         aIntentFilter.addAction(Intents.Actions.WEAR_CONNECT);
         aIntentFilter.addAction(Intents.Actions.WEAR_EXIT);
+        aIntentFilter.addAction(Intents.Actions.WEAR_PAUSE_RESUME);
 
         return aIntentFilter;
     }
@@ -524,6 +528,9 @@ public class SlideShowActivity extends ActionBarActivity implements ServiceConne
         setUpFragment();
         refreshActionBarMenu();
     }
+    private boolean modeIsEmpty(){
+        return mMode==Mode.EMPTY;
+    }
 
     private void refreshActionBarMenu() {
         supportInvalidateOptionsMenu();
@@ -652,12 +659,12 @@ public class SlideShowActivity extends ActionBarActivity implements ServiceConne
      * Used in Wear control
      */
     private void nextTransition(){
-        if (!isLastSlideDisplayed()) {
+        if (!isLastSlideDisplayed() && !modeIsEmpty()) {
             mCommunicationService.getCommandsTransmitter().performNextTransition();
         }
     }
     private void previousTransition(){
-        if(!isFirstSlideDisplayed()){
+        if(!isFirstSlideDisplayed() && !modeIsEmpty()){
             mCommunicationService.getCommandsTransmitter().performPreviousTransition();
         }
     }
@@ -672,6 +679,13 @@ public class SlideShowActivity extends ActionBarActivity implements ServiceConne
         setUpSlideShowInformation();
         resumeSlideShow();
         resumeTimer();
+    }
+    private void pauseResumePresentation(){
+        if(modeIsEmpty()){
+            resumePresentation();
+        }else{
+            pausePresentation();
+        }
     }
 
     private void slideCountMessage(){

@@ -42,7 +42,7 @@ public class MainActivity extends Activity implements
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.full_screen);
+        setContentView(R.layout.full_screen_minimal);
 
         if(null == mGoogleApiClient) {
             mGoogleApiClient = new GoogleApiClient.Builder(this)
@@ -130,6 +130,9 @@ public class MainActivity extends Activity implements
     }
     public void onButtonClickedPause(View target) {
         new SendActivityPhoneMessage("/pause","").start();
+    }
+    public void onButtonClickedPauseResume(View target) {
+        new SendActivityPhoneMessage("/pauseResume","").start();
     }
     public void onButtonClickedResume(View target) {
         new SendActivityPhoneMessage("/resume","").start();

@@ -2,5 +2,8 @@
 <resources>
 
     <string name="application_name">Impress Remote</string>
+    <string name="left_arrow">&lt;</string>
+    <string name="right_arrow">&gt;</string>
+    <string name="pause_resume">|| / ►</string>
 
 </resources>

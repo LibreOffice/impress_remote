@@ -112,6 +112,10 @@ public class CommunicationServiceWear extends WearableListenerService {
             Intent aIntent= Intents.buildWearExitIntent();
             LocalBroadcastManager.getInstance(this).sendBroadcast(aIntent);
         }
+        if(messageEvent.getPath().equals("/pauseResume")){
+            Intent aIntent= Intents.buildWearPauseResumeIntent();
+            LocalBroadcastManager.getInstance(this).sendBroadcast(aIntent);
+        }
 
 
 

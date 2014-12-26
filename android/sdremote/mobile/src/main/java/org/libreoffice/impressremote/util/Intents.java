@@ -55,6 +55,7 @@ public final class Intents {
         public static final String WEAR_RESUME= "WEAR_RESUME";
         public static final String WEAR_CONNECT= "WEAR_CONNECT";
         public static final String WEAR_EXIT= "WEAR_EXIT";
+        public static final String WEAR_PAUSE_RESUME="WEAR_PAUSE_RESUME";
 
     }
 
@@ -140,6 +141,10 @@ public final class Intents {
     }
     public static Intent buildWearExitIntent() {
         Intent aIntent = new Intent(Actions.WEAR_EXIT);
+        return aIntent;
+    }
+    public static Intent buildWearPauseResumeIntent() {
+        Intent aIntent = new Intent(Actions.WEAR_PAUSE_RESUME);
         return aIntent;
     }
 
