@@ -8,12 +8,15 @@
 package org.libreoffice.impressremote.activity;
 
 import android.app.Activity;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.v4.content.LocalBroadcastManager;
+import android.support.wearable.view.CardFragment;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
@@ -66,21 +69,21 @@ public class MainActivity extends Activity implements
     @Override
     protected void onDestroy() {
         Log.v(TAG, "onDestroy");
-//        new SendActivityPhoneMessage("/exit","").start();
+        unregisterIntentsReceiver();
+        this.stopService(new Intent(this, DataLayerListenerService.class));
         super.onDestroy();
     }
 
     @Override
      protected void onPause(){
         Log.v(TAG, "onPause");
-        new SendActivityPhoneMessage("/appPaused","").start();
+        DataLayerListenerService.commandAppPaused();
         super.onPause();
     }
 
     @Override
     protected void onStop(){
         Log.v(TAG, "onStop");
-//        new SendActivityPhoneMessage("/exit","").start();
         super.onStop();
     }
 
@@ -119,48 +122,22 @@ public class MainActivity extends Activity implements
     @Override
     public void onConnected(Bundle connectionHint) {
         Log.v(TAG,"onConnected called");
-        new SendActivityPhoneMessage("/connect","").start();
+        DataLayerListenerService.commandConnect();
     }
 
     public void onButtonClickedPrevious(View target) {
-        new SendActivityPhoneMessage("/previous","").start();
+        DataLayerListenerService.commandPrevious();
     }
     public void onButtonClickedNext(View target) {
-        new SendActivityPhoneMessage("/next","").start();
-    }
-    public void onButtonClickedPause(View target) {
-        new SendActivityPhoneMessage("/pause","").start();
+        DataLayerListenerService.commandNext();
     }
     public void onButtonClickedPauseResume(View target) {
-        new SendActivityPhoneMessage("/pauseResume","").start();
-    }
-    public void onButtonClickedResume(View target) {
-        new SendActivityPhoneMessage("/resume","").start();
+        DataLayerListenerService.commandPauseResume();
     }
     private void changeSlideCount(String count){
         TextView textView;
         textView = (TextView) findViewById(R.id.textView_counter);
         textView.setText(count);
-    }
-
-    private class SendActivityPhoneMessage extends Thread {
-        String path;
-        String message;
-
-        SendActivityPhoneMessage(String p, String msg) {
-            path = p;
-            message = msg;
-        }
-
-        public void run() {
-            NodeApi.GetConnectedNodesResult nodes =
-                    Wearable.NodeApi.getConnectedNodes( mGoogleApiClient ).await();
-            for(Node node : nodes.getNodes()) {
-                MessageApi.SendMessageResult result = Wearable.MessageApi.sendMessage(
-                        mGoogleApiClient, node.getId(), path,null ).await();
-            }
-
-        }
     }
     private static final class IntentsReceiver extends BroadcastReceiver {
         private final MainActivity mainActivity;

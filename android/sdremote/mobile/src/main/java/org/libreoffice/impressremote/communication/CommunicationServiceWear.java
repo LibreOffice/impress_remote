@@ -44,6 +44,14 @@ public class CommunicationServiceWear extends WearableListenerService {
 
     private static final String TAG = "CommunicationServiceWear";
 
+    private static final String COMMAND_NEXT="/next";
+    private static final String COMMAND_PREVIOUS="/previous";
+    private static final String COMMAND_PAUSERESUME="/pauseResume";
+    private static final String COMMAND_CONNECT="/connect";
+    private static final String COMMAND_APP_PAUSED="/appPaused";
+    private static final String COMMAND_PRESENTATION_STOPPED="/wearableStop";
+    private static final String COMMAND_SLIDE_COUNT="/count";
+
     private static GoogleApiClient googleApiClient;
 
 
@@ -56,8 +64,9 @@ public class CommunicationServiceWear extends WearableListenerService {
         Log.v(TAG, "GoogleApiClient created");
         googleApiClient.connect();
         Log.v(TAG, "Connecting to GoogleApiClient..");
-        notifyWearStart();
 
+        Intent aIntent= Intents.buildGoogleApiConnectedIntent();
+        LocalBroadcastManager.getInstance(this).sendBroadcast(aIntent);
 
     }
 
@@ -65,18 +74,19 @@ public class CommunicationServiceWear extends WearableListenerService {
     public void onDestroy(){
         Log.v(TAG, "onDestroy");
         if(null != googleApiClient){
-
-            final ScheduledExecutorService exec = Executors.newScheduledThreadPool(1);
             notifyWearStop();
+            final ScheduledExecutorService exec = Executors.newScheduledThreadPool(1);
             exec.schedule(new Runnable(){
                 @Override
                 public void run(){
-                    if(googleApiClient.isConnected()){
-                        googleApiClient.disconnect();
-                        Log.v(TAG, "GoogleApiClient disconnected");
+                    if(googleApiClient!=null){
+                        if(googleApiClient.isConnected()){
+                            googleApiClient.disconnect();
+                            Log.v(TAG, "GoogleApiClient disconnected");
+                        }
                     }
                 }
-            }, 1, TimeUnit.SECONDS);
+            }, 2, TimeUnit.SECONDS);
 
     }
         super.onDestroy();
@@ -88,31 +98,31 @@ public class CommunicationServiceWear extends WearableListenerService {
 
        Log.d(TAG, "onMessageReceived: " + messageEvent.getPath());
 
-        if(messageEvent.getPath().equals("/next")){
+        if(messageEvent.getPath().equals(COMMAND_NEXT)){
             Intent aIntent= Intents.buildWearNextIntent();
             LocalBroadcastManager.getInstance(this).sendBroadcast(aIntent);
         }
-        if(messageEvent.getPath().equals("/previous")){
+        if(messageEvent.getPath().equals(COMMAND_PREVIOUS)){
             Intent aIntent= Intents.buildWearPreviousIntent();
             LocalBroadcastManager.getInstance(this).sendBroadcast(aIntent);
         }
-        if(messageEvent.getPath().equals("/pause")){
+/*        if(messageEvent.getPath().equals("/pause")){
             Intent aIntent= Intents.buildWearPauseIntent();
             LocalBroadcastManager.getInstance(this).sendBroadcast(aIntent);
         }
         if(messageEvent.getPath().equals("/resume")){
             Intent aIntent= Intents.buildWearResumeIntent();
             LocalBroadcastManager.getInstance(this).sendBroadcast(aIntent);
-        }
-        if(messageEvent.getPath().equals("/connect")){
+        }*/
+        if(messageEvent.getPath().equals(COMMAND_CONNECT)){
             Intent aIntent= Intents.buildWearConnectIntent();
             LocalBroadcastManager.getInstance(this).sendBroadcast(aIntent);
         }
-        if(messageEvent.getPath().equals("/appPaused")){
+        if(messageEvent.getPath().equals(COMMAND_APP_PAUSED)){
             Intent aIntent= Intents.buildWearExitIntent();
             LocalBroadcastManager.getInstance(this).sendBroadcast(aIntent);
         }
-        if(messageEvent.getPath().equals("/pauseResume")){
+        if(messageEvent.getPath().equals(COMMAND_PAUSERESUME)){
             Intent aIntent= Intents.buildWearPauseResumeIntent();
             LocalBroadcastManager.getInstance(this).sendBroadcast(aIntent);
         }
@@ -132,51 +142,51 @@ public class CommunicationServiceWear extends WearableListenerService {
 
     }
 
-    private void notifyWearStart() {
-        Log.d(TAG, "notifyWearStart");
-        String WEARABLE_START_PATH = "/wearable_start";
-        sendMessage(WEARABLE_START_PATH,"Start now?");
-/*
-        PutDataMapRequest dataMap = PutDataMapRequest.create(WEARABLE_START_PATH);
-        dataMap.getDataMap().putString("title", "Impress Remote");
-        dataMap.getDataMap().putString("body", "Start now?");
-        PutDataRequest request = dataMap.asPutDataRequest();
-        PendingResult<DataApi.DataItemResult> pendingResult = Wearable.DataApi
-                .putDataItem(googleApiClient, request);
-*/
-
-    }
     private void notifyWearStop(){
         Log.d(TAG, "notifyWearStop");
-        String WEARABLE_STOP_PATH = "/wearable_stop";
-        sendMessage(WEARABLE_STOP_PATH,"");
-    }
-    public static void sendStatusNotification(String status){
-        Log.d(TAG, "sendStatusNotification");
-        String WEARABLE_STATUS_PATH = "/wearable_status";
-        sendMessage(WEARABLE_STATUS_PATH,status);
-/*
-        PutDataMapRequest dataMap = PutDataMapRequest.create(WEARABLE_STATUS_PATH);
-        dataMap.getDataMap().putString("title", "Presentation Running");
-        dataMap.getDataMap().putString("body", status);
-        PutDataRequest request = dataMap.asPutDataRequest();
-        PendingResult<DataApi.DataItemResult> pendingResult = Wearable.DataApi
-                .putDataItem(googleApiClient, request);
-*/
+        sendMessage(COMMAND_PRESENTATION_STOPPED);
     }
 
-    public static void sendMessage( final String path, final String text ) {
+    public static void sendStatusNotification(String count){
+        Log.d(TAG, "sendStatusNotification");
+        sendCountMessage(count);
+    }
+
+    private static void sendMessage( final String path, final String text ) {
         new Thread( new Runnable() {
             @Override
             public void run() {
-                NodeApi.GetConnectedNodesResult nodes =
-                        Wearable.NodeApi.getConnectedNodes( googleApiClient ).await();
-                for(Node node : nodes.getNodes()) {
-                    Log.d(TAG, "SendMessage " + path + "-" + text);
-                    MessageApi.SendMessageResult result = Wearable.MessageApi.sendMessage(
-                            googleApiClient, node.getId(), path, text.getBytes(Charset.forName("UTF-8")) ).await();
+                if(googleApiClient !=null){
+                    NodeApi.GetConnectedNodesResult nodes =
+                            Wearable.NodeApi.getConnectedNodes( googleApiClient ).await();
+                    for(Node node : nodes.getNodes()) {
+                        Log.d(TAG, "SendMessage " + path + "-" + text);
+                        MessageApi.SendMessageResult result = Wearable.MessageApi.sendMessage(
+                                googleApiClient, node.getId(), path, text.getBytes(Charset.forName("UTF-8")) ).await();
+                    }
                 }
             }
         }).start();
+    }
+    private static void sendMessage( final String path) {
+        new Thread( new Runnable() {
+            @Override
+            public void run() {
+                if(googleApiClient !=null){
+                    NodeApi.GetConnectedNodesResult nodes =
+                            Wearable.NodeApi.getConnectedNodes( googleApiClient ).await();
+                    for(Node node : nodes.getNodes()) {
+                        Log.d(TAG, "SendMessage " + path );
+                        MessageApi.SendMessageResult result = Wearable.MessageApi.sendMessage(
+                                googleApiClient, node.getId(), path, null ).await();
+                    }
+                }
+            }
+        }).start();
+    }
+
+    public static void sendCountMessage(String s) {
+        Log.d(TAG, "sendCountMessage");
+        sendMessage(COMMAND_SLIDE_COUNT,s);
     }
 }

@@ -49,7 +49,7 @@
             android:id="@+id/textView_counter"
             android:gravity="top|center|bottom"
             android:autoText="false"
-            android:text="0/0"
+            android:text="@string/null_slide_count"
             android:layout_gravity="center_horizontal|top" />
 
 

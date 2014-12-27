@@ -156,12 +156,13 @@ public class SlideShowActivity extends ActionBarActivity implements ServiceConne
         CommunicationService.ServiceBinder aServiceBinder = (CommunicationService.ServiceBinder) aBinder;
         mCommunicationService = aServiceBinder.getService();
 
-        //TODO check if wear api is present
-        this.startService(new Intent(this, CommunicationServiceWear.class));
+        wearableServiceConnect();
 
         startSlideShow();
         resumeTimer();
     }
+
+
 
     private void startSlideShow() {
         if (!isServiceBound()) {
@@ -251,12 +252,12 @@ public class SlideShowActivity extends ActionBarActivity implements ServiceConne
             if (Intents.Actions.WEAR_PREVIOUS.equals(aIntent.getAction())) {
                 mSlideShowActivity.previousTransition();
             }
-            if (Intents.Actions.WEAR_PAUSE.equals(aIntent.getAction())) {
+/*            if (Intents.Actions.WEAR_PAUSE.equals(aIntent.getAction())) {
                 mSlideShowActivity.pausePresentation();
             }
             if (Intents.Actions.WEAR_RESUME.equals(aIntent.getAction())) {
                 mSlideShowActivity.resumePresentation();
-            }
+            }*/
             if (Intents.Actions.WEAR_CONNECT.equals(aIntent.getAction())) {
                 mSlideShowActivity.slideCountMessage();
             }
@@ -265,6 +266,9 @@ public class SlideShowActivity extends ActionBarActivity implements ServiceConne
             }
             if (Intents.Actions.WEAR_PAUSE_RESUME.equals(aIntent.getAction())) {
                 mSlideShowActivity.pauseResumePresentation();
+            }
+            if (Intents.Actions.GOOGLE_API_CONNECTED.equals(aIntent.getAction())) {
+                mSlideShowActivity.showWearNotification();
             }
         }
     }
@@ -277,10 +281,11 @@ public class SlideShowActivity extends ActionBarActivity implements ServiceConne
         aIntentFilter.addAction(Intents.Actions.TIMER_STARTED);
         aIntentFilter.addAction(Intents.Actions.TIMER_RESUMED);
         aIntentFilter.addAction(Intents.Actions.TIMER_CHANGED);
+        aIntentFilter.addAction(Intents.Actions.GOOGLE_API_CONNECTED);
         aIntentFilter.addAction(Intents.Actions.WEAR_NEXT);
         aIntentFilter.addAction(Intents.Actions.WEAR_PREVIOUS);
-        aIntentFilter.addAction(Intents.Actions.WEAR_PAUSE);
-        aIntentFilter.addAction(Intents.Actions.WEAR_RESUME);
+/*        aIntentFilter.addAction(Intents.Actions.WEAR_PAUSE);
+        aIntentFilter.addAction(Intents.Actions.WEAR_RESUME);*/
         aIntentFilter.addAction(Intents.Actions.WEAR_CONNECT);
         aIntentFilter.addAction(Intents.Actions.WEAR_EXIT);
         aIntentFilter.addAction(Intents.Actions.WEAR_PAUSE_RESUME);
@@ -647,7 +652,8 @@ public class SlideShowActivity extends ActionBarActivity implements ServiceConne
     private void unbindService() {
         unbindService(this);
 
-        this.stopService(new Intent(this, CommunicationServiceWear.class));
+        wearableServiceDisconnect();
+
     }
 
     @Override
@@ -689,43 +695,22 @@ public class SlideShowActivity extends ActionBarActivity implements ServiceConne
     }
 
     private void slideCountMessage(){
-
-        //TODO check if wear api is present
-
-        String count=String.valueOf(mCommunicationService.getSlideShow().getHumanCurrentSlideIndex())
-                +"/"+String.valueOf(mCommunicationService.getSlideShow().getSlidesCount());
-        CommunicationServiceWear.sendMessage("/count",count);
+        CommunicationServiceWear.sendCountMessage(notificationCount());
     }
     private String notificationCount(){
-        return "Slide "+ mCommunicationService.getSlideShow().getHumanCurrentSlideIndex()
-                +" of "+mCommunicationService.getSlideShow().getSlidesCount();
+        return mCommunicationService.getSlideShow().getHumanCurrentSlideIndex()
+                +"/"+mCommunicationService.getSlideShow().getSlidesCount();
     }
     private void showWearNotification(){
         Log.d("SlideShowActivity","showWearNotification");
         CommunicationServiceWear.sendStatusNotification(notificationCount());
-        /*
-        int notificationId = 001;
-        final String NOTIFICATION_ID = "notification_id";
-// Build intent for notification content
-        Intent viewIntent = new Intent(this, SlideShowActivity.class);
-        viewIntent.putExtra(NOTIFICATION_ID, notificationId);
-        PendingIntent viewPendingIntent =
-                PendingIntent.getActivity(this, 0, viewIntent, 0);
-
-        NotificationCompat.Builder notificationBuilder =
-                new NotificationCompat.Builder(this)
-                        .setSmallIcon(R.drawable.ic_launcher)
-                        .setContentTitle("Presentation running")
-                        .setContentText(notificationCount())
-                        .setContentIntent(viewPendingIntent);
-
-// Get an instance of the NotificationManager service
-        NotificationManagerCompat notificationManager =
-                NotificationManagerCompat.from(this);
-
-// Build the notification and issues it with notification manager.
-        notificationManager.notify(notificationId, notificationBuilder.build());
-*/
+    }
+    private void wearableServiceConnect() {
+        //TODO check if wear api is present
+        this.startService(new Intent(this, CommunicationServiceWear.class));
+    }
+    private void wearableServiceDisconnect() {
+        this.stopService(new Intent(this, CommunicationServiceWear.class));
     }
 
 }

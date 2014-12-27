@@ -41,10 +41,23 @@ public class DataLayerListenerService extends WearableListenerService implements
         GoogleApiClient.OnConnectionFailedListener {
 
     private static final String TAG = "DataLayerListenerService";
-    private static final int N_START=001;
-    private static final int N_STATUS=002;
+    private static final int NOTIFICATION_ID=001;
+    private static final String NOTIFICATION_TITLE="Impress Remote";
+    private static final String SLIDE="Slide";
+    private static final String COUNT_SPLIT="/";
+    private static final String OF="of";
+    private static final String SPACE=" ";
+    private static final String NULL_STRING_COUNT="0/0";
 
-    GoogleApiClient mGoogleApiClient;
+    private static final String COMMAND_NEXT="/next";
+    private static final String COMMAND_PREVIOUS="/previous";
+    private static final String COMMAND_PAUSERESUME="/pauseResume";
+    private static final String COMMAND_CONNECT="/connect";
+    private static final String COMMAND_APP_PAUSED="/appPaused";
+    private static final String COMMAND_PRESENTATION_STOPPED="/wearableStop";
+    private static final String COMMAND_SLIDE_COUNT="/count";
+
+    private static GoogleApiClient mGoogleApiClient;
 
 
     public DataLayerListenerService() {
@@ -98,35 +111,11 @@ public class DataLayerListenerService extends WearableListenerService implements
     @Override
     public void onConnected(Bundle connectionHint) {
         Log.v(TAG,"onConnected called");
-//        sendMessage("/connect","");
-
     }
 
     @Override
     public void onDataChanged(DataEventBuffer dataEvents) {
         Log.v(TAG, "Data Changed");
-     /*   DataMap dataMap;
-        for (DataEvent event : dataEvents) {
-            // Check the event type
-            if (event.getType() == DataEvent.TYPE_CHANGED) {
-                String path = event.getDataItem().getUri().getPath();
-                //Verify the data path, get the DataMap, and send local notification
-                if (path.equals("/wearable_start")) {
-                    // Create and send a local notification inviting the user to start the wearable app
-                    dataMap = DataMapItem.fromDataItem(event.getDataItem()).getDataMap();
-                    sendLocalNotification(N_START,dataMap.getString("title"), dataMap.getString("body"));
-                }
-                if (path.equals("/wearable_status")) {
-                    // Create and send a local notification inviting the user to start the wearable app
-                    dataMap = DataMapItem.fromDataItem(event.getDataItem()).getDataMap();
-                    sendLocalNotification(N_STATUS,dataMap.getString("title"), dataMap.getString("body"));
-                }
-            }
-            if (event.getType() == DataEvent.TYPE_DELETED) {
-
-            }
-        }
-        */
     }
 
     @Override
@@ -135,20 +124,17 @@ public class DataLayerListenerService extends WearableListenerService implements
         try{
             String message=new String(messageEvent.getData(), "UTF-8");
             Log.v(TAG, "onMessageReceived " + messageEvent.getPath()+message);
-            if(messageEvent.getPath().equals("/count")){
+            if(messageEvent.getPath().equals(COMMAND_SLIDE_COUNT)){
                 Intent aIntent= new Intent("SLIDE_COUNT");
                 aIntent.putExtra("DATA",message);
                 LocalBroadcastManager.getInstance(this).sendBroadcast(aIntent);
+                sendLocalNotification(message);
             }
-            if(messageEvent.getPath().equals("/wearable_start")){
-                sendLocalNotification(N_START,"Impress Remote",message);
-            }
-            if(messageEvent.getPath().equals("/wearable_status")){
-                sendLocalNotification(N_STATUS,"Presentation Running",message);
-            }
-            if(messageEvent.getPath().equals("/wearable_stop")){
-                //TODO update(or close) full screen
-                cancelNotifications();
+            if(messageEvent.getPath().equals(COMMAND_PRESENTATION_STOPPED)){
+                cancelLocalNotification();
+                Intent aIntent= new Intent("SLIDE_COUNT");
+                aIntent.putExtra("DATA",NULL_STRING_COUNT);
+                LocalBroadcastManager.getInstance(this).sendBroadcast(aIntent);
             }
 
         }catch(UnsupportedEncodingException e){
@@ -168,7 +154,7 @@ public class DataLayerListenerService extends WearableListenerService implements
         super.onPeerDisconnected(peer);
         Log.v(TAG, "Peer Disconnected " + peer.getDisplayName());
     }
-    private void sendMessage( final String path, final String text ) {
+    private static void sendMessage( final String path, final String text ) {
         new Thread( new Runnable() {
             @Override
             public void run() {
@@ -182,40 +168,68 @@ public class DataLayerListenerService extends WearableListenerService implements
             }
         }).start();
     }
-    private void cancelNotifications(){
-        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
-        notificationManager.cancel(N_START);
-        notificationManager.cancel(N_STATUS);
+    private static void sendMessage( final String path) {
+        new Thread( new Runnable() {
+            @Override
+            public void run() {
+                if(mGoogleApiClient!=null){
+                    NodeApi.GetConnectedNodesResult nodes =
+                            Wearable.NodeApi.getConnectedNodes( mGoogleApiClient ).await();
+                    for(Node node : nodes.getNodes()) {
+                        Log.d(TAG, "SendMessage " + path );
+                        MessageApi.SendMessageResult result = Wearable.MessageApi.sendMessage(
+                                mGoogleApiClient, node.getId(), path, null ).await();
+                    }
+                }
+            }
+        }).start();
     }
 
-    private void sendLocalNotification(int id,String title, String body) {
+    private void cancelLocalNotification(){
+        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
+        notificationManager.cancel(NOTIFICATION_ID);
+    }
+
+    private void sendLocalNotification(String count) {
         Log.v(TAG, "sendLocalNotification");
-//        int notificationId = 001;
-
-        // Create a pending intent that starts this wearable app
-
         Intent startIntent;
-        if(id==001){
-            startIntent = new Intent(this, MainActivity.class).setAction(Intent.ACTION_MAIN);
-        }else{
-            startIntent = new Intent(this, MainActivity.class).setAction(Intent.ACTION_VIEW);
-        }
+        startIntent = new Intent(this, MainActivity.class).setAction(Intent.ACTION_VIEW);
 
         PendingIntent startPendingIntent = PendingIntent.getActivity(this, 0, startIntent, 0);
 
         Notification notify = new NotificationCompat.Builder(this)
-                .setContentTitle(title)
-                .setContentText(body)
+                .setContentTitle(NOTIFICATION_TITLE)
+                .setContentText(getNotificationMessage(count))
                 .setLocalOnly(true)
                 .setOngoing(true)
                 .setSmallIcon(R.drawable.ic_launcher)
                 .setContentIntent(startPendingIntent)
                 .build();
 
+        cancelLocalNotification();
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
-        cancelNotifications();
-        notificationManager.notify(id, notify);
+        notificationManager.notify(NOTIFICATION_ID, notify);
 
+    }
+
+    private String getNotificationMessage(String count){
+        return SLIDE+SPACE+count.substring(0,count.indexOf(COUNT_SPLIT))+SPACE+OF+SPACE+count.substring(1+count.indexOf(COUNT_SPLIT));
+    }
+
+    public static void commandNext(){
+        sendMessage(COMMAND_NEXT);
+    }
+    public static void commandPrevious(){
+        sendMessage(COMMAND_PREVIOUS);
+    }
+    public static void commandPauseResume(){
+        sendMessage(COMMAND_PAUSERESUME);
+    }
+    public static void commandConnect(){
+        sendMessage(COMMAND_CONNECT);
+    }
+    public static void commandAppPaused(){
+        sendMessage(COMMAND_APP_PAUSED);
     }
 
 }
