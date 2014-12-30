@@ -5,4 +5,4 @@ export PARAMETERS=--lightblue
 export SUBCOMMAND=remote
 export APP_NAME=libreoffice
 
-/usr/bin/pebble-remote --pebble_id $PEBBLE_ID $PARAMETERS $SUBCOMMAND $APP_NAME $1
+/usr/bin/p.py --pebble_id $PEBBLE_ID $PARAMETERS $SUBCOMMAND $APP_NAME $1
