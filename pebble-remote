@@ -1,0 +1,8 @@
+#!/bin/bash
+
+export PEBBLE_ID=`bt-device -l | grep Pebble | cut -d ' ' -f3 | cut -c2-18`
+export PARAMETERS=--lightblue
+export SUBCOMMAND=remote
+export APP_NAME=libreoffice
+
+/usr/bin/pebble-remote --pebble_id $PEBBLE_ID $PARAMETERS $SUBCOMMAND $APP_NAME $1
