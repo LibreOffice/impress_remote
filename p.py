@@ -40,7 +40,7 @@ def cmd_app_msg_send_bytes(pebble, args):
 def cmd_remote(pebble, args):
     path=args.odp_file_fullpath
     runodp = args.app_name+" --impress "+path
-    pebble.set_nowplaying_metadata("Libreoffice Remote Control ", "Next", "Previous")
+    pebble.set_nowplaying_metadata("LibreOffice Remote Control ", "Next", "Previous")
 
     try:
         pexpect.run(runodp, timeout=5)
