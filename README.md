@@ -26,5 +26,13 @@ This project provides remote control to Libreoffice Impress with Pebble. The dir
 
 * Open music app on your pebble. You can remote presentation by using up and down buttons on Pebble.
 
+
+## Pictures
+
+![1](https://github.com/COMU/pebble-remote/blob/master/pictures/IMG_20141224_202150.jpg)
+![2](https://github.com/COMU/pebble-remote/blob/master/pictures/10841370_10205282785527499_935854715_n.jpg)
+
 ---
 [1] http://tinyurl.com/pebble-remote
+
+
