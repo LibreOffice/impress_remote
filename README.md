@@ -29,8 +29,7 @@ This project provides remote control to Libreoffice Impress with Pebble. The dir
 
 ## Pictures
 
-![1](https://github.com/COMU/pebble-remote/blob/master/pictures/IMG_20141224_202150.jpg)
-![2](https://github.com/COMU/pebble-remote/blob/master/pictures/10841370_10205282785527499_935854715_n.jpg)
+![1](https://github.com/COMU/pebble-remote/blob/master/pictures/Screenshot%202015-01-02%20at%2001.33.35.png)
 
 ---
 [1] http://tinyurl.com/pebble-remote
