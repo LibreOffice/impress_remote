@@ -10,33 +10,6 @@ import pexpect
 
 MAX_ATTEMPTS = 5
 
-def cmd_ping(pebble, args):
-    pebble.ping(cookie=0xDEADBEEF)
-
-def cmd_load(pebble, args):
-    pebble.install_app(args.app_bundle, args.nolaunch)
-
-def cmd_load_fw(pebble, args):
-    pebble.install_firmware(args.fw_bundle)
-    time.sleep(5)
-    print 'resetting to apply firmware update...'
-    pebble.reset()
-
-def cmd_launch_app(pebble, args):
-    pebble.launcher_message(args.app_uuid, "RUNNING")
-
-def cmd_app_msg_send_string(pebble, args):
-		pebble.app_message_send_string(args.app_uuid, args.key, args.tuple_string)
-
-def cmd_app_msg_send_uint(pebble, args):
-		pebble.app_message_send_uint(args.app_uuid, args.key, args.tuple_uint)
-
-def cmd_app_msg_send_int(pebble, args):
-		pebble.app_message_send_int(args.app_uuid, args.key, args.tuple_int)
-
-def cmd_app_msg_send_bytes(pebble, args):
-		pebble.app_message_send_byte_array(args.app_uuid, args.key, args.tuple_bytes)
-
 def cmd_remote(pebble, args):
     path=args.odp_file_fullpath
     runodp = args.app_name+" --impress "+path
@@ -77,62 +50,6 @@ def cmd_remote(pebble, args):
             time.sleep(5)
         except KeyboardInterrupt:
             return
-
-def cmd_logcat(pebble, args):
-    print 'listening for logs...'
-    try:
-        while True:
-            time.sleep(1)
-    except KeyboardInterrupt:
-        return
-
-def cmd_list_apps(pebble, args):
-    apps = pebble.get_appbank_status()
-    if apps is not False:
-        for app in apps['apps']:
-            print '[{}] {}'.format(app['index'], app['name'])
-    else:
-        print "no apps"
-
-def cmd_rm_app(pebble, args):
-    try:
-        uuid = args.app_index_or_hex_uuid.decode('hex')
-        if len(uuid) == 16:
-            pebble.remove_app_by_uuid(uuid, uuid_is_string=False)
-            print 'removed app'
-            return 0
-    except:
-        pass
-    try:
-        idx = int(args.app_index_or_hex_uuid)
-        for app in pebble.get_appbank_status()['apps']:
-            if app['index'] == idx:
-                pebble.remove_app(app["id"], app["index"])
-                print 'removed app'
-                return 0
-    except:
-        print 'Invalid arguments. Use bank index or hex app UUID (16 bytes / 32 hex digits)'
-
-def cmd_reinstall_app(pebble, args):
-    pebble.reinstall_app(args.app_bundle, args.nolaunch)
-
-def cmd_reset(pebble, args):
-    pebble.reset()
-
-def cmd_set_nowplaying_metadata(pebble, args):
-    pebble.set_nowplaying_metadata(args.track, args.album, args.artist)
-
-def cmd_notification_email(pebble, args):
-    pebble.notification_email(args.sender, args.subject, args.body)
-
-def cmd_notification_sms(pebble, args):
-    pebble.notification_sms(args.sender, args.body)
-
-def cmd_get_time(pebble, args):
-    print pebble.get_time()
-
-def cmd_set_time(pebble, args):
-    pebble.set_time(args.timestamp)
 
 def main():
     parser = argparse.ArgumentParser(description='a utility belt for pebble development')
