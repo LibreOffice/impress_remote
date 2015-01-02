@@ -1,0 +1,42 @@
+# Turkish translations for PACKAGE package.
+# Copyright (C) 2015 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# gulsah <gulsah.1004@gmail.com>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-01-03 01:34+0200\n"
+"PO-Revision-Date: 2015-01-03 01:40+0200\n"
+"Last-Translator: gulsah <gulsah.1004@gmail.com>\n"
+"Language-Team: Turkish\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ASCII\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: libpebble/p.py:17
+msgid "LibreOffice Remote Control "
+msgstr ""
+
+#: libpebble/p.py:17
+msgid "Next"
+msgstr ""
+
+#: libpebble/p.py:17
+msgid "Previous"
+msgstr ""
+
+#: libpebble/p.py:25
+msgid "Somethings are going bad"
+msgstr ""
+
+#: libpebble/p.py:47
+msgid "waiting for events"
+msgstr ""
+
+#: libpebble/p.py:77
+msgid "Could not connect to Pebble"
+msgstr ""
