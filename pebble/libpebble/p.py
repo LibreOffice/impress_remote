@@ -5,13 +5,16 @@ import os
 import pebble as libpebble
 import time
 import pexpect
+import i18n
+
+_ = i18n.language.gettext
 
 MAX_ATTEMPTS = 5
 
 def cmd_remote(pebble, args):
     path=args.odp_file_path
     runodp = args.app_name+" --impress "+path
-    pebble.set_nowplaying_metadata("LibreOffice Remote Control ", "Next", "Previous")
+    pebble.set_nowplaying_metadata(_("LibreOffice Remote Control "), _("Next"), _("Previous"))
 
     try:
         pexpect.run(runodp, timeout=5)
@@ -19,7 +22,7 @@ def cmd_remote(pebble, args):
 	fullscreen = "xdotool key --window " +window_id+" F5"
 	pexpect.run(fullscreen) 
     except Exception:
-        print "Somethings are going bad"
+        print _("Somethings are going bad")
         return False
 
     def libreoffice_event_handler(event):
@@ -41,7 +44,7 @@ def cmd_remote(pebble, args):
 
         libreoffice_event_handler(events[resp])
 
-    print "waiting for events"
+    print _("waiting for events")
     while True:
         try:
             pebble.register_endpoint("MUSIC_CONTROL", music_control_handler)
@@ -71,7 +74,7 @@ def main():
     attempts = 0
     while True:
         if attempts > MAX_ATTEMPTS:
-            raise 'Could not connect to Pebble'
+            raise _('Could not connect to Pebble')
         try:
             pebble_id = args.pebble_id
             if pebble_id is None and "PEBBLE_ID" in os.environ:
