@@ -145,12 +145,6 @@ def main():
 
     subparsers = parser.add_subparsers(help='commands', dest='which')
 
-    set_nowplaying_metadata_parser = subparsers.add_parser('playing', help='set current music playing')
-    set_nowplaying_metadata_parser.add_argument('track', type=str)
-    set_nowplaying_metadata_parser.add_argument('album', type=str)
-    set_nowplaying_metadata_parser.add_argument('artist', type=str)
-    set_nowplaying_metadata_parser.set_defaults(func=cmd_set_nowplaying_metadata)
-
     remote_parser = subparsers.add_parser('remote', help='control a music app on this PC using Pebble')
     remote_parser.add_argument('app_name', type=str, help='title of application to be controlled')
     remote_parser.add_argument('odp_file_fullpath', type=str, help='full path for libreoffice impress presentation file')
