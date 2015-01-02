@@ -259,22 +259,6 @@ class Pebble(object):
 		log.debug("Sending command %s (code %d)" % (command, commands[command]))
 		self._send_message("SYSTEM_MESSAGE", data)
 
-	def ping(self, cookie = 0xDEC0DE, async = False):
-
-		"""Send a 'ping' to the watch to test connectivity."""
-
-		data = pack("!bL", 0, cookie)
-		self._send_message("PING", data)
-
-		if not async:
-			return EndpointSync(self, "PING").get_data()
-
-	def reset(self):
-
-		"""Reset the watch remotely."""
-
-		self._send_message("RESET", "\x00")
-
 	def disconnect(self):
 
 		"""Disconnect from the target Pebble."""
