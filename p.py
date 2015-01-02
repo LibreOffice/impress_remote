@@ -169,34 +169,11 @@ def main():
     msg_send_bytes_parser.add_argument('tuple_bytes', type=str, help='a byte array to send along')
     msg_send_bytes_parser.set_defaults(func=cmd_app_msg_send_bytes)
 
-    reinstall_app_parser = subparsers.add_parser('reinstall', help='reinstall then launch an installed app')
-    reinstall_app_parser.add_argument('app_bundle', metavar='FILE', type=str, help='a compiled app bundle')
-    reinstall_app_parser.add_argument('--nolaunch', action="store_false", help='do not launch the application after install')
-    reinstall_app_parser.set_defaults(func=cmd_reinstall_app)
-
     set_nowplaying_metadata_parser = subparsers.add_parser('playing', help='set current music playing')
     set_nowplaying_metadata_parser.add_argument('track', type=str)
     set_nowplaying_metadata_parser.add_argument('album', type=str)
     set_nowplaying_metadata_parser.add_argument('artist', type=str)
     set_nowplaying_metadata_parser.set_defaults(func=cmd_set_nowplaying_metadata)
-
-    notification_email_parser = subparsers.add_parser('email', help='send an "Email Notification"')
-    notification_email_parser.add_argument('sender', type=str)
-    notification_email_parser.add_argument('subject', type=str)
-    notification_email_parser.add_argument('body', type=str)
-    notification_email_parser.set_defaults(func=cmd_notification_email)
-
-    notification_sms_parser = subparsers.add_parser('sms', help='send an "SMS Notification"')
-    notification_sms_parser.add_argument('sender', type=str)
-    notification_sms_parser.add_argument('body', type=str)
-    notification_sms_parser.set_defaults(func=cmd_notification_sms)
-
-    get_time_parser = subparsers.add_parser('get_time', help='get the time stored on a connected watch')
-    get_time_parser.set_defaults(func=cmd_get_time)
-
-    set_time_parser = subparsers.add_parser('set_time', help='set the time stored on a connected watch')
-    set_time_parser.add_argument('timestamp', type=int, help='time stamp to be sent')
-    set_time_parser.set_defaults(func=cmd_set_time)
 
     remote_parser = subparsers.add_parser('remote', help='control a music app on this PC using Pebble')
     remote_parser.add_argument('app_name', type=str, help='title of application to be controlled')
