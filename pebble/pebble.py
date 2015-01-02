@@ -228,22 +228,6 @@ class Pebble(object):
 		endpoint = self.endpoints[endpoint_name]
 		self._endpoint_handlers[endpoint] = func
 
-	def notification_sms(self, sender, body):
-
-		"""Send a 'SMS Notification' to the displayed on the watch."""
-
-		ts = str(int(time.time())*1000)
-		parts = [sender, body, ts]
-		self._send_message("NOTIFICATION", self._pack_message_data(1, parts))
-
-	def notification_email(self, sender, subject, body):
-
-		"""Send an 'Email Notification' to the displayed on the watch."""
-
-		ts = str(int(time.time())*1000)
-		parts = [sender, body, ts, subject]
-		self._send_message("NOTIFICATION", self._pack_message_data(0, parts))
-
 	def set_nowplaying_metadata(self, track, album, artist):
 
 		"""Update the song metadata displayed in Pebble's music app."""
