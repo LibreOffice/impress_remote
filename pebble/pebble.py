@@ -266,10 +266,6 @@ class Pebble(object):
 		self._alive = False
 		self._ser.close()
 
-	def _add_app(self, index):
-		data = pack("!bI", 3, index)
-		self._send_message("APP_MANAGER", data)
-
 	def _ping_response(self, endpoint, data):
 		restype, retcookie = unpack("!bL", data)
 		return retcookie
