@@ -145,9 +145,6 @@ def main():
 
     subparsers = parser.add_subparsers(help='commands', dest='which')
 
-    ping_parser = subparsers.add_parser('ping', help='send a ping message')
-    ping_parser.set_defaults(func=cmd_ping)
-
     launch_parser = subparsers.add_parser('launch_app', help='launch an app on the watch by its UUID')
     launch_parser.add_argument('app_uuid', metavar='UUID', type=str, help='a valid UUID in the form of: 54D3008F0E46462C995C0D0B4E01148C')
     launch_parser.set_defaults(func=cmd_launch_app)
@@ -185,23 +182,10 @@ def main():
     load_fw_parser.add_argument('fw_bundle', metavar='FILE', type=str, help='a compiled app bundle')
     load_fw_parser.set_defaults(func=cmd_load_fw)
 
-    logcat_parser = subparsers.add_parser('logcat', help='view logs sent from a connected watch')
-    logcat_parser.set_defaults(func=cmd_logcat)
-
-    list_apps_parser = subparsers.add_parser('list', help='list installed apps')
-    list_apps_parser.set_defaults(func=cmd_list_apps)
-
-    rm_app_parser = subparsers.add_parser('rm', help='remove installed app')
-    rm_app_parser.add_argument('app_index_or_hex_uuid', metavar='IDX or UUID in the form of: 54D3008F0E46462C995C0D0B4E01148C', type=str, help='the app index or UUID to delete')
-    rm_app_parser.set_defaults(func=cmd_rm_app)
-
     reinstall_app_parser = subparsers.add_parser('reinstall', help='reinstall then launch an installed app')
     reinstall_app_parser.add_argument('app_bundle', metavar='FILE', type=str, help='a compiled app bundle')
     reinstall_app_parser.add_argument('--nolaunch', action="store_false", help='do not launch the application after install')
     reinstall_app_parser.set_defaults(func=cmd_reinstall_app)
-
-    reset_parser = subparsers.add_parser('reset', help='reset the watch remotely')
-    reset_parser.set_defaults(func=cmd_reset)
 
     set_nowplaying_metadata_parser = subparsers.add_parser('playing', help='set current music playing')
     set_nowplaying_metadata_parser.add_argument('track', type=str)
