@@ -145,10 +145,6 @@ def main():
 
     subparsers = parser.add_subparsers(help='commands', dest='which')
 
-    launch_parser = subparsers.add_parser('launch_app', help='launch an app on the watch by its UUID')
-    launch_parser.add_argument('app_uuid', metavar='UUID', type=str, help='a valid UUID in the form of: 54D3008F0E46462C995C0D0B4E01148C')
-    launch_parser.set_defaults(func=cmd_launch_app)
-
     msg_send_string_parser = subparsers.add_parser('msg_send_string', help='sends a string via app message')
     msg_send_string_parser.add_argument('app_uuid', metavar='UUID', type=str, help='a valid UUID in the form of: 54D3008F0E46462C995C0D0B4E01148C')
     msg_send_string_parser.add_argument('key', type=int, help='a valid tuple key for the app')
@@ -172,15 +168,6 @@ def main():
     msg_send_bytes_parser.add_argument('key', type=int, help='a valid tuple key for the app')
     msg_send_bytes_parser.add_argument('tuple_bytes', type=str, help='a byte array to send along')
     msg_send_bytes_parser.set_defaults(func=cmd_app_msg_send_bytes)
-
-    load_parser = subparsers.add_parser('load', help='load an app onto a connected watch')
-    load_parser.add_argument('--nolaunch', action="store_false", help='do not launch the application after install')
-    load_parser.add_argument('app_bundle', metavar='FILE', type=str, help='a compiled app bundle')
-    load_parser.set_defaults(func=cmd_load)
-
-    load_fw_parser = subparsers.add_parser('load_fw', help='load new firmware onto a connected watch')
-    load_fw_parser.add_argument('fw_bundle', metavar='FILE', type=str, help='a compiled app bundle')
-    load_fw_parser.set_defaults(func=cmd_load_fw)
 
     reinstall_app_parser = subparsers.add_parser('reinstall', help='reinstall then launch an installed app')
     reinstall_app_parser.add_argument('app_bundle', metavar='FILE', type=str, help='a compiled app bundle')
