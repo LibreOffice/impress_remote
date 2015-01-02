@@ -9,7 +9,7 @@ import pexpect
 MAX_ATTEMPTS = 5
 
 def cmd_remote(pebble, args):
-    path=args.odp_file_fullpath
+    path=args.odp_file_path
     runodp = args.app_name+" --impress "+path
     pebble.set_nowplaying_metadata("LibreOffice Remote Control ", "Next", "Previous")
 
@@ -60,9 +60,9 @@ def main():
 
     subparsers = parser.add_subparsers(help='commands', dest='which')
 
-    remote_parser = subparsers.add_parser('remote', help='control a music app on this PC using Pebble')
+    remote_parser = subparsers.add_parser('remote', help='control LibreOffice Impress app with music app on Pebble')
     remote_parser.add_argument('app_name', type=str, help='title of application to be controlled')
-    remote_parser.add_argument('odp_file_fullpath', type=str, help='full path for libreoffice impress presentation file')
+    remote_parser.add_argument('odp_file_path', type=str, help='path for libreoffice impress presentation file')
     remote_parser.set_defaults(func=cmd_remote)
 
 
