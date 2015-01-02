@@ -437,62 +437,6 @@ class Pebble(object):
 
 		return event_names[event] if event in event_names else None
 
-
-class AppMessage(object):
-# tools to build a valid app message
-	def build_tuple(self, key, data_type, data):
-		""" make a single app_message tuple"""
-		# available app message datatypes:
-		tuple_datatypes = {
-			"BYTE_ARRAY": b'\x00',
-			"CSTRING": b'\x01',
-			"UINT": b'\x02',
-			"INT": b'\x03'
-		}
-
-		# build the message_tuple
-		app_message_tuple = OrderedDict([
-			("KEY", pack('<L', key)),
-			("TYPE", tuple_datatypes[data_type]),
-			("LENGTH", pack('<H', len(data))),
-			("DATA", data)
-		])
-
-		return app_message_tuple
-
-	def build_dict(self, tuple_of_tuples):
-		""" make a dictionary from a list of app_message tuples"""
-		# note that "TUPLE" can refer to 0 or more tuples. Tuples must be correct endian-ness already
-		tuple_count = len(tuple_of_tuples)
-		# make the bytearray from the flattened tuples
-		tuple_total_bytes = ''.join(item for item in itertools.chain(*tuple_of_tuples.values()))
-		# now build the dict
-		app_message_dict = OrderedDict([
-			("TUPLECOUNT", pack('B', tuple_count)),
-			("TUPLE", tuple_total_bytes)
-		])
-		return app_message_dict
-
-	def build_message(self, dict_of_tuples, command, uuid, transaction_id=b'\x00'):
-		""" build the app_message intended for app with matching uuid"""
-		# NOTE: uuid must be a byte array
-		# available app_message commands:
-		app_messages = {
-			"PUSH": b'\x01',
-			"REQUEST": b'\x02',
-			"ACK": b'\xFF',
-			"NACK": b'\x7F'
-		}
-		# finally build the entire message
-		app_message = OrderedDict([
-			("COMMAND", app_messages[command]),
-			("TRANSACTIONID", transaction_id),
-			("UUID", uuid),
-			("DICT", ''.join(dict_of_tuples.values()))
-		])
-		return ''.join(app_message.values())
-
-
 class PutBytesClient(object):
 	states = {
 		"NOT_STARTED": 0,
