@@ -3,8 +3,6 @@
 import argparse
 import os
 import pebble as libpebble
-import subprocess
-import sys
 import time
 import pexpect
 
