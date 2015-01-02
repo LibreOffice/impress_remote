@@ -1,2 +1,0 @@
-pyserial>=2.6
-git+http://github.com/pebble/lightblue-0.4.git#egg=lightblue-0.4
