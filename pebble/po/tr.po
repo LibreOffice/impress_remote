@@ -19,24 +19,24 @@ msgstr ""
 
 #: libpebble/p.py:17
 msgid "LibreOffice Remote Control "
-msgstr ""
+msgstr "LibreOffice Uzaktan Kumandasi"
 
 #: libpebble/p.py:17
 msgid "Next"
-msgstr ""
+msgstr "Sonraki"
 
 #: libpebble/p.py:17
 msgid "Previous"
-msgstr ""
+msgstr "Onceki"
 
 #: libpebble/p.py:25
 msgid "Somethings are going bad"
-msgstr ""
+msgstr "Kotu giden birseyler var"
 
 #: libpebble/p.py:47
 msgid "waiting for events"
-msgstr ""
+msgstr "Olay bekleniyor"
 
 #: libpebble/p.py:77
 msgid "Could not connect to Pebble"
-msgstr ""
+msgstr "Pebble'a baglanilamadi"
