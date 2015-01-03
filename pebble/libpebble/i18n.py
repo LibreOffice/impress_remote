@@ -10,7 +10,7 @@ import gettext
 APP_NAME = "pebble-remote"
  
 # This is ok for maemo. Not sure in a regular desktop:
-APP_DIR = os.path.join(sys.prefix, 'pebble-remote')
+APP_DIR = os.path.join(sys.prefix, '/home/gulsah/proje/pebble-remote/') #!!!This path works for me. You have to write your project path here.!!!
 LOCALE_DIR = os.path.join(APP_DIR, 'i18n') # .mo files will then be located in APP_Dir/i18n/LANGUAGECODE/LC_MESSAGES/
  
 # Now we need to choose the language. We will provide a list, and gettext
