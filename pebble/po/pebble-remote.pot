@@ -30,7 +30,7 @@ msgid "Previous"
 msgstr ""
 
 #: libpebble/p.py:25
-msgid "Somethings are going bad"
+msgid "Something's wrong"
 msgstr ""
 
 #: libpebble/p.py:47
