@@ -22,7 +22,7 @@ def cmd_remote(pebble, args):
 	fullscreen = "xdotool key --window " +window_id+" F5"
 	pexpect.run(fullscreen) 
     except Exception:
-        print _("Somethings are going bad")
+        print _("Something's wrong")
         return False
 
     def libreoffice_event_handler(event):
