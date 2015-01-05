@@ -30,8 +30,8 @@ msgid "Previous"
 msgstr "Onceki"
 
 #: libpebble/p.py:25
-msgid "Somethings are going bad"
-msgstr "Kotu giden birseyler var"
+msgid "Something's wrong"
+msgstr "Yanlis giden birsey var"
 
 #: libpebble/p.py:47
 msgid "waiting for events"
