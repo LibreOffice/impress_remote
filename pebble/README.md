@@ -11,7 +11,7 @@ This project provides remote control to Libreoffice Impress with Pebble. The dir
 
 * Download debian package from this address[1] and then
 
-    * `sudo dpkg -i pebble-remote-1.0.deb`
+    * `sudo dpkg -i pebble-remote-1.1.deb`
 
 
 ## Usage
@@ -32,6 +32,6 @@ This project provides remote control to Libreoffice Impress with Pebble. The dir
 ![1](https://github.com/COMU/pebble-remote/blob/master/pictures/Screenshot%202015-01-02%20at%2001.33.35.png)
 
 ---
-[1] http://tinyurl.com/pebble-remote
+[1] http://tinyurl.com/pebble-remote-1-1
 
 
