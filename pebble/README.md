@@ -9,6 +9,10 @@ This project provides remote control to Libreoffice Impress with Pebble. The dir
     * `cd lightblue-0.4`
     * `sudo python setup.py install`
 
+* Install pebble-remote-1.1.deb package's dependencies.
+
+    * `sudo apt-get install python-dev libopenobex1-dev python-tk python-lightblue python-pexpect xdotool python-bluez`
+
 * Download debian package from this address[1] and then
 
     * `sudo dpkg -i pebble-remote-1.1.deb`
