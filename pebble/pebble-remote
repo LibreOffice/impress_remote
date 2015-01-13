@@ -7,9 +7,19 @@ export APP_NAME=libreoffice
 
 if [ "$1" == "-h" ] || [ "$1" == "--help" ];
 then
+
   echo "Usage: `basename $0` [path_to_odp_file]"
   exit 0
+
+elif [ "$1" == "-v" ] || [ "$1" == "--version" ];
+then
+
+  echo "2.0"
+  exit 0
+
 else
+
   /usr/bin/p.py --pebble_id $PEBBLE_ID $PARAMETERS $SUBCOMMAND $APP_NAME $1
+
 fi
 
