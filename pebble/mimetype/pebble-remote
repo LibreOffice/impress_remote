@@ -1,0 +1,5 @@
+?package(pebble-remote):needs="X11" section="Applications/Office"\
+  title="Pebble Remote" command="/usr/bin/pebble-remote"\
+  hints="Presentation"\
+  kderemove="y"\
+  icon="/usr/share/icons/hicolor/32x32/apps/libreoffice-impress.xpm"
