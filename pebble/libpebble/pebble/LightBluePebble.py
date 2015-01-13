@@ -23,7 +23,7 @@ class LightBluePebbleError(Exception):
 class LightBluePebble(object):
     """ a wrapper for LightBlue that provides Serial-style read, write and close"""
 
-    def __init__(self, id, should_pair, debug_protocol=False, connection_process_timeout=60):
+    def __init__(self, id, should_pair, debug_protocol=False, connection_process_timeout=5):
 
         self.mac_address = id
         self.debug_protocol = debug_protocol
