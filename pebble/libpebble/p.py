@@ -6,10 +6,20 @@ import pebble as libpebble
 import time
 import pexpect
 import i18n
+import tkMessageBox
+
+from Tkinter import *
 
 _ = i18n.language.gettext
 
 MAX_ATTEMPTS = 5
+
+window = Tk()
+window.wm_withdraw()
+window.geometry("1x1+200+200") #remember its .geometry("WidthxHeight(+or-)X(+or-)Y")
+
+LightBluePebbleError = libpebble.LightBluePebble.LightBluePebbleError
+PebbleError = libpebble.pebble.PebbleError
 
 def cmd_remote(pebble, args):
     path=args.odp_file_path
@@ -70,6 +80,14 @@ def cmd_remote(pebble, args):
         try:
             pebble.register_endpoint("MUSIC_CONTROL", music_control_handler)
             time.sleep(5)
+        except LightBluePebbleError as e:
+            tkMessageBox.showerror(title="Error", message=e._message, parent=window)
+            raise e
+            raise KeyboardInterrupt
+        except PebbleError as e:
+            tkMessageBox.showerror(title="Error", message=e._message, parent=window)
+            raise e
+            raise KeyboardInterrupt
         except KeyboardInterrupt:
             return
 
@@ -102,12 +120,27 @@ def main():
                 pebble_id = os.environ["PEBBLE_ID"]
             pebble = libpebble.Pebble(pebble_id, args.lightblue, args.pair)
             break
+        except LightBluePebbleError as e:
+            tkMessageBox.showerror(title="Error", message=_("Bluetooth connection error"), parent=window)
+            raise KeyboardInterrupt
+        except PebbleError as e:
+            tkMessageBox.showerror(title="Error", message=e._message, parent=window)
+            raise e
+            raise KeyboardInterrupt
         except:
             time.sleep(5)
             attempts += 1
 
     try:
         args.func(pebble, args)
+    except LightBluePebbleError as e:
+        tkMessageBox.showerror(title="Error", message=e._message, parent=window)
+        raise e
+        raise KeyboardInterrupt
+    except PebbleError as e:
+        tkMessageBox.showerror(title="Error", message=e._message, parent=window)
+        raise e
+        raise KeyboardInterrupt
     except Exception as e:
         pebble.disconnect()
         raise e
