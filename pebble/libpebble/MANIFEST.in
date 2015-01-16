@@ -1,0 +1,16 @@
+#Language Files
+
+include pebble/data/i18n/ca/LC_MESSAGES/pebble-remote.mo
+include pebble/data/i18n/tr/LC_MESSAGES/pebble-remote.mo
+include pebble/data/i18n/es/LC_MESSAGES/pebble-remote.mo
+include pebble/data/i18n/it/LC_MESSAGES/pebble-remote.mo
+
+#Manual page
+
+include pebble/data/man/pebble-remote.1.gz
+
+#Mimetype files
+
+include pebble/data/mimetype/pebble-remote
+include pebble/data/mimetype/pebble-remote.desktop
+include pebble/data/mimetype/pebble-remote.png
