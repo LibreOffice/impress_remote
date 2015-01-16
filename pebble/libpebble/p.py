@@ -38,7 +38,6 @@ def cmd_remote(pebble, args):
     def libreoffice_event_handler(event):
         right_click = "xdotool key --window "+ window_id + "Right"
         left_click = "xdotool key --window "+ window_id + "Left"
-        exit_click = "bash /usr/lib/python2.7/pebble/exit_click"
 
         if event == "next":
             pexpect.run(right_click)
@@ -60,7 +59,7 @@ def cmd_remote(pebble, args):
                 if len(window_ids)<2:
                     altf4_edit = "xdotool windowactivate --sync "+window_ids[0]+" key --clearmodifiers --delay 100 alt+F4"
                     pexpect.run(altf4_edit)
-                pexpect.run(exit_click)
+                pexpect.run("exit_click.sh")
             except Exception as e:
                 raise e
         print event

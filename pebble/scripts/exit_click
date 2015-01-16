@@ -1,2 +1,0 @@
-ps aux | grep p.py | sed 's/\s\+/ /g' | cut -d' ' -f2 | xargs kill
-ps aux | grep soffice | sed 's/\s\+/ /g' | cut -d' ' -f2 | xargs kill -2
