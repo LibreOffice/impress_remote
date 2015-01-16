@@ -5,10 +5,10 @@ import os
 import pebble as libpebble
 import time
 import pexpect
-import i18n
 import tkMessageBox
 
 from Tkinter import *
+from pebble import i18n
 
 _ = i18n.language.gettext
 

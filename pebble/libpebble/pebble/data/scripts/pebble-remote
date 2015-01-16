@@ -19,7 +19,7 @@ then
 
 else
 
-  /usr/bin/p.py --pebble_id $PEBBLE_ID $PARAMETERS $SUBCOMMAND $APP_NAME $1
+  p.py --pebble_id $PEBBLE_ID $PARAMETERS $SUBCOMMAND $APP_NAME $1
 
 fi
 
