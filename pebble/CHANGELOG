@@ -4,3 +4,10 @@
 * Added language support for Turkish and Italian
 * Changed licence
 
+2.0 / 15.01.2015
+
+* Added mimetype support
+* Added man page for pebble-remote command
+* Added exit function on middle button of Pebble
+* Add Catalan and Spanish translations
+* pebble-remote was made can be installed with 'python setup.py install'
