@@ -6,10 +6,9 @@ import pebble as libpebble
 import time
 import pexpect
 import tkMessageBox
+from pebble_remote import i18n
 
 from Tkinter import *
-from pebble import i18n
-
 _ = i18n.language.gettext
 
 MAX_ATTEMPTS = 5
