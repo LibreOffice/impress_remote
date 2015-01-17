@@ -1,7 +1,8 @@
 pebble-remote
 =========
 
-This project provides remote control to Libreoffice Impress with Pebble. The directives are all for Ubuntu 14.04, but should be easily adaptable to other platforms. 
+This project provides remote control to Libreoffice Impress with Pebble. The directives are all for Ubuntu 14.04, but should be easily adaptable to other platforms. Pebble Remote's web site is www.pebbleremote.com
+
 
 ## Installation
 
