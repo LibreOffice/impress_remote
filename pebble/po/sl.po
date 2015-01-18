@@ -1,0 +1,44 @@
+# pebble-remote translation file.
+# Copyright (C) 2015
+# This file is distributed under the same license as the pebble-remote package.
+# Gülşah KÖSE <gulsah.1004@gmail.com>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-01-03 01:34+0200\n"
+"PO-Revision-Date: 2015-01-18 02:38+0100\n"
+"Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
+"Language-Team: sl.libreoffice.org <users@sl.libreoffice.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.3\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
+"Language: sl\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: libpebble/p.py:17
+msgid "LibreOffice Remote Control "
+msgstr "Daljinec za LibreOffice "
+
+#: libpebble/p.py:17
+msgid "Next"
+msgstr "Naprej"
+
+#: libpebble/p.py:17
+msgid "Previous"
+msgstr "Nazaj"
+
+#: libpebble/p.py:25
+msgid "Something's wrong"
+msgstr "Nekaj ni v redu"
+
+#: libpebble/p.py:47
+msgid "waiting for events"
+msgstr "čakanje na dogodke"
+
+#: libpebble/p.py:77
+msgid "Could not connect to Pebble"
+msgstr "Povezava s Pebble ni možna"
