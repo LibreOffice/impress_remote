@@ -1,0 +1,43 @@
+# pebble-remote translation file.
+# Copyright (C) 2015
+# This file is distributed under the same license as the pebble-remote package.
+# 
+# Translators:
+# Kaan Özdinçer <kaanozdincer@gmail.com>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: pebble-remote\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-01-04 17:15+0200\n"
+"PO-Revision-Date: 2015-01-21 22:40+0000\n"
+"Last-Translator: Kaan Özdinçer <kaanozdincer@gmail.com>\n"
+"Language-Team: German (Germany) (http://www.transifex.com/projects/p/pebble-remote/language/de_DE/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: de_DE\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: libpebble/p.py:17
+msgid "LibreOffice Remote Control "
+msgstr "LibreOffice Fernbedienung"
+
+#: libpebble/p.py:17
+msgid "Next"
+msgstr "Weiter"
+
+#: libpebble/p.py:17
+msgid "Previous"
+msgstr "Vorherige"
+
+#: libpebble/p.py:25
+msgid "Something's wrong"
+msgstr "Irgendetwas stimmt nicht"
+
+#: libpebble/p.py:47
+msgid "waiting for events"
+msgstr "warte auf ereignisse"
+
+#: libpebble/p.py:77
+msgid "Could not connect to Pebble"
+msgstr "Verbindung zum Pebble fehlgeschlagen"
