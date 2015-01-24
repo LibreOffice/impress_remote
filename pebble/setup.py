@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='pebble-remote',
-      version='2.0',
+      version='2.1',
       description='Remote control for LibreOffice Impress with Pebble',
       url='https://github.com/LibreOffice/impress_remote/tree/master/pebble',
       author='Gulsah KOSE',

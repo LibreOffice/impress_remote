@@ -14,7 +14,7 @@ then
 elif [ "$1" == "-v" ] || [ "$1" == "--version" ];
 then
 
-  echo "2.0"
+  echo "2.1"
   exit 0
 
 else
