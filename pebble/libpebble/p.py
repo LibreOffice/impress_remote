@@ -22,21 +22,34 @@ PebbleError = libpebble.pebble.PebbleError
 
 def cmd_remote(pebble, args):
     path=args.odp_file_path
-    runodp = args.app_name+" --impress "+path
+    runodp = args.app_name+" "+path
     pebble.set_nowplaying_metadata(_("LibreOffice Remote Control "), _("Next"), _("Previous"))
 
     try:
         pexpect.run(runodp, timeout=5)
-        window_id = pexpect.run("xdotool search --sync --onlyvisible --class \"libreoffice\"")
-	fullscreen = "xdotool key --window " +window_id+" F5"
-	pexpect.run(fullscreen) 
+        window_id = pexpect.run("xdotool search --sync --onlyvisible --class \"libreoffice\"", timeout=5)
+
+        if window_id == "":
+            window_id = pexpect.run("xdotool search --sync --onlyvisible --class \"openoffice\"").split('\r\n')
+            productname = "openoffice"
+            fullscreen = "xdotool key --window " +window_id[0]+" F5"
+        else:
+           productname = "libreoffice"
+           fullscreen = "xdotool key --window " +window_id+" F5"
+
+        pexpect.run(fullscreen)
     except Exception:
         print _("Something's wrong")
         return False
 
     def libreoffice_event_handler(event):
-        right_click = "xdotool key --window "+ window_id + "Right"
-        left_click = "xdotool key --window "+ window_id + "Left"
+        if productname == "libreoffice":
+            right_click = "xdotool key --window "+ window_id + " Right"
+            left_click = "xdotool key --window "+ window_id + " Left"
+        else:
+            window_ids = pexpect.run("xdotool search --sync --onlyvisible --class \"openoffice\"").split('\r\n')
+            right_click = "xdotool key --window "+ window_ids[1] + " Right"
+            left_click = "xdotool key --window "+ window_ids[1] + " Left"
 
         if event == "next":
             pexpect.run(right_click)
@@ -46,7 +59,10 @@ def cmd_remote(pebble, args):
 
         if event == "exit":
             try:
-                window_ids = pexpect.run("xdotool search --sync --onlyvisible --name \"libreoffice\"").split("\r\n")
+                if productname == "libreoffice":
+                    window_ids = pexpect.run("xdotool search --sync --onlyvisible --name \"libreoffice\"").split("\r\n")
+                else:
+                    window_ids = pexpect.run("xdotool search --sync --onlyvisible --name \"openoffice\"").split("\r\n")
                 window_ids.pop()
                 window_ids.reverse()
                 if len(window_ids)>=2:
@@ -58,6 +74,7 @@ def cmd_remote(pebble, args):
                 if len(window_ids)<2:
                     altf4_edit = "xdotool windowactivate --sync "+window_ids[0]+" key --clearmodifiers --delay 100 alt+F4"
                     pexpect.run(altf4_edit)
+
                 pexpect.run("exit_click.sh")
             except Exception as e:
                 raise e
