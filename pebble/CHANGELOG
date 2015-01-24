@@ -1,8 +1,7 @@
-1.1 / 06.01.2015
+2.1 / 24.01.2015
 
-* Added i18n and l10n support
-* Added language support for Turkish and Italian
-* Changed licence
+* Added Apache OpenOffice support
+* Added German translation
 
 2.0 / 15.01.2015
 
@@ -11,3 +10,10 @@
 * Added exit function on middle button of Pebble
 * Add Catalan and Spanish translations
 * pebble-remote was made can be installed with 'python setup.py install'
+
+1.1 / 06.01.2015
+
+* Added i18n and l10n support
+* Added language support for Turkish and Italian
+* Changed licence
+
