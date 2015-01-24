@@ -3,7 +3,7 @@
 export PEBBLE_ID=`bt-device -l | grep Pebble | cut -d ' ' -f3 | cut -c2-18`
 export PARAMETERS=--lightblue
 export SUBCOMMAND=remote
-export APP_NAME=libreoffice
+export APP_NAME=soffice
 
 if [ "$1" == "-h" ] || [ "$1" == "--help" ];
 then
