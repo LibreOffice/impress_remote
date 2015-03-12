@@ -39,8 +39,10 @@
   <string name="header_notes">הערות</string>
   <string name="mask_slide_show_progress">שקופית %1$d מתוך %2$d</string>
   <plurals name="mask_timer_progress">
-    <item quantity="one">דקה אחת נותרה</item>
-    <item quantity="other">%d דקות נותרו</item>
+    <item quantity="one">%d דקות נותרו</item>
+    <item quantity="two"/>
+    <item quantity="many">דקה אחת נותרה</item>
+    <item quantity="other"/>
   </plurals>
   <string name="description_pager_slide">תצוגה מקדימה של השקופית</string>
   <string name="description_grid_slide">תצוגה מקדימה של השקופית</string>

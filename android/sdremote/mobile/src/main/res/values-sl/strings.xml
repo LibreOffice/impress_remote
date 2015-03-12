@@ -46,9 +46,9 @@
   <string name="header_notes">Opombe</string>
   <string name="mask_slide_show_progress">Prosojnica %1$d od %2$d</string>
   <plurals name="mask_timer_progress">
-    <item quantity="one">Še %d minut</item>
-    <item quantity="two">Še %d minuta</item>
-    <item quantity="few">Še %d minuti</item>
+    <item quantity="one">Še %d minuta</item>
+    <item quantity="two">Še %d minuti</item>
+    <item quantity="few">Še %d minut</item>
     <item quantity="other">Še %d minute</item>
   </plurals>
   <string name="description_pager_slide">Predogled prosojnice</string>

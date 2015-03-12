@@ -46,9 +46,9 @@
   <string name="header_notes">Bilješke</string>
   <string name="mask_slide_show_progress">Slajd %1$d od %2$d</string>
   <plurals name="mask_timer_progress">
-    <item quantity="one">Preostala je jedna minuta</item>
-    <item quantity="few">Preostale su %d minute</item>
-    <item quantity="many">Preostalo je %d minuta</item>
+    <item quantity="one">Preostalo je %d minuta</item>
+    <item quantity="few">Preostala je jedna minuta</item>
+    <item quantity="many">Preostale su %d minute</item>
     <item quantity="other"/>
   </plurals>
   <string name="description_pager_slide">Pregled slajda</string>

@@ -30,8 +30,8 @@
   <string name="message_impress_pin_validation">LibreOffice Impress\'de \"Slayt Gösterisi → Impress Uzaktan Kumanda\" yolunu takip edin ve aşağıdaki kodu girin.</string>
   <string name="message_connection_failed_title">Bağlantı başarısız oldu</string>
   <string name="message_impress_remote_enabling">Uzaktan erişimi etkinleştirdiğinizden emin olun. LibreOffice Impress\'te bunu yapmak için \"Araçlar → Seçenekler → LibreOffice Impress → Genel” yolunu izleyiniz.</string>
-  <string name="message_impress_wifi_enabling">"Bunun yanında  “Araçlar → Seçenekler → LibreOffice → Gelişmiş” yolunu izleyerek deneysel özellikleri de etkinleştirmelisiniz."</string>
-  <string name="message_impress_pairing_check">Eğer Bluetooth paylaşım sorununuz varsa masaüstü işletim sisteminizle ilgili talimatları kontrol edin.</string>
+  <string name="message_impress_wifi_enabling">Bunun yanında “Araçlar → Seçenekler → LibreOffice → Gelişmiş” yolunu izleyerek deneysel özellikleri de etkinleştirmelisiniz.</string>
+  <string name="message_impress_pairing_check">Eğer Bluetooth eşleşme sorununuz varsa masaüstü işletim sisteminizle ilgili talimatları kontrol edin.</string>
   <string name="message_ip_address_validation">Geçerli bir IP adresi girin.</string>
   <string name="message_time_is_up">Süre doldu!</string>
   <string name="message_search_wifi">LibreOffice\'in aynı WiFi ağındaki bir bilgisayarda çalıştığından emin olun.</string>
@@ -39,7 +39,7 @@
   <string name="message_learn_more">
     <a href="org.libreoffice.impressremote://requirements/">Daha fazlasını öğren</a>
   </string>
-  <string name="message_paused">Beklet</string>
+  <string name="message_paused">Duraklatıldı</string>
   <string name="message_notes_empty">Burada bir şey yok.</string>
   <string name="hint_ip_address">IP adresi</string>
   <string name="hint_name">İsim (isteğe bağlı)</string>
@@ -61,6 +61,6 @@
   <string name="requirements_libreoffice_general_enabled">Impress Uzaktan Kumanda, LibreOffice Impress içerisinde \"Araçlar → Seçenekler → LibreOffice Impress → Genel\" yolu ile etkinleştirilir.</string>
   <string name="requirements_libreoffice_experimental_enabled">Deneysel Özellikler \"Araçlar → Seçenekler → LimreOffice → Gelişmiş\" yolu ile etkinleştirilir.</string>
   <string name="requirements_network_connection">Aynı şebekeye bağlanmış Android cihaz ve bilgisayar.</string>
-  <string name="requirements_network_ports">Eğer güvenlik duvarı kullanıyorsanız, 1598 ve 1599 numaralı bağlantı noktalarının açık olduğundan emin olun.</string>
+  <string name="requirements_network_ports">Eğer güvenlik duvarı kullanıyorsanız 1598 ve 1599 numaralı bağlantı noktalarının açık olduğundan emin olun.</string>
   <string name="requirements_bluetooth_connection">Bluetooth\'u etkinleştirilmiş bir bilgisayar.</string>
 </resources>

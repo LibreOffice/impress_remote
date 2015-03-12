@@ -35,7 +35,8 @@
   <string name="header_notes">Жазбалар</string>
   <string name="mask_slide_show_progress">Слайд %1$d, барлығы %2$d</string>
   <plurals name="mask_timer_progress">
-    <item quantity="other">%d минут қалды</item>
+    <item quantity="one">%d минут қалды</item>
+    <item quantity="other"/>
   </plurals>
   <string name="description_pager_slide">Слайдтарды қарау</string>
   <string name="description_grid_slide">Слайдтарды қарау</string>

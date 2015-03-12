@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="application_name">தொலை இம்பிரெஸ்</string>
+  <string name="title_computers">கணினிகள்</string>
+  <string name="title_generic">பொது</string>
+  <string name="title_settings">அமைவுகள்</string>
+  <string name="title_requirements">தேவைகள்</string>
+  <string name="title_connection">இணைப்பு</string>
+  <string name="title_creation">உருவாக்கம்</string>
+  <string name="title_slide_show">படவில்லை காட்சி</string>
+  <string name="title_timer">கடிகாரம்</string>
+  <string name="menu_settings">அமைவுகள்</string>
+  <string name="menu_requirements">தேவைகள்</string>
+  <string name="menu_reconnect">மீட்டு இணை</string>
+  <string name="menu_add_computer">கணினியை சேர்</string>
+  <string name="menu_start_discovery">தேடலைத் துவக்கு</string>
+  <string name="menu_remove_computer">நீக்கு</string>
+  <string name="menu_slides_grid">படவில்லைகள் கட்டம்</string>
+  <string name="menu_slides_pager">படவில்லை தாள்</string>
+  <string name="menu_timer">கடிகாரம்</string>
+  <string name="menu_stop_slide_show">காட்சியை நிறுத்து</string>
+  <string name="menu_pause_slide_show">காட்சியை இடைநிறுத்து</string>
+  <string name="menu_resume_slide_show">காட்சியை தொடர்</string>
+  <string name="menu_start_pointer">துவக்கப் புள்ளி</string>
+  <string name="menu_stop_pointer">நிறுத்தப் புள்ளி</string>
+  <string name="button_cancel">இரத்து</string>
+  <string name="button_save">சேமி</string>
+  <string name="button_start">தொடங்கு</string>
+  <string name="button_remove">நீக்கு</string>
+  <string name="message_impress_pin_validation">லிப்ரெஓபிஸ் இம்பிரெஸில் \"படவில்லை காட்சி → இம்பிரெஸ் ரிமோட்\" சென்று குறீயீடுகளை உள்ளிடு.</string>
+  <string name="message_connection_failed_title">இணைப்பு தோல்வியுற்றது.</string>
+  <string name="message_impress_remote_enabling">தொலைநிலைக் கட்டுப்பாடு செயலில் உள்ளதா என உறுதிச்செய். லிப்ரெஓபிஸ் இம்பிரெஸில் “கருவிகள் → தேர்வுகள் → லிப்ரெஓபிஸ் இம்பிரெஸ் → பொது” என்பதற்கு செல்.</string>
+  <string name="message_impress_wifi_enabling">நீங்கள் “கருவிகள் → தேர்வுகள் → லிப்ரெஓபிஸ் → மேம்பட்டது” என்பதில் சோதனை அம்சங்களை செயல்படுத்தி இருக்க வேண்டும்.</string>
+  <string name="message_impress_pairing_check">ப்ளூடூத் சாதனங்களை சோடி சேர்த்தலில் உங்களுக்கு பிரச்சனை இருந்தால் மேசைக் கணினியின் இயங்கு தளத்திற்கான வழிமுறைகளை சரிபார்க்கவும்.</string>
+  <string name="message_ip_address_validation">சரியான IP முகவரியை உள்ளிடு.</string>
+  <string name="message_time_is_up">நேரம் முடிந்தது!</string>
+  <string name="message_search_wifi">லிப்ரெஓபிஸ் ஒத்த வை-பை பிணையத்தில் இயங்குகின்றதா என்பதை உறுதி செய்.</string>
+  <string name="message_search_bluetooth">லிப்ரெஓபிஸ் இயங்கும் கணினியில் ப்ளூடூத் செயலில் உள்ளதா என்பதை உறுதி செய்யவும்.</string>
+  <string name="message_learn_more">
+    <a href="org.libreoffice.impressremote://requirements/">மேலும் அறிய</a>
+  </string>
+  <string name="message_paused">இடைநிறுத்தப்பட்டது</string>
+  <string name="message_notes_empty">இங்கு ஒன்றும் இல்லை</string>
+  <string name="hint_ip_address">IP முகவரி</string>
+  <string name="hint_name">பெயர்(தேர்வு)</string>
+  <string name="header_notes">குறிப்புகள்</string>
+  <string name="mask_slide_show_progress">படவில்லை %1$d முதல் %2$d</string>
+  <plurals name="mask_timer_progress">
+    <item quantity="one">ஒரு நிமிடம் மீதம்</item>
+    <item quantity="other">%d நிமிடங்கள் மீதம்</item>
+  </plurals>
+  <string name="description_pager_slide">காட்சி முன்தோற்றம்</string>
+  <string name="description_grid_slide">காட்சி முன்தோற்றம்</string>
+  <string name="description_empty_slide">காலி படவில்லை</string>
+  <string name="preferences_volume_keys_actions_title">ஒலியளவு விசைகளின் செயல்கள்</string>
+  <string name="preferences_volume_keys_actions_summary">ஒலியளவு விசைகளின் மூலம் படவில்லையிலிருந்து மாறி அசைவூட்டங்களை இயக்க முடியும்</string>
+  <string name="preferences_keep_screen_on_title">திரையை திறந்தே வை</string>
+  <string name="preferences_keep_screen_on_summary">படைத்தலின்போது பேசி உறங்குவதை தடு</string>
+  <string name="preferences_quiet_mode_title">அமைதி முறைமை</string>
+  <string name="preferences_quiet_mode_summary">படைத்தலின்போது அதிர்வு அலரல் முறைமைக்கு அமை</string>
+  <string name="requirements_libreoffice_version">கணினியில் லிப்ரெஓபிஸ் பதிப்பு 4.0.3 அல்லது அதற்கு மேலான பதிப்பு இயங்குகிறது.</string>
+  <string name="requirements_libreoffice_general_enabled">லிப்ரெஓபிஸ் இம்பிரெஸில் “கருவிகள் → தேர்வுகள் → லிப்ரெஓபிஸ் இம்பிரெஸ் → பொது” இம்பிரெஸ் ரிமோட் செயலாக்கப்பட்டது.</string>
+  <string name="requirements_libreoffice_experimental_enabled">லிப்ரெஓபிஸ் இம்பிரெஸில் “கருவிகள் → தேர்வுகள் → லிப்ரெஓபிஸ் → மேம்பட்டது” சோதனை அம்சங்கள் செயலாக்கப்பட்டன.</string>
+  <string name="requirements_network_connection">ஆண்ட்ராய்டு சாதனமும் கணினியும் ஒரே பிணையத்தில் இணைக்கப்பட்டுள்ளன.</string>
+  <string name="requirements_network_ports">நீங்கள் பயர்வால் வைத்திருந்தால் 1598 மற்றும் 1599 சேவை முனை எண்களை திறந்து வைக்கவும்.</string>
+  <string name="requirements_bluetooth_connection">ப்ளூடூத் இயக்கத்துடன் உள்ள ஒரு கணினி.</string>
+</resources>

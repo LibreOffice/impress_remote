@@ -44,7 +44,7 @@
   <string name="hint_ip_address">IP-adresse</string>
   <string name="hint_name">Navn (valgfrit)</string>
   <string name="header_notes">Noter</string>
-  <string name="mask_slide_show_progress">Dias %1$d af %2$d</string>
+  <string name="mask_slide_show_progress">Dias %1$d fra %2$d</string>
   <plurals name="mask_timer_progress">
     <item quantity="one">Et minut tilbage</item>
     <item quantity="other">%d minutter tilbage</item>
