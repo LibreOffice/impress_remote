@@ -8,6 +8,16 @@ buildscript {
     }
 }
 
+// defaults for the two modules to have a single place to update
+ext {
+    compileSdkVersion = 21
+    buildToolsVersion = "21.1.2"
+
+    applicationId = "org.libreoffice.impressremote"
+    versionCode = 14
+    versionName = "2.2.0"
+}
+
 allprojects {
     repositories {
         jcenter()

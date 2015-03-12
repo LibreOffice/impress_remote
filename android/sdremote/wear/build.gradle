@@ -1,16 +1,16 @@
 apply plugin: 'com.android.application'
 
-
 android {
-    compileSdkVersion 21
-    buildToolsVersion "21.1.2"
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
-        applicationId "org.libreoffice.impressremote"
+        applicationId rootProject.ext.applicationId
+        versionCode   rootProject.ext.versionCode
+        versionName   rootProject.ext.versionName
+
         minSdkVersion 20
         targetSdkVersion 21
-        versionCode 1
-        versionName "1.1"
     }
 }
 
