@@ -101,9 +101,12 @@ class BluetoothServersFinder extends BroadcastReceiver implements ServersFinder 
     }
 
     private Server.Type buildServerType(BluetoothDevice aBluetoothDevice) {
-        int aBluetoothClass = aBluetoothDevice.getBluetoothClass().getMajorDeviceClass();
+        BluetoothClass btClass = aBluetoothDevice.getBluetoothClass();
+        if (null == btClass) {
+            return Server.Type.UNDEFINED;
+        }
 
-        switch (aBluetoothClass) {
+        switch (btClass.getMajorDeviceClass()) {
             case BluetoothClass.Device.Major.COMPUTER:
                 return Server.Type.COMPUTER;
 
