@@ -8,15 +8,12 @@
  */
 package org.libreoffice.impressremote.fragment.slides;
 
-import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.IBinder;
-import android.support.v4.app.Fragment;
 import android.support.v4.content.LocalBroadcastManager;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,12 +21,12 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
 
-import org.libreoffice.impressremote.activity.SlideShowActivity;
-import org.libreoffice.impressremote.communication.SlideShow;
-import org.libreoffice.impressremote.util.Intents;
 import org.libreoffice.impressremote.R;
+import org.libreoffice.impressremote.activity.SlideShowActivity;
 import org.libreoffice.impressremote.adapter.SlidesGridAdapter;
 import org.libreoffice.impressremote.communication.CommunicationService;
+import org.libreoffice.impressremote.communication.SlideShow;
+import org.libreoffice.impressremote.util.Intents;
 
 public class SlidesGridFragment extends AbstractSlideFragment implements ServiceConnection, AdapterView.OnItemClickListener {
     // We need to keep track of this in order to know which slide needs 'resetting' when we change
@@ -53,10 +50,6 @@ public class SlidesGridFragment extends AbstractSlideFragment implements Service
     public void onActivityCreated(Bundle aSavedInstanceState) {
         super.onActivityCreated(aSavedInstanceState);
 
-        bindService();
-    }
-
-    private void bindService() {
         Intent aServiceIntent = Intents.buildCommunicationServiceIntent(getActivity());
         getActivity().bindService(aServiceIntent, this, Context.BIND_AUTO_CREATE);
     }
@@ -66,15 +59,12 @@ public class SlidesGridFragment extends AbstractSlideFragment implements Service
         CommunicationService.ServiceBinder aServiceBinder = (CommunicationService.ServiceBinder) aBinder;
         mCommunicationService = aServiceBinder.getService();
 
-        setUpSlidesGrid();
-    }
-
-    private void setUpSlidesGrid() {
         if (!isAdded()) {
             return;
         }
 
         GridView aSlidesGrid = getSlidesGrid();
+        if (null == aSlidesGrid) return;
 
         aSlidesGrid.setAdapter(buildSlidesAdapter());
         aSlidesGrid.setOnItemClickListener(this);
@@ -83,7 +73,9 @@ public class SlidesGridFragment extends AbstractSlideFragment implements Service
     }
 
     private GridView getSlidesGrid() {
-        return (GridView) getView().findViewById(R.id.grid_slides);
+        View slideSorter = getView();
+
+        return null == slideSorter ? null : (GridView) slideSorter.findViewById(R.id.grid_slides);
     }
 
     private SlidesGridAdapter buildSlidesAdapter() {
@@ -120,7 +112,8 @@ public class SlidesGridFragment extends AbstractSlideFragment implements Service
 
     @Override
     void slideShowStateChanged() {
-        refreshSlidesGrid();
+        GridView grid = getSlidesGrid();
+        if (grid != null) grid.invalidateViews();
     }
 
     @Override
@@ -144,13 +137,9 @@ public class SlidesGridFragment extends AbstractSlideFragment implements Service
         // We don't care about notes in the grid view.
     }
 
-    private void refreshSlidesGrid() {
-        getSlidesGrid().invalidateViews();
-    }
-
     private void refreshSlidePreview(int aSlideIndex) {
         GridView aSlidesGrid = getSlidesGrid();
-        View aSlideView = aSlidesGrid.getChildAt(aSlideIndex);
+        View aSlideView = (null == aSlidesGrid) ? null : aSlidesGrid.getChildAt(aSlideIndex);
 
         if (aSlideView == null) {
             return;
@@ -163,20 +152,9 @@ public class SlidesGridFragment extends AbstractSlideFragment implements Service
     public void onDestroy() {
         super.onDestroy();
 
-        unbindService();
+        if (mCommunicationService != null) getActivity().unbindService(this);
     }
 
-    private void unbindService() {
-        if (!isServiceBound()) {
-            return;
-        }
-
-        getActivity().unbindService(this);
-    }
-
-    private boolean isServiceBound() {
-        return mCommunicationService != null;
-    }
 }
 
 /* vim:set shiftwidth=4 softtabstop=4 expandtab: */
