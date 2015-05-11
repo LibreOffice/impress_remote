@@ -661,6 +661,7 @@ public class SlideShowActivity extends ActionBarActivity implements ServiceConne
     /**
      * Used in Wear control
      */
+
     private void nextTransition(){
         if (!isLastSlideDisplayed() && !modeIsEmpty()) {
             mCommunicationService.getCommandsTransmitter().performNextTransition();
@@ -672,16 +673,21 @@ public class SlideShowActivity extends ActionBarActivity implements ServiceConne
         }
     }
     private void pausePresentation(){
+        Log.d("SlideShowActivity","pausePresentation");
         changeMode(Mode.EMPTY);
         setUpSlideShowPausedInformation();
         pauseSlideShow();
         pauseTimer();
+        CommunicationServiceWear.presentationPaused();
     }
     private void resumePresentation(){
+        Log.d("SlideShowActivity", "resumePresentation");
+        CommunicationServiceWear.ignoreNextSync();
         changeMode(Mode.PAGER);
         setUpSlideShowInformation();
         resumeSlideShow();
         resumeTimer();
+        CommunicationServiceWear.presentationResumed();
     }
     private void pauseResumePresentation(){
         if(modeIsEmpty()){
@@ -692,24 +698,33 @@ public class SlideShowActivity extends ActionBarActivity implements ServiceConne
     }
 
     private void slideCountMessage(){
-        CommunicationServiceWear.sendCountMessage(notificationCount());
+        Log.d("SlideShowActivity", "slideCountMessage");
+        CommunicationServiceWear.syncData(getSlideCount(), getSlidePreview());
     }
-    private String notificationCount(){
+
+    private void showWearNotification(){
+        Log.d("SlideShowActivity", "showWearNotification");
+        CommunicationServiceWear.syncData(getSlideCount(), getSlidePreview());
+    }
+
+    private String getSlideCount(){
         return mCommunicationService.getSlideShow().getHumanCurrentSlideIndex()
                 +"/"+mCommunicationService.getSlideShow().getSlidesCount();
     }
-    private void showWearNotification(){
-        Log.d("SlideShowActivity","showWearNotification");
-        CommunicationServiceWear.sendStatusNotification(notificationCount());
+
+    private byte[] getSlidePreview(){
+        Log.d("SlideShowActivity","getSlidePreview");
+        int mCurrentSlideIndex = mCommunicationService.getSlideShow().getCurrentSlideIndex();
+        return mCommunicationService.getSlideShow().getSlidePreviewBytes(mCurrentSlideIndex);
     }
+
     private void wearableServiceConnect() {
-        //TODO check if wear api is present
+        // TODO add option for enabling android wear
         this.startService(new Intent(this, CommunicationServiceWear.class));
     }
     private void wearableServiceDisconnect() {
         this.stopService(new Intent(this, CommunicationServiceWear.class));
     }
-
 }
 
 /* vim:set shiftwidth=4 softtabstop=4 expandtab: */
