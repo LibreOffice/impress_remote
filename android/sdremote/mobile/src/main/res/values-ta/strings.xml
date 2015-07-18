@@ -47,7 +47,7 @@
   <string name="mask_slide_show_progress">படவில்லை %1$d முதல் %2$d</string>
   <plurals name="mask_timer_progress">
     <item quantity="one">ஒரு நிமிடம் மீதம்</item>
-    <item quantity="other">%d நிமிடங்கள் மீதம்</item>
+    <item quantity="other">%d நிமிடங்கள் மீதமுள்ளன</item>
   </plurals>
   <string name="description_pager_slide">காட்சி முன்தோற்றம்</string>
   <string name="description_grid_slide">காட்சி முன்தோற்றம்</string>
@@ -58,7 +58,7 @@
   <string name="preferences_keep_screen_on_summary">படைத்தலின்போது பேசி உறங்குவதை தடு</string>
   <string name="preferences_quiet_mode_title">அமைதி முறைமை</string>
   <string name="preferences_quiet_mode_summary">படைத்தலின்போது அதிர்வு அலரல் முறைமைக்கு அமை</string>
-  <string name="requirements_libreoffice_version">கணினியில் லிப்ரெஓபிஸ் பதிப்பு 4.0.3 அல்லது அதற்கு மேலான பதிப்பு இயங்குகிறது.</string>
+  <string name="requirements_libreoffice_version">கணினியில் லிப்ரெஓபிஸ் பதிப்பு 4.0.3 அல்லது அதற்கு மேலான பதிப்பு நிறுவப்பட்டுள்ளது.</string>
   <string name="requirements_libreoffice_general_enabled">லிப்ரெஓபிஸ் இம்பிரெஸில் “கருவிகள் → தேர்வுகள் → லிப்ரெஓபிஸ் இம்பிரெஸ் → பொது” இம்பிரெஸ் ரிமோட் செயலாக்கப்பட்டது.</string>
   <string name="requirements_libreoffice_experimental_enabled">லிப்ரெஓபிஸ் இம்பிரெஸில் “கருவிகள் → தேர்வுகள் → லிப்ரெஓபிஸ் → மேம்பட்டது” சோதனை அம்சங்கள் செயலாக்கப்பட்டன.</string>
   <string name="requirements_network_connection">ஆண்ட்ராய்டு சாதனமும் கணினியும் ஒரே பிணையத்தில் இணைக்கப்பட்டுள்ளன.</string>

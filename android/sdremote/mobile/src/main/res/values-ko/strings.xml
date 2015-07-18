@@ -10,16 +10,19 @@
   <string name="menu_timer">타이머</string>
   <string name="menu_stop_slide_show">슬라이드 쇼 중지</string>
   <string name="menu_pause_slide_show">슬라이드 쇼 일시 중지</string>
+  <string name="menu_resume_slide_show">슬라이드 쇼 재개</string>
   <string name="button_cancel">취소</string>
   <string name="button_save">저장</string>
   <string name="button_start">시작</string>
   <string name="button_remove">제거</string>
   <string name="message_connection_failed_title">연결 실패</string>
+  <string name="message_time_is_up">시간이 다 되었습니다!</string>
   <string name="message_paused">일시 정지됨</string>
   <string name="hint_ip_address">IP 주소</string>
   <string name="hint_name">이름 (선택 사항)</string>
   <string name="description_pager_slide">슬라이드 미리 보기</string>
   <string name="description_grid_slide">슬라이드 미리 보기</string>
   <string name="description_empty_slide">빈 슬라이드</string>
+  <string name="preferences_keep_screen_on_summary">프레젠테이션 도중 폰 잠금 방지</string>
   <string name="requirements_network_ports">방화벽이 있다면 포트 1598과 1599가 열려져 있는지 확인해주세요.</string>
 </resources>

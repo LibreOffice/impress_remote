@@ -46,7 +46,7 @@
   <string name="header_notes">Catatan</string>
   <string name="mask_slide_show_progress">Salindia %1$d dari %2$d</string>
   <plurals name="mask_timer_progress">
-    <item quantity="other">%d menit tersisa</item>
+    <item quantity="other">Satu menit tersisa%d menit tersisa</item>
   </plurals>
   <string name="description_pager_slide">Pratinjau salindia</string>
   <string name="description_grid_slide">Pratinjau salindia</string>
