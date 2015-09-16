@@ -27,6 +27,7 @@
   <string name="message_connection_failed_title">فشل الاتصال</string>
   <string name="message_impress_remote_enabling">تأكد أن التحكّم عن بعد بإمبريس يعمل. اذهب إلى أدوات ← خيارات ← LibreOffice إمبريس ← عام\" في ليبر أوفيس إمبريس.</string>
   <string name="message_impress_wifi_enabling">عليك تمكين ميزة المزايا التجريبية في \"أدوات ← خيارات ← LibreOffice ← متقدّم\" أيضًا.</string>
+  <string name="message_impress_pairing_check">إذا كانت لديك مشاكل في اقتران بلوتوث، تفقّد التعليمات المتعلقة بنظام تشغيل الحاسوب لديك.</string>
   <string name="message_ip_address_validation">اطبع عنوان IP صالح.</string>
   <string name="message_time_is_up">حان الوقت!</string>
   <string name="message_search_wifi">تأكد أن ليبر أوفيس يعمل على حاسوب بنفس الشبكة اللاسلكية.</string>

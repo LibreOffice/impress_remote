@@ -42,11 +42,11 @@
   <string name="message_paused">Gepauzeerd</string>
   <string name="message_notes_empty">Niets hier.</string>
   <string name="hint_ip_address">IP-adres</string>
-  <string name="hint_name">Naam optioneel)</string>
+  <string name="hint_name">Naam (optioneel)</string>
   <string name="header_notes">Aantekeningen</string>
   <string name="mask_slide_show_progress">Dia %1$d van %2$d</string>
   <plurals name="mask_timer_progress">
-    <item quantity="one">Nog één minuutnog %d minuten</item>
+    <item quantity="one">Nog één minuut nog %d minuten</item>
     <item quantity="other"/>
   </plurals>
   <string name="description_pager_slide">Dia voorvertoning</string>
@@ -58,8 +58,8 @@
   <string name="preferences_keep_screen_on_summary">Voorkom dat de telefoon in slaapstand gaat gedurende de presentatie</string>
   <string name="preferences_quiet_mode_title">Stille modus</string>
   <string name="preferences_quiet_mode_summary">Zet de trilstand aan tijdens de presentatie</string>
-  <string name="requirements_libreoffice_version">LibreOffice versie 4.0.3 of hoger uitvoeren op een computer</string>
-  <string name="requirements_libreoffice_general_enabled">Impress afstandsbedienng ingeschakeld in \"Extra &gt; Opties &gt; LibreOffice Impress &gt; Algemeen\" in LibreOffice Impress.</string>
+  <string name="requirements_libreoffice_version">LibreOffice versie 4.0.3 of hoger uitvoeren op een computer.</string>
+  <string name="requirements_libreoffice_general_enabled">Impress afstandsbediening ingeschakeld in \"Extra &gt; Opties &gt; LibreOffice Impress &gt; Algemeen\" in LibreOffice Impress.</string>
   <string name="requirements_libreoffice_experimental_enabled">Experimentele functies ingeschakeld in \"Extra &gt; Opties &gt; LibreOffice &gt; Geavanceerd\" in LibreOffice Impress.</string>
   <string name="requirements_network_connection">Het Android-toestel en een computer zijn aangesloten op hetzelfde netwerk.</string>
   <string name="requirements_network_ports">Als u een firewall heeft, zorg er dan voor dat poorten 1598 en 1599 zijn geopend.</string>
