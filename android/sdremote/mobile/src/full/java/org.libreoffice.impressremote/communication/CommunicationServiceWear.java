@@ -163,7 +163,6 @@ public class CommunicationServiceWear extends WearableListenerService {
         if(ingoreSync){
             Log.d(TAG, "Ignoring sync!");
             ingoreSync=false;
-            return;
         }else{
             new Thread( new Runnable() {
                 @Override

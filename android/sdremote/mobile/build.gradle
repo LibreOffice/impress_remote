@@ -1,13 +1,8 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
-        applicationId rootProject.ext.applicationId
-        versionCode   rootProject.ext.versionCode
-        versionName   rootProject.ext.versionName
 
         minSdkVersion 9
         targetSdkVersion 20
@@ -16,11 +11,17 @@ android {
     lintOptions {
         abortOnError false
     }
+    productFlavors {
+        // the full remote including the wearable
+        full {}
+        // minimal variant without wearable (and thus without the need for google apis)
+        minimal {}
+    }
 }
 
 dependencies {
     compile 'com.android.support:support-v4:21.0.3'
     compile 'com.android.support:appcompat-v7:20.0.0'
-    compile 'com.google.android.gms:play-services:6.5.87'
-    wearApp project(':wear')
+    fullCompile 'com.google.android.gms:play-services:6.5.87'
+    fullWearApp project(':wear')
 }
