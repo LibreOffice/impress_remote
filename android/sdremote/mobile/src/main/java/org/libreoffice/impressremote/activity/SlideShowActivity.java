@@ -44,7 +44,7 @@ import org.libreoffice.impressremote.util.Preferences;
 import org.libreoffice.impressremote.util.SavedStates;
 
 public class SlideShowActivity extends ActionBarActivity implements ServiceConnection {
-    public static enum Mode {
+    public enum Mode {
         PAGER, GRID, EMPTY, STARTPOINTER, STOPPOINTER
     }
 

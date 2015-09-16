@@ -87,15 +87,15 @@ public final class Preferences {
     }
 
     public void setInt(String aKey, int aValue) {
-        mPreferences.edit().putInt(aKey, aValue).commit();
+        mPreferences.edit().putInt(aKey, aValue).apply();
     }
 
     public void setString(String aKey, String aValue) {
-        mPreferences.edit().putString(aKey, aValue).commit();
+        mPreferences.edit().putString(aKey, aValue).apply();
     }
 
     public void remove(String aKey) {
-        mPreferences.edit().remove(aKey).commit();
+        mPreferences.edit().remove(aKey).apply();
     }
 }
 

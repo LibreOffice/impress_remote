@@ -35,7 +35,7 @@ import org.libreoffice.impressremote.communication.Server;
 import org.libreoffice.impressremote.util.SavedStates;
 
 public class ComputerConnectionFragment extends Fragment implements ServiceConnection {
-    public static enum Result {
+    public enum Result {
         CONNECTED, NOT_CONNECTED
     }
 

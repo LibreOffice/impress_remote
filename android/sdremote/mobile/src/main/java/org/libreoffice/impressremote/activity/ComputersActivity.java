@@ -176,7 +176,7 @@ public class ComputersActivity extends ActionBarActivity implements ActionBar.Ta
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.putBoolean(SELECT_BLUETOOTH, btTab.equals(getSupportActionBar()
                 .getSelectedTab()));
-        editor.commit();
+        editor.apply();
     }
 
     @Override

@@ -52,7 +52,7 @@ import org.libreoffice.impressremote.util.SavedStates;
 public class ComputersFragment extends ListFragment implements ServiceConnection, Runnable {
     private static final int SHOWING_PROGRESS_MESSAGE_DELAY_IN_SECONDS = 3;
 
-    public static enum Type {
+    public enum Type {
         WIFI, BLUETOOTH
     }
 

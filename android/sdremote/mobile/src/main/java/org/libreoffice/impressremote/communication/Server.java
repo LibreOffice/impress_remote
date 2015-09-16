@@ -15,11 +15,11 @@ import android.text.TextUtils;
 public class Server implements Parcelable {
     private static final int SPECIAL_PARCELABLE_OBJECTS_BITMASK = 0;
 
-    public static enum Protocol {
+    public enum Protocol {
         TCP, BLUETOOTH
     }
 
-    public static enum Type {
+    public enum Type {
         COMPUTER, PHONE, UNDEFINED
     }
 
