@@ -17,8 +17,8 @@ subprojects {
                 buildToolsVersion  '21.1.2'
                 defaultConfig {
                     applicationId 'org.libreoffice.impressremote'
-                    versionCode   16
-                    versionName   '2.2.2'
+                    versionCode   17
+                    versionName   '2.2.3'
                 }
             }
         }
