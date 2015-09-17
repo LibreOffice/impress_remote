@@ -14,7 +14,7 @@ import android.os.Handler;
 
 public class Timer implements Runnable {
     public interface TimerListener {
-        public void onTimerUpdated();
+        void onTimerUpdated();
     }
 
     private static final long UPDATE_PERIOD_IN_MINUTES = 1;

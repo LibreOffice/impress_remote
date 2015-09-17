@@ -9,19 +9,19 @@
 package org.libreoffice.impressremote.communication;
 
 interface MessagesListener {
-    public void onPinValidation();
+    void onPinValidation();
 
-    public void onSuccessfulPairing();
+    void onSuccessfulPairing();
 
-    public void onSlideShowStart(int aSlidesCount, int aCurrentSlideIndex);
+    void onSlideShowStart(int aSlidesCount, int aCurrentSlideIndex);
 
-    public void onSlideShowFinish();
+    void onSlideShowFinish();
 
-    public void onSlideChanged(int aCurrentSlideIndex);
+    void onSlideChanged(int aCurrentSlideIndex);
 
-    public void onSlidePreview(int aSlideIndex, byte[] aPreview);
+    void onSlidePreview(int aSlideIndex, byte[] aPreview);
 
-    public void onSlideNotes(int aSlideIndex, String aNotes);
+    void onSlideNotes(int aSlideIndex, String aNotes);
 }
 
 /* vim:set shiftwidth=4 softtabstop=4 expandtab: */

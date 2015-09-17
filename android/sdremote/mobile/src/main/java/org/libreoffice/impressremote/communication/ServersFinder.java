@@ -11,11 +11,11 @@ package org.libreoffice.impressremote.communication;
 import java.util.List;
 
 interface ServersFinder {
-    public void startSearch();
+    void startSearch();
 
-    public void stopSearch();
+    void stopSearch();
 
-    public List<Server> getServers();
+    List<Server> getServers();
 }
 
 /* vim:set shiftwidth=4 softtabstop=4 expandtab: */

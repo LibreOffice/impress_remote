@@ -282,11 +282,7 @@ public class ComputerConnectionFragment extends Fragment implements ServiceConne
     }
 
     private boolean shouldActionBarMenuBeDisplayed() {
-        if (getView() == null) {
-            return false;
-        }
-
-        return getCurrentViewId() == R.id.layout_error_message;
+        return getView() != null && getCurrentViewId() == R.id.layout_error_message;
     }
 
     private int getCurrentViewId() {

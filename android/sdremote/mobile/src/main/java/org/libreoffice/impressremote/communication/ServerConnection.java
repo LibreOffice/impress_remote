@@ -12,13 +12,13 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 interface ServerConnection {
-    public void open();
+    void open();
 
-    public void close();
+    void close();
 
-    public InputStream buildMessagesStream();
+    InputStream buildMessagesStream();
 
-    public OutputStream buildCommandsStream();
+    OutputStream buildCommandsStream();
 }
 
 /* vim:set shiftwidth=4 softtabstop=4 expandtab: */
