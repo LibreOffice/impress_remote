@@ -63,10 +63,6 @@ public class CommunicationService extends Service implements Runnable, MessagesL
         mServersManager.startServersSearch();
     }
 
-    public void stopServersSearch() {
-        mServersManager.stopServersSearch();
-    }
-
     public void addServer(String aAddress, String aName) {
         mServersManager.addTcpServer(aAddress, aName);
     }
@@ -221,7 +217,7 @@ public class CommunicationService extends Service implements Runnable, MessagesL
 
     @Override
     public void onDestroy() {
-        stopServersSearch();
+        mServersManager.stopServersSearch();
         disconnectServer();
     }
 }

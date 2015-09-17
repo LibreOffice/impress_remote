@@ -9,17 +9,13 @@
 package org.libreoffice.impressremote.activity;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.text.TextUtils;
 import android.util.Patterns;
 import android.view.KeyEvent;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -32,41 +28,13 @@ public class ComputerCreationActivity extends ActionBarActivity implements View.
     protected void onCreate(Bundle aSavedInstanceState) {
         super.onCreate(aSavedInstanceState);
         setContentView(R.layout.activity_computer_creation);
-
-        setUpActionBar();
-        setUpKeyboard();
-    }
-
-    private void setUpActionBar() {
-        setUpActionBarView();
-        setUpActionBarListeners();
-    }
-
-    private void setUpActionBarView() {
-        View aActionBarView = buildCustomActionBarView();
-        ActionBar.LayoutParams aActionBarParams = buildCustomActionBarLayoutParams();
-
-        getSupportActionBar().setCustomView(aActionBarView, aActionBarParams);
-    }
-
-    private View buildCustomActionBarView() {
-        Context aContext = getSupportActionBar().getThemedContext();
-        LayoutInflater aInflater = LayoutInflater.from(aContext);
-
-        return aInflater.inflate(R.layout.action_bar_computer_creation, null);
-    }
-
-    private ActionBar.LayoutParams buildCustomActionBarLayoutParams() {
-        return new ActionBar.LayoutParams(
-            ViewGroup.LayoutParams.MATCH_PARENT,
-            ViewGroup.LayoutParams.MATCH_PARENT);
-    }
-
-    private void setUpActionBarListeners() {
+        // action bar setup and listeners
+        getSupportActionBar().setCustomView(R.layout.action_bar_computer_creation);
         View aActionBarView = getSupportActionBar().getCustomView();
-
         aActionBarView.findViewById(R.id.button_cancel).setOnClickListener(this);
         aActionBarView.findViewById(R.id.button_save).setOnClickListener(this);
+        // input field
+        getNameEdit().setOnEditorActionListener(this);
     }
 
     @Override
@@ -133,10 +101,6 @@ public class ComputerCreationActivity extends ActionBarActivity implements View.
         setResult(Activity.RESULT_OK, aIntent);
 
         finish();
-    }
-
-    private void setUpKeyboard() {
-        getNameEdit().setOnEditorActionListener(this);
     }
 
     @Override

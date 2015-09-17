@@ -82,6 +82,8 @@
 
         </activity>
 
+        <service android:exported="false" android:name=".communication.CommunicationService" />
+
     </application>
 
 </manifest>

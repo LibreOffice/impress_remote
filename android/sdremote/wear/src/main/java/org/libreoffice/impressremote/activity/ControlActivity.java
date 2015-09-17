@@ -28,7 +28,7 @@ import org.libreoffice.impressremote.R;
 import org.libreoffice.impressremote.communication.DataLayerListenerService;
 import org.libreoffice.impressremote.util.SlideShowData;
 
-public class ControlActivity extends Activity {
+public abstract class ControlActivity extends Activity {
     private static final String TAG = "ControlActivity";
     private IntentsReceiver mIntentsReceiver;
     private boolean paused;
@@ -61,20 +61,20 @@ public class ControlActivity extends Activity {
         super.onStop();
     }
 
-    public void onButtonClickedPrevious(View target) {
+    public void onButtonClickedPrevious(@SuppressWarnings("UnusedParameters") View target) {
         if(!paused){
             DataLayerListenerService.commandPrevious();
         }
 
     }
 
-    public void onButtonClickedNext(View target) {
+    public void onButtonClickedNext(@SuppressWarnings("UnusedParameters") View target) {
         if(!paused){
             DataLayerListenerService.commandNext();
         }
     }
 
-    public void onButtonClickedPauseResume(View target) {
+    public void onButtonClickedPauseResume(@SuppressWarnings("UnusedParameters") View target) {
         DataLayerListenerService.commandPauseResume();
     }
 
@@ -108,7 +108,11 @@ public class ControlActivity extends Activity {
 
     private void registerIntentsReceiver() {
         mIntentsReceiver = new IntentsReceiver(this);
-        IntentFilter aIntentFilter = buildIntentsReceiverFilter();
+        IntentFilter aIntentFilter = new IntentFilter();
+        aIntentFilter.addAction(INTENT_UPDATE);
+        aIntentFilter.addAction(COMMAND_PRESENTATION_STOPPED);
+        aIntentFilter.addAction(COMMAND_PRESENTATION_PAUSED);
+        aIntentFilter.addAction(COMMAND_PRESENTATION_RESUMED);
 
         LocalBroadcastManager.getInstance(getApplicationContext()).registerReceiver(mIntentsReceiver, aIntentFilter);
     }
@@ -119,15 +123,6 @@ public class ControlActivity extends Activity {
         } catch (IllegalArgumentException ignored) {
 
         }
-    }
-
-    private IntentFilter buildIntentsReceiverFilter() {
-        IntentFilter aIntentFilter = new IntentFilter();
-        aIntentFilter.addAction(INTENT_UPDATE);
-        aIntentFilter.addAction(COMMAND_PRESENTATION_STOPPED);
-        aIntentFilter.addAction(COMMAND_PRESENTATION_PAUSED);
-        aIntentFilter.addAction(COMMAND_PRESENTATION_RESUMED);
-        return aIntentFilter;
     }
 
     private static final class IntentsReceiver extends BroadcastReceiver {
