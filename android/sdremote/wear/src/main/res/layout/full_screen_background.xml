@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:padding="10dp"
+    android:padding="3dp"
     android:background="@color/white">
 
     <ImageView
@@ -17,7 +17,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="5dp"
+        android:padding="0dp"
         app:layout_box="all">
 
 
@@ -42,35 +42,42 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_gravity="bottom|center_horizontal"
             android:divider="@color/dark_grey"
             android:showDividers="middle"
-            android:gravity="center">
+            android:gravity="center"
+            android:weightSum="1">
 
             <ImageButton
-                android:layout_width="40dp"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_gravity="bottom"
                 android:id="@+id/button_previous"
                 android:onClick="onButtonClickedPrevious"
                 android:background="@color/button_colors"
-                android:src="@drawable/ic_action_previous" />
+                android:src="@drawable/ic_action_previous"
+                android:paddingLeft="50dp"
+                android:layout_weight="0.25" />
 
             <ImageButton
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_gravity="bottom"
                 android:id="@+id/button_pauseStart"
                 android:onClick="onButtonClickedPauseResume"
                 android:background="@color/button_colors"
-                android:src="@drawable/ic_action_pause" />
+                android:src="@drawable/ic_action_pause"
+                android:layout_weight="0.35" />
 
             <ImageButton
-                android:layout_width="40dp"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:id="@+id/button_next"
                 android:onClick="onButtonClickedNext"
                 android:background="@color/button_colors"
-                android:src="@drawable/ic_action_next" />
+                android:src="@drawable/ic_action_next"
+                android:layout_weight="0.2" />
         </LinearLayout>
 
 
