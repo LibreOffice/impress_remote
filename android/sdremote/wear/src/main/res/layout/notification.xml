@@ -1,22 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <FrameLayout
+    <android.support.wearable.view.BoxInsetLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="5dp"
-        app:layout_box="all">
+        android:padding="3dp"
+        app:layout_box="bottom"
+        >
 
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/button_previous"
+                android:onClick="onButtonClickedPrevious"
+                android:src="@drawable/ic_action_previous"
+                android:layout_weight="1"
+
+                />
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/button_pauseStart"
+                android:onClick="onButtonClickedPauseResume"
+                android:src="@drawable/ic_action_pause"
+                android:layout_weight="1.2"/>
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/button_next"
+                android:onClick="onButtonClickedNext"
+                android:src="@drawable/ic_action_next"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:orientation="vertical"
             android:paddingLeft="5dp"
-            android:layout_gravity="top">
+            android:clickable="false"
+            android:focusable="false"
+            app:layout_box="top">
             <TextView
                 android:fontFamily="sans-serif-light"
                 android:layout_height="wrap_content"
@@ -25,40 +61,11 @@
                 android:id="@+id/textView_counter"
                 android:textColor="@color/black"
                 android:textSize="20sp"
+                android:clickable="false"
+                android:focusable="false"
                 android:gravity="center" />
 
         </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center_horizontal"
-            android:gravity="center">
-
-            <ImageButton
-                android:layout_width="40dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/button_previous"
-                android:onClick="onButtonClickedPrevious"
-                android:src="@drawable/ic_action_previous" />
-
-            <ImageButton
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/button_pauseStart"
-                android:onClick="onButtonClickedPauseResume"
-                android:src="@drawable/ic_action_pause" />
-
-            <ImageButton
-                android:layout_width="40dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/button_next"
-                android:onClick="onButtonClickedNext"
-                android:src="@drawable/ic_action_next" />
-        </LinearLayout>
-
-
-    </FrameLayout>
+    </android.support.wearable.view.BoxInsetLayout>
 
 </FrameLayout>
