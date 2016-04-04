@@ -10,11 +10,12 @@ package org.libreoffice.impressremote.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
 import org.libreoffice.impressremote.R;
 
-public class RequirementsActivity extends ActionBarActivity {
+public class RequirementsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle aSavedInstanceState) {
         super.onCreate(aSavedInstanceState);
@@ -24,7 +25,8 @@ public class RequirementsActivity extends ActionBarActivity {
     }
 
     private void setUpHomeButton() {
-        getSupportActionBar().setHomeButtonEnabled(true);
+        //To show the "Up" navigation arrow in the ActionBar
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     @Override

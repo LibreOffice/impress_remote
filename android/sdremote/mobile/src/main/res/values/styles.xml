@@ -15,24 +15,21 @@
  *   except in compliance with the License. You may obtain a copy of
  *   the License at http://www.apache.org/licenses/LICENSE-2.0 .
 -->
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
 
     <style name="SectionHeader">
-        <item name="android:textAllCaps" tools:targetApi="14">true</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@color/background_header</item>
-        <item name="android:drawableBottom">@drawable/underline_header</item>
-        <item name="android:drawablePadding">@dimen/padding_header_underline</item>
+        <item name="android:textColor">@color/accent</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:paddingLeft">@dimen/padding_header</item>
         <item name="android:paddingRight">@dimen/padding_header</item>
         <item name="android:paddingTop">@dimen/padding_header</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">wrap_content</item>
     </style>
 
     <style name="SectionItem">
         <item name="android:padding">@dimen/padding_section_item</item>
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
 
@@ -45,7 +42,8 @@
 
     <style name="Theme.ImpressRemote.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-    <style name="AppTheme" parent="Theme.AppCompat.Light">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!--DarkActionBar because we need ActionBar text and icons to be white-->
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryDark">@color/primary_dark</item>
         <item name="colorAccent">@color/accent</item>
