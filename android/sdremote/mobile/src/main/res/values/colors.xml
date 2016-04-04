@@ -18,6 +18,10 @@
 -->
 <resources>
 
+    <color name="primary">#ff9800</color>
+    <color name="primary_dark">#f57c00</color>
+    <color name="accent">#2962ff</color>
+
     <color name="background_action_bar">#e46f1f</color>
     <color name="background_action_bar_tab_indicator">#e6821c</color>
     <color name="background_action_bar_divider">#55ffffff</color>

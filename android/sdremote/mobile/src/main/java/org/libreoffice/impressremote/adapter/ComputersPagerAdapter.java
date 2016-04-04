@@ -36,6 +36,17 @@ public class ComputersPagerAdapter extends FragmentPagerAdapter {
     public int getCount() {
         return pager_size;
     }
+
+    @Override
+    public CharSequence getPageTitle(int position) {
+        switch (position) {
+            case 0:
+                return "Wi-Fi";
+            case 1:
+                return "Bluetooth";
+        }
+        return null;
+    }
 }
 
 /* vim:set shiftwidth=4 softtabstop=4 expandtab: */
