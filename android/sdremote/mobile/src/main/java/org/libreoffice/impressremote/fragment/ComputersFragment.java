@@ -348,10 +348,6 @@ public class ComputersFragment extends ListFragment implements ServiceConnection
     @Override
     public boolean onOptionsItemSelected(MenuItem aMenuItem) {
         switch (aMenuItem.getItemId()) {
-            case R.id.menu_add_computer:
-                callComputerCreationActivity();
-                return true;
-
             case R.id.menu_start_discovery:
                 if (BluetoothAdapter.getDefaultAdapter().startDiscovery()) {
                     MenuItemCompat.setActionView(aMenuItem, R.layout.progress);
@@ -361,11 +357,6 @@ public class ComputersFragment extends ListFragment implements ServiceConnection
             default:
                 return super.onOptionsItemSelected(aMenuItem);
         }
-    }
-
-    private void callComputerCreationActivity() {
-        Intent aIntent = Intents.buildComputerCreationIntent(getActivity());
-        startActivityForResult(aIntent, Intents.RequestCodes.CREATE_SERVER);
     }
 
     @Override
