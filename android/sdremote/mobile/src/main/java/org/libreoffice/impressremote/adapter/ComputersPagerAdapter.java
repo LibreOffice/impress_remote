@@ -8,18 +8,22 @@
  */
 package org.libreoffice.impressremote.adapter;
 
+import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import org.libreoffice.impressremote.R;
 import org.libreoffice.impressremote.fragment.ComputersFragment;
 
 public class ComputersPagerAdapter extends FragmentPagerAdapter {
     private int pager_size = 0;
     private ComputersFragment.Type tabs[] = new ComputersFragment.Type[2];
+    private Context context;
 
-    public ComputersPagerAdapter(FragmentManager aFragmentManager) {
+    public ComputersPagerAdapter(FragmentManager aFragmentManager, Context context) {
         super(aFragmentManager);
+        this.context = context;
     }
 
     public void addFragment(ComputersFragment.Type type) {
@@ -35,6 +39,17 @@ public class ComputersPagerAdapter extends FragmentPagerAdapter {
     @Override
     public int getCount() {
         return pager_size;
+    }
+
+    @Override
+    public CharSequence getPageTitle(int position) {
+        switch (position) {
+            case 0:
+                return context.getResources().getString(R.string.title_wifi);
+            case 1:
+                return context.getResources().getString(R.string.title_bluetooth);
+        }
+        return null;
     }
 }
 

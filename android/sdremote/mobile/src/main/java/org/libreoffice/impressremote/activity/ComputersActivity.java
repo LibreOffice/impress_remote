@@ -11,191 +11,123 @@ package org.libreoffice.impressremote.activity;
 import android.bluetooth.BluetoothAdapter;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.os.Bundle;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v4.view.MenuItemCompat;
+import android.support.design.widget.TabLayout;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBar.Tab;
-import android.support.v7.app.ActionBarActivity;
+import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
 
-import org.libreoffice.impressremote.adapter.ComputersPagerAdapter;
-import org.libreoffice.impressremote.fragment.ComputersFragment.Type;
-import org.libreoffice.impressremote.util.Intents;
+import android.widget.TextView;
+
 import org.libreoffice.impressremote.R;
+import org.libreoffice.impressremote.adapter.ComputersPagerAdapter;
+import org.libreoffice.impressremote.fragment.ComputersFragment;
+import org.libreoffice.impressremote.util.Intents;
 
-public class ComputersActivity extends ActionBarActivity implements ActionBar.TabListener, ViewPager.OnPageChangeListener {
-    private static final int REQUEST_ENABLE_BT = 0;
-    private static final String SELECT_BLUETOOTH = "SELECT_BLUETOOTH";
+public class ComputersActivity extends AppCompatActivity {
+
     private static final BluetoothAdapter btAdapter = BluetoothAdapter.getDefaultAdapter();
-    private static boolean disableBTOnQuit = btAdapter != null && !btAdapter.isEnabled();
-    private static Tab btTab;
-    private static Tab wifiTab;
-    private boolean isInitializing;
-    private ComputersPagerAdapter computersPagerAdapter = new ComputersPagerAdapter(getSupportFragmentManager());
+    private ViewPager mViewPager;
 
     @Override
-    protected void onCreate(Bundle aSavedInstanceState) {
-        super.onCreate(aSavedInstanceState);
-        isInitializing = true;
-
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_computers);
-        // Looks hacky but it seems to be the best way to set activity’s title
-        // different to application’s label. The other way is setting title
-        // to intents filter but it shows wrong label for recent apps screen then.
 
-        ActionBar aActionBar = getSupportActionBar();
+        //Toolbar = ActionBar
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
-        aActionBar.setTitle(R.string.title_computers);
-        aActionBar.setDisplayShowTitleEnabled(true);
+        /*We need to do this because the name of the activity is "Impress Remote" by default,
+         *(because it's a launcher activity), and we need to change it to "Computers" */
+        getSupportActionBar().setTitle(R.string.title_computers);
 
-        btTab = aActionBar.newTab().setTabListener(this)
-                .setText(R.string.title_bluetooth);
-        wifiTab = aActionBar.newTab().setTabListener(this)
-                .setText(R.string.title_wifi);
+        ComputersPagerAdapter computersPagerAdapter = new ComputersPagerAdapter(getSupportFragmentManager(), this);
 
-        if (btAdapter != null) {
-            computersPagerAdapter.addFragment(Type.BLUETOOTH);
-            aActionBar.addTab(btTab);
+        computersPagerAdapter.addFragment(ComputersFragment.Type.WIFI);
+
+        //add bluetooth tab only if bluetooth is available
+        if(btAdapter != null) {
+            computersPagerAdapter.addFragment(ComputersFragment.Type.BLUETOOTH);
         }
 
-        computersPagerAdapter.addFragment(Type.WIFI);
 
-        ViewPager aComputersPager = (ViewPager) findViewById(R.id.pager_computers);
-        aComputersPager.setAdapter(computersPagerAdapter);
-        aComputersPager.setOnPageChangeListener(this);
+        // Set up the ViewPager with the sections adapter.
+        mViewPager = (ViewPager) findViewById(R.id.container);
+        mViewPager.setAdapter(computersPagerAdapter);
 
-        // select wifitab - onStart() decides whether BT-Tab should be selected
-        // when the user starts the remote (and thus trigger the BT-enable
-        // intent in case BT was disabled)
-        isInitializing = false;
-        aActionBar.addTab(wifiTab, true);
-    }
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        tabLayout.setupWithViewPager(mViewPager);
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 
-        if (requestCode == REQUEST_ENABLE_BT) {
-            if (resultCode != RESULT_OK) {
-                getSupportActionBar().selectTab(wifiTab);
+        //we need this context for the FAB
+        final Context context = this;
+
+        assert fab != null;
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent aIntent = Intents.buildComputerCreationIntent(context);
+                startActivity(aIntent);
             }
+        });
+
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        getMenuInflater().inflate(R.menu.menu_action_bar_computers, menu);
+
+        //if bluetooth is not present, remove bt toggle from menu
+        if (btAdapter == null){
+            menu.removeItem(R.id.menu_start_discovery);
         }
-    }
-
-    @Override
-    public void onTabSelected(Tab aTab, FragmentTransaction aTransaction) {
-        ((ViewPager) findViewById(R.id.pager_computers)).setCurrentItem(aTab
-                .getPosition());
-        supportInvalidateOptionsMenu();
-        if (isInitializing) { return; }
-        if (aTab.equals(btTab) && !btAdapter.isEnabled()) {
-            Intent enableBtIntent = new Intent(
-                    BluetoothAdapter.ACTION_REQUEST_ENABLE);
-            startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
-        }
-    }
-
-    @Override
-    public void onTabUnselected(ActionBar.Tab aTab, FragmentTransaction aTransaction) {
-    }
-
-    @Override
-    public void onTabReselected(ActionBar.Tab aTab, FragmentTransaction aTransaction) {
-    }
-
-    @Override
-    public void onPageSelected(int aPosition) {
-        getSupportActionBar().setSelectedNavigationItem(aPosition);
-    }
-
-    @Override
-    public void onPageScrolled(int aPosition, float aPositionOffset, int aPositionOffsetPixels) {
-    }
-
-    @Override
-    public void onPageScrollStateChanged(int aPosition) {
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu aMenu) {
-        getMenuInflater().inflate(R.menu.menu_action_bar_computers, aMenu);
-
         return true;
     }
 
     @Override
-    public boolean onPrepareOptionsMenu(Menu aMenu) {
-        aMenu.findItem(R.id.menu_add_computer)
-            .setVisible(wifiTab.equals(getSupportActionBar().getSelectedTab()));
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
 
-        MenuItem btDiscovery = aMenu.findItem(R.id.menu_start_discovery);
-        if( btAdapter != null && btAdapter.isDiscovering()) {
-            btDiscovery.setEnabled(false);
-            MenuItemCompat.setActionView(btDiscovery, R.layout.progress);
+        if (id == R.id.menu_settings){
+            Intent aIntent = Intents.buildSettingsIntent(this);
+            startActivity(aIntent);
         }
-        btDiscovery.setVisible(btTab.equals(getSupportActionBar().getSelectedTab()));
 
-        return super.onPrepareOptionsMenu(aMenu);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem aMenuItem) {
-        switch (aMenuItem.getItemId()) {
-            case R.id.menu_settings:
-                callSettingsActivity();
-                return true;
-
-            case R.id.menu_requirements:
-                callRequirementsActivity();
-                return true;
-
-            default:
-                return super.onOptionsItemSelected(aMenuItem);
+        if (id == R.id.menu_requirements) {
+            Intent intent = Intents.buildRequirementsIntent(this);
+            startActivity(intent);
         }
-    }
-
-    private void callSettingsActivity() {
-        Intent aIntent = Intents.buildSettingsIntent(this);
-        startActivity(aIntent);
-    }
-
-    private void callRequirementsActivity() {
-        Intent aIntent = Intents.buildRequirementsIntent(this);
-        startActivity(aIntent);
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-
-        SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPref.edit();
-        editor.putBoolean(SELECT_BLUETOOTH, btTab.equals(getSupportActionBar()
-                .getSelectedTab()));
-        editor.apply();
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-
-        SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
-        if (sharedPref.getBoolean(SELECT_BLUETOOTH, btAdapter != null)) {
-            getSupportActionBar().selectTab(btTab);
+        else if (id == R.id.menu_start_discovery){
+            btAdapter.enable();
+            btAdapter.startDiscovery();
         }
+
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (isFinishing() && disableBTOnQuit) {
-            btAdapter.disable();
-        }
+
+        //disable bluetooth after exiting the application
+        btAdapter.disable();
     }
 }
-
-/* vim:set shiftwidth=4 softtabstop=4 expandtab: */

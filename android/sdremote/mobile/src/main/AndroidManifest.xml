@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
  * This file is part of the LibreOffice project.
  *
  * This Source Code Form is subject to the terms of the Mozilla Public
@@ -17,54 +16,44 @@
  *   the License at http://www.apache.org/licenses/LICENSE-2.0 .
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="org.libreoffice.impressremote"
-          android:installLocation="auto">
+    package="org.libreoffice.impressremote"
+    android:installLocation="auto">
 
-    <uses-permission
-        android:name="android.permission.INTERNET"/>
-    <uses-permission
-        android:name="android.permission.BLUETOOTH"/>
-    <uses-permission
-        android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
 
     <uses-feature
         android:name="android.hardware.bluetooth"
-        android:required="false"/>
+        android:required="false" />
 
     <application
         android:allowBackup="true"
-        android:label="@string/application_name"
         android:icon="@drawable/ic_launcher"
+        android:label="@string/application_name"
         android:logo="@drawable/ic_logo"
-        android:theme="@style/Theme.ImpressRemote">
+        android:theme="@style/AppTheme">
 
         <activity
             android:name=".activity.ComputersActivity"
-            android:theme="@style/Theme.ImpressRemote.Computers">
-
+            android:label="@string/application_name"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-
         </activity>
 
         <activity
             android:name=".activity.ComputerCreationActivity"
             android:label="@string/title_creation"
-            android:theme="@style/Theme.ImpressRemote.ComputerCreation">
-        </activity>
-
+            android:theme="@style/Theme.ImpressRemote.ComputerCreation"/>
         <activity
             android:name=".activity.ComputerConnectionActivity"
-            android:label="@string/title_connection">
-        </activity>
-
+            android:label="@string/title_connection"/>
         <activity
             android:name=".activity.SlideShowActivity"
-            android:label="@string/title_slide_show">
-        </activity>
-
+            android:label="@string/title_slide_show"/>
         <activity
             android:name=".activity.SettingsActivity"
             android:label="@string/title_settings"
@@ -73,14 +62,15 @@
 
         <activity
             android:name=".activity.RequirementsActivity"
-            android:label="@string/title_requirements">
-
+            android:label="@string/title_requirements"
+            android:theme="@style/AppTheme">
             <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-                <data android:scheme="org.libreoffice.impressremote"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
+                <action android:name="android.intent.action.VIEW" />
 
+                <data android:scheme="org.libreoffice.impressremote" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
 
         <service android:exported="false" android:name=".communication.CommunicationService" />
