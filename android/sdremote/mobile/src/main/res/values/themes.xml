@@ -61,4 +61,7 @@
         <item name="displayOptions">showCustom</item>
     </style>
 
+    <style name="Theme.ImpressRemote.Settings" parent="Theme.ImpressRemote">
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>
+    </style>
 </resources>
