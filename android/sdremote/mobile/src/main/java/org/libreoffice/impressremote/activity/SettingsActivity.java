@@ -9,17 +9,17 @@
 package org.libreoffice.impressremote.activity;
 
 import android.os.Bundle;
-import android.preference.PreferenceActivity;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.preference.PreferenceFragmentCompat;
 import android.view.MenuItem;
 
 import org.libreoffice.impressremote.R;
 
-public class SettingsActivity extends PreferenceActivity {
+public class SettingsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle aSavedInstanceState) {
         super.onCreate(aSavedInstanceState);
-
-        addPreferencesFromResource(R.xml.preferences);
+        setContentView(R.layout.activity_settings);
     }
 
     @Override
@@ -31,6 +31,14 @@ public class SettingsActivity extends PreferenceActivity {
 
             default:
                 return super.onOptionsItemSelected(aMenuItem);
+        }
+    }
+
+    public static class SettingsFragment extends PreferenceFragmentCompat {
+        @Override
+        public void onCreatePreferences(Bundle savedInstanceState, String s) {
+            //Load preferences from XML
+            addPreferencesFromResource(R.xml.preferences);
         }
     }
 }
