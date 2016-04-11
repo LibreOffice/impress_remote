@@ -12,16 +12,17 @@ android {
         abortOnError false
     }
     productFlavors {
+        // return statements to avoid "Not all execution paths return a value" inspection warning
         // the full remote including the wearable
-        full {}
+        full {return true}
         // minimal variant without wearable (and thus without the need for google apis)
-        minimal {}
+        minimal {return true}
     }
 }
 
 dependencies {
-    compile 'com.android.support:support-v4:23.0.1'
-    compile 'com.android.support:appcompat-v7:23.0.1'
+    compile 'com.android.support:support-v4:23.3.0'
+    compile 'com.android.support:appcompat-v7:23.3.0'
     fullCompile 'com.google.android.gms:play-services-wearable:8.4.0'
     fullWearApp project(':wear')
 }
