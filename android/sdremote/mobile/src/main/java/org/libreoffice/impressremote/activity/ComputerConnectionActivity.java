@@ -10,7 +10,7 @@ package org.libreoffice.impressremote.activity;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
 import org.libreoffice.impressremote.fragment.ComputerConnectionFragment;
@@ -18,7 +18,7 @@ import org.libreoffice.impressremote.util.Fragments;
 import org.libreoffice.impressremote.util.Intents;
 import org.libreoffice.impressremote.communication.Server;
 
-public class ComputerConnectionActivity extends ActionBarActivity {
+public class ComputerConnectionActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle aSavedInstanceState) {
         super.onCreate(aSavedInstanceState);

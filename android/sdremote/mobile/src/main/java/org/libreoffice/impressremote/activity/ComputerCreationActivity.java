@@ -11,7 +11,8 @@ package org.libreoffice.impressremote.activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Patterns;
 import android.view.KeyEvent;
@@ -23,14 +24,16 @@ import android.widget.TextView;
 import org.libreoffice.impressremote.R;
 import org.libreoffice.impressremote.util.Intents;
 
-public class ComputerCreationActivity extends ActionBarActivity implements View.OnClickListener, TextView.OnEditorActionListener {
+public class ComputerCreationActivity extends AppCompatActivity implements View.OnClickListener, TextView.OnEditorActionListener {
     @Override
     protected void onCreate(Bundle aSavedInstanceState) {
         super.onCreate(aSavedInstanceState);
         setContentView(R.layout.activity_computer_creation);
         // action bar setup and listeners
-        getSupportActionBar().setCustomView(R.layout.action_bar_computer_creation);
-        View aActionBarView = getSupportActionBar().getCustomView();
+        ActionBar aActionBar = getSupportActionBar();
+        aActionBar.setCustomView(R.layout.action_bar_computer_creation);
+        aActionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        View aActionBarView = aActionBar.getCustomView();
         aActionBarView.findViewById(R.id.button_cancel).setOnClickListener(this);
         aActionBarView.findViewById(R.id.button_save).setOnClickListener(this);
         // input field

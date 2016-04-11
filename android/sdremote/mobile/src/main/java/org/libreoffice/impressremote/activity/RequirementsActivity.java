@@ -9,29 +9,23 @@
 package org.libreoffice.impressremote.activity;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
 import org.libreoffice.impressremote.R;
 
-public class RequirementsActivity extends ActionBarActivity {
+public class RequirementsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle aSavedInstanceState) {
         super.onCreate(aSavedInstanceState);
         setContentView(R.layout.activity_requirements);
-
-        setUpHomeButton();
-    }
-
-    private void setUpHomeButton() {
-        getSupportActionBar().setHomeButtonEnabled(true);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem aMenuItem) {
         switch (aMenuItem.getItemId()) {
             case android.R.id.home:
-                navigateUp();
+                finish();
                 return true;
 
             default:
@@ -39,9 +33,6 @@ public class RequirementsActivity extends ActionBarActivity {
         }
     }
 
-    private void navigateUp() {
-        finish();
-    }
 }
 
 /* vim:set shiftwidth=4 softtabstop=4 expandtab: */

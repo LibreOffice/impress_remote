@@ -18,7 +18,7 @@ import android.support.v4.view.MenuItemCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBar.Tab;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -27,7 +27,7 @@ import org.libreoffice.impressremote.fragment.ComputersFragment.Type;
 import org.libreoffice.impressremote.util.Intents;
 import org.libreoffice.impressremote.R;
 
-public class ComputersActivity extends ActionBarActivity implements ActionBar.TabListener, ViewPager.OnPageChangeListener {
+public class ComputersActivity extends AppCompatActivity implements ActionBar.TabListener, ViewPager.OnPageChangeListener {
     private static final int REQUEST_ENABLE_BT = 0;
     private static final String SELECT_BLUETOOTH = "SELECT_BLUETOOTH";
     private static final BluetoothAdapter btAdapter = BluetoothAdapter.getDefaultAdapter();
@@ -43,14 +43,13 @@ public class ComputersActivity extends ActionBarActivity implements ActionBar.Ta
         isInitializing = true;
 
         setContentView(R.layout.activity_computers);
+
+        ActionBar aActionBar = getSupportActionBar();
         // Looks hacky but it seems to be the best way to set activity’s title
         // different to application’s label. The other way is setting title
         // to intents filter but it shows wrong label for recent apps screen then.
-
-        ActionBar aActionBar = getSupportActionBar();
-
         aActionBar.setTitle(R.string.title_computers);
-        aActionBar.setDisplayShowTitleEnabled(true);
+        aActionBar.setDisplayHomeAsUpEnabled(false);
 
         btTab = aActionBar.newTab().setTabListener(this)
                 .setText(R.string.title_bluetooth);

@@ -21,7 +21,7 @@ import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
@@ -43,7 +43,7 @@ import org.libreoffice.impressremote.util.Intents;
 import org.libreoffice.impressremote.util.Preferences;
 import org.libreoffice.impressremote.util.SavedStates;
 
-public class SlideShowActivity extends ActionBarActivity implements ServiceConnection {
+public class SlideShowActivity extends AppCompatActivity implements ServiceConnection {
     public enum Mode {
         PAGER, GRID, EMPTY, STARTPOINTER, STOPPOINTER
     }
