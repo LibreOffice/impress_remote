@@ -11,6 +11,7 @@ package org.libreoffice.impressremote.activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
@@ -31,6 +32,7 @@ public class ComputerCreationActivity extends AppCompatActivity implements View.
         setContentView(R.layout.activity_computer_creation);
         // action bar setup and listeners
         ActionBar aActionBar = getSupportActionBar();
+        assert aActionBar != null;
         aActionBar.setCustomView(R.layout.action_bar_computer_creation);
         aActionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         View aActionBarView = aActionBar.getCustomView();
@@ -93,10 +95,10 @@ public class ComputerCreationActivity extends AppCompatActivity implements View.
     }
 
     private void setUpIpAddressErrorMessage() {
-        EditText aIpAddressEdit = getIpAddressEdit();
-
-        aIpAddressEdit.setError(getString(R.string.message_ip_address_validation));
-        aIpAddressEdit.requestFocus();
+        TextInputLayout aIpEntry = (TextInputLayout) findViewById(R.id.edit_ip_address_layout);
+        assert aIpEntry != null;
+        aIpEntry.setError(getString(R.string.message_ip_address_validation));
+        aIpEntry.requestFocus();
     }
 
     private void finish(String aIpAddress, String aName) {

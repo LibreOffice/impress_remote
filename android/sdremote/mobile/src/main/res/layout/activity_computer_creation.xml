@@ -16,13 +16,15 @@
  *   except in compliance with the License. You may obtain a copy of
  *   the License at http://www.apache.org/licenses/LICENSE-2.0 .
 -->
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+<android.support.v7.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding_creation_layout"
+    android:orientation="vertical">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:padding="@dimen/padding_creation_layout"
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/edit_ip_address_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -34,6 +36,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
         <EditText
             android:id="@+id/edit_name"
             android:singleLine="true"
@@ -43,6 +51,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
-    </LinearLayout>
+    </android.support.design.widget.TextInputLayout>
 
-</ScrollView>
+</android.support.v7.widget.LinearLayoutCompat>

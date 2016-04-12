@@ -13,34 +13,36 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v4.view.MenuItemCompat;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBar.Tab;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.animation.AnimationUtils;
 
 import org.libreoffice.impressremote.adapter.ComputersPagerAdapter;
 import org.libreoffice.impressremote.fragment.ComputersFragment.Type;
 import org.libreoffice.impressremote.util.Intents;
 import org.libreoffice.impressremote.R;
 
-public class ComputersActivity extends AppCompatActivity implements ActionBar.TabListener, ViewPager.OnPageChangeListener {
+public class ComputersActivity extends AppCompatActivity {
     private static final int REQUEST_ENABLE_BT = 0;
     private static final String SELECT_BLUETOOTH = "SELECT_BLUETOOTH";
     private static final BluetoothAdapter btAdapter = BluetoothAdapter.getDefaultAdapter();
-    private static boolean disableBTOnQuit = btAdapter != null && !btAdapter.isEnabled();
-    private static Tab btTab;
-    private static Tab wifiTab;
-    private boolean isInitializing;
-    private ComputersPagerAdapter computersPagerAdapter = new ComputersPagerAdapter(getSupportFragmentManager());
+    private static final boolean disableBTOnQuit = btAdapter != null && !btAdapter.isEnabled();
+    private static TabLayout tabLayout;
+    private static TabLayout.Tab btTab;
+    private static TabLayout.Tab wifiTab;
+    private static FloatingActionButton btFab;
+    private static FloatingActionButton addFab;
+    private final ComputersPagerAdapter computersPagerAdapter = new ComputersPagerAdapter(getSupportFragmentManager(), this);
 
     @Override
     protected void onCreate(Bundle aSavedInstanceState) {
         super.onCreate(aSavedInstanceState);
-        isInitializing = true;
 
         setContentView(R.layout.activity_computers);
 
@@ -48,30 +50,73 @@ public class ComputersActivity extends AppCompatActivity implements ActionBar.Ta
         // Looks hacky but it seems to be the best way to set activity’s title
         // different to application’s label. The other way is setting title
         // to intents filter but it shows wrong label for recent apps screen then.
+        assert aActionBar != null;
         aActionBar.setTitle(R.string.title_computers);
         aActionBar.setDisplayHomeAsUpEnabled(false);
 
-        btTab = aActionBar.newTab().setTabListener(this)
-                .setText(R.string.title_bluetooth);
-        wifiTab = aActionBar.newTab().setTabListener(this)
-                .setText(R.string.title_wifi);
-
-        if (btAdapter != null) {
-            computersPagerAdapter.addFragment(Type.BLUETOOTH);
-            aActionBar.addTab(btTab);
-        }
-
+        computersPagerAdapter.addFragment(Type.BLUETOOTH);
         computersPagerAdapter.addFragment(Type.WIFI);
 
         ViewPager aComputersPager = (ViewPager) findViewById(R.id.pager_computers);
+        assert aComputersPager != null;
         aComputersPager.setAdapter(computersPagerAdapter);
-        aComputersPager.setOnPageChangeListener(this);
+        tabLayout = (TabLayout) findViewById(R.id.pager_computers_tabs);
+        assert tabLayout != null;
+        tabLayout.setupWithViewPager(aComputersPager);
 
-        // select wifitab - onStart() decides whether BT-Tab should be selected
-        // when the user starts the remote (and thus trigger the BT-enable
-        // intent in case BT was disabled)
-        isInitializing = false;
-        aActionBar.addTab(wifiTab, true);
+        btTab = tabLayout.getTabAt(0);
+        wifiTab = tabLayout.getTabAt(1);
+        assert wifiTab != null;
+        wifiTab.select();
+
+        if (btAdapter == null) {
+            computersPagerAdapter.removeFragment(Type.BLUETOOTH);
+        }
+
+        tabLayout.setOnTabSelectedListener(
+            new TabLayout.ViewPagerOnTabSelectedListener(aComputersPager) {
+                @Override
+                public void onTabSelected(TabLayout.Tab tab) {
+                    super.onTabSelected(tab);
+                    if (btAdapter != null
+                            && tab.getPosition() == btTab.getPosition()
+                            && !btAdapter.isEnabled()) {
+                        startActivityForResult(
+                                new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE),
+                                REQUEST_ENABLE_BT);
+                    }
+                }
+            }
+        );
+
+        btFab = (FloatingActionButton) findViewById(R.id.btFab);
+        btFab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (btAdapter != null && btAdapter.startDiscovery()) {
+                    btFab.setClickable(false);
+                    // workaround, see https://code.google.com/p/android/issues/detail?id=175696#c6
+                    // when not delayed animation won't show on pre-lollipop unless switching tabs
+                    btFab.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            btFab.startAnimation(
+                                    AnimationUtils.loadAnimation(getApplication(), R.anim.fabrotate));
+                        }
+                    }, 50);
+                }
+            }
+        });
+
+        addFab = (FloatingActionButton) findViewById(R.id.addFab);
+        addFab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getSupportFragmentManager().getFragments().get(0).startActivityForResult(
+                        Intents.buildComputerCreationIntent(tabLayout.getContext()),
+                        Intents.RequestCodes.CREATE_SERVER);
+            }
+        });
     }
 
     @Override
@@ -80,76 +125,28 @@ public class ComputersActivity extends AppCompatActivity implements ActionBar.Ta
 
         if (requestCode == REQUEST_ENABLE_BT) {
             if (resultCode != RESULT_OK) {
-                getSupportActionBar().selectTab(wifiTab);
+                wifiTab.select();
             }
         }
     }
 
     @Override
-    public void onTabSelected(Tab aTab, FragmentTransaction aTransaction) {
-        ((ViewPager) findViewById(R.id.pager_computers)).setCurrentItem(aTab
-                .getPosition());
-        supportInvalidateOptionsMenu();
-        if (isInitializing) { return; }
-        if (aTab.equals(btTab) && !btAdapter.isEnabled()) {
-            Intent enableBtIntent = new Intent(
-                    BluetoothAdapter.ACTION_REQUEST_ENABLE);
-            startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
-        }
-    }
-
-    @Override
-    public void onTabUnselected(ActionBar.Tab aTab, FragmentTransaction aTransaction) {
-    }
-
-    @Override
-    public void onTabReselected(ActionBar.Tab aTab, FragmentTransaction aTransaction) {
-    }
-
-    @Override
-    public void onPageSelected(int aPosition) {
-        getSupportActionBar().setSelectedNavigationItem(aPosition);
-    }
-
-    @Override
-    public void onPageScrolled(int aPosition, float aPositionOffset, int aPositionOffsetPixels) {
-    }
-
-    @Override
-    public void onPageScrollStateChanged(int aPosition) {
-    }
-
-    @Override
     public boolean onCreateOptionsMenu(Menu aMenu) {
         getMenuInflater().inflate(R.menu.menu_action_bar_computers, aMenu);
-
+        // ComputerFragement uses invalidateOptionsMKenu when BT-discovery broadcast is received
+        toggleFab(tabLayout.getSelectedTabPosition());
         return true;
-    }
-
-    @Override
-    public boolean onPrepareOptionsMenu(Menu aMenu) {
-        aMenu.findItem(R.id.menu_add_computer)
-            .setVisible(wifiTab.equals(getSupportActionBar().getSelectedTab()));
-
-        MenuItem btDiscovery = aMenu.findItem(R.id.menu_start_discovery);
-        if( btAdapter != null && btAdapter.isDiscovering()) {
-            btDiscovery.setEnabled(false);
-            MenuItemCompat.setActionView(btDiscovery, R.layout.progress);
-        }
-        btDiscovery.setVisible(btTab.equals(getSupportActionBar().getSelectedTab()));
-
-        return super.onPrepareOptionsMenu(aMenu);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem aMenuItem) {
         switch (aMenuItem.getItemId()) {
             case R.id.menu_settings:
-                callSettingsActivity();
+                startActivity(Intents.buildSettingsIntent(this));
                 return true;
 
             case R.id.menu_requirements:
-                callRequirementsActivity();
+                startActivity(Intents.buildRequirementsIntent(this));
                 return true;
 
             default:
@@ -157,14 +154,36 @@ public class ComputersActivity extends AppCompatActivity implements ActionBar.Ta
         }
     }
 
-    private void callSettingsActivity() {
-        Intent aIntent = Intents.buildSettingsIntent(this);
-        startActivity(aIntent);
-    }
-
-    private void callRequirementsActivity() {
-        Intent aIntent = Intents.buildRequirementsIntent(this);
-        startActivity(aIntent);
+    private void toggleFab(int pos) {
+        if(pos == btTab.getPosition()) {
+            addFab.hide(new FloatingActionButton.OnVisibilityChangedListener() {
+                @Override
+                public void onHidden(FloatingActionButton fab) {
+                    if( btAdapter == null) {
+                        wifiTab.select();
+                        return;
+                    }
+                    if (btAdapter.isDiscovering()) {
+                        btFab.setClickable(false);
+                        btFab.startAnimation(
+                                AnimationUtils.loadAnimation(getApplication(), R.anim.fabrotate));
+                    } else {
+                        btFab.setClickable(true);
+                        if(btFab.getAnimation() != null) {
+                            btFab.clearAnimation();
+                        }
+                    }
+                    btFab.show();
+                }
+            });
+        } else {
+            btFab.hide(new FloatingActionButton.OnVisibilityChangedListener() {
+                @Override
+                public void onHidden(FloatingActionButton fab) {
+                    addFab.show();
+                }
+            });
+        }
     }
 
     @Override
@@ -173,8 +192,7 @@ public class ComputersActivity extends AppCompatActivity implements ActionBar.Ta
 
         SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
-        editor.putBoolean(SELECT_BLUETOOTH, btTab.equals(getSupportActionBar()
-                .getSelectedTab()));
+        editor.putBoolean(SELECT_BLUETOOTH, btTab.getPosition() == tabLayout.getSelectedTabPosition());
         editor.apply();
     }
 
@@ -183,8 +201,9 @@ public class ComputersActivity extends AppCompatActivity implements ActionBar.Ta
         super.onStart();
 
         SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
-        if (sharedPref.getBoolean(SELECT_BLUETOOTH, btAdapter != null)) {
-            getSupportActionBar().selectTab(btTab);
+        if (btTab.getPosition() != TabLayout.Tab.INVALID_POSITION
+            && sharedPref.getBoolean(SELECT_BLUETOOTH, btAdapter != null)) {
+            btTab.select();
         }
     }
 

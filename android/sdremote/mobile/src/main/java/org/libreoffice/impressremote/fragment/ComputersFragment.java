@@ -13,7 +13,6 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import android.app.Activity;
-import android.bluetooth.BluetoothAdapter;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
@@ -26,12 +25,10 @@ import android.os.IBinder;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.ListFragment;
 import android.support.v4.content.LocalBroadcastManager;
-import android.support.v4.view.MenuItemCompat;
 import android.text.TextUtils;
 import android.text.method.LinkMovementMethod;
 import android.view.ContextMenu;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
@@ -343,29 +340,6 @@ public class ComputersFragment extends ListFragment implements ServiceConnection
 
         Intent aIntent = Intents.buildServersListChangedIntent();
         LocalBroadcastManager.getInstance(getActivity()).sendBroadcast(aIntent);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem aMenuItem) {
-        switch (aMenuItem.getItemId()) {
-            case R.id.menu_add_computer:
-                callComputerCreationActivity();
-                return true;
-
-            case R.id.menu_start_discovery:
-                if (BluetoothAdapter.getDefaultAdapter().startDiscovery()) {
-                    MenuItemCompat.setActionView(aMenuItem, R.layout.progress);
-                }
-                return true;
-
-            default:
-                return super.onOptionsItemSelected(aMenuItem);
-        }
-    }
-
-    private void callComputerCreationActivity() {
-        Intent aIntent = Intents.buildComputerCreationIntent(getActivity());
-        startActivityForResult(aIntent, Intents.RequestCodes.CREATE_SERVER);
     }
 
     @Override

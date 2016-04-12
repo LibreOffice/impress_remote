@@ -16,22 +16,24 @@
  *   except in compliance with the License. You may obtain a copy of
  *   the License at http://www.apache.org/licenses/LICENSE-2.0 .
 -->
-<resources xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<resources>
 
     <style name="Theme.ImpressRemote" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="actionBarStyle">@style/Theme.ImpressRemote.ActionBar</item>
-        <item name="actionBarTabStyle">@style/Theme.ImpressRemote.ActionBar.Tab</item>
         <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
     </style>
 
     <style name="Theme.ImpressRemote.ActionBar" parent="Widget.AppCompat.Light.ActionBar.Solid.Inverse">
-        <item name="background">@drawable/bg_action_bar</item>
         <item name="displayOptions">showTitle|homeAsUp|useLogo</item>
     </style>
 
-    <style name="Theme.ImpressRemote.ActionBar.Tab" parent="Widget.AppCompat.Light.ActionBar.TabView.Inverse">
-        <item name="android:background">@drawable/bg_action_bar_tab</item>
+    <style name="Theme.ImpressRemote.ActionBar.Tab" parent="Widget.Design.TabLayout">
+        <item name="android:background">@color/primary</item>
+        <item name="tabTextColor">?android:textColorSecondaryInverse</item>
+        <item name="tabSelectedTextColor">?android:textColorPrimaryInverse</item>
     </style>
 
 </resources>
