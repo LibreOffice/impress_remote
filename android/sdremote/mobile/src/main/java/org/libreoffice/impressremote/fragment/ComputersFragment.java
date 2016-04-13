@@ -34,6 +34,7 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.ViewAnimator;
@@ -110,10 +111,18 @@ public class ComputersFragment extends ListFragment implements ServiceConnection
     }
 
     private void showLearnMoreMessage() {
-        TextView learnMoreView = (TextView) getView().findViewById(R.id.text_learn_more);
+        Button learnMoreView = (Button) getView().findViewById(R.id.button_learn_more);
         Animation aFadeInAnimation = AnimationUtils.loadAnimation(getActivity(), android.R.anim.fade_in);
 
         learnMoreView.setMovementMethod(LinkMovementMethod.getInstance());
+
+        learnMoreView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent reqIntent = Intents.buildRequirementsIntent(getContext());
+                startActivity(reqIntent);
+            }
+        });
 
         learnMoreView.startAnimation(aFadeInAnimation);
         learnMoreView.setVisibility(View.VISIBLE);

@@ -31,7 +31,6 @@
     <string name="menu_resume_slide_show">Настави слајдшоу</string>
     <string name="message_impress_pin_validation">Иди у "Slideshow →  Impress Remote" и унеси кôд</string>
     <string name="message_ip_address_validation">Унесите добру IP адресу</string>
-    <string name="message_learn_more">Види још</string>
     <string name="message_notes_empty">Нема ничега овде.</string>
     <string name="message_paused">Паузирано</string>
     <string name="message_search_bluetooth">Провери да ли је LibreOffice покренут на рачунару који има Bluetooth</string>
@@ -58,5 +57,6 @@
     <string name="message_impress_wifi_enabling">Такође, требало би да се укључе "експерименталне особине" у "Tools → Options → LibreOffice → Advanced".</string>
     <string name="requirements_libreoffice_experimental_enabled">Експерименталне опције укључене у “Tools → Options → LibreOffice → Advanced” у LibreOffice Impress-у.</string>
     <string name="requirements_libreoffice_general_enabled">"Impress Remote" укључен у “Tools → Options → LibreOffice Impress → General” у LibreOffice Impress-у.</string>
+    <string name="message_learn_more">Види још</string>
 
 </resources>
