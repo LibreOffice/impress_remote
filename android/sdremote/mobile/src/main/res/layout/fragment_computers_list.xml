@@ -48,14 +48,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
-        <TextView
+        <Button
             android:id="@+id/text_learn_more"
             android:text="@string/message_learn_more"
             android:layout_gravity="center_horizontal"
             android:visibility="invisible"
             android:paddingTop="@dimen/padding_vertical_learn_more"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Borderless" />
 
     </LinearLayout>
 
