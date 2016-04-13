@@ -37,4 +37,23 @@
         <item name="android:layout_height">wrap_content</item>
     </style>
 
+    <style name="Theme.ImpressRemote" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="actionBarStyle">@style/Theme.ImpressRemote.ActionBar</item>
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="android:tint">@android:color/white</item>
+        <item name="colorAccent">@color/accent</item>
+    </style>
+
+    <style name="Theme.ImpressRemote.ActionBar" parent="Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="displayOptions">showTitle|homeAsUp|useLogo</item>
+    </style>
+
+    <style name="Theme.ImpressRemote.ActionBar.Tab" parent="Widget.Design.TabLayout">
+        <item name="android:background">@color/primary</item>
+        <item name="tabTextColor">?android:textColorSecondaryInverse</item>
+        <item name="tabSelectedTextColor">?android:textColorPrimaryInverse</item>
+    </style>
+
 </resources>
