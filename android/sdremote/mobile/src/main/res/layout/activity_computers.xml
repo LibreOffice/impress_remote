@@ -51,7 +51,7 @@
             android:layout_height="56dp"
             android:layout_gravity="end|bottom"
             android:layout_margin="16dp"
-            android:src="@drawable/ic_action_add_computer"
+            android:src="@drawable/ic_plus"
             android:visibility="visible"/>
 
         <android.support.design.widget.FloatingActionButton
