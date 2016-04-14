@@ -81,7 +81,7 @@ public class SlidesPagerFragment extends AbstractSlideFragment
 
         aSlidesPager.setAdapter(buildSlidesAdapter());
         aSlidesPager.setPageMargin(getSlidesMargin());
-        aSlidesPager.setOnPageChangeListener(this);
+        aSlidesPager.addOnPageChangeListener(this);
 
         setUpCurrentSlide();
         setUpCurrentSlideNotes();
