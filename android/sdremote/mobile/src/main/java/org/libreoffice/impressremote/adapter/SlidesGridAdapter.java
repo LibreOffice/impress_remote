@@ -9,6 +9,7 @@
 package org.libreoffice.impressremote.adapter;
 
 import android.content.Context;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -61,8 +62,8 @@ public class SlidesGridAdapter extends BaseAdapter {
 
         // Highlight the currently selected slide for obviousness.
         if (aPosition == mSlideShow.getCurrentSlideIndex()) {
-            aSlideViewHolder.mSlideIndex.setBackgroundColor(
-                    aViewGroup.getResources().getColor(R.color.background_grid_slide_index_active));
+            aSlideViewHolder.mSlideIndex.setBackgroundColor(ContextCompat.getColor(
+                    aViewGroup.getContext(), R.color.background_grid_slide_index_active));
             aSlideViewHolder.mSlidePreview.setBackgroundResource(R.drawable.bg_grid_slide_active);
         } else {
             // However we need to 'reset' the view to be non-selected otherwise: i.e. if we change
@@ -71,8 +72,8 @@ public class SlidesGridAdapter extends BaseAdapter {
             // still have a view with highlighted borders -- hence we need to de-highlight it.
             // TODO: this whole class should have better state 'caching', and keep track of previews,
             // to avoid needless updating here unless something has actually changed.
-            aSlideViewHolder.mSlideIndex.setBackgroundColor(
-                    aViewGroup.getResources().getColor(R.color.background_grid_slide_index_inactive));
+            aSlideViewHolder.mSlideIndex.setBackgroundColor(ContextCompat.getColor(
+                    aViewGroup.getContext(), R.color.background_grid_slide_index_inactive));
             aSlideViewHolder.mSlidePreview.setBackgroundResource(R.drawable.bg_grid_slide_inactive);
         }
 
