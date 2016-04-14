@@ -52,7 +52,8 @@ public class ComputersActivity extends AppCompatActivity {
         // to intents filter but it shows wrong label for recent apps screen then.
         assert aActionBar != null;
         aActionBar.setTitle(R.string.title_computers);
-        aActionBar.setDisplayHomeAsUpEnabled(false);
+        aActionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_HOME,
+                ActionBar.DISPLAY_SHOW_HOME|ActionBar.DISPLAY_HOME_AS_UP);
 
         computersPagerAdapter.addFragment(Type.BLUETOOTH);
         computersPagerAdapter.addFragment(Type.WIFI);

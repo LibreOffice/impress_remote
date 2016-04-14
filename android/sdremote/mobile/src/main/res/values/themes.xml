@@ -28,6 +28,7 @@
 
     <style name="Theme.ImpressRemote.ActionBar" parent="Widget.AppCompat.Light.ActionBar.Solid.Inverse">
         <item name="displayOptions">showTitle|homeAsUp|useLogo</item>
+        <item name="logo">@drawable/ic_logo_padding</item>
     </style>
 
     <style name="Theme.ImpressRemote.ActionBar.Tab" parent="Widget.Design.TabLayout">
