@@ -22,25 +22,25 @@
     <item
         android:id="@+id/menu_slides_pager"
         android:title="@string/menu_slides_pager"
-        android:icon="@drawable/ic_action_pager"
+        android:icon="@drawable/ic_view_carousel_white_24dp"
         compat:showAsAction="always"/>
 
     <item
         android:id="@+id/menu_slides_grid"
         android:title="@string/menu_slides_grid"
-        android:icon="@drawable/ic_action_grid"
+        android:icon="@drawable/ic_grid_on_white_24dp"
         compat:showAsAction="always"/>
 
     <item
         android:id="@+id/menu_timer"
         android:title="@string/menu_timer"
-        android:icon="@drawable/ic_action_timer"
+        android:icon="@drawable/ic_av_timer_white_24dp"
         compat:showAsAction="ifRoom"/>
 
     <item
         android:id="@+id/menu_resume_slide_show"
         android:title="@string/menu_resume_slide_show"
-        android:icon="@drawable/ic_action_resume"
+        android:icon="@drawable/ic_play"
         compat:showAsAction="always"/>
 
     <item
