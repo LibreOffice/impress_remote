@@ -19,6 +19,7 @@
 <android.support.v7.widget.LinearLayoutCompat
     xmlns:compat="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
               android:orientation="horizontal"
               compat:divider="?attr/dividerVertical"
               compat:showDividers="middle"
@@ -36,9 +37,9 @@
 
         <TextView
             style="?actionBarTabTextStyle"
+            android:id="@+id/button_cancel_tv"
             android:text="@string/button_cancel"
-            android:drawableLeft="@drawable/ic_action_cancel"
-            android:drawableStart="@drawable/ic_action_cancel"
+            tools:drawableLeft="@drawable/ic_clear_black_24dp"
             android:drawablePadding="@dimen/padding_action_bar_button_drawable"
             android:gravity="center_vertical"
             android:layout_gravity="center"
@@ -56,9 +57,9 @@
 
         <TextView
             style="?actionBarTabTextStyle"
+            android:id="@+id/button_save_tv"
             android:text="@string/button_save"
-            android:drawableLeft="@drawable/ic_action_save"
-            android:drawableStart="@drawable/ic_action_save"
+            tools:drawableLeft="@drawable/ic_done_black_24dp"
             android:drawablePadding="@dimen/padding_action_bar_button_drawable"
             android:gravity="center_vertical"
             android:layout_gravity="center"

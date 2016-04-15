@@ -19,6 +19,8 @@ subprojects {
                     applicationId 'org.libreoffice.impressremote'
                     versionCode   17
                     versionName   '2.2.3'
+                    // prevent having android studio create PNGs from the vectors
+                    vectorDrawables.useSupportLibrary = true
                 }
             }
         }
