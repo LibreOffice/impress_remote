@@ -47,12 +47,12 @@ public class ComputerCreationActivity extends AppCompatActivity implements View.
         TextView tCancel = (TextView) aActionBarView.findViewById(R.id.button_cancel_tv);
         tCancel.setCompoundDrawablesWithIntrinsicBounds(
                 VectorDrawableCompat.create(
-                        this.getResources(), R.drawable.ic_clear_black_24dp, this.getTheme()),
+                        this.getResources(), R.drawable.ic_clear_white_24dp, this.getTheme()),
                 null, null, null);
         TextView tSave = (TextView) aActionBarView.findViewById(R.id.button_save_tv);
         tSave.setCompoundDrawablesWithIntrinsicBounds(
                 VectorDrawableCompat.create(
-                        this.getResources(),R.drawable.ic_done_black_24dp, this.getTheme()),
+                        this.getResources(),R.drawable.ic_done_white_24dp, this.getTheme()),
                 null, null, null);
     }
 

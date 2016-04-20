@@ -52,7 +52,7 @@
             android:layout_height="56dp"
             android:layout_gravity="end|bottom"
             android:layout_margin="16dp"
-            compat:srcCompat="@drawable/ic_add_black_24dp"
+            compat:srcCompat="@drawable/ic_add_white_24dp"
             android:visibility="visible"/>
 
         <android.support.design.widget.FloatingActionButton
@@ -62,7 +62,7 @@
             android:layout_height="56dp"
             android:layout_gravity="end|bottom"
             android:layout_margin="16dp"
-            compat:srcCompat="@drawable/ic_bluetooth_searching_black_24dp"
+            compat:srcCompat="@drawable/ic_bluetooth_searching_white_24dp"
             android:visibility="invisible"/>
 
     </android.support.design.widget.CoordinatorLayout>

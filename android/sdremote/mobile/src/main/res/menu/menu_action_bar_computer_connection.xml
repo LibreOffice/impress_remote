@@ -22,7 +22,7 @@
     <item
         android:id="@+id/menu_reconnect"
         android:title="@string/menu_reconnect"
-        android:icon="@drawable/ic_autorenew_black_24dp"
+        android:icon="@drawable/ic_autorenew_white_24dp"
         compat:showAsAction="always"/>
 
 </menu>
