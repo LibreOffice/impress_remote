@@ -15,6 +15,7 @@ import android.support.design.widget.TextInputLayout;
 import android.support.graphics.drawable.VectorDrawableCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.AppCompatDelegate;
 import android.text.TextUtils;
 import android.util.Patterns;
 import android.view.KeyEvent;
@@ -30,6 +31,8 @@ public class ComputerCreationActivity extends AppCompatActivity implements View.
     @Override
     protected void onCreate(Bundle aSavedInstanceState) {
         super.onCreate(aSavedInstanceState);
+        // enable use of vector drawables via indirection e.g. through layer drawables
+        AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
         setContentView(R.layout.activity_computer_creation);
         // action bar setup and listeners
         ActionBar aActionBar = getSupportActionBar();
@@ -41,19 +44,6 @@ public class ComputerCreationActivity extends AppCompatActivity implements View.
         aActionBarView.findViewById(R.id.button_save).setOnClickListener(this);
         // input field
         getNameEdit().setOnEditorActionListener(this);
-
-        // workaround for bug in appcompat lib - reading vector from resource won't work in 23.3.0
-        // even when using indirection using a LayerDrawable or similar
-        TextView tCancel = (TextView) aActionBarView.findViewById(R.id.button_cancel_tv);
-        tCancel.setCompoundDrawablesWithIntrinsicBounds(
-                VectorDrawableCompat.create(
-                        this.getResources(), R.drawable.ic_clear_black_24dp, this.getTheme()),
-                null, null, null);
-        TextView tSave = (TextView) aActionBarView.findViewById(R.id.button_save_tv);
-        tSave.setCompoundDrawablesWithIntrinsicBounds(
-                VectorDrawableCompat.create(
-                        this.getResources(),R.drawable.ic_done_black_24dp, this.getTheme()),
-                null, null, null);
     }
 
     @Override

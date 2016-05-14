@@ -5,21 +5,14 @@
  * This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
- *
- * This file incorporates work covered by the following license notice:
- *
- *   Licensed to the Apache Software Foundation (ASF) under one or more
- *   contributor license agreements. See the NOTICE file distributed
- *   with this work for additional information regarding copyright
- *   ownership. The ASF licenses this file to you under the Apache
- *   License, Version 2.0 (the "License"); you may not use this file
- *   except in compliance with the License. You may obtain a copy of
- *   the License at http://www.apache.org/licenses/LICENSE-2.0 .
 -->
 <android.support.v7.widget.LinearLayoutCompat
     xmlns:compat="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.ComputerCreationActivity"
+    tools:background="@color/primary"
+    tools:layout_height="?actionBarSize"
               android:orientation="horizontal"
               compat:divider="?attr/dividerVertical"
               compat:showDividers="middle"
@@ -39,7 +32,8 @@
             style="?actionBarTabTextStyle"
             android:id="@+id/button_cancel_tv"
             android:text="@string/button_cancel"
-            tools:drawableLeft="@drawable/ic_clear_black_24dp"
+            android:drawableLeft="@drawable/ic_clear_layer_wrap"
+            android:drawableStart="@drawable/ic_clear_layer_wrap"
             android:drawablePadding="@dimen/padding_action_bar_button_drawable"
             android:gravity="center_vertical"
             android:layout_gravity="center"
@@ -59,7 +53,8 @@
             style="?actionBarTabTextStyle"
             android:id="@+id/button_save_tv"
             android:text="@string/button_save"
-            tools:drawableLeft="@drawable/ic_done_black_24dp"
+            android:drawableLeft="@drawable/ic_done_layer_wrap"
+            android:drawableStart="@drawable/ic_done_layer_wrap"
             android:drawablePadding="@dimen/padding_action_bar_button_drawable"
             android:gravity="center_vertical"
             android:layout_gravity="center"

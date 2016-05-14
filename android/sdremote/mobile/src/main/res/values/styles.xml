@@ -5,24 +5,43 @@
  * This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
- *
- * This file incorporates work covered by the following license notice:
- *
- *   Licensed to the Apache Software Foundation (ASF) under one or more
- *   contributor license agreements. See the NOTICE file distributed
- *   with this work for additional information regarding copyright
- *   ownership. The ASF licenses this file to you under the Apache
- *   License, Version 2.0 (the "License"); you may not use this file
- *   except in compliance with the License. You may obtain a copy of
- *   the License at http://www.apache.org/licenses/LICENSE-2.0 .
 -->
 <resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.ImpressRemote" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="actionBarStyle">@style/ab_style</item>
+        <item name="actionBarTabBarStyle">@style/ab_tabBar</item>
+        <item name="actionBarTabTextStyle">@style/ab_tabText</item>
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="android:tint">@android:color/white</item>
+        <!-- used for action_bar_computer_creation TextView drawable -->
+        <item name="android:drawableTint" tools:targetApi="23">@android:color/white</item>
+    </style>
+
+    <style name="ab_style" parent="Widget.AppCompat.Light.ActionBar.Solid">
+        <item name="displayOptions">showTitle|homeAsUp|useLogo</item>
+        <item name="logo">@drawable/ic_logo_padding</item>
+    </style>
+
+    <style name="ab_tabBar" parent="Widget.AppCompat.ActionBar.TabBar">
+        <item name="android:background">@color/primary</item>
+        <item name="tabTextColor">?android:textColorSecondaryInverse</item>
+        <item name="tabSelectedTextColor">?android:textColorPrimaryInverse</item>
+    </style>
+
+    <style name="ab_tabText" parent="Widget.AppCompat.ActionBar.TabText">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
 
     <style name="SectionHeader">
         <item name="android:textAllCaps" tools:targetApi="14">true</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/accent</item>
         <item name="android:drawableBottom">@drawable/underline_header</item>
+        <item name="android:drawableTint" tools:targetApi="23">@color/accent</item>
         <item name="android:drawablePadding">@dimen/padding_header_underline</item>
         <item name="android:paddingLeft">@dimen/padding_header</item>
         <item name="android:paddingRight">@dimen/padding_header</item>

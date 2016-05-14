@@ -62,7 +62,6 @@ public class SlideShowActivity extends AppCompatActivity implements ServiceConne
 
         mMode = loadMode(aSavedInstanceState);
 
-        setUpHomeButton();
         setUpFragment();
         setUpKeepingScreenOn();
 
@@ -80,9 +79,6 @@ public class SlideShowActivity extends AppCompatActivity implements ServiceConne
         return (Mode) aSavedInstanceState.getSerializable(SavedStates.Keys.MODE);
     }
 
-    private void setUpHomeButton() {
-        getSupportActionBar().setHomeButtonEnabled(true);
-    }
 
     private void setUpFragment() {
         Fragments.Operator.replaceAnimated(this, buildFragment());
