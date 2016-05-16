@@ -102,7 +102,7 @@ public class ComputersActivity extends AppCompatActivity {
                         @Override
                         public void run() {
                             btFab.startAnimation(
-                                    AnimationUtils.loadAnimation(getApplication(), R.anim.fabrotate));
+                                    AnimationUtils.loadAnimation(getApplication(), R.anim.fabalpha));
                         }
                     }, 50);
                 }
@@ -167,7 +167,7 @@ public class ComputersActivity extends AppCompatActivity {
                     if (btAdapter.isDiscovering()) {
                         btFab.setClickable(false);
                         btFab.startAnimation(
-                                AnimationUtils.loadAnimation(getApplication(), R.anim.fabrotate));
+                                AnimationUtils.loadAnimation(getApplication(), R.anim.fabalpha));
                     } else {
                         btFab.setClickable(true);
                         if(btFab.getAnimation() != null) {
