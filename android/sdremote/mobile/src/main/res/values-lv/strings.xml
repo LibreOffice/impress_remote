@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="application_name">Impress tālvadība</string>
+  <string name="title_computers">Datori</string>
+  <string name="title_generic">Vispārējs</string>
+  <string name="title_settings">Iestatījumi</string>
+  <string name="title_requirements">Prasības</string>
+  <string name="title_connection">Savienojums</string>
+  <string name="title_creation">Izveidošana</string>
+  <string name="title_slide_show">Slīdrāde</string>
+  <string name="title_timer">Taimeris</string>
+  <string name="menu_settings">Iestatījumi</string>
+  <string name="menu_requirements">Prasības</string>
+  <string name="menu_reconnect">Savienoties atkal</string>
+  <string name="menu_add_computer">Pievienot datoru</string>
+  <string name="menu_remove_computer">Izņemt</string>
+  <string name="menu_timer">Taimeris</string>
+  <string name="button_cancel">Atcelt</string>
+  <string name="button_save">Saglabāt</string>
+  <string name="button_start">Sākt</string>
+  <string name="button_remove">Izņemt</string>
+  <string name="message_time_is_up">Laiks beidzies!</string>
+  <string name="message_paused">Pauzēts</string>
+  <string name="hint_ip_address">IP adrese</string>
+  <string name="header_notes">Piezīmes</string>
+  <string name="description_pager_slide">Slaida priekšskatījums</string>
+  <string name="description_grid_slide">Slaida priekšskatījums</string>
+  <string name="description_empty_slide">Tukšs slaids</string>
+  <string name="preferences_quiet_mode_title">Klusais režīms</string>
+</resources>

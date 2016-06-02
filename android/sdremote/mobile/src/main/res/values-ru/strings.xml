@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <string name="application_name">Пульт ДУ Impress</string>
+  <string name="application_name">Дистанционное управление Impress</string>
   <string name="title_computers">Компьютеры</string>
   <string name="title_generic">Общие</string>
   <string name="title_settings">Настройки</string>
