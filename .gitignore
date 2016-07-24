@@ -4,11 +4,12 @@
 ## https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 # user specifc
 *.iml
-.idea/workspace.xml
-/../../.idea/workspace.xml
-/../../.idea/impress_remote.iml
+android/sdremote/.idea/workspace.xml
 # managed by gradle
-/.idea/libraries/
+android/sdremote/.idea/libraries/
+
+/.idea/workspace.xml
+/.idea/impress_remote.iml
 
 # Log Files
 *.log
@@ -25,9 +26,9 @@ gen/
 out/
 
 # build variants cause oscillation in the module imls..
-/mobile/mobile.iml
-/wear/wear.iml
-sdremote.iml
+android/sdremote/mobile/mobile.iml
+android/sdremote/wear/wear.iml
+android/sdremote/sdremote.iml
 
 # Keystore files
 *.jks
