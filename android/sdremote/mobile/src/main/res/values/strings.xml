@@ -84,6 +84,8 @@
     <string name="preferences_keep_screen_on_summary">Ensures that your phone does not go to sleep during a presentation.</string>
     <string name="preferences_quiet_mode_title">Quiet mode</string>
     <string name="preferences_quiet_mode_summary">Make phone silent (but enable vibration) during a presentation.</string>
+    <string name="preferences_shake_action_title">Phone shake action</string>
+    <string name="preferences_shake_action_summary">Switch slides and activate animations by shaking phone</string>
 
     <string name="requirements_libreoffice_version">LibreOffice version 4.0.3 or higher running on a computer.</string>
     <string name="requirements_libreoffice_general_enabled">Impress Remote enabled at “Tools → Options → LibreOffice Impress → General” in LibreOffice Impress.</string>
