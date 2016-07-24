@@ -14,6 +14,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.ServiceConnection;
+import android.hardware.SensorManager;
 import android.media.AudioManager;
 import android.os.Bundle;
 import android.os.IBinder;
@@ -42,8 +43,9 @@ import org.libreoffice.impressremote.util.Fragments;
 import org.libreoffice.impressremote.util.Intents;
 import org.libreoffice.impressremote.util.Preferences;
 import org.libreoffice.impressremote.util.SavedStates;
+import org.libreoffice.impressremote.util.ShakeDetector;
 
-public class SlideShowActivity extends AppCompatActivity implements ServiceConnection {
+public class SlideShowActivity extends AppCompatActivity implements ServiceConnection, ShakeDetector.Listener {
     public enum Mode {
         PAGER, GRID, EMPTY, STARTPOINTER, STOPPOINTER
     }
@@ -69,6 +71,14 @@ public class SlideShowActivity extends AppCompatActivity implements ServiceConne
         enableQuietMode();
 
         bindService();
+        SensorManager sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
+        ShakeDetector sd = new ShakeDetector(this);
+        sd.start(sensorManager);
+    }
+
+
+    public void hearShake() {
+        mCommunicationService.getCommandsTransmitter().performNextTransition();
     }
 
     private Mode loadMode(Bundle aSavedInstanceState) {
