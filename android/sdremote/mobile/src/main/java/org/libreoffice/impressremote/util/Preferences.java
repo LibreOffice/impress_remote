@@ -33,6 +33,7 @@ public final class Preferences {
         public static final String KEEP_SCREEN_ON = "keep_screen_on";
         public static final String VOLUME_KEYS_ACTIONS = "volume_keys_actions";
         public static final String QUIET_MODE = "quiet_mode";
+        public static final String SHAKE_ACTION = "shake_action";
     }
 
     private static final class Defaults {
