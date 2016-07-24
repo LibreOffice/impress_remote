@@ -36,4 +36,10 @@
         android:title="@string/preferences_quiet_mode_title"
         android:summary="@string/preferences_quiet_mode_summary"/>
 
+    <android.support.v7.preference.CheckBoxPreference
+        android:key="shake_action"
+        android:defaultValue="false"
+        android:title="@string/preferences_shake_action_title"
+        android:summary="@string/preferences_shake_action_summary"/>
+
 </android.support.v7.preference.PreferenceScreen>
