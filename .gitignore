@@ -1,0 +1,48 @@
+/.gradle/
+/**/build/
+/local.properties
+## https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+# user specifc
+*.iml
+android/sdremote/.idea/workspace.xml
+
+# managed by gradle
+android/sdremote/.gradle
+android/sdremote/local.properties
+android/sdremote/.idea/libraries/
+android/sdremote/.idea/gradle.xml
+android/sdremote/.idea/misc.xml
+
+
+/.idea/workspace.xml
+/.idea/.name
+/.idea/compiler.xml
+/.idea/copyright/profiles_settings.xml
+/.idea/encodings.xml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/vcs.xml
+
+/.idea/impress_remote.iml
+
+# Log Files
+*.log
+
+# Files for the ART/Dalvik VM
+*.dex
+
+# Java class files
+*.class
+
+# Generated files
+bin/
+gen/
+out/
+
+# build variants cause oscillation in the module imls..
+android/sdremote/mobile/mobile.iml
+android/sdremote/wear/wear.iml
+android/sdremote/sdremote.iml
+
+# Keystore files
+*.jks
