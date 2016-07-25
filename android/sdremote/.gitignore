@@ -5,6 +5,9 @@
 # user specifc
 /.idea/workspace.xml
 /.idea/tasks.xml
+/build
+.DS_Store
+/captures
 # managed by gradle
 /.idea/libraries/
 # build variants cause oscillation in the module imls..

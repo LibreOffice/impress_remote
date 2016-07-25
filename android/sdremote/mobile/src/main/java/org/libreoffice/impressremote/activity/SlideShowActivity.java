@@ -76,11 +76,6 @@ public class SlideShowActivity extends AppCompatActivity implements ServiceConne
         sd.start(sensorManager);
     }
 
-
-    public void hearShake() {
-        mCommunicationService.getCommandsTransmitter().performNextTransition();
-    }
-
     private Mode loadMode(Bundle aSavedInstanceState) {
         if (aSavedInstanceState == null) {
             return Mode.PAGER;
@@ -390,6 +385,18 @@ public class SlideShowActivity extends AppCompatActivity implements ServiceConne
         Preferences aPreferences = Preferences.getSettingsInstance(this);
 
         return aPreferences.getBoolean(Preferences.Keys.VOLUME_KEYS_ACTIONS);
+    }
+
+    public void hearShake() {
+        if (areShakeActionsRequired()) {
+            mCommunicationService.getCommandsTransmitter().performNextTransition();
+        }
+    }
+
+    private boolean areShakeActionsRequired() {
+        Preferences aPreferences = Preferences.getSettingsInstance(this);
+
+        return aPreferences.getBoolean(Preferences.Keys.SHAKE_ACTION);
     }
 
     private boolean isLastSlideDisplayed() {
