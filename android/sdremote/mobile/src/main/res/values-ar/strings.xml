@@ -7,6 +7,7 @@
   <string name="title_requirements">المتطلبات</string>
   <string name="title_connection">الاتصال</string>
   <string name="title_creation">إنشاء</string>
+  <string name="title_slide_show">عرض الشرائح</string>
   <string name="title_timer">المؤقت</string>
   <string name="menu_settings">إعدادات</string>
   <string name="menu_requirements">المتطلبات</string>
@@ -42,11 +43,11 @@
   <string name="header_notes">الملاحظات</string>
   <string name="mask_slide_show_progress">الشريحة %1$d من %2$d</string>
   <plurals name="mask_timer_progress">
-    <item quantity="zero">تبقّت %d دقيقة</item>
-    <item quantity="one">تبقّت دقيقتان</item>
-    <item quantity="two">تبقّت %d دقائق</item>
-    <item quantity="few">لا دقائق متبقية</item>
-    <item quantity="many">تبقّت دقيقة واحدة</item>
+    <item quantity="zero">لا دقائق متبقية</item>
+    <item quantity="one">تبقّت دقيقة واحدة</item>
+    <item quantity="two">تبقّت دقيقتان</item>
+    <item quantity="few">تبقّت %d دقائق</item>
+    <item quantity="many">تبقّت %d دقيقة</item>
     <item quantity="other">تبقّت %d دقيقة</item>
   </plurals>
   <string name="description_pager_slide">معاينة الشريحة</string>
@@ -63,5 +64,5 @@
   <string name="requirements_libreoffice_experimental_enabled">المزايا التجريبية ممكّنة في \"أدوات ← خيارات ← LibreOffice ← متقدّم\" في ليبر أوفيس إمبريس.</string>
   <string name="requirements_network_connection">جهاز أندرويد والحاسوب متّصلان بنفس الشبكة.</string>
   <string name="requirements_network_ports">إن كان لديك جدار ناري، تأكد أن المنفذين 1598 و 1599 مفتوحين.</string>
-  <string name="requirements_bluetooth_connection">حاسوب وبلووتوث ممكّن عليه.</string>
+  <string name="requirements_bluetooth_connection">حاسوب حيث بلوتوث مفعّل.</string>
 </resources>

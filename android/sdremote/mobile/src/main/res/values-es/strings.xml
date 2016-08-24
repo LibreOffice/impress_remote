@@ -53,7 +53,7 @@
   <string name="description_grid_slide">Previsualización de la diapositiva</string>
   <string name="description_empty_slide">Diapositiva vacía</string>
   <string name="preferences_volume_keys_actions_title">Acciones de las teclas de volumen</string>
-  <string name="preferences_volume_keys_actions_summary">Pasar las diapositivas y activar animaciones utilizando las teclas de volumen.</string>
+  <string name="preferences_volume_keys_actions_summary">Pasar las diapositivas y activar animaciones con las teclas de volumen</string>
   <string name="preferences_keep_screen_on_title">Mantener la pantalla activada</string>
   <string name="preferences_keep_screen_on_summary">Desactivar el modo suspender del teléfono durante la presentación</string>
   <string name="preferences_quiet_mode_title">Modo silencioso</string>

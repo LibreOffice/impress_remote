@@ -13,6 +13,7 @@
   <string name="menu_requirements">Талаптары</string>
   <string name="menu_reconnect">Қайта байланысу</string>
   <string name="menu_add_computer">Компьютерді қосу</string>
+  <string name="menu_start_discovery">Құрылғыларды іздеу</string>
   <string name="menu_remove_computer">Өшіру</string>
   <string name="menu_slides_grid">Слайдтар тормен</string>
   <string name="menu_slides_pager">Слайдтар бет бойынша</string>
@@ -30,6 +31,7 @@
     <a href="org.libreoffice.impressremote://requirements/">Көбірек біліңіз</a>
   </string>
   <string name="message_paused">Аялдатылған</string>
+  <string name="message_notes_empty">Ешнәрсе жоқ.</string>
   <string name="hint_ip_address">IP адресі</string>
   <string name="hint_name">Аты (міндетті емес)</string>
   <string name="header_notes">Жазбалар</string>

@@ -46,7 +46,8 @@
   <string name="header_notes">Megjegyzések</string>
   <string name="mask_slide_show_progress">%1$d. / %2$d dia</string>
   <plurals name="mask_timer_progress">
-    <item quantity="other">Egy perc van hátra</item>
+    <item quantity="one">Egy perc van hátra</item>
+    <item quantity="other">%d perc van hátra</item>
   </plurals>
   <string name="description_pager_slide">Diaelőnézet</string>
   <string name="description_grid_slide">Diaelőnézet</string>

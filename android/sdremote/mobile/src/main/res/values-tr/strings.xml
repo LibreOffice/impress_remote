@@ -46,7 +46,8 @@
   <string name="header_notes">Notlar</string>
   <string name="mask_slide_show_progress">%2$d slayttan %1$d slayt</string>
   <plurals name="mask_timer_progress">
-    <item quantity="other">%d dakika kaldı</item>
+    <item quantity="one">%d dakika kaldı</item>
+    <item quantity="other"/>
   </plurals>
   <string name="description_pager_slide">Slayt önizleme</string>
   <string name="description_grid_slide">Slayt önizleme</string>

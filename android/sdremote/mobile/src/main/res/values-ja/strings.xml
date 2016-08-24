@@ -16,6 +16,7 @@
   <string name="menu_start_discovery">コンピューター検索の実行</string>
   <string name="menu_remove_computer">削除</string>
   <string name="menu_slides_grid">スライドグリッド表示</string>
+  <string name="menu_slides_pager">スライドのページャー</string>
   <string name="menu_timer">タイマー</string>
   <string name="menu_stop_slide_show">スライドショーの終了</string>
   <string name="menu_pause_slide_show">スライドショーの一時停止</string>
