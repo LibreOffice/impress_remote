@@ -18,22 +18,25 @@
 -->
 <android.support.v7.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <android.support.v7.preference.CheckBoxPreference
+    <android.support.v7.preference.SwitchPreferenceCompat
         android:key="volume_keys_actions"
         android:defaultValue="true"
         android:title="@string/preferences_volume_keys_actions_title"
-        android:summary="@string/preferences_volume_keys_actions_summary"/>
+        android:summary="@string/preferences_volume_keys_actions_summary"
+        android:layout="@layout/preference_item"/>
 
-    <android.support.v7.preference.CheckBoxPreference
+    <android.support.v7.preference.SwitchPreferenceCompat
         android:key="keep_screen_on"
         android:defaultValue="true"
         android:title="@string/preferences_keep_screen_on_title"
-        android:summary="@string/preferences_keep_screen_on_summary"/>
+        android:summary="@string/preferences_keep_screen_on_summary"
+        android:layout="@layout/preference_item"/>
 
-    <android.support.v7.preference.CheckBoxPreference
+    <android.support.v7.preference.SwitchPreferenceCompat
         android:key="quiet_mode"
         android:defaultValue="false"
         android:title="@string/preferences_quiet_mode_title"
-        android:summary="@string/preferences_quiet_mode_summary"/>
+        android:summary="@string/preferences_quiet_mode_summary"
+        android:layout="@layout/preference_item"/>
 
 </android.support.v7.preference.PreferenceScreen>
