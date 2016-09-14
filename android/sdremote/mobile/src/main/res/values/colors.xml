@@ -17,9 +17,9 @@
  *   the License at http://www.apache.org/licenses/LICENSE-2.0 .
 -->
 <resources>
-    <color name="primary">#18A303</color> <!-- green primary -->
-    <color name="primary_dark">#106802</color> <!-- green secondary -->
-    <color name="accent">#023F62</color> <!-- blue secondary -->
+    <color name="primary">#D36118</color> <!-- orange primary -->
+    <color name="primary_dark">#A33E03</color> <!-- orange secondary -->
+    <color name="accent">#0F6799</color> <!-- blue secondary -->
 
     <color name="background_grid_slide_index_inactive">#7f000000</color>
     <color name="background_grid_slide_index_active">#bfff0000</color>
