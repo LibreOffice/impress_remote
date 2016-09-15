@@ -38,7 +38,8 @@
         android:theme="@style/Theme.ImpressRemote">
 
         <activity
-            android:name=".activity.ComputersActivity">
+            android:name=".activity.ComputersActivity"
+            android:theme="@style/Theme.ImpressRemote.NoActionBar">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
