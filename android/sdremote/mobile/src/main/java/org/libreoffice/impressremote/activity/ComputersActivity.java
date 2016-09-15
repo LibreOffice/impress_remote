@@ -18,9 +18,11 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.view.animation.AnimationUtils;
 
 import org.libreoffice.impressremote.adapter.ComputersPagerAdapter;
@@ -43,17 +45,16 @@ public class ComputersActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle aSavedInstanceState) {
         super.onCreate(aSavedInstanceState);
-
+        
         setContentView(R.layout.activity_computers);
 
-        ActionBar aActionBar = getSupportActionBar();
+        Toolbar toolbar = (Toolbar) findViewById(R.id.computers_toolbar);
+        setSupportActionBar(toolbar);
         // Looks hacky but it seems to be the best way to set activity’s title
         // different to application’s label. The other way is setting title
         // to intents filter but it shows wrong label for recent apps screen then.
-        assert aActionBar != null;
-        aActionBar.setTitle(R.string.title_computers);
-        aActionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_HOME,
-                ActionBar.DISPLAY_SHOW_HOME|ActionBar.DISPLAY_HOME_AS_UP);
+        assert toolbar != null;
+        toolbar.setTitle(R.string.title_computers);
 
         computersPagerAdapter.addFragment(Type.BLUETOOTH);
         computersPagerAdapter.addFragment(Type.WIFI);
