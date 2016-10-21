@@ -16,13 +16,11 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
 import android.view.animation.AnimationUtils;
 
 import org.libreoffice.impressremote.adapter.ComputersPagerAdapter;
@@ -35,11 +33,11 @@ public class ComputersActivity extends AppCompatActivity {
     private static final String SELECT_BLUETOOTH = "SELECT_BLUETOOTH";
     private static final BluetoothAdapter btAdapter = BluetoothAdapter.getDefaultAdapter();
     private static final boolean disableBTOnQuit = btAdapter != null && !btAdapter.isEnabled();
-    private static TabLayout tabLayout;
+    private TabLayout tabLayout;
     private static TabLayout.Tab btTab;
     private static TabLayout.Tab wifiTab;
-    private static FloatingActionButton btFab;
-    private static FloatingActionButton addFab;
+    private FloatingActionButton btFab;
+    private FloatingActionButton addFab;
     private final ComputersPagerAdapter computersPagerAdapter = new ComputersPagerAdapter(getSupportFragmentManager(), this);
 
     @Override
