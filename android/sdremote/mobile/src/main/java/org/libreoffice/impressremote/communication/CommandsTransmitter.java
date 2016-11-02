@@ -38,13 +38,18 @@ public class CommandsTransmitter {
                 aPin));
     }
 
-    private void writeCommand(String aCommand) {
-        try {
-            mCommandsWriter.write(aCommand);
-            mCommandsWriter.flush();
-        } catch (IOException e) {
-            throw new RuntimeException("Unable to write command.");
-        }
+    private void writeCommand(final String aCommand) {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    mCommandsWriter.write(aCommand);
+                    mCommandsWriter.flush();
+                } catch (IOException e) {
+                    throw new RuntimeException("Unable to write command.");
+                }
+            }
+        }).start();
     }
 
     public void performNextTransition() {
