@@ -4,7 +4,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.2'
+        classpath 'com.android.tools.build:gradle:2.2.3'
     }
 }
 
@@ -14,7 +14,7 @@ subprojects {
         if (project.hasProperty("android")) {
             android {
                 compileSdkVersion  25
-                buildToolsVersion  '25.0.0'
+                buildToolsVersion  '25.0.1'
                 defaultConfig {
                     targetSdkVersion 25
                     applicationId 'org.libreoffice.impressremote'
