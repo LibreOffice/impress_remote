@@ -15,6 +15,7 @@ import java.net.InetAddress;
 import java.net.SocketException;
 import java.net.SocketTimeoutException;
 import java.net.UnknownHostException;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -94,7 +95,7 @@ class TcpServersFinder implements ServersFinder, Runnable {
                 .prepareCommand(Protocol.Commands.SEARCH_SERVERS);
 
             DatagramPacket aSearchPacket = new DatagramPacket(
-                aSearchCommand.getBytes(), aSearchCommand.length());
+                aSearchCommand.getBytes(Charset.forName(Protocol.CHARSET)), aSearchCommand.length());
 
             aSearchPacket.setAddress(
                 InetAddress.getByName(Protocol.Addresses.SERVER_SEARCH));
