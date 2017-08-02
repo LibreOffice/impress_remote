@@ -8,7 +8,6 @@
  */
 package org.libreoffice.impressremote.fragment.slides;
 
-import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -32,7 +31,6 @@ import org.libreoffice.impressremote.communication.CommunicationService;
 
 public class PointerFragment extends AbstractSlideFragment implements ServiceConnection, View.OnTouchListener {
     private CommunicationService mCommunicationService;
-    private BroadcastReceiver mIntentsReceiver;
     private int displayheight, displaywidth, xoffset, yoffset;
     private long nextUpdate = 0;
     private static final int REFRESH_MILLIS = 40; //25 fps refresh
@@ -147,22 +145,6 @@ public class PointerFragment extends AbstractSlideFragment implements ServiceCon
     @Override
     void notesUpdated(int nSlideIndex) {
         // We don't show notes (yet) -- ignore.
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-
-        unregisterIntentsReceiver();
-    }
-
-    private void unregisterIntentsReceiver() {
-        try {
-            getBroadcastManager().unregisterReceiver(mIntentsReceiver);
-        } catch (IllegalArgumentException e) {
-            // Receiver not registered.
-            // Fixed in Honeycomb: Android’s issue #6191.
-        }
     }
 
     @Override
