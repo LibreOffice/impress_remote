@@ -76,10 +76,13 @@ class ServersManager implements Comparator<Server> {
     private List<Server> buildTcpServers(Map<String, ?> aServersEntries) {
         List<Server> aServers = new ArrayList<Server>();
 
-        for (String aServerAddress : aServersEntries.keySet()) {
-            String aServerName = (String) aServersEntries.get(aServerAddress);
+        // The entries are also Strings, however that's only a (sdremote specific) runtime
+        // expectation.
+        for (final Map.Entry<String, ?> entry : aServersEntries.entrySet()) {
+            final String serverAddress = entry.getKey();
+            final String serverName = (String) entry.getValue();
 
-            aServers.add(Server.newTcpInstance(aServerAddress, aServerName));
+            aServers.add(Server.newTcpInstance(serverAddress, serverName));
         }
 
         return aServers;
