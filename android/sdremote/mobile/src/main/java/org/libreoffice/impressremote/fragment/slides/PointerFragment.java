@@ -167,7 +167,6 @@ public class PointerFragment extends AbstractSlideFragment implements ServiceCon
 
     @Override
     public boolean onTouch(View v, MotionEvent event) {
-
         float x = (event.getX() - xoffset) / displaywidth;
         float y = (event.getY() - yoffset) / displayheight;
 
@@ -193,7 +192,10 @@ public class PointerFragment extends AbstractSlideFragment implements ServiceCon
         case MotionEvent.ACTION_CANCEL:
         // a pointer was removed
             mCommunicationService.getCommandsTransmitter().stopPointer();
-        break;
+            break;
+        default:
+            // We specifically don't care about all other events.
+            return false;
         }
         return true;
     }
