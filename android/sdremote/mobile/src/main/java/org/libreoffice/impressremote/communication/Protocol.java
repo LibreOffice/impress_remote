@@ -84,6 +84,10 @@ final class Protocol {
 
     public static final class Pin {
         private static final int NUMBERS_COUNT = 4;
+        // It's apparently bad practice to create a new generator on demand, and better to reuse one
+        // generator, hence we keep one static instance throughout. Search for (findbugs)
+        // DMI_RANDOM_USED_ONLY_ONCE for more.
+        private static final Random RANDOM = new Random();
 
         private Pin() {
         }
@@ -101,7 +105,7 @@ final class Protocol {
         private int generatePinNumber() {
             int aMaximumPin = (int) Math.pow(10, NUMBERS_COUNT) - 1;
 
-            return new Random().nextInt(aMaximumPin);
+            return RANDOM.nextInt(aMaximumPin);
         }
 
         private int preventLeadingZeros(int aPin) {
