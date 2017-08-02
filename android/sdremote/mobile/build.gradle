@@ -44,9 +44,9 @@ findbugs {
 
     // This selects what level of bugs to report: low means low priority issues will be reported
     // (in addition to medium+high), which corresponds to warning about everything.
-    // TODO: boost this to medium/low once medium/low priority issues are fixed.
+    // TODO: boost this to low once low priority issues are fixed.
     // (Whether or not low is useful is tbc.)
-    reportLevel = "high"
+    reportLevel = "medium"
 
     excludeFilter = new File("${project.rootDir}/quality/findbugs-exclude.xml")
 }
