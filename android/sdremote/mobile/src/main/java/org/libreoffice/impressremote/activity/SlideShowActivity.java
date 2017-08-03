@@ -68,7 +68,7 @@ public class SlideShowActivity extends AppCompatActivity implements ServiceConne
         saveRingerMode(aSavedInstanceState);
         enableQuietMode();
 
-        bindService();
+        bindCommunicationService();
     }
 
     private Mode loadMode(Bundle aSavedInstanceState) {
@@ -139,7 +139,7 @@ public class SlideShowActivity extends AppCompatActivity implements ServiceConne
         return aPreferences.getBoolean(Preferences.Keys.QUIET_MODE);
     }
 
-    private void bindService() {
+    private void bindCommunicationService() {
         Intent aIntent = Intents.buildCommunicationServiceIntent(this);
         bindService(aIntent, this, Context.BIND_AUTO_CREATE);
     }
