@@ -4,6 +4,12 @@ android {
     defaultConfig {
         minSdkVersion 20
     }
+
+    lintOptions {
+        // Temporarily disable failing on lint errors until we've migrated away from BIND_LISTENER,
+        // see tdf#111399 .
+        abortOnError false
+    }
 }
 
 dependencies {
