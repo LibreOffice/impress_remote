@@ -30,6 +30,8 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
+
 public class CommunicationServiceWear extends WearableListenerService {
 
     private static final String TAG = "CommunicationSrvcWear";
@@ -49,6 +51,9 @@ public class CommunicationServiceWear extends WearableListenerService {
     public static final String INTENT_PREVIEW="PREVIEW";
     public static final String INTENT_HAS_ASSET="HASASSET";
 
+    // Filed as tdf#111393 - this is tricky to unclog since googleApiClient is used by static
+    // methods that shouldn't really exist in the first place.
+    @SuppressFBWarnings("ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD")
     private static GoogleApiClient googleApiClient;
 
     private static boolean ingoreSync;
