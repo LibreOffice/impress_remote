@@ -37,8 +37,7 @@ dependencies {
 // -------------------------------------------------------------------------------------------------
 
 findbugs {
-    // TODO: upgrade this to false once we've fixed all issues
-    ignoreFailures = true
+    ignoreFailures = false
 
     effort = "max"
 
