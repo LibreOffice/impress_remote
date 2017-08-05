@@ -8,6 +8,8 @@
  */
 package org.libreoffice.impressremote.communication;
 
+import android.os.AsyncTask;
+
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -39,17 +41,21 @@ public class CommandsTransmitter {
     }
 
     private void writeCommand(final String aCommand) {
-        new Thread(new Runnable() {
+        // TODO: We should ensure that all communication happens on one Thread. By default AsyncTask
+        // executes on a thread pool (at least on modern devices). See tdf#111398
+        (new AsyncTask<Void, Void, Void>() {
             @Override
-            public void run() {
+            protected Void doInBackground(Void... params) {
                 try {
                     mCommandsWriter.write(aCommand);
                     mCommandsWriter.flush();
                 } catch (IOException e) {
                     throw new RuntimeException("Unable to write command.");
                 }
+
+                return null;
             }
-        }).start();
+        }).execute();
     }
 
     public void performNextTransition() {
