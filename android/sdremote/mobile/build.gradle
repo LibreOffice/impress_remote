@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     defaultConfig {
-        minSdkVersion 9
+        minSdkVersion 14
     }
 
     lintOptions {
@@ -18,9 +18,8 @@ android {
 }
 
 dependencies {
-    // both pull in support-v4 and appcompat-v7 already
-    compile 'com.android.support:preference-v7:25.0.0'
-    compile 'com.android.support:design:25.0.0'
+    compile 'com.android.support:preference-v7:26.1.0'
+    compile 'com.android.support:design:26.1.0'
     fullCompile 'com.google.android.gms:play-services-wearable:9.6.1'
     fullWearApp project(':wear')
 }
