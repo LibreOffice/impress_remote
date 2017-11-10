@@ -2,7 +2,7 @@
 
 export PEBBLE_ID=`bt-device -l | grep "Pebble Time" | cut -d ' ' -f4 | cut -c2-18`
 
-if [ -z "$PEBBLE_ID" ];
+if [ -z $PEBBLE_ID ];
 then
 
   export PEBBLE_ID=`bt-device -l | grep "Pebble" | cut -d ' ' -f3 | cut -c2-18`
