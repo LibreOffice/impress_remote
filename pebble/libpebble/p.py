@@ -34,8 +34,8 @@ def cmd_remote(pebble, args):
             productname = "openoffice"
             fullscreen = "xdotool key --window " +window_id[0]+" F5"
         else:
-           productname = "libreoffice"
-           fullscreen = "xdotool key --window " +window_id+" F5"
+            productname = "libreoffice"
+            fullscreen = "xdotool windowactivate --sync "+window_id+" key F5"
 
         pexpect.run(fullscreen)
     except Exception:
@@ -45,12 +45,13 @@ def cmd_remote(pebble, args):
 
     def libreoffice_event_handler(event):
         if productname == "libreoffice":
-            right_click = "xdotool key --window "+ window_id + " Right"
-            left_click = "xdotool key --window "+ window_id + " Left"
+            window_id = pexpect.run("xdotool getactivewindow")
+            right_click = "xdotool windowactivate --sync "+window_id+" key Right"
+            left_click = "xdotool windowactivate --sync "+window_id+" key Left"
         else:
             window_ids = pexpect.run("xdotool search --sync --onlyvisible --class \"openoffice\"").split('\r\n')
-            right_click = "xdotool key --window "+ window_ids[1] + " Right"
-            left_click = "xdotool key --window "+ window_ids[1] + " Left"
+            right_click = "xdotool windowactivate --sync "+window_ids[1]+" key Right"
+            left_click = "xdotool windowactivate --sync "+window_ids[1]+" key Left"
 
         if event == "next":
             pexpect.run(right_click)
