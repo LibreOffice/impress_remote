@@ -209,6 +209,11 @@ public class SlideShowActivity extends AppCompatActivity implements ServiceConne
                 return;
             }
 
+            if (Intents.Actions.SLIDE_SHOW_STOPPED.equals(aIntent.getAction())) {
+                mSlideShowActivity.finish();
+                return;
+            }
+
             if (Intents.Actions.SLIDE_CHANGED.equals(aIntent.getAction())) {
                 mSlideShowActivity.setUpSlideShowInformation();
                 mSlideShowActivity.slideCountMessage();
@@ -270,6 +275,7 @@ public class SlideShowActivity extends AppCompatActivity implements ServiceConne
         IntentFilter aIntentFilter = new IntentFilter();
         aIntentFilter.addAction(Intents.Actions.SLIDE_SHOW_MODE_CHANGED);
         aIntentFilter.addAction(Intents.Actions.SLIDE_CHANGED);
+        aIntentFilter.addAction(Intents.Actions.SLIDE_SHOW_STOPPED);
         aIntentFilter.addAction(Intents.Actions.TIMER_UPDATED);
         aIntentFilter.addAction(Intents.Actions.TIMER_STARTED);
         aIntentFilter.addAction(Intents.Actions.TIMER_RESUMED);
