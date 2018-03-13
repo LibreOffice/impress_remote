@@ -73,6 +73,13 @@ public class PointerFragment extends AbstractSlideFragment implements ServiceCon
 
         ViewPager aSlidesPager = getSlidesPager();
 
+        if (aSlidesPager == null) {
+            return;
+        }
+        if (aSlidesPager.getChildAt(0) == null) {
+            return;
+        }
+
         aSlidesPager.setAdapter(buildSlidesAdapter());
 
         setUpCurrentSlide();
