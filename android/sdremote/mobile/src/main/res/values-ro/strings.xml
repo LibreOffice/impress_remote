@@ -46,8 +46,8 @@
   <string name="header_notes">Notițe</string>
   <string name="mask_slide_show_progress">Diapozitiv %1$d din %2$d</string>
   <plurals name="mask_timer_progress">
-    <item quantity="one">Un minut rămas</item>
-    <item quantity="few">%d minute rămase</item>
+    <item quantity="one">%d minute rămase</item>
+    <item quantity="few">Un minut rămas</item>
     <item quantity="other">%d de minute rămase</item>
   </plurals>
   <string name="description_pager_slide">Previzualizare</string>

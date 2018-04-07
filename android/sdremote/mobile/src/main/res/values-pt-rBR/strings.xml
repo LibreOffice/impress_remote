@@ -53,7 +53,7 @@
   <string name="description_grid_slide">Pré-visualização</string>
   <string name="description_empty_slide">Slide vazio</string>
   <string name="preferences_volume_keys_actions_title">Ações das teclas de volume</string>
-  <string name="preferences_volume_keys_actions_summary">Trocar slides e ativar animações usando as teclas de volume</string>
+  <string name="preferences_volume_keys_actions_summary">Troca os slides e ativa as animações usando as teclas de volume</string>
   <string name="preferences_keep_screen_on_title">Manter tela ligada</string>
   <string name="preferences_keep_screen_on_summary">Impedir suspensão do telefone durante a apresentação</string>
   <string name="preferences_quiet_mode_title">Modo silencioso</string>

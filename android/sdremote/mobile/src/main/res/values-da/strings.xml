@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <string name="application_name">Impress fjernbetjening</string>
+  <string name="application_name">Impress-fjernbetjening</string>
   <string name="title_computers">Computere</string>
   <string name="title_generic">Generisk</string>
   <string name="title_settings">Indstillinger</string>

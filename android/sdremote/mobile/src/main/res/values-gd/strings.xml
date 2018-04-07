@@ -30,7 +30,7 @@
   <string name="message_impress_pin_validation">Rach gu \"Taisbeanadh shleamhnagan → Impress Remote\" ann an LibreOffice Impress agus cuir a-steach an còd.</string>
   <string name="message_connection_failed_title">Dh\'fhàillig an ceangal</string>
   <string name="message_impress_remote_enabling">Dèan cinnteach gu bheil an smachdadh cèin an comas. Rach gu \"Innealan → Roghainnean → LibreOffice Impress → Coitcheann\" ann an LibreOffice Impress.</string>
-  <string name="message_impress_wifi_enabling">Bu chòir dhut na feartan deuchainneach a chur an comas cuideachd fo \"Innealan → Roghainnean → LibreOffice → Adhartach\".</string>
+  <string name="message_impress_wifi_enabling">Bu chòir dhut na gleusan deuchainneach a chur an comas cuideachd fo “Innealan” » “Roghainnean” » “LibreOffice” » “Adhartach”.</string>
   <string name="message_impress_pairing_check">Ma tha duilgheadas agad le paidhreachadh Bluetooth, thoir sùil air an stiùireadh airson OS an desktop agad.</string>
   <string name="message_ip_address_validation">Cuir a-steach seòladh IP dligheach.</string>
   <string name="message_time_is_up">Dh\'fhalbh an ùine ort!</string>
@@ -47,8 +47,8 @@
   <string name="mask_slide_show_progress">Sleamhnag %1$d à %2$d</string>
   <plurals name="mask_timer_progress">
     <item quantity="one">%d mhionaid air fhàgail</item>
-    <item quantity="two">%d mhionaid air fhàgail</item>
-    <item quantity="few">%d mionaidean air fhàgail</item>
+    <item quantity="two">%d mionaidean air fhàgail</item>
+    <item quantity="few">%d mhionaid air fhàgail</item>
     <item quantity="other">%d mionaid air fhàgail</item>
   </plurals>
   <string name="description_pager_slide">Ro-shealladh na sleamhnaige</string>
@@ -62,7 +62,7 @@
   <string name="preferences_quiet_mode_summary">"Cuir gu do modh na seirme chritheach rè taisbeanaidh "</string>
   <string name="requirements_libreoffice_version">LibreOffice tionndadh 4.0.3 no nas ùire air coimpiutair.</string>
   <string name="requirements_libreoffice_general_enabled">Impress Remote an comas aig \"Innealan → Roghainnean → LibreOffice Impress → Coitcheann\" ann an LibreOffice Impress.</string>
-  <string name="requirements_libreoffice_experimental_enabled">Feartan deuchainneach an comas aig \"Innealan → Roghainnean → LibreOffice → Adhartach\" ann an LibreOffice Impress.</string>
+  <string name="requirements_libreoffice_experimental_enabled">Gleusan deuchainneach an comas aig “Innealan” » “Roghainnean” » “LibreOffice” » “Adhartach” ann an LibreOffice Impress.</string>
   <string name="requirements_network_connection">An t-uidheam Android is coimpiutair ceangailte ris an aon lìonra.</string>
   <string name="requirements_network_ports">Ma tha cachaileith-theine agad, dèan cinnteach gu bheil port 1598 agus 1599 fosgailte.</string>
   <string name="requirements_bluetooth_connection">Coimpiutair le Bluetooth an comas air.</string>

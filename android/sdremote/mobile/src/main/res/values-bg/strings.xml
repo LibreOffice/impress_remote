@@ -52,8 +52,8 @@
   <string name="description_pager_slide">Преглед на кадрите</string>
   <string name="description_grid_slide">Преглед на кадрите</string>
   <string name="description_empty_slide">Празен кадър</string>
-  <string name="preferences_volume_keys_actions_title">Действие на клавишите за звука</string>
-  <string name="preferences_volume_keys_actions_summary">Смяна на кадрите и анимация чрез клавишите за звука</string>
+  <string name="preferences_volume_keys_actions_title">Действия с бутоните за звука</string>
+  <string name="preferences_volume_keys_actions_summary">Смяна на кадрите и анимация чрез бутоните за сила на звука</string>
   <string name="preferences_keep_screen_on_title">Постоянно включен екран</string>
   <string name="preferences_keep_screen_on_summary">Забранено заспиване на телефона при прожекция</string>
   <string name="preferences_quiet_mode_title">Тих режим</string>

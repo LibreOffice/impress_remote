@@ -52,11 +52,11 @@
   <string name="description_pager_slide">Anteprima della diapositiva</string>
   <string name="description_grid_slide">Anteprima della diapositiva</string>
   <string name="description_empty_slide">Diapositiva vuota</string>
-  <string name="preferences_volume_keys_actions_title">Azione dei tasti volume</string>
+  <string name="preferences_volume_keys_actions_title">Azioni dei tasti volume</string>
   <string name="preferences_volume_keys_actions_summary">Cambia le diapositive e attiva le animazioni utilizzando i tasti volume</string>
   <string name="preferences_keep_screen_on_title">Mantieni lo schermo acceso</string>
   <string name="preferences_keep_screen_on_summary">Impedisci lo standby del telefono durante la presentazione</string>
-  <string name="preferences_quiet_mode_title">Modalità silenziosa</string>
+  <string name="preferences_quiet_mode_title">Modo silenzioso</string>
   <string name="preferences_quiet_mode_summary">Imposta la suoneria su vibrazione durante la presentazione</string>
   <string name="requirements_libreoffice_version">LibreOffice versione 4.0.3 o successiva in esecuzione su un computer.</string>
   <string name="requirements_libreoffice_general_enabled">Impress Remote abilitato in “Strumenti → Opzioni → LibreOffice Impress → Generale” in LibreOffice Impress.</string>

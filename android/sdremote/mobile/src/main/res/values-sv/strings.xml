@@ -25,7 +25,7 @@
   <string name="menu_stop_pointer">Avaktivera pekare</string>
   <string name="button_cancel">Avbryt</string>
   <string name="button_save">Spara</string>
-  <string name="button_start">Start</string>
+  <string name="button_start">Starta</string>
   <string name="button_remove">Ta bort</string>
   <string name="message_impress_pin_validation">Gå till ”Presentation → Impress fjärrkontroll” i LibreOffice Impress och skriv in koden.</string>
   <string name="message_connection_failed_title">Anslutningen misslyckades</string>

@@ -8,7 +8,7 @@
   <string name="title_connection">Povezivanje</string>
   <string name="title_creation">Kreacija</string>
   <string name="title_slide_show">Prezentacija</string>
-  <string name="title_timer">Brojač</string>
+  <string name="title_timer">Mjerenje vremena</string>
   <string name="menu_settings">Postavke</string>
   <string name="menu_requirements">Zahtjevi</string>
   <string name="menu_reconnect">Ponovno povezivanje</string>
@@ -17,8 +17,8 @@
   <string name="menu_remove_computer">Ukloni</string>
   <string name="menu_slides_grid">Mreža slajdova</string>
   <string name="menu_slides_pager">Brojač slajdova</string>
-  <string name="menu_timer">Brojač</string>
-  <string name="menu_stop_slide_show">Prekini prezentaciju</string>
+  <string name="menu_timer">Mjerenje vremena</string>
+  <string name="menu_stop_slide_show">Završi prezentaciju</string>
   <string name="menu_pause_slide_show">Zaustavi prezentaciju</string>
   <string name="menu_resume_slide_show">Nastavi s prezentacijom</string>
   <string name="menu_start_pointer">Uključi pokazivač</string>
@@ -27,27 +27,27 @@
   <string name="button_save">Spremi</string>
   <string name="button_start">Pokreni</string>
   <string name="button_remove">Ukloni</string>
-  <string name="message_impress_pin_validation">Unesite kod kroz izbornik Prezentacija → Impress Remote u LibreOffice Impressu.</string>
+  <string name="message_impress_pin_validation">Unesite kôd kroz izbornik “Prezentacija → Impress Remote” u LibreOffice Impressu.</string>
   <string name="message_connection_failed_title">Povezivanje nije uspjelo</string>
-  <string name="message_impress_remote_enabling">Provjerite jeste li omogućili daljinsko upravljanje. U LibreOffice Impressu provjerite izbornike Alati → Mogućnosti → LibreOffice Impress → Općenito.</string>
-  <string name="message_impress_wifi_enabling">Trebali biste omogućiti i eksperimentalne značajke kroz izbornike Alati → Mogućnosti → LibreOffice → Napredno.</string>
-  <string name="message_impress_pairing_check">Imate li problema s uparivanjem bluetoothom, provjerite upute vezane za operacijski sustav vašeg stolnog računala.</string>
+  <string name="message_impress_remote_enabling">Provjerite je li uključeno daljinsko upravljanje. U LibreOffice Impressu provjerite “Alati → Mogućnosti → LibreOffice Impress → Općenito”.</string>
+  <string name="message_impress_wifi_enabling">Trebali biste omogućiti eksperimentalne značajke kroz izbornike “Alati → Mogućnosti → LibreOffice → Napredno”.</string>
+  <string name="message_impress_pairing_check">Imate li problema s uparivanjem, provjerite upute vezane za operacijski sustav vašeg stolnog računala.</string>
   <string name="message_ip_address_validation">Unesite valjanu IP adresu.</string>
   <string name="message_time_is_up">Vrijeme je isteklo!</string>
-  <string name="message_search_wifi">Provjerite je li LibreOffice pokrenut na računalo spojenom na istu bežićnu mrežu.</string>
+  <string name="message_search_wifi">Provjerite je li LibreOffice pokrenut na računalu koje je spojeno na istu bežičnu mrežu.</string>
   <string name="message_search_bluetooth">Provjerite je li LibreOffice pokrenut na računalu s uključenim bluetoothom.</string>
   <string name="message_learn_more">
-    <a href="org.libreoffice.impressremote://requirements/">Naučite više</a>
+    <a href="org.libreoffice.impressremote://requirements/">Saznajte više</a>
   </string>
   <string name="message_paused">Zaustavljeno</string>
-  <string name="message_notes_empty">Ovdje nema ničega.</string>
+  <string name="message_notes_empty">Nema bilješki.</string>
   <string name="hint_ip_address">IP adresa</string>
-  <string name="hint_name">Ime (neobavezno)</string>
+  <string name="hint_name">Naziv (neobavezno)</string>
   <string name="header_notes">Bilješke</string>
   <string name="mask_slide_show_progress">Slajd %1$d od %2$d</string>
   <plurals name="mask_timer_progress">
-    <item quantity="one">Preostala je %d minuta</item>
-    <item quantity="few">Preostale su %d minute</item>
+    <item quantity="one">Preostale su %d minute</item>
+    <item quantity="few">Preostala je %d minuta</item>
     <item quantity="other">Preostalo je %d minuta</item>
   </plurals>
   <string name="description_pager_slide">Pregled slajda</string>
@@ -60,9 +60,9 @@
   <string name="preferences_quiet_mode_title">Tihi način rada</string>
   <string name="preferences_quiet_mode_summary">Uključi vibraciju kao vrstu zvona za vrijeme prezentacije</string>
   <string name="requirements_libreoffice_version">Na računalu pokrenut LibreOffice inačice 4.0.3 ili novije.</string>
-  <string name="requirements_libreoffice_general_enabled">Uključite značajku Impress Remote u LibreOffice Impressu kroz izbornike Alati → Mogućnosti → LibreOffice Impress → Općenito.</string>
-  <string name="requirements_libreoffice_experimental_enabled">U LibreOffice Impressu eksperimentalne je značajke moguće uključiti kroz izbornike Alati → Mogućnosti → Libreoffice → Napredno.</string>
-  <string name="requirements_network_connection">Uređaj s Androidom i računalo povezani na istu mrežu.</string>
+  <string name="requirements_libreoffice_general_enabled">Uključite značajku Impress Remote u LibreOffice Impressu kroz “Alati → Mogućnosti → LibreOffice Impress → Općenito”.</string>
+  <string name="requirements_libreoffice_experimental_enabled">U LibreOffice Impressu eksperimentalne značajke kroz “Alati → Mogućnosti → Libreoffice → Napredno”.</string>
+  <string name="requirements_network_connection">Uređaj s Androidom i računalo povezano na istu mrežu.</string>
   <string name="requirements_network_ports">Imate li uključen vatrozid, provjerite jesu li otvoreni ulazi 1598 i 1599.</string>
   <string name="requirements_bluetooth_connection">Računalo s uključenim bluetoothom.</string>
 </resources>

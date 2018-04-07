@@ -46,9 +46,9 @@
   <string name="header_notes">Poznámky</string>
   <string name="mask_slide_show_progress">Snímka %1$d z %2$d</string>
   <plurals name="mask_timer_progress">
-    <item quantity="one">Zostáva jedna minúta</item>
-    <item quantity="few">Zostávajú %d minuty</item>
-    <item quantity="many">Zostáva %d minút</item>
+    <item quantity="one">Zostáva %d minút</item>
+    <item quantity="few">Zostáva jedna minúta</item>
+    <item quantity="many">Zostávajú %d minúty</item>
     <item quantity="other"/>
   </plurals>
   <string name="description_pager_slide">Náhľad snímky</string>

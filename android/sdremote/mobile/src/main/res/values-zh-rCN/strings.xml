@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <string name="application_name">Impress 遥控</string>
+  <string name="application_name">Impress Remote</string>
   <string name="title_computers">计算机</string>
   <string name="title_generic">一般</string>
   <string name="title_settings">设置</string>

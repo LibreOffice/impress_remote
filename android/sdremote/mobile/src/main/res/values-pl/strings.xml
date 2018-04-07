@@ -46,9 +46,9 @@
   <string name="header_notes">Notatki</string>
   <string name="mask_slide_show_progress">Slajd %1$d z %2$d</string>
   <plurals name="mask_timer_progress">
-    <item quantity="one">Pozostała jedna minuta</item>
-    <item quantity="few">Pozostało %d minut</item>
-    <item quantity="many">Pozostały %d minuty</item>
+    <item quantity="one">Pozostały %d minuty</item>
+    <item quantity="few">Pozostała jedna minuta</item>
+    <item quantity="many">Pozostało %d minut</item>
     <item quantity="other"/>
   </plurals>
   <string name="description_pager_slide">Podgląd slajdu</string>
