@@ -8,19 +8,18 @@ android {
     lintOptions {
         abortOnError false
     }
+    flavorDimensions "default"
     productFlavors {
-        // return statements to avoid "Not all execution paths return a value" inspection warning
         // the full remote including the wearable
-        full {return true}
+        full.dimension "default"
         // minimal variant without wearable (and thus without the need for google apis)
-        minimal {return true}
+        minimal.dimension "default"
     }
 }
 
 dependencies {
-    // both pull in support-v4 and appcompat-v7 already
-    compile 'com.android.support:preference-v7:25.0.0'
-    compile 'com.android.support:design:25.0.0'
-    fullCompile 'com.google.android.gms:play-services-wearable:9.6.1'
+    implementation 'com.android.support:preference-v7:25.4.0'
+    implementation 'com.android.support:design:25.4.0'
+    fullImplementation 'com.google.android.gms:play-services-wearable:10.0.1'
     fullWearApp project(':wear')
 }
