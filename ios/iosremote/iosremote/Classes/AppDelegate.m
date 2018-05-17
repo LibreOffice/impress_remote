@@ -18,7 +18,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 @synthesize window = _window;
 
-- (NSUInteger)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window
+- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window
 {
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
         return UIInterfaceOrientationMaskAll;
@@ -43,14 +43,18 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     [[UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil]
      setBackgroundImage:[UIImage imageNamed:@"navBarButtonNormal"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     
-    NSDictionary *attributes = [NSDictionary dictionaryWithObjects:
-                                [NSArray arrayWithObjects: [UIFont boldSystemFontOfSize:15], kTintColor, [UIColor clearColor], nil]
-                                                           forKeys: [NSArray arrayWithObjects:UITextAttributeFont, UITextAttributeTextColor, UITextAttributeTextShadowColor, nil]];
+    NSShadow *shadow = [NSShadow new];
+    shadow.shadowColor = [UIColor clearColor];
+
+    NSDictionary *attributes = @{NSFontAttributeName:            [UIFont boldSystemFontOfSize:15],
+                                 NSForegroundColorAttributeName: kTintColor,
+                                 NSShadowAttributeName:          shadow};
     [[UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil] setTitleTextAttributes:attributes
                                                 forState:UIControlStateNormal];
-    attributes = [NSDictionary dictionaryWithObjects:
-                  [NSArray arrayWithObjects: kAppTextFont, [UIColor grayColor], [UIColor clearColor], nil]
-                                             forKeys: [NSArray arrayWithObjects:UITextAttributeFont, UITextAttributeTextColor, UITextAttributeTextShadowColor, nil]];
+
+    attributes = @{NSFontAttributeName:            kAppTextFont,
+                   NSForegroundColorAttributeName: [UIColor grayColor],
+                   NSShadowAttributeName:          shadow};
     [[UIBarButtonItem appearance] setTitleTextAttributes:attributes
                                                 forState:UIControlStateHighlighted];
     

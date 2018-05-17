@@ -404,7 +404,9 @@
     
     if (self.comManager.searchState == SEARCHING && section == 0) {
         UIActivityIndicatorView * aiv = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-        aiv.center = CGPointMake([sectionHeader.text sizeWithFont: sectionHeader.font].width + 2 * aiv.frame.size.width, sectionHeader.center.y);
+        aiv.center = CGPointMake([sectionHeader.text sizeWithAttributes:@{NSFontAttributeName:
+                                         sectionHeader.font}].width + 2 * aiv.frame.size.width,
+                                 sectionHeader.center.y);
         [aiv startAnimating];
         [aiv setTag:4];
         [view addSubview:aiv];
@@ -485,7 +487,7 @@
     if (indexPath.section == 0){
         if ([self.comManager.autoDiscoveryServers count] == 0){
             cell.textLabel.text = self.searchStateText;
-            cell.textLabel.lineBreakMode = UILineBreakModeClip;
+            cell.textLabel.lineBreakMode = NSLineBreakByClipping;
             cell.selectionStyle = self.style;
             
             UIButton *infoBtn = [UIButton buttonWithType:UIButtonTypeInfoDark];

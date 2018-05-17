@@ -84,6 +84,7 @@ dispatch_queue_t backgroundQueue;
         [self.tableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionNone];
         [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionMiddle animated:NO];
     }
+    [super viewDidAppear:animated];
 }
 
 - (void) prepareForSegue: (UIStoryboardSegue *) segue sender: (id) sender

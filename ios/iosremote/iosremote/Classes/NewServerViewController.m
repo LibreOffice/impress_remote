@@ -79,7 +79,7 @@
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Cancel", nil) style:UIBarButtonItemStyleBordered target:self action:@selector(handleBack)];
     [backButton setBackgroundImage:[UIImage imageNamed:@"backButton"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     self.navigationItem.leftBarButtonItem = backButton;
-    
+    [super viewDidLoad];
 }
 
 //  Override this method to automatically place the insertion point in the
@@ -98,6 +98,7 @@
                                                             cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
     
     [[cell textField] becomeFirstResponder];
+    [super viewDidAppear:animated];
 }
 
 //  Force textfields to resign firstResponder so that our implementation of
@@ -217,27 +218,19 @@
     
     //  Pick the editable cell and the values for its textField
     //
-    NSUInteger section = [indexPath section];
-    switch (section)
+    if ([indexPath row] == 1)
     {
-        case InformationSection:
-        {
-            if ([indexPath row] == 1)
-            {
-                cell = [self nameCell];
-                text = [self.server serverName];
-                placeholder = NSLocalizedString(@"Name (optional)", @"EditableTableViewCell placeholder");
-                keyboardType = UIKeyboardTypeDefault;
-            }
-            else
-            {
-                cell = [self addrCell];
-                text = [self.server serverAddress];
-                placeholder = NSLocalizedString(@"IP Address", @"EditableTableViewCell placeholder");
-                keyboardType = UIKeyboardTypeNumbersAndPunctuation;
-            }
-            break;
-        }
+        cell = [self nameCell];
+        text = [self.server serverName];
+        placeholder = NSLocalizedString(@"Name (optional)", @"EditableTableViewCell placeholder");
+        keyboardType = UIKeyboardTypeDefault;
+    }
+    else
+    {
+        cell = [self addrCell];
+        text = [self.server serverAddress];
+        placeholder = NSLocalizedString(@"IP Address", @"EditableTableViewCell placeholder");
+        keyboardType = UIKeyboardTypeNumbersAndPunctuation;
     }
     [cell.textField setPlaceholder:placeholder];
     [cell.textField setText:text];

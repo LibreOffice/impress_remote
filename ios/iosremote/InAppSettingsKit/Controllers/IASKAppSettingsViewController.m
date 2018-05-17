@@ -28,10 +28,6 @@
 #import "IASKSpecifierValuesViewController.h"
 #import "IASKTextField.h"
 
-static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
-static const CGFloat MINIMUM_SCROLL_FRACTION = 0.2;
-static const CGFloat MAXIMUM_SCROLL_FRACTION = 0.8;
-
 static NSString *kIASKCredits = @"Powered by InAppSettingsKit"; // Leave this as-is!!!
 
 #define kIASKSpecifierValuesViewControllerIndex       0
@@ -127,6 +123,7 @@ CGRect IASKCGRectSwap(CGRect rect);
 	_showDoneButton = NO;
 
   [self setup];
+  [super awakeFromNib];
 }
 
 //common (NIB & code based) initialization
@@ -356,9 +353,11 @@ CGRect IASKCGRectSwap(CGRect rect);
 	}
 	NSString *title;
 	if ((title = [self tableView:tableView titleForHeaderInSection:section])) {
-		CGSize size = [title sizeWithFont:[UIFont boldSystemFontOfSize:[UIFont labelFontSize]]
-						constrainedToSize:CGSizeMake(tableView.frame.size.width - 2*kIASKHorizontalPaddingGroupTitles, INFINITY)
-							lineBreakMode:NSLineBreakByWordWrapping];
+		CGSize size = [title boundingRectWithSize:
+                       CGSizeMake(tableView.frame.size.width - 2*kIASKHorizontalPaddingGroupTitles, INFINITY)
+                       options:NSStringDrawingUsesLineFragmentOrigin
+                       attributes:@{NSFontAttributeName: [UIFont boldSystemFontOfSize:[UIFont labelFontSize]]}
+                       context:nil].size;
 		return size.height+kIASKVerticalPaddingGroupTitles;
 	}
 	return 0;
@@ -515,7 +514,7 @@ CGRect IASKCGRectSwap(CGRect rect);
 	} else if ([specifier.type isEqualToString:kIASKButtonSpecifier]) {
 		NSString *value = [self.settingsStore objectForKey:specifier.key];
 		cell.textLabel.text = [value isKindOfClass:[NSString class]] ? [self.settingsReader titleForStringId:value] : specifier.title;
-		cell.textLabel.textAlignment = UITextAlignmentCenter;
+		cell.textLabel.textAlignment = NSTextAlignmentCenter;
 	} else {
 		cell.textLabel.text = specifier.title;
 	}
@@ -690,7 +689,7 @@ CGRect IASKCGRectSwap(CGRect rect);
             }
 
             mailViewController.mailComposeDelegate = vc;
-            [vc presentModalViewController:mailViewController animated:YES];
+            [vc presentViewController:mailViewController animated:YES completion:nil];
         } else {
             UIAlertView *alert = [[UIAlertView alloc]
                                   initWithTitle:NSLocalizedString(@"Mail not configured", @"InAppSettingsKit")
@@ -723,7 +722,7 @@ CGRect IASKCGRectSwap(CGRect rect);
      }
 
     // NOTE: No error handling is done here
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark -

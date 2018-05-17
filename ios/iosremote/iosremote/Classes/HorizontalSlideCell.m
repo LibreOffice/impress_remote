@@ -41,7 +41,7 @@
 	self.numberLabel.backgroundColor = kHorizontalTableCellHighlightedBackgroundColor;
     self.numberLabel.textColor = [UIColor whiteColor];
     self.numberLabel.font = [UIFont boldSystemFontOfSize:11];
-    self.numberLabel.textAlignment = UITextAlignmentCenter;
+    self.numberLabel.textAlignment = NSTextAlignmentCenter;
     self.numberLabel.numberOfLines = 1;
     [self.thumbnail addSubview:self.numberLabel];
     

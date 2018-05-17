@@ -14,7 +14,7 @@
 #import "HorizontalSlideCell.h"
 #import "ServerListViewController.h"
 #import "MainSplitViewController.h"
-#import "stopWatch.h"
+#import "StopWatch.h"
 #import "Timer.h"
 #import "PopoverView.h"
 #import "UIView+Shadowing.h"
@@ -103,7 +103,7 @@
     return YES;
 }
 
-- (NSUInteger)supportedInterfaceOrientations {
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
     return UIInterfaceOrientationMaskAll;
 }
 

@@ -41,6 +41,6 @@
 
 #pragma mark - Actions
 - (IBAction)cancelModalView:(id)sender {
-    [self.presentingViewController dismissModalViewControllerAnimated:YES];
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 @end

@@ -74,7 +74,7 @@
 		// Make sure the currently checked item is visible
         [_tableView scrollToRowAtIndexPath:[self checkedItem] atScrollPosition:UITableViewScrollPositionMiddle animated:NO];
     }
-	[super viewWillAppear:animated];
+    [super viewWillAppear:animated];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -107,6 +107,7 @@
 	// Release any retained subviews of the main view.
 	// e.g. self.myOutlet = nil;
 	self.tableView = nil;
+	[super viewDidUnload];
 }
 
 
