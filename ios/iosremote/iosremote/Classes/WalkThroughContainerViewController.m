@@ -41,8 +41,7 @@
     [self.pageController didMoveToParentViewController:self];
     
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Ok, thanks", @"backButton for Tutorial") style:UIBarButtonItemStylePlain target:self action:@selector(handleBack)];
-    [backButton setBackgroundImage:[UIImage imageNamed:@"backButton"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
-    self.navigationItem.leftBarButtonItem = backButton;
+    self.navigationController.navigationBar.topItem.backBarButtonItem = backButton;
     
     [self setTitle:NSLocalizedString(@"How-to", @"In app How-to title")];
     

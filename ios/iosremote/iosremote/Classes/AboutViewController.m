@@ -28,8 +28,7 @@
     [super viewDidLoad];
     
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Back", nil) style:UIBarButtonItemStylePlain target:self action:@selector(handleBack)];
-    [backButton setBackgroundImage:[UIImage imageNamed:@"backButton"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
-    self.navigationItem.leftBarButtonItem = backButton;
+    self.navigationController.navigationBar.topItem.backBarButtonItem = backButton;
  
     NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"licenses" ofType:@"html" inDirectory:nil]];
     [self.aboutWebView loadRequest:[NSURLRequest requestWithURL:url]];

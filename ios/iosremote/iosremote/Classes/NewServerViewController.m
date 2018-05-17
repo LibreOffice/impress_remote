@@ -77,8 +77,7 @@
         [self setTitle:NSLocalizedString(@"New Server", nil)];
     
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Cancel", nil) style:UIBarButtonItemStylePlain target:self action:@selector(handleBack)];
-    [backButton setBackgroundImage:[UIImage imageNamed:@"backButton"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
-    self.navigationItem.leftBarButtonItem = backButton;
+    self.navigationController.navigationBar.topItem.backBarButtonItem = backButton;
     [super viewDidLoad];
 }
 

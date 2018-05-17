@@ -63,8 +63,6 @@
 		8C19F42F17B05089005BDB61 /* LibONavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C19F42E17B05089005BDB61 /* LibONavigationController.m */; };
 		8C19F43317B056B3005BDB61 /* navBarButtonNormal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C19F43217B056B3005BDB61 /* navBarButtonNormal@2x.png */; };
 		8C19F43617B10D49005BDB61 /* UIViewController+LibOStyling.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C19F43517B10D49005BDB61 /* UIViewController+LibOStyling.m */; };
-		8C19F43917B145AD005BDB61 /* backButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C19F43717B145AD005BDB61 /* backButton.png */; };
-		8C19F43A17B145AD005BDB61 /* backButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C19F43817B145AD005BDB61 /* backButton@2x.png */; };
 		8C19F43E17B1D935005BDB61 /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C19F43C17B1D935005BDB61 /* add.png */; };
 		8C19F44A17B1FEFE005BDB61 /* gear_transparent_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C19F44817B1FEFD005BDB61 /* gear_transparent_bg.png */; };
 		8C19F44B17B1FEFE005BDB61 /* gear_transparent_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C19F44917B1FEFE005BDB61 /* gear_transparent_bg@2x.png */; };
@@ -230,8 +228,6 @@
 		8C19F43217B056B3005BDB61 /* navBarButtonNormal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navBarButtonNormal@2x.png"; sourceTree = "<group>"; };
 		8C19F43417B10D48005BDB61 /* UIViewController+LibOStyling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+LibOStyling.h"; path = "iosremote/Categories/UIViewController+LibOStyling.h"; sourceTree = "<group>"; };
 		8C19F43517B10D49005BDB61 /* UIViewController+LibOStyling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+LibOStyling.m"; path = "iosremote/Categories/UIViewController+LibOStyling.m"; sourceTree = "<group>"; };
-		8C19F43717B145AD005BDB61 /* backButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backButton.png; sourceTree = "<group>"; };
-		8C19F43817B145AD005BDB61 /* backButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backButton@2x.png"; sourceTree = "<group>"; };
 		8C19F43C17B1D935005BDB61 /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add.png; sourceTree = "<group>"; };
 		8C19F44817B1FEFD005BDB61 /* gear_transparent_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gear_transparent_bg.png; sourceTree = "<group>"; };
 		8C19F44917B1FEFE005BDB61 /* gear_transparent_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gear_transparent_bg@2x.png"; sourceTree = "<group>"; };
@@ -545,8 +541,6 @@
 				8C19F44817B1FEFD005BDB61 /* gear_transparent_bg.png */,
 				8C19F44917B1FEFE005BDB61 /* gear_transparent_bg@2x.png */,
 				8C19F43C17B1D935005BDB61 /* add.png */,
-				8C19F43717B145AD005BDB61 /* backButton.png */,
-				8C19F43817B145AD005BDB61 /* backButton@2x.png */,
 				8C19F43217B056B3005BDB61 /* navBarButtonNormal@2x.png */,
 				8C19F42517B04E7C005BDB61 /* navBarBackground@2x.png */,
 				8C19F42617B04E7C005BDB61 /* navBarBackground.png */,
@@ -956,8 +950,6 @@
 				8C19F42717B04E7C005BDB61 /* navBarBackground@2x.png in Resources */,
 				8C19F42817B04E7C005BDB61 /* navBarBackground.png in Resources */,
 				8C19F43317B056B3005BDB61 /* navBarButtonNormal@2x.png in Resources */,
-				8C19F43917B145AD005BDB61 /* backButton.png in Resources */,
-				8C19F43A17B145AD005BDB61 /* backButton@2x.png in Resources */,
 				8C19F43E17B1D935005BDB61 /* add.png in Resources */,
 				8C19F44A17B1FEFE005BDB61 /* gear_transparent_bg.png in Resources */,
 				8C19F44B17B1FEFE005BDB61 /* gear_transparent_bg@2x.png in Resources */,

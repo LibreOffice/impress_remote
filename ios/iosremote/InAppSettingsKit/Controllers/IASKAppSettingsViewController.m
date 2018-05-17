@@ -148,8 +148,7 @@ CGRect IASKCGRectSwap(CGRect rect);
   }
 
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Done", nil) style:UIBarButtonItemStylePlain target:self action:@selector(handleBack)];
-    [backButton setBackgroundImage:[UIImage imageNamed:@"backButton"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
-    self.navigationItem.leftBarButtonItem = backButton;
+    self.navigationController.navigationBar.topItem.backBarButtonItem = backButton;
     
     self.tableView.backgroundView.backgroundColor = [UIColor colorWithRed:.968627451 green:.968627451 blue:.968627451 alpha:1.0];
 }

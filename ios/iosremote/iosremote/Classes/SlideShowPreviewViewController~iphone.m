@@ -31,8 +31,7 @@
     }];
     
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Connect", nil) style:UIBarButtonItemStylePlain target:self action:@selector(handleBack)];
-    [backButton setBackgroundImage:[UIImage imageNamed:@"backButton"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
-    self.navigationItem.leftBarButtonItem = backButton;
+    self.navigationController.navigationBar.topItem.backBarButtonItem = backButton;
 }
 
 - (void) viewDidAppear:(BOOL)animated

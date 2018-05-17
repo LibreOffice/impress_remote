@@ -12,11 +12,11 @@
 @implementation UINavigationController (Theme)
 - (void)loadTheme
 {
-    UINavigationBar *navBar = self.navigationBar;
+    UINavigationBar *navBar = self.navigationController.navigationBar;
     [navBar setBackgroundImage:[UIImage imageNamed:@"navBarBackground"]
                  forBarMetrics:UIBarMetricsDefault];
     [navBar setBackgroundImage:[UIImage imageNamed:@"navBarBackgroundPhoneLandscape"]
-                 forBarMetrics:UIBarMetricsLandscapePhone];
+                 forBarMetrics:UIBarMetricsCompact];
     navBar.barStyle = UIBarStyleBlack;
 }
 @end

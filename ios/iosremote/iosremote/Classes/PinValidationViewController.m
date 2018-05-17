@@ -42,8 +42,7 @@
     [self.pinLabel setText:[NSString stringWithFormat:@"%@", [self.comManager getPairingPin]]];
     
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Connect", @"Back button to the connect page on navbar") style:UIBarButtonItemStylePlain target:self action:@selector(handleBack)];
-    [backButton setBackgroundImage:[UIImage imageNamed:@"backButton"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
-    self.navigationItem.leftBarButtonItem = backButton;
+    self.navigationController.navigationBar.topItem.backBarButtonItem = backButton;
 }
 
 - (void) viewDidAppear:(BOOL)animated
