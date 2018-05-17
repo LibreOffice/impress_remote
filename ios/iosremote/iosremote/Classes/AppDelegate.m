@@ -28,8 +28,6 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [TestFlight takeOff:@"cb645cf2-a557-481e-993a-6ad3aaeb06d0"];
-    
     NSString *defaultsPath = [[NSBundle mainBundle] pathForResource:@"UserDefaults"
                                                              ofType:@"plist"];
     NSDictionary *appDefaults = [NSDictionary dictionaryWithContentsOfFile:defaultsPath];
