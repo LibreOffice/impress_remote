@@ -34,9 +34,6 @@
 		57C6E3FD175E06E800E8BC5F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 57C6E3FB175E06E800E8BC5F /* InfoPlist.strings */; };
 		57C6E3FF175E06E800E8BC5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C6E3FE175E06E800E8BC5F /* main.m */; };
 		57C6E403175E06E800E8BC5F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C6E402175E06E800E8BC5F /* AppDelegate.m */; };
-		57C6E405175E06E800E8BC5F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 57C6E404175E06E800E8BC5F /* Default.png */; };
-		57C6E407175E06E800E8BC5F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57C6E406175E06E800E8BC5F /* Default@2x.png */; };
-		57C6E409175E06E800E8BC5F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57C6E408175E06E800E8BC5F /* Default-568h@2x.png */; };
 		57C6E42E175E076900E8BC5F /* Client.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C6E427175E076900E8BC5F /* Client.m */; };
 		57C6E42F175E076900E8BC5F /* CommunicationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C6E429175E076900E8BC5F /* CommunicationManager.m */; };
 		57C6E430175E076900E8BC5F /* CommandInterpreter.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C6E42B175E076900E8BC5F /* CommandInterpreter.m */; };
@@ -86,9 +83,6 @@
 		8C26E5D717A68154007DA4B7 /* StopWatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C26E5D617A68154007DA4B7 /* StopWatch.m */; };
 		8C2937B017E8348D00C3B887 /* libreoffice_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C2937AF17E8348D00C3B887 /* libreoffice_logo.png */; };
 		8C2937B317E8374B00C3B887 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2937B217E8374B00C3B887 /* SWRevealViewController.m */; };
-		8C2937BD17E837BA00C3B887 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C2937BA17E837BA00C3B887 /* Default-568h@2x.png */; };
-		8C2937BE17E837BA00C3B887 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C2937BB17E837BA00C3B887 /* Default.png */; };
-		8C2937BF17E837BA00C3B887 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C2937BC17E837BA00C3B887 /* Default@2x.png */; };
 		8C2937C517E9C40D00C3B887 /* ServerListViewController~ipad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2937C417E9C40C00C3B887 /* ServerListViewController~ipad.m */; };
 		8C3A648817DCBE9E004A77D9 /* timer_clear_btn_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C3A648117DCBE9E004A77D9 /* timer_clear_btn_dark.png */; };
 		8C3A648A17DCBE9E004A77D9 /* timer_pause_btn_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C3A648317DCBE9E004A77D9 /* timer_pause_btn_dark.png */; };
@@ -189,9 +183,6 @@
 		57C6E400175E06E800E8BC5F /* iosremote-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iosremote-Prefix.pch"; sourceTree = "<group>"; };
 		57C6E401175E06E800E8BC5F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = iosremote/Classes/AppDelegate.h; sourceTree = "<group>"; };
 		57C6E402175E06E800E8BC5F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = iosremote/Classes/AppDelegate.m; sourceTree = "<group>"; };
-		57C6E404175E06E800E8BC5F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		57C6E406175E06E800E8BC5F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		57C6E408175E06E800E8BC5F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		57C6E426175E076900E8BC5F /* Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Client.h; path = iosremote/Communication/Client.h; sourceTree = "<group>"; };
 		57C6E427175E076900E8BC5F /* Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Client.m; path = iosremote/Communication/Client.m; sourceTree = "<group>"; };
 		57C6E428175E076900E8BC5F /* CommunicationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = CommunicationManager.h; path = iosremote/Communication/CommunicationManager.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -540,9 +531,6 @@
 				57C6E3FB175E06E800E8BC5F /* InfoPlist.strings */,
 				57C6E3FE175E06E800E8BC5F /* main.m */,
 				57C6E400175E06E800E8BC5F /* iosremote-Prefix.pch */,
-				57C6E404175E06E800E8BC5F /* Default.png */,
-				57C6E406175E06E800E8BC5F /* Default@2x.png */,
-				57C6E408175E06E800E8BC5F /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			path = iosremote;
@@ -965,9 +953,6 @@
 			files = (
 				57C6E3FD175E06E800E8BC5F /* InfoPlist.strings in Resources */,
 				8C10780318947B9D0062E0E7 /* Images.xcassets in Resources */,
-				57C6E405175E06E800E8BC5F /* Default.png in Resources */,
-				57C6E407175E06E800E8BC5F /* Default@2x.png in Resources */,
-				57C6E409175E06E800E8BC5F /* Default-568h@2x.png in Resources */,
 				8C0C879317F4C46E003CE6B2 /* WalkThroughPageViewController.xib in Resources */,
 				57867A5A1787510700EBBE52 /* pushed_next_button.png in Resources */,
 				57867A5B1787510700EBBE52 /* released_next_button.png in Resources */,
@@ -1035,9 +1020,6 @@
 				8CBF9E0317DDD2230044D949 /* Settings.bundle in Resources */,
 				8CBF9E0A17E103B50044D949 /* licenses.html in Resources */,
 				8C2937B017E8348D00C3B887 /* libreoffice_logo.png in Resources */,
-				8C2937BD17E837BA00C3B887 /* Default-568h@2x.png in Resources */,
-				8C2937BE17E837BA00C3B887 /* Default.png in Resources */,
-				8C2937BF17E837BA00C3B887 /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
