@@ -172,14 +172,14 @@
     [self.slideNumber setText:[NSString stringWithFormat:@"%u/%u", [self.slideshow currentSlide]+1, [self.slideshow size]]];
 
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"gear_transparent_bg"]
-                                                                   style:UIBarButtonItemStyleBordered
+                                                                   style:UIBarButtonItemStylePlain
                                                                   target:self
                                                                   action:@selector(popOverStart:)];
     
     self.revealViewController.navigationItem.rightBarButtonItem = backButton;
 
     self.revealButtonItem = [[UIBarButtonItem alloc] initWithImage: [UIImage imageNamed:@"more_icon"]
-                                                             style:UIBarButtonItemStyleBordered
+                                                             style:UIBarButtonItemStylePlain
                                                             target:self.revealViewController
                                                             action:@selector( revealToggle: )];
     self.revealViewController.navigationItem.leftBarButtonItem = self.revealButtonItem;

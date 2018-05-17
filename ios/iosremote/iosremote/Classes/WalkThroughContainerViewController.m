@@ -40,7 +40,7 @@
     [[self view] addSubview:self.pageController.view];
     [self.pageController didMoveToParentViewController:self];
     
-    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Ok, thanks", @"backButton for Tutorial") style:UIBarButtonItemStyleBordered target:self action:@selector(handleBack)];
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Ok, thanks", @"backButton for Tutorial") style:UIBarButtonItemStylePlain target:self action:@selector(handleBack)];
     [backButton setBackgroundImage:[UIImage imageNamed:@"backButton"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     self.navigationItem.leftBarButtonItem = backButton;
     
