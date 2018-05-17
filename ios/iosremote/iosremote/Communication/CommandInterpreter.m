@@ -60,8 +60,8 @@ dispatch_queue_t backgroundQueue;
         NSLog(@"Connected to %@", [[[CommunicationManager sharedComManager] client] server].description);
     }
     else if([instruction isEqualToString:@"slideshow_started"]){
-        uint slideLength = [[command objectAtIndex:1] integerValue];
-        uint currentSlide = [[command objectAtIndex:2] integerValue];
+        uint slideLength = [[command objectAtIndex:1] unsignedIntValue];
+        uint currentSlide = [[command objectAtIndex:2] unsignedIntValue];
         NSLog(@"Interpreter: slideshow_started with currentSlide: %u slideLength: %u", currentSlide, slideLength);
 
         [self.slideShow setSize:slideLength];
@@ -87,7 +87,7 @@ dispatch_queue_t backgroundQueue;
     } else {
         if ([instruction isEqualToString:@"slide_updated"]) {
             NSLog(@"Interpret   er: slide_updated");
-            uint newSlideNumber = [[command objectAtIndex:1] integerValue];
+            uint newSlideNumber = [[command objectAtIndex:1] unsignedIntValue];
             [self.slideShow setCurrentSlide:newSlideNumber];
 
             [[NSNotificationCenter defaultCenter] postNotificationName:MSG_SLIDE_CHANGED object:nil];
@@ -95,7 +95,7 @@ dispatch_queue_t backgroundQueue;
         } else if ([instruction isEqualToString:@"slide_preview"]){
             backgroundQueue = dispatch_queue_create("com.libreoffice.iosremote", NULL);
             dispatch_async(backgroundQueue, ^(void) {
-                uint slideNumber = [[command objectAtIndex:1] integerValue];
+                uint slideNumber = [[command objectAtIndex:1] unsignedIntValue];
                 NSString * imageData = [command objectAtIndex:2];
                 [self.slideShow putImage:imageData
                                  AtIndex:slideNumber];
@@ -103,7 +103,7 @@ dispatch_queue_t backgroundQueue;
             marker = 4;
         } else if ([instruction isEqualToString:@"slide_notes"]){
             backgroundQueue = dispatch_queue_create("com.libreoffice.iosremote", NULL);
-            uint slideNumber = [[command objectAtIndex:1] integerValue];
+            uint slideNumber = [[command objectAtIndex:1] unsignedIntValue];
             NSMutableString *notes = [[NSMutableString alloc] init];
             for (int i = 2; i<command.count; ++i) {
                 [notes appendString:[command objectAtIndex:i]];

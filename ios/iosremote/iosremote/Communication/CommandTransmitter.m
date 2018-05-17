@@ -39,9 +39,9 @@
     [self.client sendCommand:@"transition_previous\n\n"];
 }
 
-- (void) gotoSlide:(uint) slide
+- (void) gotoSlide:(NSUInteger) slide
 {
-    [self.client sendCommand:[NSString stringWithFormat:@"goto_slide\n%u\n\n", slide]];
+    [self.client sendCommand:[NSString stringWithFormat:@"goto_slide\n%lu\n\n", (unsigned long)slide]];
 }
 
 - (void) pointerCoordination:(CGPoint) aPoint

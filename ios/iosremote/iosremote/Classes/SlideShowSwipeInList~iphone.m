@@ -232,7 +232,7 @@ dispatch_queue_t backgroundQueue;
         // Starting 20, all tags are used for thumbnails in this sidebar
         [cell setTag:20+indexPath.row];
         [self.slideshow getContentAtIndex:indexPath.row forView:cell];
-        [slideNumber setText:[NSString stringWithFormat:@"%u", indexPath.row+1]];
+        [slideNumber setText:[NSString stringWithFormat:@"%ld", (long)indexPath.row+1]];
         
         [image setShadow];
         

@@ -84,7 +84,7 @@ NSString *sTitle;
                                                                   if ([tag integerValue] > 20)
                                                                       view = [[self.secondaryDelegate view] viewWithTag: [tag integerValue]];
                                                                   else if ([tag integerValue] >= 0){
-                                                                      NSLog(@"Received image, try to load for tag:%d", [tag integerValue]);
+                                                                      NSLog(@"Received image, try to load for tag:%d", [tag intValue]);
                                                                       view = [[self.delegate view] viewWithTag:[tag integerValue]];
                                                                       if (!view) {
                                                                           if (!self.delegate) {
@@ -101,7 +101,7 @@ NSString *sTitle;
                                                                       if (image) {
 //                                                                          image = [image resizedImage:view.frame.size interpolationQuality:kCGInterpolationDefault];
                                                                           dispatch_async(dispatch_get_main_queue(), ^{
-                                                                              NSLog(@"Setting image to tag: %ld", (long)[tag integerValue]);
+                                                                              NSLog(@"Setting image to tag: %d", [tag intValue]);
                                                                              [(UIImageView *)view setImage:image animated:YES];
                                                                           });
                                                                           [self.loadBuffer removeObjectForKey:tag];
@@ -153,7 +153,7 @@ NSString *sTitle;
                                                       userInfo:[NSDictionary dictionaryWithObject:[NSNumber numberWithInt:index] forKey:@"index"]];
 }
 
-- (void) getContentAtIndex: (uint) index forView: (UIView*) view
+- (void) getContentAtIndex: (NSUInteger) index forView: (UIView*) view
 {
     if (index >= self.size)
     {
@@ -168,21 +168,21 @@ NSString *sTitle;
             [(UIWebView* )view loadHTMLString: @"SlideShow finished" baseURL:nil];
         return;
     }
-    if (![self.imagesDictionary objectForKey:[NSNumber numberWithUnsignedInt:index]])
+    if (![self.imagesDictionary objectForKey:[NSNumber numberWithUnsignedInteger:index]])
     {
-        NSLog(@"Didn't find %u, putting tag: %d into buffer", index, [view tag]);
-        [self.loadBuffer setObject:[NSNumber numberWithInt:index ] forKey:[NSNumber numberWithInt:[view tag]]];
+        NSLog(@"Didn't find %ld, putting tag: %ld into buffer", (long)index, (long)[view tag]);
+        [self.loadBuffer setObject:[NSNumber numberWithInteger:index ] forKey:[NSNumber numberWithInteger:[view tag]]];
     }
     else{
         if ([view isKindOfClass:[UIImageView class]])
-            [(UIImageView* )view setImage:[self.imagesDictionary objectForKey:[NSNumber numberWithUnsignedInt:index]]];
+            [(UIImageView* )view setImage:[self.imagesDictionary objectForKey:[NSNumber numberWithUnsignedInteger:index]]];
         else if ([view isKindOfClass:[UITableViewCell class]])
         {
             UIImageView *image = (UIImageView *)[view viewWithTag:1];
-            [image setImage:[self.imagesDictionary objectForKey:[NSNumber numberWithUnsignedInt:index]]];
+            [image setImage:[self.imagesDictionary objectForKey:[NSNumber numberWithUnsignedInteger:index]]];
         }
         else if ([view isKindOfClass:[UIWebView class]])
-            [(UIWebView* )view loadHTMLString: [self.notesDictionary objectForKey:[NSNumber numberWithUnsignedInt:index]] baseURL:nil];
+            [(UIWebView* )view loadHTMLString: [self.notesDictionary objectForKey:[NSNumber numberWithUnsignedInteger:index]] baseURL:nil];
     }
 }
 

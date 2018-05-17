@@ -69,8 +69,7 @@
         cell = [[HorizontalSlideCell alloc] initWithFrame:CGRectMake(0, 0, kCellWidth, kCellHeight)];
     }
     
-    cell.numberLabel.text =
-        [NSString stringWithFormat:@"%u", indexPath.row+1];
+    cell.numberLabel.text = [NSString stringWithFormat:@"%ld", (long)indexPath.row+1];
     
     [cell setTag:-indexPath.row - 1];
     [cell.thumbnail setTag:1];

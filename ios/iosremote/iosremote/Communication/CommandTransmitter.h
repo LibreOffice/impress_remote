@@ -18,7 +18,7 @@
 - (void) nextTransition;
 - (void) previousTransition;
 
-- (void) gotoSlide:(uint) slide;
+- (void) gotoSlide:(NSUInteger) slide;
 
 - (void) blankScreen;
 - (void) blankScreenWithColor:(UIColor*)color;

@@ -31,7 +31,7 @@
 
 - (id)initWithCoder:(NSCoder *)coder;
 {
-    self = [self initWithProtocol:[coder decodeIntegerForKey:@"protocol"]
+    self = [self initWithProtocol:[coder decodeIntForKey:@"protocol"]
                         atAddress:[coder decodeObjectForKey:@"address"]
                            ofName:[coder decodeObjectForKey:@"name"]
                         ofVersion:[coder decodeObjectForKey:@"version"]];

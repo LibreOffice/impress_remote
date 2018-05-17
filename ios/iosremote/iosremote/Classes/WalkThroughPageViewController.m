@@ -62,7 +62,7 @@
         default:
             break;
     }
-    self.indexLabl.text = [NSString stringWithFormat:@"%d", self.index+1];
+    self.indexLabl.text = [NSString stringWithFormat:@"%ld", (long)self.index+1];
 }
 
 - (void)didReceiveMemoryWarning

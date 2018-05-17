@@ -185,7 +185,7 @@ int count = 0;
                 data = [[NSMutableData alloc] init];
             }
             uint8_t buf[1024];
-            int len = 0;
+            NSInteger len = 0;
             NSString *str;
             while (true) {
                 len = [(NSInputStream *)stream read:buf maxLength:1024];

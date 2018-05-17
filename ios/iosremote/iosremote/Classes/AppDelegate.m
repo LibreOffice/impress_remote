@@ -70,8 +70,8 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 - (void) reconfigure
 {
-    kDefaultTimerWidget = [[NSUserDefaults standardUserDefaults] integerForKey:@"DEFAULT_TIMING_WIDGET"];
-    kCountDownTimerDefaultDuration = [[NSUserDefaults standardUserDefaults] integerForKey:@"TIMER_DEFAULT_DURATION"];
+    kDefaultTimerWidget = (int)[[NSUserDefaults standardUserDefaults] integerForKey:@"DEFAULT_TIMING_WIDGET"];
+    kCountDownTimerDefaultDuration = (int)[[NSUserDefaults standardUserDefaults] integerForKey:@"TIMER_DEFAULT_DURATION"];
     kStopwatchAutoStart = [[NSUserDefaults standardUserDefaults] boolForKey:@"STOPWATCH_AUTO_START"];
     kCountDownTimerAutoStart = [[NSUserDefaults standardUserDefaults] boolForKey:@"TIMER_AUTO_START"];
     kCountDownTimerVibration = [[NSUserDefaults standardUserDefaults] boolForKey:@"TIMER_VIBRATION"];
