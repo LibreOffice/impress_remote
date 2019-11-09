@@ -45,11 +45,13 @@ public class SlidesPagerAdapter extends PagerAdapter {
     public Object instantiateItem(ViewGroup aViewGroup, int aPosition) {
         ImageView aSlideView = (ImageView) getView(aViewGroup);
 
-        if (isSlidePreviewAvailable(aPosition)) {
-            setUpSlidePreview(aSlideView, aPosition);
+        if (mSlideShow.getSlidePreviewBytes(aPosition) != null) {
+            byte[] aSlidePreviewBytes = mSlideShow.getSlidePreviewBytes(aPosition);
+
+            mImageLoader.loadImage(aSlideView, aSlidePreviewBytes);
         }
         else {
-            setUpUnknownSlidePreview(aSlideView);
+            aSlideView.setImageResource(R.drawable.bg_slide_unknown);
         }
 
         // touch listener that handles tap and double-tap
@@ -62,20 +64,6 @@ public class SlidesPagerAdapter extends PagerAdapter {
 
     private View getView(ViewGroup aViewGroup) {
         return mLayoutInflater.inflate(R.layout.view_pager_slide, aViewGroup, false);
-    }
-
-    private boolean isSlidePreviewAvailable(int aSlideIndex) {
-        return mSlideShow.getSlidePreviewBytes(aSlideIndex) != null;
-    }
-
-    private void setUpSlidePreview(ImageView aSlideView, int aPosition) {
-        byte[] aSlidePreviewBytes = mSlideShow.getSlidePreviewBytes(aPosition);
-
-        mImageLoader.loadImage(aSlideView, aSlidePreviewBytes);
-    }
-
-    private void setUpUnknownSlidePreview(ImageView aSlideView) {
-        aSlideView.setImageResource(R.drawable.bg_slide_unknown);
     }
 
     @Override
