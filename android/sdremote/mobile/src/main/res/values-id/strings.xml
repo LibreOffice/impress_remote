@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <string name="application_name">Impress Kendali Jauh</string>
+  <string name="application_name">Impress Remote</string>
   <string name="title_computers">Komputer</string>
   <string name="title_generic">Generik</string>
   <string name="title_settings">Pengaturan</string>
@@ -27,7 +27,7 @@
   <string name="button_save">Simpan</string>
   <string name="button_start">Mulai</string>
   <string name="button_remove">Hapus</string>
-  <string name="message_impress_pin_validation">Akses menu “Pertunjukan Salindia → Impress Kendali Jauh” pada LibreOffice Impress dan masukkan kodenya.</string>
+  <string name="message_impress_pin_validation">Akses menu “Pertunjukan Salindia → Impress Remote” pada LibreOffice Impress dan masukkan kodenya.</string>
   <string name="message_connection_failed_title">Koneksi gagal</string>
   <string name="message_impress_remote_enabling">Pastikan kendali jauh telah aktif. Akses menu “Perkakas → Opsi → LibreOffice Impress → Umum” pada LibreOffice Impress.</string>
   <string name="message_impress_wifi_enabling">Anda juga harus mengaktifkan fitur uji coba pada menu “Perkakas → Opsi → LibreOffice → Lanjutan”.</string>

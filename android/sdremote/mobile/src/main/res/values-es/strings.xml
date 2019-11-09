@@ -28,7 +28,7 @@
   <string name="button_start">Iniciar</string>
   <string name="button_remove">Eliminar</string>
   <string name="message_impress_pin_validation">Vaya a «Presentación → Control remoto de Impress» en LibreOffice Impress y escriba el código.</string>
-  <string name="message_connection_failed_title">La conexión falló</string>
+  <string name="message_connection_failed_title">Falló la conexión</string>
   <string name="message_impress_remote_enabling">Asegúrese de activar el control remoto. Vaya a «Herramientas → Opciones → LibreOffice Impress → General» en LibreOffice Impress.</string>
   <string name="message_impress_wifi_enabling">También puede las funcionalidades experimentales en «Herramientas → Opciones → LibreOffice → Avanzado».</string>
   <string name="message_impress_pairing_check">Si tiene problemas de conexión Bluetooth, verifique las instrucciones relativas a su sistema operativo de escritorio.</string>

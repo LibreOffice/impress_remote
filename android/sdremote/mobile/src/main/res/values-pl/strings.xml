@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <string name="application_name">Pilot Impressa</string>
+  <string name="application_name">Impress Zdalnie</string>
   <string name="title_computers">Komputery</string>
   <string name="title_generic">Ogólne</string>
   <string name="title_settings">Ustawienia</string>

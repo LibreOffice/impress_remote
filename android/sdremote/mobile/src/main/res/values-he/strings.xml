@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
+  <string name="application_name">Impress בשלט רחוק</string>
   <string name="title_computers">מחשבים</string>
   <string name="title_generic">כללי</string>
   <string name="title_settings">הגדרות</string>
@@ -26,7 +27,10 @@
   <string name="button_save">שמירה</string>
   <string name="button_start">התחלה</string>
   <string name="button_remove">הסרה</string>
+  <string name="message_impress_pin_validation">יש לגשת אל „מצגת ← Impress בשלט רחוק” ב־Impress מבית LibreOffice ולהכניס את הקוד.</string>
   <string name="message_connection_failed_title">החיבור נכשל</string>
+  <string name="message_impress_remote_enabling">נא לוודא שהפעלת את השלט הרחוק. יש לגשת אל „כלים ← אפשרויות ← Impress מבית LibreOffice ← כללי” ב־Impress מבית LibreOffice.</string>
+  <string name="message_impress_wifi_enabling">עליך להפעיל תכונות ניסיוניות בנוסף תחת „כלים ← אפשרויות ← LibreOffice ← מתקדם”.</string>
   <string name="message_impress_pairing_check">אם יש לך בעיות צימוד ל־Bluetooth נא לחפש את ההנחיות הקשורות למערכת ההפעלה של המחשב שלך.</string>
   <string name="message_ip_address_validation">נא להזין כתובת IP חוקית.</string>
   <string name="message_time_is_up">זמנך עבר!</string>
@@ -57,6 +61,8 @@
   <string name="preferences_quiet_mode_title">מצב שקט</string>
   <string name="preferences_quiet_mode_summary">הגדרת מצב צלצול ברטט בעת ההצגה</string>
   <string name="requirements_libreoffice_version">גרסה 4.0.3 ומעלה של LibreOffice פועלת על מחשב.</string>
+  <string name="requirements_libreoffice_general_enabled">Impress בשלט רחוק מופעל דרך „כלים ← אפשרויות ← Impress מבית LibreOffice ← כללי” ב־Impress מבית LibreOffice.</string>
+  <string name="requirements_libreoffice_experimental_enabled">תכונות ניסיוניות מופעלות דרך „כלים ← אפשרויות ← Impress מבית LibreOffice ← כללי” ב־Impress מבית LibreOffice.</string>
   <string name="requirements_network_connection">התקן אנדרויד ומחשב המחוברים לאותה הרשת.</string>
   <string name="requirements_network_ports">אם יש לך חומת אש עליך לוודא שפתחות 1598 ו־1599 פתוחות.</string>
   <string name="requirements_bluetooth_connection">מחשב עם Bluetooth פעיל.</string>

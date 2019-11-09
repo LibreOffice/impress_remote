@@ -29,8 +29,8 @@
   <string name="button_remove">Ukloni</string>
   <string name="message_impress_pin_validation">Unesite kôd kroz izbornik “Prezentacija → Impress Remote” u LibreOffice Impressu.</string>
   <string name="message_connection_failed_title">Povezivanje nije uspjelo</string>
-  <string name="message_impress_remote_enabling">Provjerite je li uključeno daljinsko upravljanje. U LibreOffice Impressu provjerite “Alati → Mogućnosti → LibreOffice Impress → Općenito”.</string>
-  <string name="message_impress_wifi_enabling">Trebali biste omogućiti eksperimentalne značajke kroz izbornike “Alati → Mogućnosti → LibreOffice → Napredno”.</string>
+  <string name="message_impress_remote_enabling">Provjerite je li uključeno daljinsko upravljanje. U LibreOffice Impressu provjerite „Alati → Mogućnosti → LibreOffice Impress → Općenito”.</string>
+  <string name="message_impress_wifi_enabling">Trebali biste omogućiti eksperimentalne funkcije kroz izbornike „Alati → Mogućnosti → LibreOffice → Napredno”.</string>
   <string name="message_impress_pairing_check">Imate li problema s uparivanjem, provjerite upute vezane za operacijski sustav vašeg stolnog računala.</string>
   <string name="message_ip_address_validation">Unesite valjanu IP adresu.</string>
   <string name="message_time_is_up">Vrijeme je isteklo!</string>
@@ -60,8 +60,8 @@
   <string name="preferences_quiet_mode_title">Tihi način rada</string>
   <string name="preferences_quiet_mode_summary">Uključi vibraciju kao vrstu zvona za vrijeme prezentacije</string>
   <string name="requirements_libreoffice_version">Na računalu pokrenut LibreOffice inačice 4.0.3 ili novije.</string>
-  <string name="requirements_libreoffice_general_enabled">Uključite značajku Impress Remote u LibreOffice Impressu kroz “Alati → Mogućnosti → LibreOffice Impress → Općenito”.</string>
-  <string name="requirements_libreoffice_experimental_enabled">U LibreOffice Impressu eksperimentalne značajke kroz “Alati → Mogućnosti → Libreoffice → Napredno”.</string>
+  <string name="requirements_libreoffice_general_enabled">Omogućite Impress Remote u LibreOffice Impressu kroz „Alati → Mogućnosti → LibreOffice Impress → Općenito”.</string>
+  <string name="requirements_libreoffice_experimental_enabled">Omogućite eksperimentalne funkcije u LibreOffice Impressu kroz „Alati → Mogućnosti → LibreOffice → Napredno”.</string>
   <string name="requirements_network_connection">Uređaj s Androidom i računalo povezano na istu mrežu.</string>
   <string name="requirements_network_ports">Imate li uključen vatrozid, provjerite jesu li otvoreni ulazi 1598 i 1599.</string>
   <string name="requirements_bluetooth_connection">Računalo s uključenim bluetoothom.</string>

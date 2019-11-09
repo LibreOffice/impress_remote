@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-  <string name="application_name">Impress Remote</string>
+  <string name="application_name">Impress 遥控</string>
   <string name="title_computers">计算机</string>
   <string name="title_generic">一般</string>
   <string name="title_settings">设置</string>
@@ -27,10 +27,10 @@
   <string name="button_save">保存</string>
   <string name="button_start">开始</string>
   <string name="button_remove">移除</string>
-  <string name="message_impress_pin_validation">在 LibreOffice Impress 的 “幻灯片放映 → Impress 遥控” 处输入代码。</string>
+  <string name="message_impress_pin_validation">在 LibreOffice Impress 的「幻灯片放映 → Impress 遥控」处输入代码。</string>
   <string name="message_connection_failed_title">连接失败</string>
-  <string name="message_impress_remote_enabling">请确保您已经启用了远程控制。在 LibreOffice Impress 转到“工具 → 选项 → LibreOffice Impress → 常规”。</string>
-  <string name="message_impress_wifi_enabling">您应该同时在 “工具 → 选项 → LibreOffice → 高级”启用实验性功能。</string>
+  <string name="message_impress_remote_enabling">请确保您已经启用了远程控制。在 LibreOffice Impress 转到「工具 → 选项 → LibreOffice Impress → 常规」。</string>
+  <string name="message_impress_wifi_enabling">您应该同时在「工具 → 选项 → LibreOffice → 高级」启用实验性功能。</string>
   <string name="message_impress_pairing_check">如果您遇到蓝牙配对问题，请检查桌面操作系统的相关说明。</string>
   <string name="message_ip_address_validation">请输入有效的 IP 地址。</string>
   <string name="message_time_is_up">时间到!</string>
@@ -56,10 +56,10 @@
   <string name="preferences_keep_screen_on_title">保持屏幕常亮</string>
   <string name="preferences_keep_screen_on_summary">演示时阻止手机进入待机状态</string>
   <string name="preferences_quiet_mode_title">安静模式</string>
-  <string name="preferences_quiet_mode_summary">演示时将手机设置为震动模式</string>
+  <string name="preferences_quiet_mode_summary">演示时将手机铃声设置为震动模式</string>
   <string name="requirements_libreoffice_version">计算机上运行的 LibreOffice 4.0.3 或更高版本。</string>
-  <string name="requirements_libreoffice_general_enabled">LibreOffice Impress 中“工具 → 选项 → LibreOffice Impress → 常规”已启用 Impress 遥控。</string>
-  <string name="requirements_libreoffice_experimental_enabled">在 LibreOffice Impress 的 “工具 → 选项 → LibreOffice → 高级” 处启用实验性功能。</string>
+  <string name="requirements_libreoffice_general_enabled">LibreOffice Impress 中「工具 → 选项 → LibreOffice Impress → 常规」已启用 Impress 遥控。</string>
+  <string name="requirements_libreoffice_experimental_enabled">在 LibreOffice Impress 的「工具 → 选项 → LibreOffice → 高级」处启用实验性功能。</string>
   <string name="requirements_network_connection">Android 设备及计算机连接到同一个网络中。</string>
   <string name="requirements_network_ports">如果您打开了防火墙，请确保端口 1598 及 1599 处于打开状态。</string>
   <string name="requirements_bluetooth_connection">打开蓝牙的计算机。</string>

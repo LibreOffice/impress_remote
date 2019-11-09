@@ -28,7 +28,7 @@
   <string name="button_start">Spustit</string>
   <string name="button_remove">Odstranit</string>
   <string name="message_impress_pin_validation">V programu LibreOffice Impress přejděte na „Prezentace → Dálkové ovládání prezentace“ a zadejte kód.</string>
-  <string name="message_connection_failed_title">Připojení se nepodařilo navázat</string>
+  <string name="message_connection_failed_title">Spojení přerušeno</string>
   <string name="message_impress_remote_enabling">Ujistěte se, že je dálkové ovládání povoleno. V programu LibreOffice Impress přejděte na „Nástroje → Možnosti → LibreOffice Impress → Obecné“.</string>
   <string name="message_impress_wifi_enabling">Měli byste také povolit experimentální vlastnosti v „Nástroje → Možnosti → LibreOffice → Pokročilé“.</string>
   <string name="message_impress_pairing_check">Máte-li problémy s připojením pomocí Bluetooth, vyzkoušejte návody pro příslušný operační systém.</string>
