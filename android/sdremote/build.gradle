@@ -7,7 +7,7 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.1.0'
+        classpath 'com.android.tools.build:gradle:3.5.2'
     }
 }
 
@@ -16,13 +16,13 @@ subprojects {
     afterEvaluate {project ->
         if (project.hasProperty("android")) {
             android {
-                compileSdkVersion  26
-                buildToolsVersion  '27.0.3'
+                compileSdkVersion  29
+                buildToolsVersion  '29.0.2'
                 defaultConfig {
-                    targetSdkVersion 25
+                    targetSdkVersion 26
                     applicationId 'org.libreoffice.impressremote'
-                    versionCode   20
-                    versionName   '2.3.0'
+                    versionCode   21
+                    versionName   '2.4.0'
                     // prevent having android studio create PNGs from the vectors
                     vectorDrawables.useSupportLibrary = true
                 }
