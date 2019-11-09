@@ -1,6 +1,8 @@
 /.gradle/
 /**/build/
 /local.properties
+/.idea/caches
+/captures/
 ## https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 # user specifc
 /.idea/workspace.xml
