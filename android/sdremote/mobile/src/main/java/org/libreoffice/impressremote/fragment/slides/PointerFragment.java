@@ -16,7 +16,6 @@ import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.support.v4.content.LocalBroadcastManager;
-import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -76,11 +75,13 @@ public class PointerFragment extends AbstractSlideFragment implements ServiceCon
         if (aSlidesPager == null) {
             return;
         }
+        SlideShow aSlideShow = mCommunicationService.getSlideShow();
+
+        aSlidesPager.setAdapter(new SlidesPagerAdapter(getActivity(), aSlideShow, this));
+
         if (aSlidesPager.getChildAt(0) == null) {
             return;
         }
-
-        aSlidesPager.setAdapter(buildSlidesAdapter());
 
         setUpCurrentSlide();
 
@@ -105,12 +106,6 @@ public class PointerFragment extends AbstractSlideFragment implements ServiceCon
 
     private ViewPager getSlidesPager() {
         return (ViewPager) getView().findViewById(R.id.pointer_pager_slides);
-    }
-
-    private PagerAdapter buildSlidesAdapter() {
-        SlideShow aSlideShow = mCommunicationService.getSlideShow();
-
-        return new SlidesPagerAdapter(getActivity(), aSlideShow, this);
     }
 
     private void setUpCurrentSlide() {
