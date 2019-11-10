@@ -19,7 +19,7 @@ subprojects {
                 compileSdkVersion  29
                 buildToolsVersion  '29.0.2'
                 defaultConfig {
-                    targetSdkVersion 26
+                    targetSdkVersion 28
                     applicationId 'org.libreoffice.impressremote'
                     versionCode   21
                     versionName   '2.4.0'
