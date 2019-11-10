@@ -10,6 +10,7 @@ package org.libreoffice.impressremote.adapter;
 
 import android.content.Context;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.widget.ImageViewCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -120,6 +121,7 @@ public class SlidesGridAdapter extends BaseAdapter {
         byte[] aSlidePreviewBytes = mSlideShow.getSlidePreviewBytes(aPosition);
 
         mImageLoader.loadImage(aSlideViewHolder.mSlidePreview, aSlidePreviewBytes);
+        ImageViewCompat.setImageTintList(aSlideViewHolder.mSlidePreview, null);
     }
 
     private void setUpUnknownSlidePreview(ViewHolder aSlideViewHolder) {

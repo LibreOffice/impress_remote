@@ -10,6 +10,7 @@ package org.libreoffice.impressremote.adapter;
 
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;
+import android.support.v4.widget.ImageViewCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,12 +44,13 @@ public class SlidesPagerAdapter extends PagerAdapter {
 
     @Override
     public Object instantiateItem(ViewGroup aViewGroup, int aPosition) {
-        ImageView aSlideView = (ImageView) getView(aViewGroup);
+        ImageView aSlideView = (ImageView) mLayoutInflater.inflate(R.layout.view_pager_slide, aViewGroup, false);
 
         if (mSlideShow.getSlidePreviewBytes(aPosition) != null) {
             byte[] aSlidePreviewBytes = mSlideShow.getSlidePreviewBytes(aPosition);
 
             mImageLoader.loadImage(aSlideView, aSlidePreviewBytes);
+            ImageViewCompat.setImageTintList(aSlideView, null);
         }
         else {
             aSlideView.setImageResource(R.drawable.bg_slide_unknown);
@@ -60,10 +62,6 @@ public class SlidesPagerAdapter extends PagerAdapter {
         aViewGroup.addView(aSlideView);
 
         return aSlideView;
-    }
-
-    private View getView(ViewGroup aViewGroup) {
-        return mLayoutInflater.inflate(R.layout.view_pager_slide, aViewGroup, false);
     }
 
     @Override
