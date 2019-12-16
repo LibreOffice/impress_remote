@@ -1,2 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
-<resources/>
+<resources>
+  <plurals name="mask_timer_progress">
+    <item quantity="one">एक मिनट बाकी</item>
+    <item quantity="other">%d मिनट बाकी</item>
+  </plurals>
+</resources>

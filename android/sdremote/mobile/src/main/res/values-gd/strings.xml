@@ -47,8 +47,8 @@
   <string name="mask_slide_show_progress">Sleamhnag %1$d à %2$d</string>
   <plurals name="mask_timer_progress">
     <item quantity="one">%d mhionaid air fhàgail</item>
-    <item quantity="two">%d mionaidean air fhàgail</item>
-    <item quantity="few">%d mhionaid air fhàgail</item>
+    <item quantity="two">%d mhionaid air fhàgail</item>
+    <item quantity="few">%d mionaidean air fhàgail</item>
     <item quantity="other">%d mionaid air fhàgail</item>
   </plurals>
   <string name="description_pager_slide">Ro-shealladh na sleamhnaige</string>

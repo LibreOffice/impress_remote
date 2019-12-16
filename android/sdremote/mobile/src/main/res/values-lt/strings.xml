@@ -46,9 +46,9 @@
   <string name="header_notes">Pastabos</string>
   <string name="mask_slide_show_progress">%1$d-oji skaidrė iš %2$d</string>
   <plurals name="mask_timer_progress">
-    <item quantity="one">Liko %d minučių</item>
-    <item quantity="few">Liko %d minutė</item>
-    <item quantity="many">Liko %d minutės</item>
+    <item quantity="one">Liko %d minutė</item>
+    <item quantity="few">Liko %d minutės</item>
+    <item quantity="many">Liko %d minučių</item>
     <item quantity="other"/>
   </plurals>
   <string name="description_pager_slide">Skaidrės peržiūra</string>

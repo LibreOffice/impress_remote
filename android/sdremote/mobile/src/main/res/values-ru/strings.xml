@@ -46,9 +46,9 @@
   <string name="header_notes">Примечания</string>
   <string name="mask_slide_show_progress">Слайд %1$d из %2$d</string>
   <plurals name="mask_timer_progress">
-    <item quantity="one">Осталось %d минут</item>
-    <item quantity="few">Осталась минута</item>
-    <item quantity="many">Осталось %d минуты</item>
+    <item quantity="one">Осталась минута</item>
+    <item quantity="few">Осталось %d минуты</item>
+    <item quantity="many">Осталось %d минут</item>
     <item quantity="other"/>
   </plurals>
   <string name="description_pager_slide">Просмотр слайдов</string>

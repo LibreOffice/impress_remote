@@ -46,11 +46,11 @@
   <string name="header_notes">الملاحظات</string>
   <string name="mask_slide_show_progress">شريحة %1$d من %2$d</string>
   <plurals name="mask_timer_progress">
-    <item quantity="zero">تبقّت %d دقيقة</item>
-    <item quantity="one">تبقّت دقيقتان</item>
-    <item quantity="two">تبقّت %d دقائق</item>
-    <item quantity="few">لا دقائق متبقية</item>
-    <item quantity="many">تبقّت دقيقة واحدة</item>
+    <item quantity="zero">لا دقائق متبقية</item>
+    <item quantity="one">تبقّت دقيقة واحدة</item>
+    <item quantity="two">تبقّت دقيقتان</item>
+    <item quantity="few">تبقّت %d دقائق</item>
+    <item quantity="many">تبقّت %d دقيقة</item>
     <item quantity="other">تبقّت %d دقيقة</item>
   </plurals>
   <string name="description_pager_slide">معاينة الشريحة</string>
