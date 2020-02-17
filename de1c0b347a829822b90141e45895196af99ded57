@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "467110cd_987d1f20",
+        "filename": "android/sdremote/wear/src/main/res/values-ca/strings.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000321
+      },
+      "writtenOn": "2020-02-17T08:28:44Z",
+      "side": 1,
+      "message": "I’m pretty sure there are dedicated Unicode characters for playback actions, and that these don’t need to be translatable strings.",
+      "revId": "de1c0b347a829822b90141e45895196af99ded57",
+      "serverId": "6622c302-437a-49ad-a91d-55ba7dcf1615",
+      "unresolved": true
+    }
+  ]
+}
