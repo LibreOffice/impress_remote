@@ -6,4 +6,8 @@
     <string name="button_start">Aniciar</string>
     <string name="button_cancel">Encaboxar</string>
     <string name="menu_slides_grid">Rexáu de diapositives</string>
+    <string name="menu_settings">Axustes</string>
+    <string name="title_computers">Ordenadores</string>
+    <string name="title_settings">Axustes</string>
+    <string name="application_name">Mandu a distancia d\'Impress</string>
 </resources>
