@@ -34,8 +34,8 @@
     <string name="message_impress_pairing_check">Si teniu problemes de connexió Bluetooth, comproveu les instruccions relatives al sistema operatiu d\'escriptori.</string>
     <string name="message_ip_address_validation">Introduïu una adreça IP vàlida.</string>
     <string name="message_time_is_up">S\'ha acabat el temps!</string>
-    <string name="message_search_wifi">Assegureu-vos que el LibreOffice s\'està executant en un equip de la mateixa xarxa WiFi.</string>
-    <string name="message_search_bluetooth">Assegureu-vos que el LibreOffice s\'està executant en un equip amb el Bluetooth habilitat.</string>
+    <string name="message_search_wifi">Assegureu-vos que el LibreOffice s\'està executant en un ordinador de la mateixa xarxa wifi.</string>
+    <string name="message_search_bluetooth">Assegureu-vos que el LibreOffice s\'està executant en un ordinador amb el Bluetooth activat.</string>
     <string name="message_learn_more">
         <a href="org.libreoffice.impressremote://requirements/">Més informació</a>
     </string>
