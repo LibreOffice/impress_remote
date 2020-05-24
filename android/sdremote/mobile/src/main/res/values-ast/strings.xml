@@ -10,4 +10,7 @@
     <string name="title_computers">Ordenadores</string>
     <string name="title_settings">Axustes</string>
     <string name="application_name">Mandu a distancia d\'Impress</string>
+    <string name="message_time_is_up">¡Acabóse\'l tiempu!</string>
+    <string name="button_save">Guardar</string>
+    <string name="title_connection">Conexón</string>
 </resources>
