@@ -27,11 +27,11 @@
     <string name="button_save">Desa</string>
     <string name="button_start">Inicia</string>
     <string name="button_remove">Suprimeix</string>
-    <string name="message_impress_pin_validation">Aneu a «Presentació de diapositives → Control remot de l\'Impress» al LibreOffice Impress i introduïu el codi.</string>
+    <string name="message_impress_pin_validation">Aneu a Presentació de diapositives ▸ Control remot de l\'Impress al LibreOffice Impress i introduïu el codi.</string>
     <string name="message_connection_failed_title">La connexió ha fallat</string>
-    <string name="message_impress_remote_enabling">Assegureu-vos que heu habilitat el control remot. Aneu a «Eines → Opcions → LibreOffice Impress → General» al LibreOffice Impress.</string>
-    <string name="message_impress_wifi_enabling">"També heu d\'habilitar les funcionalitats experimentals  a «Eines s → Opcions → LibreOffice → Avançat»."</string>
-    <string name="message_impress_pairing_check">Si teniu problemes de connexió Bluetooth, comproveu les instruccions relatives al sistema operatiu d\'escriptori.</string>
+    <string name="message_impress_remote_enabling">Assegureu-vos que heu habilitat el control remot. Aneu a Eines ▸ Opcions ▸ LibreOffice Impress ▸ General al LibreOffice Impress.</string>
+    <string name="message_impress_wifi_enabling">"També heu d\'habilitar les funcionalitats experimentals  a Eines ▸ Opcions ▸ LibreOffice ▸ Avançat."</string>
+    <string name="message_impress_pairing_check">Si teniu problemes de connexió Bluetooth, consulteu la documentació fornida pel vostre sistema operatiu.</string>
     <string name="message_ip_address_validation">Introduïu una adreça IP vàlida.</string>
     <string name="message_time_is_up">S\'ha acabat el temps!</string>
     <string name="message_search_wifi">Assegureu-vos que el LibreOffice s\'està executant en un ordinador de la mateixa xarxa wifi.</string>
@@ -59,8 +59,8 @@
     <string name="preferences_quiet_mode_title">Mode silenciós</string>
     <string name="preferences_quiet_mode_summary">Configura el mode de timbre de vibració durant la presentació</string>
     <string name="requirements_libreoffice_version">LibreOffice versió 4.0.3 o superior executant-se en un ordinador.</string>
-    <string name="requirements_libreoffice_general_enabled">Control remot de l\'Impress habilitat a «Eines→ Opcions → LibreOffice Impress → General» al LibreOffice Impress.</string>
-    <string name="requirements_libreoffice_experimental_enabled">Funcionalitats experimentals habilitades a «Eines → Opcions → LibreOffice → Avançat» al LibreOffice Impress.</string>
+    <string name="requirements_libreoffice_general_enabled">Control remot de l\'Impress habilitat a Eines ▸ Opcions ▸ LibreOffice Impress ▸ General al LibreOffice Impress.</string>
+    <string name="requirements_libreoffice_experimental_enabled">Funcionalitats experimentals habilitades a Eines ▸ Opcions ▸ LibreOffice ▸ Avançat al LibreOffice Impress.</string>
     <string name="requirements_network_connection">El dispositiu Android i un ordinador connectats a la mateixa xarxa.</string>
     <string name="requirements_network_ports">Si teniu un tallafocs, assegureu-vos de tenir oberts els ports 1598 i 1599.</string>
     <string name="requirements_bluetooth_connection">Un ordinador amb el Bluetooth activat.</string>

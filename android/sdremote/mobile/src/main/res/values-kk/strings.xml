@@ -46,4 +46,22 @@
     <string name="preferences_volume_keys_actions_title">Дыбыс пернелерінің әрекеттері</string>
     <string name="preferences_keep_screen_on_title">Экранды сөндірмеу</string>
     <string name="preferences_quiet_mode_title">Тыныш режимі</string>
+    <string name="requirements_bluetooth_connection">Bluetooth іске қосылған компьютер.</string>
+    <string name="requirements_network_ports">Файрвол іске қосылған болса, 1598 және 1599 порттары ашық болуы тиіс.</string>
+    <string name="requirements_network_connection">Android құрылғысы және компьютер бір желіге қосылған.</string>
+    <string name="requirements_libreoffice_experimental_enabled">Тәжірибелі мүмкіндіктер LibreOffice Impress ішінде \"Саймандар ▸ Опциялар ▸ LibreOffice ▸ Кеңейтілген\" ішінде іске қосылған.</string>
+    <string name="requirements_libreoffice_general_enabled">Impress-ті қашықтан басқару LibreOffice Impress ішінде \"Саймандар ▸ Опциялар ▸ LibreOffice Impress ▸ Жалпы\" ішінде іске қосылған.</string>
+    <string name="requirements_libreoffice_version">Компьютерде LibreOffice нұсқасы 4.0.3 немесе жаңалау орнатылған.</string>
+    <string name="preferences_quiet_mode_summary">Презентация кезінде телефонды үнсіз ету (бірақ дірілді іске қосу).</string>
+    <string name="preferences_keep_screen_on_summary">Презентация кезінде телефоныңыз ұйықтамайтынын қамтамасыз етеді.</string>
+    <string name="preferences_volume_keys_actions_summary">Слайдтарды ауыстыру және анимацияны дыбыс пернелерімен басқару</string>
+    <string name="message_search_bluetooth">LibreOffice Bluetooth қосылып тұрған компьютерде іске қосылып тұрғанын тексеріңіз.</string>
+    <string name="message_search_wifi">LibreOffice дәл сол WiFi желісіндегі компьютерде іске қосылып тұрғанын тексеріңіз.</string>
+    <string name="message_ip_address_validation">Жарамды IP адресін енгізіңіз.</string>
+    <string name="message_impress_pairing_check">Bluetooth жұптау мәселесі орын алса, операциялық жүйеңіздің құжаттамасын қараңыз.</string>
+    <string name="message_impress_wifi_enabling">Сонымен қатар, \"Саймандар ▸ Опциялар ▸ LibreOffice ▸ Кеңейтілген\" ішінде тәжірибелі мүмкіндіктерді іске қосу керек.</string>
+    <string name="message_impress_remote_enabling">LibreOffice Impress ішінде қашықтан басқару іске қосылғанын тексеріңіз. \"Саймандар ▸ Опциялар ▸ LibreOffice Impress → Жалпы\" қараңыз.</string>
+    <string name="message_impress_pin_validation">LibreOffice Impress ішінде \"Слайдшоу ▸ Impress-ті қашықтан басқару\" ашып, кодты енгізіңіз.</string>
+    <string name="menu_stop_pointer">Сілтеу таяқшасын сөндіру</string>
+    <string name="menu_start_pointer">Сілтеу таяқшасын іске қосу</string>
 </resources>
