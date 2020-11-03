@@ -9,8 +9,8 @@
 package org.libreoffice.impressremote.adapter;
 
 import android.content.Context;
-import android.support.v4.view.PagerAdapter;
-import android.support.v4.widget.ImageViewCompat;
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.core.widget.ImageViewCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;

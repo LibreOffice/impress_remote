@@ -9,9 +9,9 @@
 package org.libreoffice.impressremote.adapter;
 
 import android.content.Context;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
 
 import org.libreoffice.impressremote.R;
 import org.libreoffice.impressremote.fragment.ComputersFragment;
