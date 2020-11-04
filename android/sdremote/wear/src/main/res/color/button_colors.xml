@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
         <item android:state_pressed="true"
-              android:drawable="@color/grey"/>
-        <item android:drawable="@color/semitransparent_grey"/>
+            android:drawable="@color/grey" android:color="@color/grey"/>
+        <item android:drawable="@color/semitransparent_grey" android:color="@color/semitransparent_grey" />
 </selector>
