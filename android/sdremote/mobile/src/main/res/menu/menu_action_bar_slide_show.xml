@@ -32,6 +32,17 @@
         compat:showAsAction="always"/>
 
     <item
+        android:id="@+id/menu_start_pointer"
+        android:icon="@drawable/ic_pointer_off"
+        android:title="@string/menu_start_pointer"
+        compat:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menu_stop_pointer"
+        android:icon="@drawable/ic_pointer_on"
+        android:title="@string/menu_stop_pointer"
+        compat:showAsAction="ifRoom" />
+
+    <item
         android:id="@+id/menu_timer"
         android:title="@string/menu_timer"
         android:icon="@drawable/ic_av_timer_black_24dp"
@@ -52,17 +63,5 @@
         android:id="@+id/menu_stop_slide_show"
         android:title="@string/menu_stop_slide_show"
         compat:showAsAction="never"/>
-
-    <item
-        android:id="@+id/menu_start_pointer"
-        android:title="@string/menu_start_pointer"
-        android:icon="@drawable/ic_pointer_off"
-        compat:showAsAction="ifRoom"/>
-
-    <item
-        android:id="@+id/menu_stop_pointer"
-        android:title="@string/menu_stop_pointer"
-        android:icon="@drawable/ic_pointer_on"
-        compat:showAsAction="ifRoom"/>
 
 </menu>
