@@ -38,6 +38,7 @@ import org.libreoffice.impressremote.util.SlideShowData;
 
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
+import java.nio.charset.StandardCharsets;
 import java.util.concurrent.TimeUnit;
 
 public class DataLayerListenerService extends WearableListenerService implements
@@ -116,26 +117,22 @@ public class DataLayerListenerService extends WearableListenerService implements
     @Override
     public void onMessageReceived(MessageEvent messageEvent) {
         super.onMessageReceived(messageEvent);
-        try{
-            String message=new String(messageEvent.getData(), "UTF-8");
-            Log.v(TAG, "onMessageReceived " + messageEvent.getPath()+message);
-            if(messageEvent.getPath().equals(COMMAND_PRESENTATION_STOPPED)){
-                cancelLocalNotification();
-                if(SlideShowData.getInstance().isFullscreen()){
-                    Intent aIntent= new Intent(COMMAND_PRESENTATION_STOPPED);
-                    LocalBroadcastManager.getInstance(this).sendBroadcast(aIntent);
-                }
-            }
-            if(messageEvent.getPath().equals(COMMAND_PRESENTATION_PAUSED)){
-                Intent aIntent= new Intent(COMMAND_PRESENTATION_PAUSED);
+        String message=new String(messageEvent.getData(), StandardCharsets.UTF_8);
+        Log.v(TAG, "onMessageReceived " + messageEvent.getPath()+message);
+        if(messageEvent.getPath().equals(COMMAND_PRESENTATION_STOPPED)){
+            cancelLocalNotification();
+            if(SlideShowData.getInstance().isFullscreen()){
+                Intent aIntent= new Intent(COMMAND_PRESENTATION_STOPPED);
                 LocalBroadcastManager.getInstance(this).sendBroadcast(aIntent);
             }
-            if(messageEvent.getPath().equals(COMMAND_PRESENTATION_RESUMED)){
-                Intent aIntent= new Intent(COMMAND_PRESENTATION_RESUMED);
-                LocalBroadcastManager.getInstance(this).sendBroadcast(aIntent);
-            }
-        }catch(UnsupportedEncodingException ignored){
-
+        }
+        if(messageEvent.getPath().equals(COMMAND_PRESENTATION_PAUSED)){
+            Intent aIntent= new Intent(COMMAND_PRESENTATION_PAUSED);
+            LocalBroadcastManager.getInstance(this).sendBroadcast(aIntent);
+        }
+        if(messageEvent.getPath().equals(COMMAND_PRESENTATION_RESUMED)){
+            Intent aIntent= new Intent(COMMAND_PRESENTATION_RESUMED);
+            LocalBroadcastManager.getInstance(this).sendBroadcast(aIntent);
         }
     }
 
