@@ -7,7 +7,7 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
 -->
 <merge xmlns:android="http://schemas.android.com/apk/res/android">
-    <fragment
+    <androidx.fragment.app.FragmentContainerView
         android:id="@+id/settingsContent"
         android:name="org.libreoffice.impressremote.activity.SettingsActivity$SettingsFragment"
         android:tag="SettingsFragment"

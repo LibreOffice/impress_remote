@@ -23,7 +23,7 @@
     android:orientation="vertical"
     android:padding="@dimen/padding_slide">
 
-    <org.libreoffice.impressremote.view.PointerViewPager xmlns:android="http://schemas.android.com/apk/res/android"
+    <org.libreoffice.impressremote.view.PointerViewPager
         android:id="@+id/pointer_pager_slides"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

@@ -11,7 +11,7 @@
     android:paddingBottom="@dimen/padding_vertical_list_item"
     android:background="?android:attr/selectableItemBackground"
     android:clickable="true"
-    >
+    android:focusable="true">
 
     <RelativeLayout
         android:layout_width="0dp"
