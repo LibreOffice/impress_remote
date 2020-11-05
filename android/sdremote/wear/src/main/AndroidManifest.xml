@@ -9,6 +9,10 @@
         android:label="@string/application_name"
         android:icon="@drawable/ic_launcher"
         android:theme="@android:style/Theme.DeviceDefault" >
+        <meta-data
+            android:name="com.google.android.wearable.standalone"
+            android:value="false" />
+
         <activity
             android:name=".activity.FullscreenActivity"
             android:label="@string/application_name" >
