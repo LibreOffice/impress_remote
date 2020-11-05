@@ -203,10 +203,9 @@ public class CommunicationServiceWear extends WearableListenerService {
         if(data==null){
             throw new IllegalArgumentException("Null byte array.");
         }
-        Bitmap bitmap =BitmapFactory.decodeByteArray(data, 0, data.length);
-        Bitmap.createScaledBitmap(bitmap,150,150,false);
+        Bitmap bitmap = BitmapFactory.decodeByteArray(data, 0, data.length);
         final ByteArrayOutputStream byteStream = new ByteArrayOutputStream();
-        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, byteStream);
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, byteStream);
         return Asset.createFromBytes(byteStream.toByteArray());
     }
 
