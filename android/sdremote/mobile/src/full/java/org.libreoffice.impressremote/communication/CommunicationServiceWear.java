@@ -72,6 +72,9 @@ public class CommunicationServiceWear extends WearableListenerService {
     public void onDestroy(){
         Log.v(TAG, "onDestroy");
         if(null != googleApiClient){
+            //FIXME: this approach is wrong - the lifecycle of the WearableListenerService is
+            //managed by the watch, and it can just destroy it after receiving a message,
+            //dismissing the notification while it still is ongoing/active
             notifyWearStop();
             final ScheduledExecutorService exec = Executors.newScheduledThreadPool(1);
             exec.schedule(new Runnable() {

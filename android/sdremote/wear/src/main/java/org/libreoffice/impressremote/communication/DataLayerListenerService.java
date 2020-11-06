@@ -9,6 +9,8 @@ package org.libreoffice.impressremote.communication;
 
 import static org.libreoffice.impressremote.communication.Commands.*;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -31,13 +33,13 @@ import com.google.android.gms.wearable.NodeApi;
 import com.google.android.gms.wearable.Wearable;
 import com.google.android.gms.wearable.WearableListenerService;
 
+import org.libreoffice.impressremote.BuildConfig;
 import org.libreoffice.impressremote.R;
 import org.libreoffice.impressremote.activity.FullscreenActivity;
 import org.libreoffice.impressremote.activity.NotificationActivity;
 import org.libreoffice.impressremote.util.SlideShowData;
 
 import java.io.InputStream;
-import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
 import java.util.concurrent.TimeUnit;
 
@@ -49,6 +51,7 @@ public class DataLayerListenerService extends WearableListenerService implements
 
     private static final int NOTIFICATION_ID=1;
     private static final String NOTIFICATION_TITLE="Impress Remote";
+    private static final String NOTIFICATION_CHANNEL="LibreOffice Slide Notifications";
 
     private static GoogleApiClient mGoogleApiClient;
 
@@ -72,6 +75,12 @@ public class DataLayerListenerService extends WearableListenerService implements
         if(!mGoogleApiClient.isConnected()){
             mGoogleApiClient.connect();
             Log.v(TAG, "Connecting to GoogleApiClient..");
+        }
+        // notification channel requires for Oreo or later...
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            int importance = NotificationManager.IMPORTANCE_DEFAULT;
+            NotificationChannel notificationChannel = new NotificationChannel(BuildConfig.APPLICATION_ID, NOTIFICATION_CHANNEL, importance);
+            NotificationManagerCompat.from(this).createNotificationChannel(notificationChannel);
         }
     }
 
@@ -201,8 +210,10 @@ public class DataLayerListenerService extends WearableListenerService implements
         Intent startIntent = new Intent(this, FullscreenActivity.class).setAction(Intent.ACTION_VIEW);
         PendingIntent startPendingIntent = PendingIntent.getActivity(this, 0, startIntent, 0);
 
+        // WearOS doesn't allow background images or custom layouts in notifications anymore,
+        // user has to open the main activity to control the slideshow.
         NotificationCompat.Builder notificationBuilder =
-                new NotificationCompat.Builder(this)
+                new NotificationCompat.Builder(this, BuildConfig.APPLICATION_ID)
                         .setSmallIcon(R.drawable.ic_launcher)
                         .setContentTitle(NOTIFICATION_TITLE)
                         .setContentText(SlideShowData.getInstance().getCount())
