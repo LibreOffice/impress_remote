@@ -22,8 +22,7 @@ subprojects {
                 defaultConfig {
                     targetSdkVersion 29
                     applicationId 'org.libreoffice.impressremote'
-                    versionCode   21
-                    versionName   '2.4.0'
+                    versionName   '2.5.0'
                     // prevent having android studio create PNGs from the vectors
                     vectorDrawables.useSupportLibrary = true
                 }

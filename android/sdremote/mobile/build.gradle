@@ -3,6 +3,7 @@ apply plugin: 'com.android.application'
 android {
     defaultConfig {
         minSdkVersion 14
+        versionCode   22
     }
 
     lintOptions {
