@@ -9,6 +9,7 @@
 package org.libreoffice.impressremote.communication;
 
 import android.os.AsyncTask;
+import android.util.Log;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -30,7 +31,7 @@ public class CommandsTransmitter {
             return new BufferedWriter(
                 new OutputStreamWriter(aCommandsStream, Protocol.CHARSET));
         } catch (UnsupportedEncodingException e) {
-            throw new RuntimeException("Unable to create commands writer.");
+            throw new RuntimeException("Unable to create commands writer:" + e.getMessage());
         }
     }
 
@@ -43,19 +44,7 @@ public class CommandsTransmitter {
     private void writeCommand(final String aCommand) {
         // TODO: We should ensure that all communication happens on one Thread. By default AsyncTask
         // executes on a thread pool (at least on modern devices). See tdf#111398
-        (new AsyncTask<Void, Void, Void>() {
-            @Override
-            protected Void doInBackground(Void... params) {
-                try {
-                    mCommandsWriter.write(aCommand);
-                    mCommandsWriter.flush();
-                } catch (IOException e) {
-                    throw new RuntimeException("Unable to write command.");
-                }
-
-                return null;
-            }
-        }).execute();
+        new WriteCommandTask(mCommandsWriter).execute(aCommand);
     }
 
     public void performNextTransition() {
@@ -109,6 +98,26 @@ public class CommandsTransmitter {
     public void stopPointer() {
         writeCommand(Protocol.Commands
             .prepareCommand(Protocol.Commands.POINTER_DISMISSED));
+    }
+
+    // non-static AsyncTask can leak memory
+    private static class WriteCommandTask extends AsyncTask<String, Void, Void> {
+        private final BufferedWriter mCommandsWriter;
+
+        public WriteCommandTask(BufferedWriter writer) {
+            mCommandsWriter = writer;
+        }
+
+        @Override
+        protected Void doInBackground(String... commands) {
+            try {
+                mCommandsWriter.write(commands[0]);
+                mCommandsWriter.flush();
+            } catch (IOException e) {
+                Log.e("CommandsTransmitter", "Unable to write command:" + e.getMessage());
+            }
+            return null;
+        }
     }
 }
 
