@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     defaultConfig {
         minSdkVersion 20
-        versionCode 23
+        versionCode 25
     }
 }
 
