@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="button_remove">Kendu</string>
+    <string name="button_start">Hasi</string>
+    <string name="button_save">Gorde</string>
+    <string name="button_cancel">Utzi</string>
+    <string name="menu_stop_pointer">Irten laser-erakusletik</string>
+    <string name="menu_start_pointer">Laser-erakuslea</string>
+    <string name="menu_resume_slide_show">Berrekin diapositiba-aurkezpenari</string>
+    <string name="menu_pause_slide_show">Pausatu diapositiba-aurkezpena</string>
+    <string name="menu_stop_slide_show">Gelditu diapositiba-aurkezpena</string>
+    <string name="menu_timer">Tenporizadorea</string>
+    <string name="menu_slides_grid">Diapositiben sareta</string>
+    <string name="menu_remove_computer">Kendu</string>
+    <string name="menu_add_computer">Gehitu ordenagailua</string>
+    <string name="menu_reconnect">Birkonektatu</string>
+    <string name="menu_requirements">Eskakizunak</string>
+    <string name="menu_settings">Ezarpenak</string>
+    <string name="title_timer">Tenporizadorea</string>
+    <string name="title_slide_show">Diapositiba-aurkezpena</string>
+    <string name="title_creation">Sorrera</string>
+    <string name="title_connection">Konexioa</string>
+    <string name="title_requirements">Eskakizunak</string>
+    <string name="title_settings">Ezarpenak</string>
+    <string name="title_generic">Orokorra</string>
+    <string name="title_computers">Ordenagailuak</string>
+    <string name="application_name">Impress Remote</string>
+</resources>
