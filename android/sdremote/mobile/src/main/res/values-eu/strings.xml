@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="button_remove">Kendu</string>
+    <string name="button_start">Hasi</string>
+    <string name="button_save">Gorde</string>
+    <string name="button_cancel">Utzi</string>
+    <string name="menu_stop_pointer">Irten laser-erakusletik</string>
+    <string name="menu_start_pointer">Laser-erakuslea</string>
+    <string name="menu_resume_slide_show">Berrekin diapositiba-aurkezpenari</string>
+    <string name="menu_pause_slide_show">Pausatu diapositiba-aurkezpena</string>
+    <string name="menu_stop_slide_show">Gelditu diapositiba-aurkezpena</string>
+    <string name="menu_timer">Tenporizadorea</string>
+    <string name="menu_slides_grid">Diapositiben sareta</string>
+    <string name="menu_remove_computer">Kendu</string>
+    <string name="menu_add_computer">Gehitu ordenagailua</string>
+    <string name="menu_reconnect">Birkonektatu</string>
+    <string name="menu_requirements">Eskakizunak</string>
+    <string name="menu_settings">Ezarpenak</string>
+    <string name="title_timer">Tenporizadorea</string>
+    <string name="title_slide_show">Diapositiba-aurkezpena</string>
+    <string name="title_creation">Sorrera</string>
+    <string name="title_connection">Konexioa</string>
+    <string name="title_requirements">Eskakizunak</string>
+    <string name="title_settings">Ezarpenak</string>
+    <string name="title_generic">Orokorra</string>
+    <string name="title_computers">Ordenagailuak</string>
+    <string name="application_name">Impress Remote</string>
+    <string name="requirements_libreoffice_version">LibreOffice 4.0.3 bertsioa edo berriagoa ari da exekutatzen ordenagailuan.</string>
+    <string name="preferences_quiet_mode_summary">Isildu telefonoa (baina gaitu bibrazioa) aurkezpenetan.</string>
+    <string name="message_impress_pairing_check">Bluetooth parekatzeetan arazoak badituzu, irakurri zure sistema eragilearen dokumentazioa.</string>
+    <string name="message_impress_wifi_enabling">Eginbide esperimentalak ere aktibatu behar dira \'Tresnak → Aukerak → LibreOffice → Aurreratua\' atalean.</string>
+    <string name="message_impress_remote_enabling">Ziurtatu urruneko kontrola gaituta dagoela. Joan \'Tresnak → Aukerak → LibreOffice Impress → Orokorra\' atalera LibreOffice Impressen.</string>
+    <string name="message_impress_pin_validation">Joan \'Diapositiba-aurkezpena → Impress Remote\' atalera, LibreOffice Impressen, eta sartu kodea.</string>
+    <string name="preferences_quiet_mode_title">Modu isila</string>
+    <string name="preferences_keep_screen_on_summary">Aurkezpen batean telefonoa esekiko ez dela ziurtatzen du.</string>
+    <string name="preferences_keep_screen_on_title">Mantendu pantaila aktibatuta</string>
+    <string name="preferences_volume_keys_actions_summary">Aldatu diapositibaz eta aktibatu animazioak bolumen-teklak erabilita</string>
+    <string name="preferences_volume_keys_actions_title">Bolumen-teklen ekintzak</string>
+    <string name="description_empty_slide">Diapositiba hutsa</string>
+    <string name="description_grid_slide">Diapositibaren aurrebista</string>
+    <string name="description_pager_slide">Diapositibaren aurrebista</string>
+    <plurals name="mask_timer_progress">
+        <item quantity="one">Minutu bat falta da</item>
+        <item quantity="other">%d minutu falta dira</item>
+    </plurals>
+    <string name="mask_slide_show_progress">%1$d / %2$d diapositiba</string>
+    <string name="header_notes">Oharrak</string>
+    <string name="hint_name">Izena (aukerakoa)</string>
+    <string name="hint_ip_address">IP helbidea</string>
+    <string name="message_notes_empty">Ez dago ezer hemen.</string>
+    <string name="message_paused">Pausatua</string>
+    <string name="message_learn_more"><a href="org.libreoffice.impressremote://requirements/">Gehiago</a></string>
+    <string name="message_search_bluetooth">Ziurtatu LibreOffice Bluetooth-a gaituta duen ordenagailu batean exekutatzen ari dela.</string>
+    <string name="message_search_wifi">Ziurtatu LibreOffice WiFi sare berera konektatutako ordenagailu batean exekutatzen ari dela.</string>
+    <string name="message_time_is_up">Denbora amaitu da!</string>
+    <string name="message_ip_address_validation">Sartu baliozko IP helbide bat.</string>
+    <string name="message_connection_failed_title">Konexioak huts egin du</string>
+    <string name="menu_slides_pager">Diapositiben orria</string>
+    <string name="menu_start_discovery">Hasi esplorazioa</string>
+</resources>
