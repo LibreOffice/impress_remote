@@ -42,7 +42,7 @@
     <string name="message_paused">Unterbrochen</string>
     <string name="message_notes_empty">Keine vorhanden.</string>
     <string name="hint_ip_address">IP-Adresse</string>
-    <string name="hint_name">Name (optional)</string>
+    <string name="hint_name">Bezeichnung (optional)</string>
     <string name="header_notes">Notizen</string>
     <string name="mask_slide_show_progress">Folie %1$d von %2$d</string>
     <plurals name="mask_timer_progress">
