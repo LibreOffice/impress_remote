@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_connection">සම්බන්ධතාවය</string>
+    <string name="title_requirements">අවශ්‍යතා</string>
+    <string name="title_settings">සැකසුම්</string>
+    <string name="title_computers">පරිගණක</string>
+    <string name="application_name">ඉම්ප්‍රෙස් රිමෝට්</string>
+</resources>

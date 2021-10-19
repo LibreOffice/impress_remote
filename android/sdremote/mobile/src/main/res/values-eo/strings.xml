@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="message_search_wifi">Bonvolu certigi ke LibreOffice rulas ĉe komputilo konektita al la sama sendrata reto.</string>
+    <string name="message_time_is_up">Tempolimo!</string>
+    <string name="message_ip_address_validation">Bonvolu enigi validan IP-adreson.</string>
+    <string name="message_impress_pairing_check">En la okazo se okazas problemoj pri Bluetooth, bonvolu legi la dokumentaron liveritan de via operaciumo.</string>
+    <string name="message_impress_wifi_enabling">Vi ankaŭ devus enŝalti eksperimentajn funkciojn per “Iloj → Agordaro → LibreOffice → Speciala”.</string>
+    <string name="message_impress_remote_enabling">Certigu ke vi enŝaltis teleregilon. Iru al “Iloj → Agordaro → LibreOffice-Prezentilo → Ĝenerala” in LibreOffice-Prezentilo.</string>
+    <string name="message_connection_failed_title">Konekto malsukcesis</string>
+    <string name="message_impress_pin_validation">Iru al “Vidigi prezentaĵon → Prezentilo-Teleregilo” en LibreOffice-Prezentilo kaj enigi la kodon.</string>
+    <string name="button_remove">Forigi</string>
+    <string name="button_start">Komenci</string>
+    <string name="button_save">Konservi</string>
+    <string name="button_cancel">Rezigni</string>
+    <string name="menu_stop_pointer">Haltigi la laseran indikilon</string>
+    <string name="menu_start_pointer">Lasera indikilo</string>
+    <string name="menu_resume_slide_show">Daŭrigi la prezentaĵon</string>
+    <string name="menu_pause_slide_show">Paŭzigi la prezentaĵon</string>
+    <string name="menu_stop_slide_show">Finigi prezentaĵon</string>
+    <string name="menu_timer">Tempumilo</string>
+    <string name="menu_slides_pager">Lumbilda televokilo</string>
+    <string name="menu_slides_grid">Lumbilda krado</string>
+    <string name="menu_remove_computer">Forigi</string>
+    <string name="menu_start_discovery">Startigi malkovri</string>
+    <string name="menu_add_computer">Aldoni komputilon</string>
+    <string name="menu_reconnect">Rekonekti</string>
+    <string name="menu_requirements">Postuloj</string>
+    <string name="menu_settings">Agordaro</string>
+    <string name="title_timer">Tempumilo</string>
+    <string name="title_slide_show">Vidigi prezentaĵon</string>
+    <string name="title_creation">Krei</string>
+    <string name="title_connection">Konekti</string>
+    <string name="title_requirements">Postuloj</string>
+    <string name="title_settings">Agordaro</string>
+    <string name="title_generic">Ĝenerala</string>
+    <string name="title_computers">Komputiloj</string>
+    <string name="application_name">Prezentilo-Teleregilo</string>
+    <string name="requirements_bluetooth_connection">Komputilo kun Bluetooth aktiva.</string>
+    <string name="requirements_network_ports">Se vi havas fajroŝirmilon, bonvolu certigi ke pordoj 1598 jah 1599 estas malfermitaj.</string>
+    <string name="requirements_network_connection">La Androidilo kaj komputilo konektiĝas al la sama reto.</string>
+    <string name="requirements_libreoffice_experimental_enabled">Eksperimentaj funkcioj aktiviĝas ĉe “Iloj → Agordaro → LibreOffice → Speciala” en LibreOffice-Prezentilo.</string>
+    <string name="requirements_libreoffice_general_enabled">Prezentilo-Teleregilo aktiviĝas ĉe “Iloj → Agordaro → LibreOffice-Prezentilo → Ĝenerala” en LibreOffice-Prezentilo.</string>
+    <string name="requirements_libreoffice_version">LibreOffice versio 4.0.3 aŭ posta rulas ĉe via komputilo.</string>
+    <string name="preferences_quiet_mode_summary">Silentigi telefonon (sed enŝalti vibradon) du prezentado.</string>
+    <string name="preferences_quiet_mode_title">Silenta reĝimo</string>
+    <string name="preferences_keep_screen_on_summary">Certigas ke via telefono ne ekdormos dum prezentado.</string>
+    <string name="preferences_keep_screen_on_title">Lasu ekranon aktiva</string>
+    <string name="preferences_volume_keys_actions_summary">Ŝalti lumbildojn kaj aktivigi animaciojn per laŭtecaj klavoj</string>
+    <string name="preferences_volume_keys_actions_title">Laŭteco - klavaj agoj</string>
+    <string name="description_empty_slide">Vaka lumbildo</string>
+    <string name="description_grid_slide">Antaŭvidi lumbildon</string>
+    <string name="description_pager_slide">Antaŭvidi lumbildon</string>
+    <plurals name="mask_timer_progress">
+        <item quantity="one">Restas unu minuto</item>
+        <item quantity="other">Restas %d minutoj</item>
+    </plurals>
+    <string name="mask_slide_show_progress">Lumbildo %1$d el %2$d</string>
+    <string name="header_notes">Notoj</string>
+    <string name="hint_name">Nomo (malnepra)</string>
+    <string name="hint_ip_address">IP-adreso</string>
+    <string name="message_notes_empty">Nenio ĉi tie.</string>
+    <string name="message_paused">Dumpaŭze</string>
+    <string name="message_learn_more"><a href="org.libreoffice.impressremote://requirements/">Lerni plu</a></string>
+    <string name="message_search_bluetooth">Bonvolu certigi ke LibreOffice rulas ĉe via komputilo kun Bluetooth enŝaltita.</string>
+</resources>
