@@ -2,7 +2,7 @@
 <resources>
     <string name="mask_slide_show_progress">Diapositiva %1$d de %2$d</string>
     <string name="header_notes">Notes</string>
-    <string name="hint_ip_address">Direición IP</string>
+    <string name="hint_ip_address">Señes IP</string>
     <string name="button_start">Aniciar</string>
     <string name="button_cancel">Encaboxar</string>
     <string name="menu_slides_grid">Rexáu de diapositives</string>
@@ -14,4 +14,6 @@
     <string name="button_save">Guardar</string>
     <string name="title_connection">Conexón</string>
     <string name="menu_add_computer">Amestar un ordenador</string>
+    <string name="requirements_bluetooth_connection">Un ordenador col Bluetooth activáu.</string>
+    <string name="message_ip_address_validation">Introduz señes IP válides.</string>
 </resources>
