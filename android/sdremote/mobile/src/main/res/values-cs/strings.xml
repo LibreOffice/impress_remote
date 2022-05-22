@@ -21,7 +21,7 @@
     <string name="menu_stop_slide_show">Zastavit prezentaci</string>
     <string name="menu_pause_slide_show">Pozastavit prezentaci</string>
     <string name="menu_resume_slide_show">Pokračovat v prezentaci</string>
-    <string name="menu_start_pointer">"Laserový  ukazatel"</string>
+    <string name="menu_start_pointer">Laserový ukazatel</string>
     <string name="menu_stop_pointer">Vypnout ukazatel</string>
     <string name="button_cancel">Zrušit</string>
     <string name="button_save">Uložit</string>
@@ -36,9 +36,7 @@
     <string name="message_time_is_up">Čas vypršel!</string>
     <string name="message_search_wifi">Ujistěte se, že je LibreOffice spuštěn na počítači připojeném ke stejné síti WiFi.</string>
     <string name="message_search_bluetooth">Ujistěte se, že je povolen Bluetooth na počítači, kde je LibreOffice spuštěn.</string>
-    <string name="message_learn_more">
-        <a href="org.libreoffice.impressremote://requirements/">Zjistěte více</a>
-    </string>
+    <string name="message_learn_more"><a href="org.libreoffice.impressremote://requirements/">Zjistit více</a></string>
     <string name="message_paused">Pozastaveno</string>
     <string name="message_notes_empty">Nic se zde nenachází.</string>
     <string name="hint_ip_address">IP adresa</string>

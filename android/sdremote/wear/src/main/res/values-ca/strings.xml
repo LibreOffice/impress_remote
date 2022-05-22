@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="application_name">Control remot de l\'Impress</string>
+    <string name="application_name">Telecomanda de l\'Impress</string>
     <string name="null_slide_count">0/0</string>
     <string name="pause_resume">|| / ►</string>
     <string name="right_arrow">&gt;</string>

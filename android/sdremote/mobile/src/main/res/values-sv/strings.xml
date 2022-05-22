@@ -29,7 +29,7 @@
     <string name="button_remove">Ta bort</string>
     <string name="message_impress_pin_validation">Gå till ”Presentation → Impress fjärrkontroll” i LibreOffice Impress och skriv in koden.</string>
     <string name="message_connection_failed_title">Anslutningen misslyckades</string>
-    <string name="message_impress_remote_enabling">Försäkra dig om att du aktiverat fjärrkontrollen. Gå till ”Verktyg → Alternativ → LibreOffice Impress → Allmännt” i LibreOffice Impress.</string>
+    <string name="message_impress_remote_enabling">Försäkra dig om att du aktiverat fjärrkontrollen. Gå till ”Verktyg → Alternativ → LibreOffice Impress → Allmänt” i LibreOffice Impress.</string>
     <string name="message_impress_wifi_enabling">Du ska även aktivera experimentella funktioner under ”Verktyg → Alternativ → LibreOffice → Avancerat”.</string>
     <string name="message_impress_pairing_check">Om du har problem att parkoppla via bluetooth så får du läsa de instruktioner som gäller för ditt operativsystem.</string>
     <string name="message_ip_address_validation">Skriv in en giltig IP-adress.</string>
