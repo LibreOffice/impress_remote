@@ -15,7 +15,8 @@
 
         <activity
             android:name=".activity.FullscreenActivity"
-            android:label="@string/application_name" >
+            android:label="@string/application_name"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,7 +29,8 @@
             android:taskAffinity=""
             android:theme="@android:style/Theme.DeviceDefault.Light" />
 
-        <service android:name=".communication.DataLayerListenerService">
+        <service android:name=".communication.DataLayerListenerService"
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.google.android.gms.wearable.BIND_LISTENER" />
             </intent-filter>
