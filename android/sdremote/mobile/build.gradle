@@ -6,15 +6,15 @@ android {
         versionCode   26
     }
 
-    lintOptions {
-        abortOnError false
-    }
     flavorDimensions "default"
     productFlavors {
         // the full remote including the wearable
         full.dimension "default"
         // minimal variant without wearable (and thus without the need for google apis)
         minimal.dimension "default"
+    }
+    lint {
+        abortOnError false
     }
 }
 
