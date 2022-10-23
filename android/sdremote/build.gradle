@@ -17,9 +17,9 @@ subprojects {
     afterEvaluate {project ->
         if (project.hasProperty("android")) {
             android {
-                compileSdkVersion  31
+                compileSdkVersion  32
                 defaultConfig {
-                    targetSdkVersion 31
+                    targetSdkVersion 32
                     namespace 'org.libreoffice.impressremote'
                     versionName   '2.5.2'
                     // prevent having android studio create PNGs from the vectors

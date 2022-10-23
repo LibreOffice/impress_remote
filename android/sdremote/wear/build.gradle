@@ -8,10 +8,8 @@ android {
 }
 
 dependencies {
-    implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.0.0'
-    // KitKat (20) wear-emulator doesn't have anything newer
-    //noinspection GradleDependency
-    implementation 'com.google.android.gms:play-services-wearable:6.5.87'
-    implementation 'com.google.android.support:wearable:2.8.1'
-    compileOnly 'com.google.android.wearable:wearable:2.8.1'
+    implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.1.0'
+    implementation 'com.google.android.gms:play-services-wearable:18.0.0'
+    implementation 'com.google.android.support:wearable:2.9.0'
+    compileOnly 'com.google.android.wearable:wearable:2.9.0'
 }

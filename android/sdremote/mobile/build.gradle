@@ -19,10 +19,13 @@ android {
 }
 
 dependencies {
-    implementation 'androidx.preference:preference:1.1.1'
-    implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.0.0'
-    implementation 'com.google.android.material:material:1.2.1'
-    //noinspection GradleDependency
-    fullImplementation 'com.google.android.gms:play-services-wearable:6.5.87'
+    // workaround for https://issuetracker.google.com/issues/238425626 - otherwise you get duplicate
+    // class errors due to mismatch between preferences and material versions, drop with next update
+    // of the preferences package
+    api "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
+    implementation 'androidx.preference:preference:1.2.0'
+    implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.1.0'
+    implementation 'com.google.android.material:material:1.7.0'
+    fullImplementation 'com.google.android.gms:play-services-wearable:18.0.0'
     fullWearApp project(':wear')
 }
