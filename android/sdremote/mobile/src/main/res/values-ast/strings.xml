@@ -16,4 +16,5 @@
     <string name="menu_add_computer">Amestar un ordenador</string>
     <string name="requirements_bluetooth_connection">Un ordenador col Bluetooth activáu.</string>
     <string name="message_ip_address_validation">Introduz señes IP válides.</string>
+    <string name="preferences_quiet_mode_title">Mou silenciosu</string>
 </resources>

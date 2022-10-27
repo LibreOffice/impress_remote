@@ -13,7 +13,7 @@
     <string name="menu_requirements">Besoins</string>
     <string name="menu_reconnect">Reconnecter</string>
     <string name="menu_add_computer">Ajouter un ordinateur</string>
-    <string name="menu_start_discovery">Démarrer Discovery</string>
+    <string name="menu_start_discovery">Démarrer la détection</string>
     <string name="menu_remove_computer">Supprimer</string>
     <string name="menu_slides_grid">Grille de diapos</string>
     <string name="menu_slides_pager">Pageur de diapos</string>
