@@ -32,13 +32,13 @@
             style="?actionBarTabTextStyle"
             android:id="@+id/button_cancel_tv"
             android:text="@string/button_cancel"
-            android:drawableLeft="@drawable/ic_clear_layer_wrap"
-            android:drawableStart="@drawable/ic_clear_layer_wrap"
             android:drawablePadding="@dimen/padding_action_bar_button_drawable"
             android:gravity="center_vertical"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            compat:drawableLeftCompat="@drawable/ic_clear_layer_wrap"
+            compat:drawableStartCompat="@drawable/ic_clear_layer_wrap" />
 
     </FrameLayout>
 
@@ -53,13 +53,13 @@
             style="?actionBarTabTextStyle"
             android:id="@+id/button_save_tv"
             android:text="@string/button_save"
-            android:drawableLeft="@drawable/ic_done_layer_wrap"
-            android:drawableStart="@drawable/ic_done_layer_wrap"
             android:drawablePadding="@dimen/padding_action_bar_button_drawable"
             android:gravity="center_vertical"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            compat:drawableLeftCompat="@drawable/ic_done_layer_wrap"
+            compat:drawableStartCompat="@drawable/ic_done_layer_wrap" />
     </FrameLayout>
 
 </androidx.appcompat.widget.LinearLayoutCompat>
