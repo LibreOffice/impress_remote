@@ -17,16 +17,23 @@
  *   the License at http://www.apache.org/licenses/LICENSE-2.0 .
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:installLocation="auto">
 
+    <!-- bt permissions for Android 12 or later -->
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN"
+        android:usesPermissionFlags="neverForLocation"
+        tools:targetApi="31" />
+    <!-- bt permissions for older devices -->
+    <uses-permission
+        android:name="android.permission.BLUETOOTH" android:maxSdkVersion="30"/>
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_ADMIN" android:maxSdkVersion="30"/>
+    <uses-permission
+        android:name="android.permission.ACCESS_COARSE_LOCATION" android:maxSdkVersion="30"/>
     <uses-permission
         android:name="android.permission.INTERNET"/>
-    <uses-permission
-        android:name="android.permission.BLUETOOTH"/>
-    <uses-permission
-        android:name="android.permission.BLUETOOTH_ADMIN"/>
-    <uses-permission
-        android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
     <uses-feature
         android:name="android.hardware.bluetooth"
