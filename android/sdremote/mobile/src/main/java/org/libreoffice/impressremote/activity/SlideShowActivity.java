@@ -477,49 +477,39 @@ public class SlideShowActivity extends AppCompatActivity implements ServiceConne
 
     @Override
     public boolean onOptionsItemSelected(MenuItem aMenuItem) {
-        switch (aMenuItem.getItemId()) {
-            case android.R.id.home:
-                navigateUp();
-                return true;
-
-            case R.id.menu_slides_grid:
-                changeMode(Mode.GRID);
-                return true;
-
-            case R.id.menu_slides_pager:
-            case R.id.menu_stop_pointer:
-                changeMode(Mode.PAGER);
-                return true;
-
-            case R.id.menu_timer:
-                callTimer();
-                return true;
-
-            case R.id.menu_resume_slide_show:
-                changeMode(Mode.PAGER);
-                setUpSlideShowInformation();
-                resumeSlideShow();
-                resumeTimer();
-                return true;
-
-            case R.id.menu_pause_slide_show:
-                changeMode(Mode.EMPTY);
-                setUpSlideShowPausedInformation();
-                pauseSlideShow();
-                pauseTimer();
-                return true;
-
-            case R.id.menu_stop_slide_show:
-                stopSlideShow();
-                return true;
-
-            case R.id.menu_start_pointer:
-                changeMode(Mode.STARTPOINTER);
-                return true;
-
-            default:
-                return super.onOptionsItemSelected(aMenuItem);
+        int itemId = aMenuItem.getItemId();
+        if (itemId == android.R.id.home) {
+            navigateUp();
+            return true;
+        } else if (itemId == R.id.menu_slides_grid) {
+            changeMode(Mode.GRID);
+            return true;
+        } else if (itemId == R.id.menu_slides_pager || itemId == R.id.menu_stop_pointer) {
+            changeMode(Mode.PAGER);
+            return true;
+        } else if (itemId == R.id.menu_timer) {
+            callTimer();
+            return true;
+        } else if (itemId == R.id.menu_resume_slide_show) {
+            changeMode(Mode.PAGER);
+            setUpSlideShowInformation();
+            resumeSlideShow();
+            resumeTimer();
+            return true;
+        } else if (itemId == R.id.menu_pause_slide_show) {
+            changeMode(Mode.EMPTY);
+            setUpSlideShowPausedInformation();
+            pauseSlideShow();
+            pauseTimer();
+            return true;
+        } else if (itemId == R.id.menu_stop_slide_show) {
+            stopSlideShow();
+            return true;
+        } else if (itemId == R.id.menu_start_pointer) {
+            changeMode(Mode.STARTPOINTER);
+            return true;
         }
+        return super.onOptionsItemSelected(aMenuItem);
     }
 
     private void navigateUp() {

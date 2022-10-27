@@ -319,14 +319,11 @@ public class ComputersFragment extends ListFragment implements ServiceConnection
         int aComputerPosition = getListItemPosition(aMenuItem);
         Server aComputer = getComputersAdapter().getItem(aComputerPosition);
 
-        switch (aMenuItem.getItemId()) {
-            case R.id.menu_remove_computer:
-                removeComputer(aComputer);
-                return true;
-
-            default:
-                return super.onContextItemSelected(aMenuItem);
+        if (aMenuItem.getItemId() == R.id.menu_remove_computer) {
+            removeComputer(aComputer);
+            return true;
         }
+        return super.onContextItemSelected(aMenuItem);
     }
 
     private int getListItemPosition(android.view.MenuItem aMenuItem) {

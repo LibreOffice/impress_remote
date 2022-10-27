@@ -47,17 +47,11 @@ public class ComputerCreationActivity extends AppCompatActivity implements View.
 
     @Override
     public void onClick(View aView) {
-        switch (aView.getId()) {
-            case R.id.button_cancel:
-                cancelCreation();
-                break;
-
-            case R.id.button_save:
-                saveServer();
-                break;
-
-            default:
-                break;
+        int id = aView.getId();
+        if (id == R.id.button_cancel) {
+            cancelCreation();
+        } else if (id == R.id.button_save) {
+            saveServer();
         }
     }
 

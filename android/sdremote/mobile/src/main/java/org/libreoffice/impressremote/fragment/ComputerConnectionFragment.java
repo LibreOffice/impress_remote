@@ -291,16 +291,13 @@ public class ComputerConnectionFragment extends Fragment implements ServiceConne
 
     @Override
     public boolean onOptionsItemSelected(MenuItem aMenuItem) {
-        switch (aMenuItem.getItemId()) {
-            case R.id.menu_reconnect:
-                setCurrentView(R.id.progress_bar);
-                connectComputer();
-                refreshActionBarMenu();
-                return true;
-
-            default:
-                return super.onOptionsItemSelected(aMenuItem);
+        if (aMenuItem.getItemId() == R.id.menu_reconnect) {
+            setCurrentView(R.id.progress_bar);
+            connectComputer();
+            refreshActionBarMenu();
+            return true;
         }
+        return super.onOptionsItemSelected(aMenuItem);
     }
 
     @Override

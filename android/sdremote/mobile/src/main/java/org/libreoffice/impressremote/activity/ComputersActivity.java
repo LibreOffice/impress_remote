@@ -140,18 +140,15 @@ public class ComputersActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem aMenuItem) {
-        switch (aMenuItem.getItemId()) {
-            case R.id.menu_settings:
-                startActivity(Intents.buildSettingsIntent(this));
-                return true;
-
-            case R.id.menu_requirements:
-                startActivity(Intents.buildRequirementsIntent(this));
-                return true;
-
-            default:
-                return super.onOptionsItemSelected(aMenuItem);
+        int itemId = aMenuItem.getItemId();
+        if (itemId == R.id.menu_settings) {
+            startActivity(Intents.buildSettingsIntent(this));
+            return true;
+        } else if (itemId == R.id.menu_requirements) {
+            startActivity(Intents.buildRequirementsIntent(this));
+            return true;
         }
+        return super.onOptionsItemSelected(aMenuItem);
     }
 
     private void toggleFab(int pos) {
