@@ -41,7 +41,7 @@
     </style>
 
     <style name="SectionHeader">
-        <item name="android:textAllCaps" tools:targetApi="14">true</item>
+        <item name="android:textAllCaps">true</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/accent</item>
         <item name="android:drawableBottom">@drawable/underline_header</item>
