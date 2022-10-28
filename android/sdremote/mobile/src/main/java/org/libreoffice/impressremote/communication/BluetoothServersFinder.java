@@ -21,8 +21,10 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
+import org.libreoffice.impressremote.activity.ComputersActivity;
 import org.libreoffice.impressremote.util.Intents;
 
 class BluetoothServersFinder extends BroadcastReceiver implements ServersFinder {
@@ -40,7 +42,7 @@ class BluetoothServersFinder extends BroadcastReceiver implements ServersFinder 
 
     @Override
     public void startSearch() {
-        if (btAdapter == null) {
+        if (btAdapter == null || !ComputersActivity.getHaveBTConnect()) {
             return;
         }
         IntentFilter aBluetoothActionsFilter = new IntentFilter();
@@ -54,10 +56,9 @@ class BluetoothServersFinder extends BroadcastReceiver implements ServersFinder 
             for (BluetoothDevice device : pairedDevices) {
                 addServer(device);
             }
-        } else {
-            if (btAdapter.isDiscovering()) {
-                return;
-            }
+            return;
+        }
+        if (ComputersActivity.getHaveBTScan() && !btAdapter.isDiscovering()) {
             btAdapter.startDiscovery();
         }
     }
@@ -123,14 +124,15 @@ class BluetoothServersFinder extends BroadcastReceiver implements ServersFinder 
         if (btAdapter == null) {
             return;
         }
-
         try {
             mContext.unregisterReceiver(this);
         } catch (IllegalArgumentException e) {
             // Receiver not registered.
             // Fixed in Honeycomb: Android’s issue #6191.
         }
-
+        if (!ComputersActivity.getHaveBTScan()) {
+            return;
+        }
         btAdapter.cancelDiscovery();
     }
 

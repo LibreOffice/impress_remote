@@ -19,6 +19,8 @@ android {
 }
 
 dependencies {
+    // for letting the system manage the runtime permission request codes
+    implementation 'androidx.activity:activity:1.5.0'
     // workaround for https://issuetracker.google.com/issues/238425626 - otherwise you get duplicate
     // class errors due to mismatch between preferences and material versions, drop with next update
     // of the preferences package

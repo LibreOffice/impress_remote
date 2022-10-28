@@ -31,6 +31,12 @@ public class ComputersPagerAdapter extends FragmentPagerAdapter {
         pager_size++;
     }
 
+    public void reset() {
+        tabs[0] = null;
+        tabs[1] = null;
+        pager_size=0;
+    }
+
     public void removeFragment(ComputersFragment.Type type) {
         switch(type) {
             case WIFI:  tabs[1] = null; break;

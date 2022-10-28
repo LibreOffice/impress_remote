@@ -8,31 +8,41 @@
  */
 package org.libreoffice.impressremote.activity;
 
+import android.Manifest;
 import android.bluetooth.BluetoothAdapter;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.tabs.TabLayout;
-import androidx.viewpager.widget.ViewPager;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.AnimationUtils;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
+import androidx.viewpager.widget.ViewPager;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.tabs.TabLayout;
+
+import org.libreoffice.impressremote.R;
 import org.libreoffice.impressremote.adapter.ComputersPagerAdapter;
 import org.libreoffice.impressremote.fragment.ComputersFragment.Type;
 import org.libreoffice.impressremote.util.Intents;
-import org.libreoffice.impressremote.R;
 
 public class ComputersActivity extends AppCompatActivity {
     private static final int REQUEST_ENABLE_BT = 0;
     private static final String SELECT_BLUETOOTH = "SELECT_BLUETOOTH";
     private static final BluetoothAdapter btAdapter = BluetoothAdapter.getDefaultAdapter();
     private static final boolean disableBTOnQuit = btAdapter != null && !btAdapter.isEnabled();
+    private static boolean haveBluetoothPermissionConnect = false;
+    private static boolean haveBluetoothPermissionScan = false;
     private TabLayout tabLayout;
     private static TabLayout.Tab btTab;
     private static TabLayout.Tab wifiTab;
@@ -40,10 +50,49 @@ public class ComputersActivity extends AppCompatActivity {
     private FloatingActionButton addFab;
     private final ComputersPagerAdapter computersPagerAdapter = new ComputersPagerAdapter(getSupportFragmentManager(), this);
 
+    private final ActivityResultLauncher<String> requestPermissionBTConnect =
+            registerForActivityResult(new ActivityResultContracts.RequestPermission(), isGranted -> {
+                // TODO add blurp about not being able to use BT stuff if not granted
+                haveBluetoothPermissionConnect = isGranted;
+                init();
+            });
+
+    // requesting the connect permission actually asks for the nearby devices permission group,
+    // requests for the scan permission are then automatically granted without a prompt, but you
+    // still have to explicitly ask for it before you can call any related methods
+    private final ActivityResultLauncher<String> requestPermissionBTScan =
+            registerForActivityResult(new ActivityResultContracts.RequestPermission(), isGranted -> {
+                haveBluetoothPermissionScan = isGranted;
+                btFab.setClickable(isGranted);
+                btFab.performClick();
+            });
+
+    public static boolean getHaveBTConnect() {
+        return haveBluetoothPermissionConnect;
+    }
+
+    public static boolean getHaveBTScan() {
+        return haveBluetoothPermissionScan;
+    }
+
     @Override
     protected void onCreate(Bundle aSavedInstanceState) {
         super.onCreate(aSavedInstanceState);
-        
+        // the pre-Android 12 Bluetooth permissions have "normal" danger level and don't require
+        // asking at runtime
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.S || ContextCompat.checkSelfPermission(
+                this, Manifest.permission.BLUETOOTH_CONNECT) == PackageManager.PERMISSION_GRANTED) {
+            haveBluetoothPermissionConnect = true;
+            init();
+            // TODO: add else if (shouldShowRequestPermissionRationale(...)) {
+            // without that the user is only prompted a single time/would have to clear permissions
+            // in system settings to be prompted again.
+        } else {
+            requestPermissionBTConnect.launch(Manifest.permission.BLUETOOTH_CONNECT);
+        }
+    }
+
+    private void init() {
         setContentView(R.layout.activity_computers);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.computers_toolbar);
@@ -53,7 +102,7 @@ public class ComputersActivity extends AppCompatActivity {
         // to intents filter but it shows wrong label for recent apps screen then.
         assert toolbar != null;
         toolbar.setTitle(R.string.title_computers);
-
+        computersPagerAdapter.reset();
         computersPagerAdapter.addFragment(Type.BLUETOOTH);
         computersPagerAdapter.addFragment(Type.WIFI);
 
@@ -69,7 +118,7 @@ public class ComputersActivity extends AppCompatActivity {
         assert wifiTab != null;
         wifiTab.select();
 
-        if (btAdapter == null) {
+        if (btAdapter == null || !haveBluetoothPermissionConnect) {
             computersPagerAdapter.removeFragment(Type.BLUETOOTH);
         }
 
@@ -78,7 +127,7 @@ public class ComputersActivity extends AppCompatActivity {
                 @Override
                 public void onTabSelected(TabLayout.Tab tab) {
                     super.onTabSelected(tab);
-                    if (btAdapter != null
+                    if (btAdapter != null && haveBluetoothPermissionConnect
                             && tab.getPosition() == btTab.getPosition()
                             && !btAdapter.isEnabled()) {
                         startActivityForResult(
@@ -88,13 +137,24 @@ public class ComputersActivity extends AppCompatActivity {
                 }
             }
         );
-
         btFab = (FloatingActionButton) findViewById(R.id.btFab);
         btFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (btAdapter != null && btAdapter.startDiscovery()) {
-                    btFab.setClickable(false);
+                btFab.clearAnimation();
+                if (btAdapter == null) {
+                    return;
+                }
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S && ContextCompat.checkSelfPermission(v.getContext(),
+                        Manifest.permission.BLUETOOTH_SCAN) != PackageManager.PERMISSION_GRANTED) {
+                    requestPermissionBTScan.launch(Manifest.permission.BLUETOOTH_SCAN);
+                    return;
+                } else {
+                    haveBluetoothPermissionScan = true;
+                }
+                if (btAdapter.isDiscovering()) {
+                    btAdapter.cancelDiscovery();
+                } else if (btAdapter.startDiscovery()) {
                     // workaround, see https://code.google.com/p/android/issues/detail?id=175696#c6
                     // when not delayed animation won't show on pre-lollipop unless switching tabs
                     btFab.postDelayed(new Runnable() {
@@ -133,7 +193,7 @@ public class ComputersActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu aMenu) {
         getMenuInflater().inflate(R.menu.menu_action_bar_computers, aMenu);
-        // ComputerFragement uses invalidateOptionsMKenu when BT-discovery broadcast is received
+        // ComputerFragment uses invalidateOptionsMenu when BT-discovery broadcast is received
         toggleFab(tabLayout.getSelectedTabPosition());
         return true;
     }
@@ -160,20 +220,18 @@ public class ComputersActivity extends AppCompatActivity {
                         wifiTab.select();
                         return;
                     }
-                    if (btAdapter.isDiscovering()) {
-                        btFab.setClickable(false);
+                    btFab.setClickable(true);
+                    btFab.clearAnimation();
+
+                    if (haveBluetoothPermissionScan && btAdapter.isDiscovering()) {
                         btFab.startAnimation(
                                 AnimationUtils.loadAnimation(getApplication(), R.anim.fabalpha));
-                    } else {
-                        btFab.setClickable(true);
-                        if(btFab.getAnimation() != null) {
-                            btFab.clearAnimation();
-                        }
                     }
                     btFab.show();
                 }
             });
         } else {
+            btFab.setClickable(false);
             btFab.hide(new FloatingActionButton.OnVisibilityChangedListener() {
                 @Override
                 public void onHidden(FloatingActionButton fab) {
@@ -186,7 +244,9 @@ public class ComputersActivity extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
-
+        if(btTab == null) {
+            return;
+        }
         SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.putBoolean(SELECT_BLUETOOTH, btTab.getPosition() == tabLayout.getSelectedTabPosition());
@@ -198,7 +258,7 @@ public class ComputersActivity extends AppCompatActivity {
         super.onStart();
 
         SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
-        if (btTab.getPosition() != TabLayout.Tab.INVALID_POSITION
+        if (haveBluetoothPermissionConnect && btTab.getPosition() != TabLayout.Tab.INVALID_POSITION
             && sharedPref.getBoolean(SELECT_BLUETOOTH, btAdapter != null)) {
             btTab.select();
         }
@@ -207,7 +267,7 @@ public class ComputersActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (isFinishing() && disableBTOnQuit) {
+        if (isFinishing() && disableBTOnQuit && haveBluetoothPermissionConnect) {
             btAdapter.disable();
         }
     }
