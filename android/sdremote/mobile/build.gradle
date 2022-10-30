@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     defaultConfig {
         minSdkVersion 14
-        versionCode   26
+        versionCode   28
     }
 
     flavorDimensions "default"

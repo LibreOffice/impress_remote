@@ -21,7 +21,8 @@ subprojects {
                 defaultConfig {
                     targetSdkVersion 32
                     namespace 'org.libreoffice.impressremote'
-                    versionName   '2.5.2'
+                    versionName   '2.6.0'
+                    setProperty("archivesBaseName", "ImpressRemote_vc${versionCode}_${versionName}")
                     // prevent having android studio create PNGs from the vectors
                     vectorDrawables.useSupportLibrary = true
 
