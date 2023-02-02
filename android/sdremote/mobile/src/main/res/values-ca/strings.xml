@@ -55,7 +55,7 @@
     <string name="preferences_volume_keys_actions_title">Accions de les tecles de volum</string>
     <string name="preferences_volume_keys_actions_summary">Les tecles de volum permeten desplaçar-se per les diapositives i activar les animacions</string>
     <string name="preferences_keep_screen_on_title">Mantén la pantalla activa</string>
-    <string name="preferences_keep_screen_on_summary">Evita que s\'apagui la pantalla del dispositiu durant la presentació</string>
+    <string name="preferences_keep_screen_on_summary">Evita que es desengegui la pantalla del dispositiu durant la presentació.</string>
     <string name="preferences_quiet_mode_title">Mode silenciós</string>
     <string name="preferences_quiet_mode_summary">Configura el mode de timbre de vibració durant la presentació</string>
     <string name="requirements_libreoffice_version">LibreOffice versió 4.0.3 o superior executant-se en un ordinador.</string>

@@ -55,7 +55,7 @@
     <string name="preferences_volume_keys_actions_title">Acciones de las teclas de volumen</string>
     <string name="preferences_volume_keys_actions_summary">Pasar las diapositivas y activar animaciones con las teclas de volumen</string>
     <string name="preferences_keep_screen_on_title">Mantener la pantalla activada</string>
-    <string name="preferences_keep_screen_on_summary">Desactivar el modo suspender del teléfono durante la presentación</string>
+    <string name="preferences_keep_screen_on_summary">Evita que el teléfono se suspenda durante la presentación</string>
     <string name="preferences_quiet_mode_title">Modo silencioso</string>
     <string name="preferences_quiet_mode_summary">Configurar el modo de timbre de vibración durante la presentación</string>
     <string name="requirements_libreoffice_version">LibreOffice versión 4.0.3 o superior se ejecuta en el ordenador.</string>
