@@ -1,2 +1,64 @@
-<?xml version='1.0' encoding='utf-8'?>
-<resources/>
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu_slides_pager">Đánh số trang chiếu</string>
+    <string name="requirements_libreoffice_general_enabled">Bật điều khiển Impress ở \"Công cụ → Tuỳ chọn → LibreOffice Impress → Chung\" trong LibreOffice Impress.</string>
+    <string name="message_search_wifi">Hãy đảm bảo rằng LibreOffice đang chạy trên máy tính đã kết nối với cùng một mạng Wifi.</string>
+    <string name="message_time_is_up">Hết giờ!</string>
+    <string name="message_ip_address_validation">Hãy nhập địa chỉ IP hợp lệ.</string>
+    <string name="message_impress_pairing_check">Trong trường hợp vấn đề về kết nối Bluetooth, hãy đọc các tài liệu được cung cấp bởi Hệ điều hành của bạn.</string>
+    <string name="message_impress_wifi_enabling">Bạn cũng nên bật tính năng thử nghiệm bằng cách vào “Công cụ → Tuỳ chọn → LibreOffice → Nâng cao\".</string>
+    <string name="message_impress_remote_enabling">Đảm bảo bạn đã bật điều khiển từ xa. Vào “Công cụ → Tuỳ chọn → LibreOffice Impress → Chung” trong LibreOffice Impress.</string>
+    <string name="message_connection_failed_title">Kết nối thất bại</string>
+    <string name="message_impress_pin_validation">Đi tới “Trình chiếu → Điều khiển Impress” trongLibreOffice Impress và nhập mã.</string>
+    <string name="button_remove">Loại bỏ</string>
+    <string name="button_start">Bắt đầu</string>
+    <string name="button_save">Lưu</string>
+    <string name="button_cancel">Huỷ</string>
+    <string name="menu_stop_pointer">Thoát con trỏ laser</string>
+    <string name="menu_start_pointer">Con trỏ laser</string>
+    <string name="menu_resume_slide_show">Tiếp tục trình chiếu</string>
+    <string name="menu_pause_slide_show">Tạm dừng trình chiếu</string>
+    <string name="menu_stop_slide_show">Dừng trình chiếu</string>
+    <string name="menu_timer">Hẹn giờ</string>
+    <string name="menu_slides_grid">Lưới trang chiếu</string>
+    <string name="menu_remove_computer">Loại bỏ</string>
+    <string name="menu_start_discovery">Bắt đầu Khám phá</string>
+    <string name="menu_add_computer">Thêm máy tính</string>
+    <string name="menu_reconnect">Kết nối lại</string>
+    <string name="menu_requirements">Yêu cầu</string>
+    <string name="menu_settings">Cài đặt</string>
+    <string name="title_timer">Hẹn giờ</string>
+    <string name="title_slide_show">Trình chiếu</string>
+    <string name="title_creation">Sáng tạo</string>
+    <string name="title_connection">Kết nối</string>
+    <string name="title_requirements">Yêu cầu</string>
+    <string name="title_settings">Cài đặt</string>
+    <string name="title_generic">Chung</string>
+    <string name="title_computers">Máy tính</string>
+    <string name="application_name">Điều khiển Impress</string>
+    <string name="requirements_bluetooth_connection">Một máy tính có bật Bluetooth.</string>
+    <string name="requirements_network_ports">Nếu như bạn đang sử dụng tường lửa, vui lòng đảm bảo các cổng 1598 và 1599 đã được mở.</string>
+    <string name="requirements_network_connection">Thiết bị Android và máy tính phải được kết nối với cùng một mạng.</string>
+    <string name="requirements_libreoffice_experimental_enabled">Bật các tính năng thử nghiệm tại \"Công cụ → Tuỳ chọn → LibreOffice → Nâng cao\" trong LibreOffice Impress.</string>
+    <string name="requirements_libreoffice_version">LibreOffice phiên bản 4.0.3 hoặc cao hơn đang hoạt động trên máy tính.</string>
+    <string name="preferences_quiet_mode_summary">Làm điện thoại im lặng (nhưng bật rung) trong lúc trình chiếu.</string>
+    <string name="preferences_quiet_mode_title">Chế độ im lặng</string>
+    <string name="preferences_keep_screen_on_summary">Đảm bảo rằng điện thoại của bạn không chuyển sang chế độ ngủ trong lúc trình chiếu.</string>
+    <string name="preferences_keep_screen_on_title">Giữ màn hình sáng</string>
+    <string name="preferences_volume_keys_actions_summary">Chuyển đổi giữa trang chiếu và kích hoạt hoạt ảnh bằng phím âm lượng</string>
+    <string name="preferences_volume_keys_actions_title">Hành động phím âm lượng</string>
+    <string name="description_empty_slide">Trang chiếu trống</string>
+    <string name="description_grid_slide">Xem trước trang chiếu</string>
+    <string name="description_pager_slide">Xem trước trang chiếu</string>
+    <plurals name="mask_timer_progress">
+        <item quantity="other">Còn lại %d phút</item>
+    </plurals>
+    <string name="mask_slide_show_progress">Trang %1$d / %2$d</string>
+    <string name="header_notes">Ghi chú</string>
+    <string name="hint_name">Tên (không bắt buộc)</string>
+    <string name="hint_ip_address">Địa chỉ IP</string>
+    <string name="message_notes_empty">Không có gì ở đây cả</string>
+    <string name="message_paused">Đã tạm dừng</string>
+    <string name="message_learn_more"><a href="org.libreoffice.impressremote://requirements/">Tìm hiểu thêm</a></string>
+    <string name="message_search_bluetooth">Hãy đảm bảo rằng LibreOffice đang chạy trên máy tính đã bật Bluetooth.</string>
+</resources>
