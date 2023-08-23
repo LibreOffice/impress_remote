@@ -259,9 +259,6 @@ public class ComputerConnectionFragment extends Fragment implements ServiceConne
             case BLUETOOTH:
                 return getString(R.string.message_impress_pairing_check);
 
-            case TCP:
-                return getString(R.string.message_impress_wifi_enabling);
-
             default:
                 return "";
         }

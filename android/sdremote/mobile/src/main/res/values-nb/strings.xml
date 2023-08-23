@@ -30,7 +30,6 @@
     <string name="message_impress_pin_validation">Gå til «Lysbildeframvisning → Impress Remote» i LibreOffice Impress, og skriv inn koden.</string>
     <string name="message_connection_failed_title">Tilkoblinga mislyktes</string>
     <string name="message_impress_remote_enabling">Sørg for at fjernkontrollen er påslått. Gå til «Verktøy → Innstillinger → LibreOffice Impress → Generelt» i LibreOffice Impress.</string>
-    <string name="message_impress_wifi_enabling">Du bør også slå på de eksperimentelle funksjonene i «Verktøy → LibreOffice → Avansert».</string>
     <string name="message_impress_pairing_check">Les instruksjonene for ditt operativsystem hvis du har problemer med paring av Bluetooth-enheter.</string>
     <string name="message_ip_address_validation">Skriv inn en gyldig IP-adresse.</string>
     <string name="message_time_is_up">Tiden er ute!</string>

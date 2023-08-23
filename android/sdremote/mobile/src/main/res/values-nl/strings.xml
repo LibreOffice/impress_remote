@@ -30,7 +30,6 @@
     <string name="message_impress_pin_validation">Ga naar \"Presentatie &gt; ​​Impress afstandsbediening\" in LibreOffice Impress en voer de code in.</string>
     <string name="message_connection_failed_title">Verbinding mislukt</string>
     <string name="message_impress_remote_enabling">Zorg ervoor dat de afstandsbediening is ingeschakeld. Ga naar \"Extra &gt; Opties &gt; LibreOffice Impress &gt; Algemeen\", in LibreOffice Impress.</string>
-    <string name="message_impress_wifi_enabling">U moet ook experimentele functies inschakelen in \"Extra &gt; Opties &gt; LibreOffice &gt; Geavanceerd\".</string>
     <string name="message_impress_pairing_check">Als u Bluetooth-problemen heeft, bekijk de instructies met betrekking tot uw desktop OS.</string>
     <string name="message_ip_address_validation">Type een geldig IP-adres in.</string>
     <string name="message_time_is_up">Tijd is om!</string>

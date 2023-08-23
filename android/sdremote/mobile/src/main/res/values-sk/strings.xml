@@ -30,7 +30,6 @@
   <string name="message_impress_pin_validation">V programe LibreOffice Impress prejdite na \"Prezentácia → Diaľkové ovládanie prezentácie\" a zadajte kód.</string>
   <string name="message_connection_failed_title">Pripojenie zlyhalo</string>
   <string name="message_impress_remote_enabling">Overte si, že diaľkové ovládanie je povolené. V programe LibreOffice Impress prejdite na \"Nástroje → Možnosti → LibreOffice Impress → Všeobecné\".</string>
-  <string name="message_impress_wifi_enabling">Mali by ste tiež povoliť experimentálne funkcie v \"Nástroje → Možnosti → LibreOffice → Pokročilé\".</string>
   <string name="message_impress_pairing_check">Ak máte problémy s párovaním Bluetooth zariadení, overte si postup zodpovedajúci vášmu operačnému systému.</string>
   <string name="message_ip_address_validation">Zadajte platnú IP adresu.</string>
   <string name="message_time_is_up">Čas vypršal!</string>

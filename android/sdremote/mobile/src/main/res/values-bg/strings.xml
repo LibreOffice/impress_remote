@@ -30,7 +30,6 @@
     <string name="message_impress_pin_validation">В LibreOffice Impress изберете „Прожекция → Impress Remote“ и въведете кода.</string>
     <string name="message_connection_failed_title">Неуспешно свързване</string>
     <string name="message_impress_remote_enabling">Уверете се, че дистанционното управление е разрешено в „Инструменти → Настройки → LibreOffice Impress → Общи“ в LibreOffice Impress.</string>
-    <string name="message_impress_wifi_enabling">Освен това трябва да е разрешена експерименталната функционалност в „Инструменти → Настройки → LibreOffice → Разширени“.</string>
     <string name="message_impress_pairing_check">Ако срещате проблеми с връзката чрез Bluetooth, вижте указанията за настолната ви операционна система.</string>
     <string name="message_ip_address_validation">Въведете валиден IP адрес.</string>
     <string name="message_time_is_up">Времето изтече!</string>

@@ -30,7 +30,6 @@
     <string name="message_impress_pin_validation">Farðu í \"Skyggnukynning - Impress fjarstýring\" í LibreOffice Impress og sláðu inn kóðann.</string>
     <string name="message_connection_failed_title">Villa við tengingu</string>
     <string name="message_impress_remote_enabling">Vertu viss um að þú hafir virkjað Impress fjarstýringuna. Farðu í “Verkfæri → Valkostir → LibreOffice Impress → Almennt” í LibreOffice Impress.</string>
-    <string name="message_impress_wifi_enabling">Þú ættir einnig að virkja eiginleika á tilraunastigi í “Verkfæri → Valkostir → LibreOffice Impress → Nánar” í LibreOffice Impress.</string>
     <string name="message_impress_pairing_check">Ef þú ert í vandræðum með pörun Bluetooth-tækja, ættirðu að skoða leiðbeiningar sem eiga við stýrikerfi tölvunnar.</string>
     <string name="message_ip_address_validation">Gefðu upp gilda IP-tölu.</string>
     <string name="message_time_is_up">Tíminn er búinn!</string>

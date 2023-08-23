@@ -30,7 +30,6 @@
     <string name="message_impress_pin_validation">Valitse LibreOffice Impressin kohta Diaesitys → Impress-kauko-ohjain ja syötä koodi.</string>
     <string name="message_connection_failed_title">Yhteyden muodostaminen epäonnistui</string>
     <string name="message_impress_remote_enabling">Varmista, että kauko-ohjaus on käytössä. Mene LibreOfficen kohtaan Työkalut → Asetukset → LibreOffice Impress → Yleiset.</string>
-    <string name="message_impress_wifi_enabling">Ota kokeelliset ominaisuudet käyttöön kohdassa Työkalut → Asetukset → LibreOffice → Lisäasetukset.</string>
     <string name="message_impress_pairing_check">Jos Bluetooth-pariyhteyden muodostamisessa on ongelmia, lue työpöytäkäyttöjärjestelmääsi koskevat ohjeet.</string>
     <string name="message_ip_address_validation">Syötä kelvollinen IP-osoite.</string>
     <string name="message_time_is_up">Aika lopussa!</string>

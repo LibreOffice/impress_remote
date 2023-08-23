@@ -30,7 +30,6 @@
   <string name="message_impress_pin_validation">在 LibreOffice Impress 按下 [投影片放映 → Impress 遙控]，接著輸入代碼。</string>
   <string name="message_connection_failed_title">連線失敗</string>
   <string name="message_impress_remote_enabling">請確認您已啟用遠端控制功能。前往 LibreOffice Impress 中的 [工具 → 選項 → LibreOffice Impress → 一般 之下啟用。</string>
-  <string name="message_impress_wifi_enabling">您應該也要啟用 [工具 → 選項 → LibreOffice → 進階] 之下的實驗性功能。</string>
   <string name="message_impress_pairing_check">如果您發生藍牙配對問題，請檢查與您桌面作業系統相關的指示。</string>
   <string name="message_ip_address_validation">請輸入有效的 IP 位址。</string>
   <string name="message_time_is_up">時間到！</string>

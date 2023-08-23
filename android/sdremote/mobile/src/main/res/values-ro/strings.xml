@@ -30,7 +30,6 @@
   <string name="message_impress_pin_validation">Mergeți la „Prezentare → Impress de la distanță” în LibreOffice Impress și introduceți codul.</string>
   <string name="message_connection_failed_title">Conectare eșuată</string>
   <string name="message_impress_remote_enabling">Asigurați-vă că ați activat controlul de la distanță. Se poate activa în „Unelte - Opțiuni - LibreOffice Impress - General” în LibreOffice Impress.</string>
-  <string name="message_impress_wifi_enabling">Trebuie să activați și opțiunile experimentale din “Unelte → Opțiuni → LibreOffice → Avansat”.</string>
   <string name="message_impress_pairing_check">Dacă aveți probleme cu împerecherea pe Bluetooth citiți manualul sistemului de operare folosit.</string>
   <string name="message_ip_address_validation">Introduceți o adresă IP corectă.</string>
   <string name="message_time_is_up">Timpul a expirat!</string>

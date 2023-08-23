@@ -30,7 +30,6 @@
     <string name="message_impress_pin_validation">Allez dans \"Diaporama →Contrôle distant Impress\" dans LibreOffice et saisissez le code.</string>
     <string name="message_connection_failed_title">La connexion a échoué</string>
     <string name="message_impress_remote_enabling">Assurez-vous d\'avoir activé le contrôle distant. Allez dans \"Outils →Options →LibreOffice Impress →Général\" dans LibreOffice Impress.</string>
-    <string name="message_impress_wifi_enabling">Vous devez également activer les fonctions expérimentales dans \"Outils →Options →LibreOffice →Avancé\".</string>
     <string name="message_impress_pairing_check">Si vous avez un problème de couplage Bluetooth, veuillez vérifier les instructions relatives à l\'environnement de bureau de votre OS.</string>
     <string name="message_ip_address_validation">Saisissez une adresse IP valide.</string>
     <string name="message_time_is_up">Délai écoulé !</string>

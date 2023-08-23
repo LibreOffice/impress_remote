@@ -30,7 +30,6 @@
     <string name="message_impress_pin_validation">U LibreOffice Impressu, idi na „Prezentacija → Impress Remote” i upiši kȏd.</string>
     <string name="message_connection_failed_title">Povezivanje nije uspjelo</string>
     <string name="message_impress_remote_enabling">Provjeri, je li uključeno daljinsko upravljanje. U LibreOffice Impressu, provjeri „Alati → Mogućnosti → LibreOffice Impress → Opće”.</string>
-    <string name="message_impress_wifi_enabling">Potrebno je aktivirati i eksperimentalne funkcije u „Alati → Mogućnosti → LibreOffice → Napredno”.</string>
     <string name="message_impress_pairing_check">Pri problemima povezivanja putem Bluetootha, pročitaj upute tvog operacijskog sustava.</string>
     <string name="message_ip_address_validation">Upiši valjanu IP adresu.</string>
     <string name="message_time_is_up">Vrijeme je isteklo!</string>

@@ -30,7 +30,6 @@
     <string name="message_impress_pin_validation">Akses menu “Pertunjukan Salindia → Impress Remote” pada LibreOffice Impress dan masukkan kodenya.</string>
     <string name="message_connection_failed_title">Koneksi gagal</string>
     <string name="message_impress_remote_enabling">Pastikan kendali jauh telah aktif. Akses menu “Perkakas → Opsi → LibreOffice Impress → Umum” pada LibreOffice Impress.</string>
-    <string name="message_impress_wifi_enabling">Anda juga harus mengaktifkan fitur uji coba pada menu “Perkakas → Opsi → LibreOffice → Lanjutan”.</string>
     <string name="message_impress_pairing_check">Jika Anda memiliki masalah pemasangan dua perangkat Bluetooth, periksalah instruksi sesuai OS desktop Anda.</string>
     <string name="message_ip_address_validation">Ketik alamat IP yang benar.</string>
     <string name="message_time_is_up">Waktu habis!</string>

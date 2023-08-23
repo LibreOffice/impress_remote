@@ -30,7 +30,6 @@
     <string name="message_impress_pin_validation">В LibreOffice Impress выполните «Демонстрация → Пульт ДУ Impress» и введите код.</string>
     <string name="message_connection_failed_title">Сбой подключения</string>
     <string name="message_impress_remote_enabling">Убедитесь, что дистанционное управление разрешено в «Сервис → Параметры → LibreOffice Impress → Общие» в LibreOffice Impress.</string>
-    <string name="message_impress_wifi_enabling">Также, необходимо разрешить экспериментальные возможности в «Сервис → Параметры → Расширенные возможности».</string>
     <string name="message_impress_pairing_check">При трудностях с соединением Bluetooth обратитесь к инструкциям операционной системы компьютера.</string>
     <string name="message_ip_address_validation">Введите правильный адрес IP.</string>
     <string name="message_time_is_up">Время вышло!</string>

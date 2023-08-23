@@ -30,7 +30,6 @@
   <string name="message_impress_pin_validation">Πηγαίνετε στο “Παρουσίαση → Απομακρυσμένο Impress” στο LibreOffice Impress και εισαγωγή του κώδικα.</string>
   <string name="message_connection_failed_title">Αποτυχία σύνδεσης</string>
   <string name="message_impress_remote_enabling">Βεβαιωθείτε ότι ενεργοποιήσατε τον απομακρυσμένο έλεγχο. Πηγαίνετε στο “Εργαλεία → Επιλογές → LibreOffice Impress → Γενικά” στο LibreOffice Impress.</string>
-  <string name="message_impress_wifi_enabling">Θα πρέπει να ενεργοποιήσετε πειραματικά γνωρίσματα στο “Εργαλεία → Επιλογές → LibreOffice → Προχωρημένα” επίσης.</string>
   <string name="message_impress_pairing_check">Αν έχετε προβλήματα σύνδεσης μπλουτούθ κοιτάξτε τις οδηγίες τις σχετικές με το λειτουργικό της επιφάνειας εργασίας σας.</string>
   <string name="message_ip_address_validation">Πληκτρολογήστε μια έγκυρη διεύθυνση IP.</string>
   <string name="message_time_is_up">Λήξη χρόνου!</string>

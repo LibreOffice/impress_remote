@@ -30,7 +30,6 @@
     <string name="message_impress_pin_validation">리브레오피스 임프레스의 \"슬라이드 쇼 → 임프레스 리모트\"로 선택한 후, 코드를 입력하세요.</string>
     <string name="message_connection_failed_title">연결 실패</string>
     <string name="message_impress_remote_enabling">원격 제어를 사용할 수 있도록 설정하세요. 리브레오피스의 임프레스에서 \"도구 → 옵션 → 리브레오피스 임프레스 → 일반\"을 선택하세요.</string>
-    <string name="message_impress_wifi_enabling">\"도구 → 옵션 → 리브레오피스 → 고급\" 에서 실험적인 기능 활성화로 설정해야 합니다.</string>
     <string name="message_impress_pairing_check">블루투스 페어링에 문제가 발생하였다면, 운영체제에 관련된 문서지원을 확인해 보세요.</string>
     <string name="message_ip_address_validation">유효한 IP주소를 입력하세요.</string>
     <string name="message_time_is_up">시간이 되었습니다!</string>

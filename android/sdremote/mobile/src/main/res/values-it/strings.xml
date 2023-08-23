@@ -30,7 +30,6 @@
     <string name="message_impress_pin_validation">Vai a \"Presentazione → Impress Remote” in LibreOffice Impress e inserisci il codice.</string>
     <string name="message_connection_failed_title">Connessione non riuscita</string>
     <string name="message_impress_remote_enabling">Assicurati di aver abilitato il controllo remoto. Vai a “Strumenti → Opzioni → LibreOffice Impress → Generale” in LibreOffice Impress.</string>
-    <string name="message_impress_wifi_enabling">Devi anche abilitare le funzionalità sperimentali in “Strumenti → Opzioni → LibreOffice → Avanzate”.</string>
     <string name="message_impress_pairing_check">Se hai problemi con l\'abbinamento Bluetooth controlla le istruzioni relative al tuo sistema operativo desktop.</string>
     <string name="message_ip_address_validation">Inserisci un indirizzo IP valido.</string>
     <string name="message_time_is_up">Tempo scaduto!</string>

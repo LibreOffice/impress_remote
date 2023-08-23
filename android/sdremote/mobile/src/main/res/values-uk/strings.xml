@@ -30,7 +30,6 @@
     <string name="message_impress_pin_validation">Перейдіть до “Показ → Дистанційне керування Impress” у LibreOffice Impress та введіть код.</string>
     <string name="message_connection_failed_title">Збій з\'єднання</string>
     <string name="message_impress_remote_enabling">Переконайтеся, що ви увімкнули дистанційне керування. Перейдіть до “Засоби → Параметри → LibreOffice Impress → Загальне” у LibreOffice Impress.</string>
-    <string name="message_impress_wifi_enabling">Ви також маєте увімкнути експериментальні можливості у “Засоби → Параметри → LibreOffice → Додатково”.</string>
     <string name="message_impress_pairing_check">Якщо у вас наявні проблеми спаровування пристроїв Bluetooth, то прочитайте вказівки з цього питання для вашої ОС.</string>
     <string name="message_ip_address_validation">Введіть правильну IP-адресу.</string>
     <string name="message_time_is_up">Час вийшов!</string>

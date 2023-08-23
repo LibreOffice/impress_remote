@@ -30,7 +30,6 @@
     <string name="message_impress_pin_validation">A LibreOffice Impressben válassza a „Diavetítés → Impress távirányító” menüparancsot, és írja be a kódot.</string>
     <string name="message_connection_failed_title">Sikertelen kapcsolat</string>
     <string name="message_impress_remote_enabling">Ellenőrizze, hogy engedélyezte-e a távirányítót a LibreOffice Impress „Eszközök → Beállítások → LibreOffice Impress → Általános” paneljén.</string>
-    <string name="message_impress_wifi_enabling">A kísérleti funkciókat is engedélyeznie kell az „Eszközök → Beállítások → LibreOffice → Speciális” panelen.</string>
     <string name="message_impress_pairing_check">Ha a Bluetooth-párosítással vannak problémái, olvassa el az asztali operációs rendszerének használati utasítását.</string>
     <string name="message_ip_address_validation">Írjon be egy érvényes IP-címet.</string>
     <string name="message_time_is_up">Lejárt az idő!</string>

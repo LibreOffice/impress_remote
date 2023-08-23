@@ -30,7 +30,6 @@
     <string name="message_impress_pin_validation">Ir a «Presentación → Control remoto do Impress» no Impress de LibreOffice e introducir o código.</string>
     <string name="message_connection_failed_title">A conexión fallou</string>
     <string name="message_impress_remote_enabling">Asegúrese de ter activado o control remoto. Ir a «Ferramentas → Opcións → Impress de LibreOffice → Xeral» no Impress de LibreOffice.</string>
-    <string name="message_impress_wifi_enabling">Debería activar as funcionalidades experimentais en «Ferramentas → Opcións → LibreOffice → Avanzado» tamén.</string>
     <string name="message_impress_pairing_check">No caso de ter problemas co emparellamento por bluetooh, comprobe as instrucións relativas ao seu sistema operativo de escritorio.</string>
     <string name="message_ip_address_validation">Escriba un enderezo IP válido.</string>
     <string name="message_time_is_up">Rematou o tempo!</string>

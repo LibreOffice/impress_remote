@@ -30,7 +30,6 @@
     <string name="message_impress_pin_validation">LibreOffice Impressで「スライドショー → Impressリモート」を選択して、コードを入力してください。</string>
     <string name="message_connection_failed_title">接続失敗</string>
     <string name="message_impress_remote_enabling">リモートからの操作を有効に指定していますか？LibreOffice Impressで、「ツール→オプション→LibreOffice Impress→全般」を選択して確認してください。</string>
-    <string name="message_impress_wifi_enabling">同様に「ツール → オプション → LibreOffice → 詳細」を選択し、実験的（不安定）なオプションを有効にする必要があります。</string>
     <string name="message_impress_pairing_check">Bluetoothのペアリングで問題があった場合は、デスクトップOSでの設定手続きを確認してください。</string>
     <string name="message_ip_address_validation">正しい IP アドレスを入力してください。</string>
     <string name="message_time_is_up">タイムアップです！</string>

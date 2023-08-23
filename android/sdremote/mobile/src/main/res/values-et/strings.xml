@@ -30,7 +30,6 @@
     <string name="message_impress_pin_validation">Vali LibreOffice Impressi menüüst Slaidiseanss - Kaugjuhtimispult ning sisesta kood.</string>
     <string name="message_connection_failed_title">Ühendumine nurjus</string>
     <string name="message_impress_remote_enabling">Vaata, et kaugjuhtimispult oleks lubatud. Selleks vali LibreOffice Impressis menüüst Tööriistad - Sätted - LibreOffice Impress - Üldine.</string>
-    <string name="message_impress_wifi_enabling">Lubada tuleb ka katselised võimalused (Tööriistad - Sätted - LibreOffice - Edasijõudnuile).</string>
     <string name="message_impress_pairing_check">Kui seadmeid ei õnnestu Bluetoothi kaudu siduda, siis otsi juhiseid vastavalt arvuti opsüsteemile.</string>
     <string name="message_ip_address_validation">Sisesta korrektne IP-aadress.</string>
     <string name="message_time_is_up">Aeg on täis!</string>

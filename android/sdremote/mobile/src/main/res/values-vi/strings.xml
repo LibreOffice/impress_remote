@@ -6,7 +6,6 @@
     <string name="message_time_is_up">Hết giờ!</string>
     <string name="message_ip_address_validation">Hãy nhập địa chỉ IP hợp lệ.</string>
     <string name="message_impress_pairing_check">Trong trường hợp vấn đề về kết nối Bluetooth, hãy đọc các tài liệu được cung cấp bởi Hệ điều hành của bạn.</string>
-    <string name="message_impress_wifi_enabling">Bạn cũng nên bật tính năng thử nghiệm bằng cách vào “Công cụ → Tuỳ chọn → LibreOffice → Nâng cao\".</string>
     <string name="message_impress_remote_enabling">Đảm bảo bạn đã bật điều khiển từ xa. Vào “Công cụ → Tuỳ chọn → LibreOffice Impress → Chung” trong LibreOffice Impress.</string>
     <string name="message_connection_failed_title">Kết nối thất bại</string>
     <string name="message_impress_pin_validation">Đi tới “Trình chiếu → Điều khiển Impress” trongLibreOffice Impress và nhập mã.</string>

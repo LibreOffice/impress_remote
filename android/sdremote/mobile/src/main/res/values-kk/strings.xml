@@ -58,7 +58,6 @@
     <string name="message_search_wifi">LibreOffice дәл сол WiFi желісіндегі компьютерде іске қосылып тұрғанын тексеріңіз.</string>
     <string name="message_ip_address_validation">Жарамды IP адресін енгізіңіз.</string>
     <string name="message_impress_pairing_check">Bluetooth жұптау мәселесі орын алса, операциялық жүйеңіздің құжаттамасын қараңыз.</string>
-    <string name="message_impress_wifi_enabling">Сонымен қатар, \"Саймандар ▸ Опциялар ▸ LibreOffice ▸ Кеңейтілген\" ішінде тәжірибелі мүмкіндіктерді іске қосу керек.</string>
     <string name="message_impress_remote_enabling">LibreOffice Impress ішінде қашықтан басқару іске қосылғанын тексеріңіз. \"Саймандар ▸ Опциялар ▸ LibreOffice Impress → Жалпы\" қараңыз.</string>
     <string name="message_impress_pin_validation">LibreOffice Impress ішінде \"Слайдшоу ▸ Impress-ті қашықтан басқару\" ашып, кодты енгізіңіз.</string>
     <string name="menu_stop_pointer">Сілтеу таяқшасын сөндіру</string>

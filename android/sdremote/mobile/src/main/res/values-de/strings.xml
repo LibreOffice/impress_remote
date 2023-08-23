@@ -30,7 +30,6 @@
     <string name="message_impress_pin_validation">Klicken Sie im Menü von LibreOffice Impress auf \"Bildschirmpräsentation → Impress-Fernsteuerung\" und geben Sie den Code ein.</string>
     <string name="message_connection_failed_title">Verbindung fehlgeschlagen</string>
     <string name="message_impress_remote_enabling">Stellen Sie sicher, dass Sie die Fernsteuerung aktiviert haben. Klicken Sie hierzu im Menü von LibreOffice Impress auf „Extras → Optionen... → LibreOffice Impress → Allgemein“.</string>
-    <string name="message_impress_wifi_enabling">Sie sollten auch die experimentellen Funktionen im Menü unter „Extras → Optionen... → LibreOffice → Erweitert“ aktiviert haben.</string>
     <string name="message_impress_pairing_check">Falls Sie Probleme beim Verbindungsaufbau über Bluetooth haben, überprüfen Sie die Anweisungen für Ihr Betriebssystem.</string>
     <string name="message_ip_address_validation">Geben Sie eine gültige IP-Adresse ein.</string>
     <string name="message_time_is_up">Die Zeit ist abgelaufen!</string>

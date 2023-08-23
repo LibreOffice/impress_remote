@@ -30,7 +30,6 @@
   <string name="message_impress_pin_validation">„LibreOffice“ pateikčių rengyklėje atverkite meniu punktą „Demonstravimas → „Impress“ nuotolinis valdymas“ ir įveskite kodą.</string>
   <string name="message_connection_failed_title">Nepavyko užmegzti ryšio</string>
   <string name="message_impress_remote_enabling">Įsitikinkite, jog įgalintas nuotolinis valdymas. „LibreOffice“ pateikčių rengyklėje atverkite meniu punktą „Priemonės → Parinktys → „LibreOffice“ pateikčių rengyklė → Bendra“.</string>
-  <string name="message_impress_wifi_enabling">Taip pat derėtų įgalinti eksperimentines funkcijas. Tai daroma, atvėrus meniu „Priemonės → Parinktys → „LibreOffice“ → Kitkas“.</string>
   <string name="message_impress_pairing_check">Jeigu turite problemų suporuojant įrenginius per „Bluetooth“, pasidomėkite susijusia dokumentacija Jūsų naudojamai operacinei sistemai.</string>
   <string name="message_ip_address_validation">Įveskite galiojantį IP adresą.</string>
   <string name="message_time_is_up">Laikas baigėsi!</string>

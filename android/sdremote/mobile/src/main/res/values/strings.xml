@@ -54,7 +54,6 @@
     <string name="message_impress_pin_validation">Go to “Slide Show → Impress Remote” in LibreOffice Impress and enter the code.</string>
     <string name="message_connection_failed_title">Connection failed</string>
     <string name="message_impress_remote_enabling">Make sure you have enabled remote control. Go to “Tools → Options → LibreOffice Impress → General” in LibreOffice Impress.</string>
-    <string name="message_impress_wifi_enabling">You should also enable experimental features using “Tools → Options → LibreOffice → Advanced”.</string>
     <string name="message_impress_pairing_check">In case of Bluetooth pairing issues, please read the documentation supplied by your Operating System.</string>
     <string name="message_ip_address_validation">Please enter a valid IP address.</string>
     <string name="message_time_is_up">Time is up!</string>

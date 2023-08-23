@@ -30,7 +30,6 @@
   <string name="message_impress_pin_validation">லிப்ரெஓபிஸ் இம்பிரெஸில் \"படவில்லை காட்சி → இம்பிரெஸ் ரிமோட்\" சென்று குறீயீடுகளை உள்ளிடு.</string>
   <string name="message_connection_failed_title">இணைப்பு தோல்வியுற்றது.</string>
   <string name="message_impress_remote_enabling">தொலைநிலைக் கட்டுப்பாடு செயலில் உள்ளதா என உறுதிச்செய். லிப்ரெஓபிஸ் இம்பிரெஸில் “கருவிகள் → தேர்வுகள் → லிப்ரெஓபிஸ் இம்பிரெஸ் → பொது” என்பதற்கு செல்.</string>
-  <string name="message_impress_wifi_enabling">நீங்கள் “கருவிகள் → தேர்வுகள் → லிப்ரெஓபிஸ் → மேம்பட்டது” என்பதில் சோதனை அம்சங்களை செயல்படுத்தி இருக்க வேண்டும்.</string>
   <string name="message_impress_pairing_check">ப்ளூடூத் சாதனங்களை சோடி சேர்த்தலில் உங்களுக்கு பிரச்சனை இருந்தால் மேசைக் கணினியின் இயங்கு தளத்திற்கான வழிமுறைகளை சரிபார்க்கவும்.</string>
   <string name="message_ip_address_validation">சரியான IP முகவரியை உள்ளிடு.</string>
   <string name="message_time_is_up">நேரம் முடிந்தது!</string>

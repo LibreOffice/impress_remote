@@ -30,7 +30,6 @@
     <string name="message_impress_pin_validation">Aceda a “Apresentação → Impress Remote” no LibreOffice Impress e introduza o código.</string>
     <string name="message_connection_failed_title">Falha na ligação</string>
     <string name="message_impress_remote_enabling">Certifique-se de que ativou o controlo remoto. Aceda a “Ferramentas → Opções → LibreOffice Impress → Geral” no LibreOffice Impress.</string>
-    <string name="message_impress_wifi_enabling">Deverá também ativar as funcionalidades de teste em “Ferramentas → Opções → LibreOffice → Avançado”.</string>
     <string name="message_impress_pairing_check">Sem existirem problemas com o emparelhamento de dispositivos Buletooth, verifique a documentação do seu sistema operativo.</string>
     <string name="message_ip_address_validation">Escreva um endereço IP válido.</string>
     <string name="message_time_is_up">O tempo acabou!</string>

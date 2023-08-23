@@ -28,7 +28,6 @@
     <string name="requirements_libreoffice_version">LibreOffice 4.0.3 bertsioa edo berriagoa ari da exekutatzen ordenagailuan.</string>
     <string name="preferences_quiet_mode_summary">Isildu telefonoa (baina gaitu bibrazioa) aurkezpenetan.</string>
     <string name="message_impress_pairing_check">Bluetooth parekatzeetan arazoak badituzu, irakurri zure sistema eragilearen dokumentazioa.</string>
-    <string name="message_impress_wifi_enabling">Eginbide esperimentalak ere aktibatu behar dira \'Tresnak → Aukerak → LibreOffice → Aurreratua\' atalean.</string>
     <string name="message_impress_remote_enabling">Ziurtatu urruneko kontrola gaituta dagoela. Joan \'Tresnak → Aukerak → LibreOffice Impress → Orokorra\' atalera LibreOffice Impressen.</string>
     <string name="message_impress_pin_validation">Joan \'Diapositiba-aurkezpena → Impress Remote\' atalera, LibreOffice Impressen, eta sartu kodea.</string>
     <string name="preferences_quiet_mode_title">Modu isila</string>

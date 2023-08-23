@@ -30,7 +30,6 @@
     <string name="message_impress_pin_validation">Aneu a Presentació de diapositives ▸ Telecomanda de l\'Impress al LibreOffice Impress i introduïu el codi.</string>
     <string name="message_connection_failed_title">La connexió ha fallat</string>
     <string name="message_impress_remote_enabling">Assegureu-vos que heu activat la telecomanda. Aneu a Eines ▸ Opcions ▸ LibreOffice Impress ▸ General al LibreOffice Impress.</string>
-    <string name="message_impress_wifi_enabling">"També heu d\'habilitar les funcionalitats experimentals  a Eines ▸ Opcions ▸ LibreOffice ▸ Avançat."</string>
     <string name="message_impress_pairing_check">Si teniu problemes de connexió Bluetooth, consulteu la documentació fornida pel vostre sistema operatiu.</string>
     <string name="message_ip_address_validation">Introduïu una adreça IP vàlida.</string>
     <string name="message_time_is_up">S\'ha acabat el temps!</string>

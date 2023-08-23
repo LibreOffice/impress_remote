@@ -30,7 +30,6 @@
     <string name="message_impress_pin_validation">V LibreOffice Impress pojdite na »Projekcija → Daljinec za Impress« in vnesite kodo.</string>
     <string name="message_connection_failed_title">Povezava ni uspela</string>
     <string name="message_impress_remote_enabling">Preverite, da ste omogočili daljinec. Odprite »Orodja → Možnosti → LibreOffice Impress → Splošno« v LibreOffice Impress.</string>
-    <string name="message_impress_wifi_enabling">Prav tako omogočite poskusne funkcionalnosti v »Orodja → Možnosti → LibreOffice → Napredno«.</string>
     <string name="message_impress_pairing_check">Če imate težave pri ujemanju naprav prek vmesnika Bluetooth, preverite napotke svojega namiznega operacijskega sistema.</string>
     <string name="message_ip_address_validation">Vnesite veljaven naslov IP.</string>
     <string name="message_time_is_up">Čas je potekel!</string>
