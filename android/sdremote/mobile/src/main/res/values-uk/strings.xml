@@ -61,7 +61,6 @@
     <string name="preferences_quiet_mode_summary">Установка режиму вібрації дзвінка під час презентації</string>
     <string name="requirements_libreoffice_version">На комп\'ютері запущено LibreOffice версії 4.0.3 або вищої.</string>
     <string name="requirements_libreoffice_general_enabled">Дистанційне керування Impress увімкнено на вкладці “Засоби → Параметри → LibreOffice Impress → Загальне” у LibreOffice Impress.</string>
-    <string name="requirements_libreoffice_experimental_enabled">Експериментальні можливості увімкнено на вкладці “Засоби → Параметри → LibreOffice → Додатково” у LibreOffice Impress.</string>
     <string name="requirements_network_connection">Пристрій на Android і комп\'ютер з\'єднані з однаковою мережею.</string>
     <string name="requirements_network_ports">Якщо у вас є брандмауер, то переконайтеся, що порти 1598 та 1599 - відкриті.</string>
     <string name="requirements_bluetooth_connection">Комп\'ютер з увімкненим Bluetooth.</string>

@@ -58,7 +58,6 @@
     <string name="preferences_quiet_mode_summary">Esitluse ajaks läheb telefon värinarežiimi</string>
     <string name="requirements_libreoffice_version">Arvutis töötav LibreOffice\'i versioon 4.0.3 või uuem</string>
     <string name="requirements_libreoffice_general_enabled">LibreOffice Impressi seadetes kaugjuhtimispult lubatud (Tööriistad - Sätted - LibreOffice Impress - Üldine).</string>
-    <string name="requirements_libreoffice_experimental_enabled">LibreOffice\'i seadetes katselised võimalused lubatud (Tööriistad - Sätted - LibreOffice - Edasijõudnuile).</string>
     <string name="requirements_network_connection">Samasse võrku ühendatud Androidi-seade ja arvuti.</string>
     <string name="requirements_network_ports">Kui tulemüür töötab, siis tuleb avada pordid 1598 ja 1599.</string>
     <string name="requirements_bluetooth_connection">Sisselülitatud Bluetoothiga arvuti.</string>

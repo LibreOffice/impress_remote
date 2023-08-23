@@ -60,7 +60,6 @@
     <string name="preferences_quiet_mode_summary">Sett på vibrasjonsmodus under presentasjonen</string>
     <string name="requirements_libreoffice_version">En datamaskin med LibreOffice versjon 4.0.3 eller nyere.</string>
     <string name="requirements_libreoffice_general_enabled">Impress Remote påslått i «Verktøy → Innstillinger → LibreOffice Impress → Generelt» i LibreOffice Impress.</string>
-    <string name="requirements_libreoffice_experimental_enabled">Eksperimentelle funksjoner påslått i «Verktøy → Innstillinger → LibreOffice → Avansert» i LibreOffice Impress.</string>
     <string name="requirements_network_connection">En Android-enhet og datamaskin tilkoblet det samme nettverket.</string>
     <string name="requirements_network_ports">Hvis du har en brannmur, må portene «1598» og «1599» være åpne.</string>
     <string name="requirements_bluetooth_connection">En datamaskin med Bluetooth påslått.</string>

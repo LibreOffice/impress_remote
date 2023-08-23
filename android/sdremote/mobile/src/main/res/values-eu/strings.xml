@@ -60,6 +60,5 @@
     <string name="requirements_bluetooth_connection">Bluetooth gaituta duen ordenagailu bat.</string>
     <string name="requirements_network_ports">Suebakia baduzu, ziurtatu 1598 eta 1599 atakak irekita daudela.</string>
     <string name="requirements_network_connection">Android gailua eta ordenagailu bat, sare berera konektatuta.</string>
-    <string name="requirements_libreoffice_experimental_enabled">Eginbide esperimentalak \'Tresnak → Aukerak → LibreOffice → Aurreratua\' atalean gaitzen dira, LibreOffice Impressen.</string>
     <string name="requirements_libreoffice_general_enabled">Impress Remote \'Tresnak → Aukerak → LibreOffice Impress → Orokorra\' atalean gaitzen da, LibreOffice Impress aplikazioan.</string>
 </resources>

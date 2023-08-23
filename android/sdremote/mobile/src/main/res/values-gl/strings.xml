@@ -60,7 +60,6 @@
     <string name="preferences_quiet_mode_summary">Configurar o timbre de vibración durante a presentación</string>
     <string name="requirements_libreoffice_version">LibreOffice versión 4.03 ou superior executándose nun computador.</string>
     <string name="requirements_libreoffice_general_enabled">Activar o control remoto do Impress en «Ferramentas → Opcións → LibreOffice Impress → Xeral» no Impress de LibreOffice</string>
-    <string name="requirements_libreoffice_experimental_enabled">Activar as funcionalidades experimentais en «Ferramentas → Opcións → LibreOffice → Avanzadas» no Impress de LibreOffice.</string>
     <string name="requirements_network_connection">O dispositivo android e un computador conectado na mesma rede.</string>
     <string name="requirements_network_ports">Se ten unha devasa, asegúrese de que os portos 1598 e 1599 están abertos.</string>
     <string name="requirements_bluetooth_connection">Un computador co bluetooh activado.</string>

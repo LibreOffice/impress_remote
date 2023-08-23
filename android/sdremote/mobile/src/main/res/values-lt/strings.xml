@@ -62,7 +62,6 @@
   <string name="preferences_quiet_mode_summary">Išjungti skambučių garsą demonstravimo metu, įjungti vibravimą</string>
   <string name="requirements_libreoffice_version">„LibreOffice“ 4.0.3 ar vėlesnė, veikianti kompiuteryje.</string>
   <string name="requirements_libreoffice_general_enabled">„LibreOffice“ pateikčių rengyklės nuostatose (meniu „Priemonės → Parinktys → „LibreOffice“ parengčių rengyklė → Bendrosios“) įgalintas „LibreOffice“ nuotolinis valdymas.</string>
-  <string name="requirements_libreoffice_experimental_enabled">„LibreOffice“ pateikčių rengyklės nuostatose (meniu „Priemonės → Parinktys → Kitkas“) įgalintos eksperimentinės galimybės.</string>
   <string name="requirements_network_connection">„Android“ įrenginys ir kompiuteris, esantys tame pačiame tinkle.</string>
   <string name="requirements_network_ports">Jeigu naudojate ugniasienę, įsitikinkite, jog atverti 1598 ir 1599 prievadai.</string>
   <string name="requirements_bluetooth_connection">Kompiuteris su įgalintu „Bluetooth“ ryšiu.</string>

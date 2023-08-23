@@ -64,7 +64,6 @@
     <string name="preferences_quiet_mode_summary">اضبط على وضع الاهتزاز أثناء التقديم</string>
     <string name="requirements_libreoffice_version">ليبر أوفيس ٤٫٠٫٣ أو أحدث يعمل على حاسوبك.</string>
     <string name="requirements_libreoffice_general_enabled">إمبريس عن بُعد ممكّن في ”أدوات ← خيارات ← LibreOffice إمبريس ← عام“ في «ليبر أوفيس إمبريس».</string>
-    <string name="requirements_libreoffice_experimental_enabled">المزايا التجريبية ممكّنة في ”أدوات ← خيارات ← LibreOffice ← متقدّم“ في «ليبر أوفيس إمبريس».</string>
     <string name="requirements_network_connection">جهاز أندرويد و الحاسوب متّصلان بنفس الشبكة.</string>
     <string name="requirements_network_ports">إن كان لديك جدار ناري، تأكد أن المنفذين ١٥٩٨ و ١٥٩٩ مفتوحين.</string>
     <string name="requirements_bluetooth_connection">حاسوب حيث بلوتوث مفعّل.</string>

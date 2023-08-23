@@ -58,7 +58,6 @@
     <string name="preferences_quiet_mode_summary">Ativar modo de vibração durante a apresentação</string>
     <string name="requirements_libreoffice_version">Deverá ter a versão 4.0.3 ou superior em execução no computador.</string>
     <string name="requirements_libreoffice_general_enabled">Impress Remote ativo em “Ferramentas → Opções → LibreOffice Impress → Geral” no LibreOffice Impress.</string>
-    <string name="requirements_libreoffice_experimental_enabled">Funcionalidades de teste ativas em “Ferramentas → Opções → LibreOffice → Avançado” no LibreOffice Impress.</string>
     <string name="requirements_network_connection">Um dispositivo Android e um computador ligados na mesma rede.</string>
     <string name="requirements_network_ports">Se possui uma firewall, certifique-se que as portas 1598 e 1599 estão abertas.</string>
     <string name="requirements_bluetooth_connection">Um computador com Bluetooth ativo.</string>

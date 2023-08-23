@@ -48,10 +48,6 @@
 
         <TextView
             style="@style/SectionItem"
-            android:text="@string/requirements_libreoffice_experimental_enabled"/>
-
-        <TextView
-            style="@style/SectionItem"
             android:text="@string/requirements_network_ports"/>
 
         <TextView

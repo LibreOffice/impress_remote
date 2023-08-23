@@ -60,7 +60,6 @@
     <string name="preferences_quiet_mode_summary">Установить режим вибрации при демонстрации</string>
     <string name="requirements_libreoffice_version">На компьютере установлен LibreOffice версии 4.0.3 или выше.</string>
     <string name="requirements_libreoffice_general_enabled">Дистанционное упраление Impress включено в «Сервис → Параметры → LibreOffice Impress → Общие» в LibreOffice Impress.</string>
-    <string name="requirements_libreoffice_experimental_enabled">Включены экспериментальные возможности в «Сервис → Параметры → LibreOffice → Расширенные возможности» в LibreOffice.</string>
     <string name="requirements_network_connection">Устройство Android и компьютер, поключеные к одной сети.</string>
     <string name="requirements_network_ports">Если включен фаеревол, порты 1598 и 1599 должны быть открыты.</string>
     <string name="requirements_bluetooth_connection">Компьютер с включённым Bluetooth.</string>

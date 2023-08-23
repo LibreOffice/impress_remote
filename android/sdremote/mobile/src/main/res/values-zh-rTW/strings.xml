@@ -59,7 +59,6 @@
   <string name="preferences_quiet_mode_summary">簡報時將手機設為震動模式</string>
   <string name="requirements_libreoffice_version">電腦上正執行 LibreOffice 4.0.3 或以上版本。</string>
   <string name="requirements_libreoffice_general_enabled">在 LibreOffice Impress 中的 [工具 → 選項 → LibreOffice Impress → 一般] 之下啟用 Impress 遠端控制。</string>
-  <string name="requirements_libreoffice_experimental_enabled">在 LibreOffice Impress 中的 [工具 → 選項 → LibreOffice → 進階] 之下啟用實驗性功能。</string>
   <string name="requirements_network_connection">Android 裝置與電腦連接到相同的網路上。</string>
   <string name="requirements_network_ports">如果您有防火牆，請確認連接埠 1598 與 1599 維持開放。</string>
   <string name="requirements_bluetooth_connection">電腦已啟用藍牙。</string>

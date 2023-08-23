@@ -39,7 +39,6 @@
     <string name="requirements_bluetooth_connection">Một máy tính có bật Bluetooth.</string>
     <string name="requirements_network_ports">Nếu như bạn đang sử dụng tường lửa, vui lòng đảm bảo các cổng 1598 và 1599 đã được mở.</string>
     <string name="requirements_network_connection">Thiết bị Android và máy tính phải được kết nối với cùng một mạng.</string>
-    <string name="requirements_libreoffice_experimental_enabled">Bật các tính năng thử nghiệm tại \"Công cụ → Tuỳ chọn → LibreOffice → Nâng cao\" trong LibreOffice Impress.</string>
     <string name="requirements_libreoffice_version">LibreOffice phiên bản 4.0.3 hoặc cao hơn đang hoạt động trên máy tính.</string>
     <string name="preferences_quiet_mode_summary">Làm điện thoại im lặng (nhưng bật rung) trong lúc trình chiếu.</string>
     <string name="preferences_quiet_mode_title">Chế độ im lặng</string>

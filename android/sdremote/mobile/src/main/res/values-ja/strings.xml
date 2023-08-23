@@ -59,7 +59,6 @@
     <string name="preferences_quiet_mode_summary">プレゼンテーションの間、着信音をマナーモードに設定します</string>
     <string name="requirements_libreoffice_version">LibreOffice 4.0.3以上がコンピューターで動作している。</string>
     <string name="requirements_libreoffice_general_enabled">Impressリモートが、LibreOffice Impressの「ツール → オプション → LibreOffice Impress → 全般」の設定で有効になっている。</string>
-    <string name="requirements_libreoffice_experimental_enabled">LibreOffice Impressの「ツール→オプション→LibreOffice→詳細」で、実験的（不安定）なオプションを有効になっている。</string>
     <string name="requirements_network_connection">Android デバイスとコンピューターが同じネットワークに接続されている。</string>
     <string name="requirements_network_ports">ファイアウォールがある場合は、ポート1598と1599が開かれていることを確認してください。</string>
     <string name="requirements_bluetooth_connection">Bluetoothが有効にされたコンピューター</string>

@@ -60,7 +60,6 @@
     <string name="preferences_quiet_mode_summary">Indstil opkaldsvibrator under præsentationen</string>
     <string name="requirements_libreoffice_version">En computer som kører LibreOffice 4.0.3 eller nyere.</string>
     <string name="requirements_libreoffice_general_enabled">Impress Fjernkontrol aktiveret under \"Funktioner → Indstillinger → LibreOffice Impress → Generelt\" i LibreOffice Impress.</string>
-    <string name="requirements_libreoffice_experimental_enabled">Eksperimentelle funktioner er aktiveret under \"Funktioner → Indstillinger → LibreOffice → Avanceret\" i LibreOffice.</string>
     <string name="requirements_network_connection">Android-enheden og en computer forbundet til det samme trådløse netværk.</string>
     <string name="requirements_network_ports">Hvis du har en firewall, skal portene 1598 og 1599 være åbne.</string>
     <string name="requirements_bluetooth_connection">En computer med Bluetooth aktiveret.</string>

@@ -59,7 +59,6 @@
     <string name="preferences_quiet_mode_summary">Mengaktifkan mode getar saat presentasi</string>
     <string name="requirements_libreoffice_version">LibreOffice versi 4.0.3 atau lebih tinggi terpasang pada komputer.</string>
     <string name="requirements_libreoffice_general_enabled">Impress Kendali Jauh diaktifkan melalui menu “Perkakas → Opsi → LibreOffice Impress → Umum” pada LibreOffice Impress.</string>
-    <string name="requirements_libreoffice_experimental_enabled">Fitur uji coba telah diaktifkan melalui menu “Perkakas → Opsi → LibreOffice → Lanjutan” pada LibreOffice Impress.</string>
     <string name="requirements_network_connection">Perangkat Android dan komputer terhubung pada jaringan yang sama.</string>
     <string name="requirements_network_ports">Jika Anda memasang firewall, pastikan port 1598 dan 1599 dalam kondisi terbuka.</string>
     <string name="requirements_bluetooth_connection">Komputer dengan Bluetooth yang aktif.</string>

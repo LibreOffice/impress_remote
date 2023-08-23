@@ -60,7 +60,6 @@
     <string name="preferences_quiet_mode_summary">Zet de trilstand aan tijdens de presentatie</string>
     <string name="requirements_libreoffice_version">LibreOffice versie 4.0.3 of hoger uitvoeren op een computer.</string>
     <string name="requirements_libreoffice_general_enabled">Impress afstandsbediening ingeschakeld in \"Extra &gt; Opties &gt; LibreOffice Impress &gt; Algemeen\" in LibreOffice Impress.</string>
-    <string name="requirements_libreoffice_experimental_enabled">Experimentele functies ingeschakeld in \"Extra &gt; Opties &gt; LibreOffice &gt; Geavanceerd\" in LibreOffice Impress.</string>
     <string name="requirements_network_connection">Het Android-toestel en een computer zijn aangesloten op hetzelfde netwerk.</string>
     <string name="requirements_network_ports">Als u een firewall heeft, zorg er dan voor dat poorten 1598 en 1599 zijn geopend.</string>
     <string name="requirements_bluetooth_connection">Een computer met ingeschakelde Bluetooth.</string>

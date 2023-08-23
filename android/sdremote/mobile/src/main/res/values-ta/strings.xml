@@ -60,7 +60,6 @@
   <string name="preferences_quiet_mode_summary">படைத்தலின்போது அதிர்வு அலரல் முறைமைக்கு அமை</string>
   <string name="requirements_libreoffice_version">கணினியில் லிப்ரெஓபிஸ் பதிப்பு 4.0.3 அல்லது அதற்கு மேலான பதிப்பு நிறுவப்பட்டுள்ளது.</string>
   <string name="requirements_libreoffice_general_enabled">லிப்ரெஓபிஸ் இம்பிரெஸில் “கருவிகள் → தேர்வுகள் → லிப்ரெஓபிஸ் இம்பிரெஸ் → பொது” இம்பிரெஸ் ரிமோட் செயலாக்கப்பட்டது.</string>
-  <string name="requirements_libreoffice_experimental_enabled">லிப்ரெஓபிஸ் இம்பிரெஸில் “கருவிகள் → தேர்வுகள் → லிப்ரெஓபிஸ் → மேம்பட்டது” சோதனை அம்சங்கள் செயலாக்கப்பட்டன.</string>
   <string name="requirements_network_connection">ஆண்ட்ராய்டு சாதனமும் கணினியும் ஒரே பிணையத்தில் இணைக்கப்பட்டுள்ளன.</string>
   <string name="requirements_network_ports">நீங்கள் பயர்வால் வைத்திருந்தால் 1598 மற்றும் 1599 சேவை முனை எண்களை திறந்து வைக்கவும்.</string>
   <string name="requirements_bluetooth_connection">ப்ளூடூத் இயக்கத்துடன் உள்ள ஒரு கணினி.</string>

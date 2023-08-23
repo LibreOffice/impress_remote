@@ -60,7 +60,6 @@
     <string name="preferences_quiet_mode_summary">Aktivera telefonens vibrator under presentationen</string>
     <string name="requirements_libreoffice_version">LibreOffice version 4.0.3 eller senare körs på en dator.</string>
     <string name="requirements_libreoffice_general_enabled">Impress-fjärrkontroll aktiverad under ”Verktyg → Alternativ → LibreOffice Impress → Allmänt” i LibreOffice Impress.</string>
-    <string name="requirements_libreoffice_experimental_enabled">Experimentella funktioner aktiverade under ”Verktyg → Alternativ → LibreOffice → Avancerat” i LibreOffice Impress.</string>
     <string name="requirements_network_connection">Android-enheten och en dator är anslutna till samma nätverk.</string>
     <string name="requirements_network_ports">Om du har en brandvägg ska portarna 1598 och 1599 vara öppna.</string>
     <string name="requirements_bluetooth_connection">En dator med Bluetooth aktiverat.</string>

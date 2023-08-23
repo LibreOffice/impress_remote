@@ -61,7 +61,6 @@
   <string name="preferences_quiet_mode_summary">Setează modul vibrare în timpul prezentării</string>
   <string name="requirements_libreoffice_version">Versiunea LibreOffice 4.0.3 sau mai nou pe calculator.</string>
   <string name="requirements_libreoffice_general_enabled">Activat telecomandă LibreOffice Impress în „Unelte → Opțiuni → LibreOffice Impress → General”.</string>
-  <string name="requirements_libreoffice_experimental_enabled">Activarea funcțiunilor experimentale în „Unelte → Opțiuni → LibreOffice → Avansat”.</string>
   <string name="requirements_network_connection">Dispozitivul cu Android și calculatorul să fiu conectate în aceeași rețea.</string>
   <string name="requirements_network_ports">În firewall trebuie deschise porturile 1598 și 1599.</string>
   <string name="requirements_bluetooth_connection">Calculator cu Bluetooth</string>

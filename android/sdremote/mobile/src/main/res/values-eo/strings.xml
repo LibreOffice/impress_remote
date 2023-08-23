@@ -38,7 +38,6 @@
     <string name="requirements_bluetooth_connection">Komputilo kun Bluetooth aktiva.</string>
     <string name="requirements_network_ports">Se vi havas fajroŝirmilon, bonvolu certigi ke pordoj 1598 jah 1599 estas malfermitaj.</string>
     <string name="requirements_network_connection">La Androidilo kaj komputilo konektiĝas al la sama reto.</string>
-    <string name="requirements_libreoffice_experimental_enabled">Eksperimentaj funkcioj aktiviĝas ĉe “Iloj → Agordaro → LibreOffice → Speciala” en LibreOffice-Prezentilo.</string>
     <string name="requirements_libreoffice_general_enabled">Prezentilo-Teleregilo aktiviĝas ĉe “Iloj → Agordaro → LibreOffice-Prezentilo → Ĝenerala” en LibreOffice-Prezentilo.</string>
     <string name="requirements_libreoffice_version">LibreOffice versio 4.0.3 aŭ posta rulas ĉe via komputilo.</string>
     <string name="preferences_quiet_mode_summary">Silentigi telefonon (sed enŝalti vibradon) du prezentado.</string>

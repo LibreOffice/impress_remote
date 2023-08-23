@@ -62,7 +62,6 @@
     <string name="preferences_quiet_mode_summary">Nastavi, da telefon med predstavitvijo vibrira</string>
     <string name="requirements_libreoffice_version">Na računalniku nameščen LibreOffice različice 4.0.3 ali novejši.</string>
     <string name="requirements_libreoffice_general_enabled">V LibreOffice Impress omogočen Daljinec za Impress, v »Orodja → Možnosti → LibreOffice Impress → Splošno«.</string>
-    <string name="requirements_libreoffice_experimental_enabled">V LibreOffice Impress omogočene poskusne funkcionalnosti v »Orodja → Možnosti → LibreOffice → Napredno«.</string>
     <string name="requirements_network_connection">Napravo Android in računalnik, priključena na isto omrežje.</string>
     <string name="requirements_network_ports">Če imate požarni zid, preverite, da sta vrati 1598 in 1599 odprti.</string>
     <string name="requirements_bluetooth_connection">Računalnik z omogočenim vmesnikom Bluetooth.</string>

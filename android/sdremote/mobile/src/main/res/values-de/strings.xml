@@ -60,7 +60,6 @@
     <string name="preferences_quiet_mode_summary">Vibrationsalarm für die Dauer der Präsentation aktiviert.</string>
     <string name="requirements_libreoffice_version">LibreOffice Version 4.0.3 oder höher läuft auf einem Rechner.</string>
     <string name="requirements_libreoffice_general_enabled">Impress-Fernsteuerung aktiviert im Menü von LibreOffice Impress unter „Extras → Optionen... → LibreOffice Impress → Allgemein“.</string>
-    <string name="requirements_libreoffice_experimental_enabled">Experimentelle Funktionen aktiviert im Menü von LibreOffice Impress unter „Extras → Optionen... → LibreOffice → Erweitert“.</string>
     <string name="requirements_network_connection">Die Android-Schnittstelle und ein Rechner im selben Netzwerk miteinander verbunden.</string>
     <string name="requirements_network_ports">Falls Sie eine Firewall einsetzen, stellen Sie sicher, dass die Ports 1598 und 1599 offen sind.</string>
     <string name="requirements_bluetooth_connection">Ein Computer mit aktiviertem Bluetooth.</string>

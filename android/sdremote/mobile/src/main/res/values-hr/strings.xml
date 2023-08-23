@@ -61,7 +61,6 @@
     <string name="preferences_quiet_mode_summary">Uključi vibraciju kao vrstu zvona za vrijeme prezentacije</string>
     <string name="requirements_libreoffice_version">Na računalu pokrenut LibreOffice inačice 4.0.3 ili novije.</string>
     <string name="requirements_libreoffice_general_enabled">Impress Remote je aktiviran u LibreOffice Impressu u „Alati → Mogućnosti → LibreOffice Impress → Opće”.</string>
-    <string name="requirements_libreoffice_experimental_enabled">Aktivirane su eksperimentalne funkcije u LibreOffice Impressu u „Alati → Mogućnosti → LibreOffice → Napredno”.</string>
     <string name="requirements_network_connection">Android uređaj i računalo su povezani na istu mrežu.</string>
     <string name="requirements_network_ports">Ako imaš uključen vatrozid, provjeri, jesu li otvoreni priključci 1598 i 1599.</string>
     <string name="requirements_bluetooth_connection">Računalo s uključenim bluetoothom.</string>

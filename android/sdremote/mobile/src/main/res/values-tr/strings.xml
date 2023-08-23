@@ -60,7 +60,6 @@
     <string name="preferences_quiet_mode_summary">Sunum esnasında zil sesini titreşim olarak ayarla</string>
     <string name="requirements_libreoffice_version">Bilgisayarda LibreOffice 4.0.3 veya daha üst sürüm çalışıyor.</string>
     <string name="requirements_libreoffice_general_enabled">Impress Uzaktan Kumanda, LibreOffice Impress içerisinde \"Araçlar → Seçenekler → LibreOffice Impress → Genel\" yolu ile etkinleştirilir.</string>
-    <string name="requirements_libreoffice_experimental_enabled">Deneysel özellikler \"Araçlar → Seçenekler → LibreOffice → Gelişmiş\" yolu ile etkinleştirilir.</string>
     <string name="requirements_network_connection">Android aygıt ve bilgisayar aynı ağa bağlandı.</string>
     <string name="requirements_network_ports">Eğer güvenlik duvarı kullanıyorsanız 1598 ve 1599 numaralı bağlantı noktalarının açık olduğundan emin olun.</string>
     <string name="requirements_bluetooth_connection">Bluetooth\'u etkinleştirilmiş bir bilgisayar.</string>

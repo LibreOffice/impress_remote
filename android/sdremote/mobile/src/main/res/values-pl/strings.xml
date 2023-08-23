@@ -61,7 +61,6 @@
     <string name="preferences_quiet_mode_summary">Wycisza telefon (ale włącza wibracje) podczas prezentacji.</string>
     <string name="requirements_libreoffice_version">LibreOffice w wersji 4.0.3 lub nowszej uruchomiony na komputerze.</string>
     <string name="requirements_libreoffice_general_enabled">Impress Remote włączony w “Narzędzia → Opcje → LibreOffice Impress → Ogólne” w LibreOffice Impress.</string>
-    <string name="requirements_libreoffice_experimental_enabled">Eksperymentalne funkcje włączone w “Narzędzia → Opcje → LibreOffice → Zaawansowane” w LibreOffice Impress.</string>
     <string name="requirements_network_connection">Urządzenie z systemem Android oraz komputer podłączone do tej samej sieci.</string>
     <string name="requirements_network_ports">Jeśli używasz zapory sieciowej, upewnij się, że porty 1598 oraz 1599 zostały otwarte.</string>
     <string name="requirements_bluetooth_connection">Komputer z włączoną funkcją Bluetooth.</string>

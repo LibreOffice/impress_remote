@@ -57,7 +57,6 @@
     <string name="preferences_quiet_mode_summary">演示时将手机铃声设置为震动模式</string>
     <string name="requirements_libreoffice_version">计算机上运行的 LibreOffice 4.0.3 或更高版本。</string>
     <string name="requirements_libreoffice_general_enabled">在 LibreOffice Impress 的「工具 → 选项 → LibreOffice Impress → 通用」处启用 Impress 遥控。</string>
-    <string name="requirements_libreoffice_experimental_enabled">在 LibreOffice Impress 的「工具 → 选项 → LibreOffice → 高级」处启用实验性功能。</string>
     <string name="requirements_network_connection">Android 设备及计算机连接到同一个网络中。</string>
     <string name="requirements_network_ports">如果您打开了防火墙，请确保端口 1598 及 1599 处于打开状态。</string>
     <string name="requirements_bluetooth_connection">打开蓝牙的计算机。</string>

@@ -62,7 +62,6 @@
     <string name="preferences_quiet_mode_summary">Cùm am fòn sàmhach (ach cuir modh na seirme chritheach an comas) rè taisbeanaidh.</string>
     <string name="requirements_libreoffice_version">LibreOffice tionndadh 4.0.3 no nas ùire air coimpiutair.</string>
     <string name="requirements_libreoffice_general_enabled">Impress Remote an comas aig \"Innealan → Roghainnean → LibreOffice Impress → Coitcheann\" ann an LibreOffice Impress.</string>
-    <string name="requirements_libreoffice_experimental_enabled">Gleusan deuchainneach an comas aig “Innealan” » “Roghainnean” » “LibreOffice” » “Adhartach” ann an LibreOffice Impress.</string>
     <string name="requirements_network_connection">An t-uidheam Android is coimpiutair ceangailte ris an aon lìonra.</string>
     <string name="requirements_network_ports">Ma tha cachaileith-theine agad, dèan cinnteach gu bheil port 1598 agus 1599 fosgailte.</string>
     <string name="requirements_bluetooth_connection">Coimpiutair le Bluetooth an comas air.</string>

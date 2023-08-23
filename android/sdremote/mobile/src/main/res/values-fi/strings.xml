@@ -60,7 +60,6 @@
     <string name="preferences_quiet_mode_summary">Aseta puhelimen värinähälytys päälle esityksen ajaksi.</string>
     <string name="requirements_libreoffice_version">Tietokoneella on käynnissä LibreOfficen versio 4.0.3 tai uudempi.</string>
     <string name="requirements_libreoffice_general_enabled">Kauko-ohjaus sallittu (LibreOffice Impressin kohta Työkalut → Asetukset → LibreOffice Impress → Yleiset).</string>
-    <string name="requirements_libreoffice_experimental_enabled">Kokeelliset ominaisuudet käytössä (LibreOffice Impressin kohta Työkalut → Asetukset → LibreOffice → Lisäasetukset).</string>
     <string name="requirements_network_connection">Android-mobiililaite ja tietokone yhdistettynä samaan verkkoon.</string>
     <string name="requirements_network_ports">Jos käytät palomuuria, porttien 1598 ja 1599 on oltava auki.</string>
     <string name="requirements_bluetooth_connection">Tietokone, jossa Bluetooth-yhteys on päällä.</string>

@@ -59,7 +59,6 @@
     <string name="preferences_quiet_mode_summary">프레젠테이션 실행 중 무음 (진동 가능)으로 설정</string>
     <string name="requirements_libreoffice_version">컴퓨터에 리브레오피스 4.0.3 이상 버전이 실행되야 합니다.</string>
     <string name="requirements_libreoffice_general_enabled">임프레스 원격 제어를 활성화 하려면 리브레오피스 임프레스의 \"도구 → 옵션 → 리브레오피스 임프레스 → 일반\"에서 설정할 수 있습니다.</string>
-    <string name="requirements_libreoffice_experimental_enabled">리브레오피스 임프레스의 “도구 → 선택사항 → 리브레오피스 → 고급설정” 에서 실험적 기능 설정할 수 있습니다.</string>
     <string name="requirements_network_connection">안드로이드 기기와 컴퓨터가 같은 네트워크에 연결되어 있습니다.</string>
     <string name="requirements_network_ports">방화벽 설정이 되었으면, 포트 1598과 1599가 열려 있는지 확인해주세요.</string>
     <string name="requirements_bluetooth_connection">블루투스가 활성화된 컴퓨터</string>

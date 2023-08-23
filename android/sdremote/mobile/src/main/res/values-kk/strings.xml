@@ -49,7 +49,6 @@
     <string name="requirements_bluetooth_connection">Bluetooth іске қосылған компьютер.</string>
     <string name="requirements_network_ports">Файрвол іске қосылған болса, 1598 және 1599 порттары ашық болуы тиіс.</string>
     <string name="requirements_network_connection">Android құрылғысы және компьютер бір желіге қосылған.</string>
-    <string name="requirements_libreoffice_experimental_enabled">Тәжірибелі мүмкіндіктер LibreOffice Impress ішінде \"Саймандар ▸ Опциялар ▸ LibreOffice ▸ Кеңейтілген\" ішінде іске қосылған.</string>
     <string name="requirements_libreoffice_general_enabled">Impress-ті қашықтан басқару LibreOffice Impress ішінде \"Саймандар ▸ Опциялар ▸ LibreOffice Impress ▸ Жалпы\" ішінде іске қосылған.</string>
     <string name="requirements_libreoffice_version">Компьютерде LibreOffice нұсқасы 4.0.3 немесе жаңалау орнатылған.</string>
     <string name="preferences_quiet_mode_summary">Презентация кезінде телефонды үнсіз ету (бірақ дірілді іске қосу).</string>

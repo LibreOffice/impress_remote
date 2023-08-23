@@ -60,7 +60,6 @@
     <string name="preferences_quiet_mode_summary">Режим „вибрация“ по време на прожекция</string>
     <string name="requirements_libreoffice_version">В компютъра се изпълнява LibreOffice 4.0.3 или по-нов.</string>
     <string name="requirements_libreoffice_general_enabled">В „Инструменти → Настройка → LibreOffice Impress → Общи“ в LibreOffice Impress е разрешено Impress Remote.</string>
-    <string name="requirements_libreoffice_experimental_enabled">В „Инструменти → Настройка → LibreOffice → Разширени“ е разрешена експерименталната функционалност.</string>
     <string name="requirements_network_connection">Устройството с Android и компютърът са свързани в една мрежа.</string>
     <string name="requirements_network_ports">Ако е включена защитна стена, портовете 1598 и 1599 трябва да са отворени.</string>
     <string name="requirements_bluetooth_connection">Компютър с включен Bluetooth.</string>

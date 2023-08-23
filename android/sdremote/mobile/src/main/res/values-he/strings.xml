@@ -62,7 +62,6 @@
     <string name="preferences_quiet_mode_summary">הגדרת מצב צלצול ברטט בעת ההצגה</string>
     <string name="requirements_libreoffice_version">גרסה 4.0.3 ומעלה של LibreOffice פועלת על מחשב.</string>
     <string name="requirements_libreoffice_general_enabled">Impress בשלט רחוק מופעל דרך „כלים ← אפשרויות ← Impress מבית LibreOffice ← כללי” ב־Impress מבית LibreOffice.</string>
-    <string name="requirements_libreoffice_experimental_enabled">תכונות ניסיוניות מופעלות דרך „כלים ← אפשרויות ← Impress מבית LibreOffice ← כללי” ב־Impress מבית LibreOffice.</string>
     <string name="requirements_network_connection">התקן אנדרויד ומחשב המחוברים לאותה הרשת.</string>
     <string name="requirements_network_ports">אם יש לך חומת אש עליך לוודא שפתחות 1598 ו־1599 פתוחות.</string>
     <string name="requirements_bluetooth_connection">מחשב עם Bluetooth פעיל.</string>

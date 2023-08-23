@@ -60,7 +60,6 @@
     <string name="preferences_quiet_mode_summary">Stilla á titringsham hringingar á meðan kynning er í gangi</string>
     <string name="requirements_libreoffice_version">Tölva með LibreOffice útgáfu 4.0.3 eða hærri.</string>
     <string name="requirements_libreoffice_general_enabled">Impress fjarstýring virkjuð í “Verkfæri → Valkostir → LibreOffice Impress → Almennt” í LibreOffice Impress.</string>
-    <string name="requirements_libreoffice_experimental_enabled">Eiginleikar á tilraunastigi virkjaðir í “Verkfæri → Valkostir → LibreOffice Impress → Nánar” í LibreOffice Impress.</string>
     <string name="requirements_network_connection">Android tækið og tölva sem tengd eru á sama neti.</string>
     <string name="requirements_network_ports">Ef þú ert með eldvegg skaltu ganga úr skugga um að gáttir 1598 og 1599 séu opnar.</string>
     <string name="requirements_bluetooth_connection">Tölva með virkt Bluetooth</string>

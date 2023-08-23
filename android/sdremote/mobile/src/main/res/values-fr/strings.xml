@@ -60,7 +60,6 @@
     <string name="preferences_quiet_mode_summary">Définir sur mode vibreur pendant la présentation</string>
     <string name="requirements_libreoffice_version">LibreOffice version 4.0.3 ou supérieure s\'exécutant sur un ordinateur.</string>
     <string name="requirements_libreoffice_general_enabled">Contrôle distant activé dans \"Outils →Options →LibreOffice Impress →Général\" dans LibreOffice Impress.</string>
-    <string name="requirements_libreoffice_experimental_enabled">Fonctions expérimentales activées dans \"Outils →Options →LibreOffice →Avancé\" dans LibreOffice Impress.</string>
     <string name="requirements_network_connection">Le périphérique Android et un ordinateur connectés au même réseau.</string>
     <string name="requirements_network_ports">S\'il y a un pare-feu, assurez-vous que les ports 1598 et 1599 sont ouverts.</string>
     <string name="requirements_bluetooth_connection">Un ordinateur dont le Bluetooth est activé.</string>

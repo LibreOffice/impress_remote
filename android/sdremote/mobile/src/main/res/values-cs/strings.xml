@@ -60,7 +60,6 @@
     <string name="preferences_quiet_mode_summary">Nastavit během prezentace vibrační vyzvánění</string>
     <string name="requirements_libreoffice_version">Na počítači spuštěný LibreOffice verze 4.0.3 nebo novější.</string>
     <string name="requirements_libreoffice_general_enabled">V LibreOffice Impressu povolené Dálkové ovládání prezentace v „Nástroje → Možnosti → LibreOffice Impress → Obecné“.</string>
-    <string name="requirements_libreoffice_experimental_enabled">V LibreOffice Impressu povolené experimentální vlastnosti v „Nástroje → Možnosti → LibreOffice → Pokročilé“.</string>
     <string name="requirements_network_connection">Ke stejné síti připojené zařízení s Androidem a počítač.</string>
     <string name="requirements_network_ports">Pokud používáte firewall, ujistěte se, že jsou porty 1598 a 1599 otevřené.</string>
     <string name="requirements_bluetooth_connection">Počítač s povoleným Bluetooth.</string>

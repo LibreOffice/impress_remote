@@ -60,7 +60,6 @@
   <string name="preferences_quiet_mode_summary">Ορισμός σε λειτουργία δόνησης κατά την παρουσίαση</string>
   <string name="requirements_libreoffice_version">LibreOffice με έκδοση 4.0.3 ή μεγαλύτερη που εκτελείται σε έναν υπολογιστή.</string>
   <string name="requirements_libreoffice_general_enabled">Απομακρυσμένο Impress ενεργοποιημένο στο “Εργαλεία → Επιλογές → LibreOffice Impress → Γενικά” στο LibreOffice Impress.</string>
-  <string name="requirements_libreoffice_experimental_enabled">Πειραματικά γνωρίσματα ενεργοποιημένα στο “Εργαλεία → Επιλογές → LibreOffice → Προχωρημένα” στο LibreOffice Impress.</string>
   <string name="requirements_network_connection">Η συσκευή Android και ένας υπολογιστής συνδεμένος στο ίδιο δίκτυο.</string>
   <string name="requirements_network_ports">Αν έχετε τείχος προστασίας βεβαιωθείτε ότι οι θύρες 1598 και 1599 είναι ανοικτές.</string>
   <string name="requirements_bluetooth_connection">Ένας υπολογιστής με ενεργοποιημένο μπλουτούθ.</string>

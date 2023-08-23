@@ -60,7 +60,6 @@
     <string name="preferences_quiet_mode_summary">Configura el mode de timbre de vibració durant la presentació</string>
     <string name="requirements_libreoffice_version">LibreOffice versió 4.0.3 o superior executant-se en un ordinador.</string>
     <string name="requirements_libreoffice_general_enabled">Telecomanda de l\'Impress activat a Eines ▸ Opcions ▸ LibreOffice Impress ▸ General al LibreOffice Impress.</string>
-    <string name="requirements_libreoffice_experimental_enabled">Funcionalitats experimentals habilitades a Eines ▸ Opcions ▸ LibreOffice ▸ Avançat al LibreOffice Impress.</string>
     <string name="requirements_network_connection">El dispositiu Android i un ordinador connectats a la mateixa xarxa.</string>
     <string name="requirements_network_ports">Si teniu un tallafocs, assegureu-vos de tenir oberts els ports 1598 i 1599.</string>
     <string name="requirements_bluetooth_connection">Un ordinador amb el Bluetooth activat.</string>
