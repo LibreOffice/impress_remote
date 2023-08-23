@@ -17,9 +17,9 @@ subprojects {
     afterEvaluate {project ->
         if (project.hasProperty("android")) {
             android {
-                compileSdkVersion  32
+                compileSdkVersion  33
                 defaultConfig {
-                    targetSdkVersion 32
+                    targetSdkVersion 33
                     namespace 'org.libreoffice.impressremote'
                     versionName   '2.6.0'
                     setProperty("archivesBaseName", "ImpressRemote_vc${versionCode}_${versionName}")
