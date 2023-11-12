@@ -18,4 +18,14 @@
     <string name="message_ip_address_validation">Introduz señes IP válides.</string>
     <string name="preferences_quiet_mode_title">Mou silenciosu</string>
     <string name="hint_name">Nome (opcional)</string>
+    <string name="title_generic">Xenéricu</string>
+    <string name="title_requirements">Requisitos</string>
+    <string name="title_creation">Creación</string>
+    <string name="title_slide_show">Presentación</string>
+    <string name="title_timer">Temporizador</string>
+    <string name="menu_requirements">Requisitos</string>
+    <string name="menu_reconnect">Torna a coneutar</string>
+    <string name="menu_start_discovery">Entamar la gueta</string>
+    <string name="menu_remove_computer">Desaniciar</string>
+    <string name="menu_slides_pager">Paxinador de diapositives</string>
 </resources>

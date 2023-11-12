@@ -35,9 +35,7 @@
     <string name="message_time_is_up">Tiden är ute!</string>
     <string name="message_search_wifi">Försäkra dig om att LibreOffice körs på en dator i samma Wifi-nätverk.</string>
     <string name="message_search_bluetooth">Försäkra dig om att LibreOffice körs på en dator där Bluetooth är aktiverat.</string>
-    <string name="message_learn_more">
-        <a href="org.libreoffice.impressremote://requirements/">Lär dig mer</a>
-    </string>
+    <string name="message_learn_more"><a href="org.libreoffice.impressremote://requirements/">Läs mer</a></string>
     <string name="message_paused">Pausad</string>
     <string name="message_notes_empty">Ingenting här.</string>
     <string name="hint_ip_address">IP-adress</string>

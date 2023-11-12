@@ -35,9 +35,7 @@
     <string name="message_time_is_up">Die Zeit ist abgelaufen!</string>
     <string name="message_search_wifi">Stellen Sie sicher, dass LibreOffice auf einem Rechner im selben Drahtlosnetzwerk läuft.</string>
     <string name="message_search_bluetooth">Stellen Sie sicher, dass auf dem Rechner, auf dem LibreOffice läuft, Bluetooth aktiviert ist.</string>
-    <string name="message_learn_more">
-        <a href="org.libreoffice.impressremote://requirements/">Mehr erfahren</a>
-    </string>
+    <string name="message_learn_more"><a href="org.libreoffice.impressremote://requirements/">Mehr erfahren</a></string>
     <string name="message_paused">Unterbrochen</string>
     <string name="message_notes_empty">Keine vorhanden.</string>
     <string name="hint_ip_address">IP-Adresse</string>
