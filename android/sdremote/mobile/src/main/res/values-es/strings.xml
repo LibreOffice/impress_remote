@@ -35,9 +35,7 @@
     <string name="message_time_is_up">Se acabó el tiempo.</string>
     <string name="message_search_wifi">Asegúrese de que LibreOffice se ejecute en un equipo de la misma red inalámbrica.</string>
     <string name="message_search_bluetooth">Asegúrese de que LibreOffice se ejecute en un equipo con Bluetooth activado.</string>
-    <string name="message_learn_more">
-        <a href="org.libreoffice.impressremote://requirements/">Más información</a>
-    </string>
+    <string name="message_learn_more"><a href="org.libreoffice.impressremote://requirements/">Más información</a></string>
     <string name="message_paused">En pausa</string>
     <string name="message_notes_empty">No hay nada aquí.</string>
     <string name="hint_ip_address">Dirección IP</string>
@@ -52,12 +50,12 @@
     <string name="description_grid_slide">Previsualización de la diapositiva</string>
     <string name="description_empty_slide">Diapositiva vacía</string>
     <string name="preferences_volume_keys_actions_title">Acciones de las teclas de volumen</string>
-    <string name="preferences_volume_keys_actions_summary">Pasar las diapositivas y activar animaciones con las teclas de volumen</string>
+    <string name="preferences_volume_keys_actions_summary">Pasar diapositivas y activar animaciones con las teclas de volumen</string>
     <string name="preferences_keep_screen_on_title">Mantener la pantalla activada</string>
     <string name="preferences_keep_screen_on_summary">Evita que el teléfono se suspenda durante la presentación</string>
     <string name="preferences_quiet_mode_title">Modo silencioso</string>
-    <string name="preferences_quiet_mode_summary">Configurar el modo de timbre de vibración durante la presentación</string>
-    <string name="requirements_libreoffice_version">LibreOffice versión 4.0.3 o superior se ejecuta en el ordenador.</string>
+    <string name="preferences_quiet_mode_summary">Apagar timbre y activar vibración durante una presentación</string>
+    <string name="requirements_libreoffice_version">LibreOffice versión 4.0.3 o superior en ejecución en su PC.</string>
     <string name="requirements_libreoffice_general_enabled">Active el control remoto en Herramientas ▸ Opciones ▸ LibreOffice Impress ▸ General en LibreOffice Impress.</string>
     <string name="requirements_network_connection">El dispositivo Android y un equipo conectados con la misma red.</string>
     <string name="requirements_network_ports">Si utiliza un cortafuegos, asegúrese de que los puertos 1598 y 1599 estén abiertos.</string>

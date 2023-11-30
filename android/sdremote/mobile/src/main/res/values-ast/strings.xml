@@ -28,4 +28,6 @@
     <string name="menu_start_discovery">Entamar la gueta</string>
     <string name="menu_remove_computer">Desaniciar</string>
     <string name="menu_slides_pager">Paxinador de diapositives</string>
+    <string name="menu_timer">Temporizador</string>
+    <string name="button_remove">Desaniciar</string>
 </resources>

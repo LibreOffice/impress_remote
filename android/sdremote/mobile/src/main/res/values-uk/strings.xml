@@ -35,9 +35,7 @@
     <string name="message_time_is_up">Час вийшов!</string>
     <string name="message_search_wifi">Переконайтеся, що LibreOffice запущено на комп\'ютері у тій самій мережі Wi-Fi.</string>
     <string name="message_search_bluetooth">Переконайтеся, що LibreOffice запущено на комп\'ютері з увімкненим Bluetooth.</string>
-    <string name="message_learn_more">
-        <a href="org.libreoffice.impressremote://requirements/">Дізнатися більше</a>
-    </string>
+    <string name="message_learn_more"><a href="org.libreoffice.impressremote://requirements/">Дізнатися більше</a></string>
     <string name="message_paused">Призупинено</string>
     <string name="message_notes_empty">Нічого.</string>
     <string name="hint_ip_address">ІР-адреса</string>
