@@ -35,9 +35,7 @@
     <string name="message_time_is_up">Čas je potekel!</string>
     <string name="message_search_wifi">Zagotovite, da je LibreOffice zagnan na računalniku v istem brezžičnem omrežju.</string>
     <string name="message_search_bluetooth">Zagotovite, da je LibreOffice zagnan na računalniku z omogočenim vmesnikom Bluetooth.</string>
-    <string name="message_learn_more">
-        <a href="org.libreoffice.impressremote://requirements/">Več o tem</a>
-    </string>
+    <string name="message_learn_more"><a href="org.libreoffice.impressremote://requirements/">Več o tem</a></string>
     <string name="message_paused">Začasno prekinjeno</string>
     <string name="message_notes_empty">Tukaj ni ničesar.</string>
     <string name="hint_ip_address">Naslov IP</string>

@@ -30,4 +30,6 @@
     <string name="menu_slides_pager">Paxinador de diapositives</string>
     <string name="menu_timer">Temporizador</string>
     <string name="button_remove">Desaniciar</string>
+    <string name="description_empty_slide">Diapositiva balera</string>
+    <string name="message_learn_more"><a href="org.libreoffice.impressremote://requirements/">Pa saber más</a></string>
 </resources>
