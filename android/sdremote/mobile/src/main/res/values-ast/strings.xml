@@ -32,4 +32,7 @@
     <string name="button_remove">Desaniciar</string>
     <string name="description_empty_slide">Diapositiva balera</string>
     <string name="message_learn_more"><a href="org.libreoffice.impressremote://requirements/">Pa saber más</a></string>
+    <string name="message_connection_failed_title">Fallu na conexón</string>
+    <string name="requirements_network_ports">Si tienes un torgafueos, mira ver si los puertos 1598 y 1599 tán abiertos.</string>
+    <string name="requirements_network_connection">El preséu Android y un ordenador coneutaos a la mesma rede.</string>
 </resources>
