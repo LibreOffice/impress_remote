@@ -35,9 +35,7 @@
     <string name="message_time_is_up">O tempo acabou!</string>
     <string name="message_search_wifi">Certifique-se de que o LibreOffice esteja rodando em um computador na mesma rede WiFi.</string>
     <string name="message_search_bluetooth">Certifique-se de que o LibreOffice esteja rodando em um computador com Bluetooth ativado.</string>
-    <string name="message_learn_more">
-        <a href="org.libreoffice.impressremote://requirements/">Saiba mais</a>
-    </string>
+    <string name="message_learn_more"><a href="org.libreoffice.impressremote://requirements/">Saiba mais</a></string>
     <string name="message_paused">Pausado</string>
     <string name="message_notes_empty">Nada aqui.</string>
     <string name="hint_ip_address">Endereço IP</string>

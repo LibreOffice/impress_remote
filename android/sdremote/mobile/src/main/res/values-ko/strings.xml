@@ -35,9 +35,7 @@
     <string name="message_time_is_up">시간이 되었습니다!</string>
     <string name="message_search_wifi">리브레오피스가 컴퓨터와 동일한 WiFi 네트워크에 연결되었는지 확인해 주세요.</string>
     <string name="message_search_bluetooth">리브레오피스를 실행한 컴퓨터의 블루투스가 켜져 있는지 확인해 주세요.</string>
-    <string name="message_learn_more">
-        <a href="org.libreoffice.impressremote://requirements/">더 알아보기</a>
-    </string>
+    <string name="message_learn_more"><a href="org.libreoffice.impressremote://requirements/">더 알아보기</a></string>
     <string name="message_paused">일시 정지</string>
     <string name="message_notes_empty">비어있음.</string>
     <string name="hint_ip_address">IP 주소</string>

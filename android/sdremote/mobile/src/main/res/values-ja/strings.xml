@@ -29,15 +29,13 @@
     <string name="button_remove">削除</string>
     <string name="message_impress_pin_validation">LibreOffice Impressで「スライドショー → Impressリモート」を選択して、コードを入力してください。</string>
     <string name="message_connection_failed_title">接続失敗</string>
-    <string name="message_impress_remote_enabling">リモートからの操作を有効に指定していますか？LibreOffice Impressで、「ツール→オプション→LibreOffice Impress→全般」を選択して確認してください。</string>
+    <string name="message_impress_remote_enabling">リモートからの操作を有効にしていますか？LibreOffice Impressで、[ツール] → [オプション] → [LibreOffice Impress] → [全般] を選択して確認してください。</string>
     <string name="message_impress_pairing_check">Bluetoothのペアリングで問題があった場合は、デスクトップOSでの設定手続きを確認してください。</string>
     <string name="message_ip_address_validation">正しい IP アドレスを入力してください。</string>
     <string name="message_time_is_up">タイムアップです！</string>
     <string name="message_search_wifi">同じ WiFi ネットワーク上のコンピューターで LibreOffice が実行されていることを確認してください。</string>
     <string name="message_search_bluetooth">Bluetoothが有効にされたコンピューターで、LibreOfficeが実行されていることを確認してください。</string>
-    <string name="message_learn_more">
-        <a href="org.libreoffice.impressremote://requirements/">さらに詳しく</a>
-    </string>
+    <string name="message_learn_more"><a href="org.libreoffice.impressremote://requirements/">さらに詳しく</a></string>
     <string name="message_paused">一時停止</string>
     <string name="message_notes_empty">何もありません。</string>
     <string name="hint_ip_address">IP アドレス</string>
@@ -50,7 +48,7 @@
     <string name="description_pager_slide">スライドのプレビュー</string>
     <string name="description_grid_slide">スライドのプレビュー</string>
     <string name="description_empty_slide">空のスライド</string>
-    <string name="preferences_volume_keys_actions_title">音量キーの操作</string>
+    <string name="preferences_volume_keys_actions_title">音量キーで操作</string>
     <string name="preferences_volume_keys_actions_summary">音量キーを使用してスライドを切り替えたりアニメーションを動かします</string>
     <string name="preferences_keep_screen_on_title">画面をオンに維持する</string>
     <string name="preferences_keep_screen_on_summary">プレゼンテーションの間、電話をスリープ状態にしないようにします</string>

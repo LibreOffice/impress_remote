@@ -35,4 +35,6 @@
     <string name="message_connection_failed_title">Fallu na conexón</string>
     <string name="requirements_network_ports">Si tienes un torgafueos, mira ver si los puertos 1598 y 1599 tán abiertos.</string>
     <string name="requirements_network_connection">El preséu Android y un ordenador coneutaos a la mesma rede.</string>
+    <string name="description_grid_slide">Vista previa de la diapositiva</string>
+    <string name="description_pager_slide">Vista previa de la diapositiva</string>
 </resources>
