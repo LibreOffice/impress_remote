@@ -25,4 +25,13 @@
     <string name="title_slide_show">Presentation de diapositivas</string>
     <string name="mask_slide_show_progress">Diapositiva %1$d de %2$d</string>
     <string name="application_name">Controlo remote de Impress</string>
+    <string name="description_pager_slide">Previsualisation del diapositiva</string>
+    <string name="description_grid_slide">Previsualisation del diapositiva</string>
+    <string name="description_empty_slide">Diapositiva vacue</string>
+    <string name="preferences_volume_keys_actions_title">Actiones del claves de volumine</string>
+    <string name="preferences_volume_keys_actions_summary">Cambiar diapositivas e activar animationes usante le claves de volumine.</string>
+    <string name="preferences_keep_screen_on_title">Mantener le schermo activate</string>
+    <string name="requirements_libreoffice_general_enabled">Impress Remote activate in “Instrumentos → Optiones → LibreOffice Impress → General” in LibreOffice Impress.</string>
+    <string name="requirements_network_connection">Le apparato Android e le computator connectite al mesme rete.</string>
+    <string name="requirements_bluetooth_connection">Un computator con Bluetooth activate.</string>
 </resources>
