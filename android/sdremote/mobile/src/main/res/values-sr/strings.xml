@@ -1,2 +1,64 @@
-<?xml version='1.0' encoding='utf-8'?>
-<resources/>
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu_reconnect">Поново се повежи</string>
+    <string name="menu_add_computer">Додај рачунар</string>
+    <string name="button_cancel">Откажи</string>
+    <string name="button_start">Покрени</string>
+    <string name="title_slide_show">Пројекција</string>
+    <string name="title_timer">Штоперица</string>
+    <string name="menu_slides_pager">Бројач слајдова</string>
+    <string name="menu_resume_slide_show">Настави пројекцију</string>
+    <string name="hint_ip_address">ИП адреса</string>
+    <string name="header_notes">Белешке</string>
+    <string name="description_empty_slide">Празан слајд</string>
+    <string name="requirements_libreoffice_version">На овом рачунару је покренут LibreOffice, верзија 4.0.3.</string>
+    <string name="requirements_network_connection">Андроид уређај и рачунар су повезани на исту мрежу.</string>
+    <string name="button_save">Сачувај</string>
+    <string name="title_generic">Генерички</string>
+    <string name="application_name">Даљинац за презентације</string>
+    <string name="menu_settings">Подешавања</string>
+    <string name="menu_requirements">Предуслови</string>
+    <string name="title_computers">Рачунари</string>
+    <string name="title_connection">Веза</string>
+    <string name="menu_slides_grid">Мрежа слајдова</string>
+    <string name="title_settings">Подешавања</string>
+    <string name="title_requirements">Предуслови</string>
+    <string name="title_creation">Стварање</string>
+    <string name="menu_start_discovery">Започни откривање</string>
+    <string name="menu_pause_slide_show">Паузирај пројекцију</string>
+    <string name="menu_stop_slide_show">Заустави пројекцију</string>
+    <string name="menu_start_pointer">Ласерски показивач</string>
+    <string name="menu_remove_computer">Уклони</string>
+    <string name="menu_timer">Штоперица</string>
+    <string name="menu_stop_pointer">Угаси показивач</string>
+    <string name="description_grid_slide">Покрени</string>
+    <string name="preferences_keep_screen_on_summary">Омогућава да се ваш телефон не успава док држите презентацију.</string>
+    <string name="preferences_volume_keys_actions_title">Радње тастера за звук</string>
+    <string name="preferences_volume_keys_actions_summary">Мења слајдове и активира анимације помоћу дугмића за звук</string>
+    <string name="preferences_keep_screen_on_title">Не гаси екран</string>
+    <string name="preferences_quiet_mode_title">Тихи режим</string>
+    <string name="preferences_quiet_mode_summary">Утишава телефон (али омогућава вибрацију) током презентације.</string>
+    <string name="requirements_libreoffice_general_enabled">Омогућен је даљински управљач за презентације у „Алатке → Опције → LibreOffice Презентације → Опште“ унутар програма LibreOffice Презентације.</string>
+    <string name="message_impress_remote_enabling">Проверите да ли сте омогућили даљински управљач. Идите на „Алатке → Опције → LibreOffice Презентација → Опште“ унутар LibreOffice Презентација.</string>
+    <string name="requirements_network_ports">Уколико имате заштитни зид отворите портове 1598 и 1599.</string>
+    <string name="requirements_bluetooth_connection">Рачунар на коме је укључен Блутут.</string>
+    <string name="button_remove">Уклони</string>
+    <string name="message_impress_pin_validation">Идите у „Пројекција → Даљински управљач” унутар LibreOffice Презентација и унесите код.</string>
+    <string name="message_ip_address_validation">Унесите исправну ИП идресу.</string>
+    <string name="message_connection_failed_title">Није успело повезивање</string>
+    <string name="message_time_is_up">Време је истекло!</string>
+    <string name="message_search_wifi">Проверите да ли је LibreOffice покренут на рачунару и повезан на исту бежичну везу.</string>
+    <string name="message_notes_empty">Празно.</string>
+    <string name="message_impress_pairing_check">Уколико имате проблема са упаривањем Блутут уређаја проучите упутства вашег оперативног система.</string>
+    <string name="message_search_bluetooth">Проверите да ли је LibreOffice покренут на рачунару и да ли је укључен Блутут.</string>
+    <string name="message_paused">Паузирано</string>
+    <string name="hint_name">Име (опционо)</string>
+    <string name="mask_slide_show_progress">Слајд бр. %1$d од %2$d</string>
+    <plurals name="mask_timer_progress">
+        <item quantity="one">Преостао је још %d минут</item>
+        <item quantity="few">Преостало је још %d минута</item>
+        <item quantity="other">Преостало је још %d минута</item>
+    </plurals>
+    <string name="description_pager_slide">Преглед слајда</string>
+    <string name="message_learn_more"><a href="org.libreoffice.impressremote://requirements/">Сазнајте више</a></string>
+</resources>

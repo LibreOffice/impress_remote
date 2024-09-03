@@ -1,7 +1,47 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <plurals name="mask_timer_progress">
-    <item quantity="one">एक मिनट बाकी</item>
-    <item quantity="other">%d मिनट बाकी</item>
-  </plurals>
+    <plurals name="mask_timer_progress">
+        <item quantity="one">एक मिनट बाकी</item>
+        <item quantity="other">%d मिनट बाकी</item>
+    </plurals>
+    <string name="menu_requirements">आवश्यकताएँ</string>
+    <string name="title_computers">कंप्यूटर</string>
+    <string name="title_slide_show">स्लाइड शो</string>
+    <string name="menu_add_computer">कंप्यूटर जोड़ें</string>
+    <string name="menu_start_discovery">डिस्कवरी शुरू करें</string>
+    <string name="description_pager_slide">"स्लाईड  पुर्वालोकन"</string>
+    <string name="message_time_is_up">समय खतम</string>
+    <string name="title_creation">रचना</string>
+    <string name="button_start">शुरु</string>
+    <string name="title_settings">वरीयताएँ</string>
+    <string name="title_requirements">जरुरतें</string>
+    <string name="title_connection">जोड़</string>
+    <string name="title_timer">समयनापक</string>
+    <string name="menu_reconnect">पुनर्जोड</string>
+    <string name="menu_remove_computer">हटाएँ</string>
+    <string name="menu_slides_grid">स्लाइड खाका</string>
+    <string name="menu_slides_pager">स्लाइड अंकक</string>
+    <string name="menu_pause_slide_show">स्लाइड प्रस्तुति रोकें</string>
+    <string name="menu_start_pointer">लेसर सूचक</string>
+    <string name="menu_stop_pointer">लेसर सूचक बंद</string>
+    <string name="message_connection_failed_title">जोड विफल</string>
+    <string name="message_ip_address_validation">वैध आईपी डालें</string>
+    <string name="message_notes_empty">यहाँ कुछ नहीं</string>
+    <string name="hint_ip_address">आईपी पता</string>
+    <string name="header_notes">नोटस</string>
+    <string name="description_grid_slide">"स्लाईड  पुर्वालोकन"</string>
+    <string name="description_empty_slide">खाली स्लाईड</string>
+    <string name="preferences_quiet_mode_title">शांत मोड़</string>
+    <string name="button_save">सहेज़ें</string>
+    <string name="title_generic">साधारण</string>
+    <string name="menu_settings">वरीयताएँ</string>
+    <string name="menu_stop_slide_show">स्लाइड प्रस्तुति रोकें</string>
+    <string name="button_remove">हटाएँ</string>
+    <string name="menu_timer">समयमापक</string>
+    <string name="message_paused">रुका हुआ</string>
+    <string name="hint_name">नाम (गैरजरूरी)</string>
+    <string name="mask_slide_show_progress">स्लाईड %1$d का %2$d</string>
+    <string name="button_cancel">रद्द</string>
+    <string name="message_learn_more"><a href="org.libreoffice.impressremote://requirements/">और जाने</a></string>
+    <string name="preferences_keep_screen_on_title">स्क्रीन चालू रखें</string>
 </resources>
