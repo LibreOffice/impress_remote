@@ -27,14 +27,14 @@
     <string name="button_save">Zapisz</string>
     <string name="button_start">Uruchom</string>
     <string name="button_remove">Usuń</string>
-    <string name="message_impress_pin_validation">Przejdź do “Pokaz slajdów → Impress Remote” w LibreOffice Impress i wprowadź kod.</string>
+    <string name="message_impress_pin_validation">Przejdź do „Pokaz slajdów → Impress Remote” w programie LibreOffice Impress i wpisz kod.</string>
     <string name="message_connection_failed_title">Połączenie się nie powiodło</string>
-    <string name="message_impress_remote_enabling">Upewnij się, że włączyłeś zdalne sterowanie. Przejdź do “Narzędzia → Opcje → LibreOffice Impress → Ogólne” w LibreOffice Impress.</string>
-    <string name="message_impress_pairing_check">Jeśli wystąpiły problemy z parowaniem urządzeń przez Bluetooth, zapoznaj się z instrukcją odpowiednią dla Twojego systemu operacyjnego.</string>
-    <string name="message_ip_address_validation">Wprowadź poprawny adres IP.</string>
+    <string name="message_impress_remote_enabling">Upewnij się, że włączono zdalne sterowanie. Przejdź do „Narzędzia → Opcje → LibreOffice Impress → Ogólne” w programie LibreOffice Impress.</string>
+    <string name="message_impress_pairing_check">Jeśli wystąpiły problemy z parowaniem urządzeń przez Bluetooth, zapoznaj się z instrukcją odpowiednią dla Twojego systemu operacyjnego.</string>
+    <string name="message_ip_address_validation">Wpisz poprawny adres IP.</string>
     <string name="message_time_is_up">Koniec czasu!</string>
     <string name="message_search_wifi">Upewnij się, że LibreOffice jest uruchomiony na komputerze podłączonym do tej samej sieci Wi-Fi.</string>
-    <string name="message_search_bluetooth">Upewnij się, że LibreOffice działa na komputerze z włączoną funkcją Bluetooth.</string>
+    <string name="message_search_bluetooth">Upewnij się, że LibreOffice działa na komputerze z włączoną funkcją Bluetooth.</string>
     <string name="message_learn_more"><a href="org.libreoffice.impressremote://requirements/">Dowiedz się więcej</a></string>
     <string name="message_paused">Wstrzymano</string>
     <string name="message_notes_empty">Pusto.</string>
@@ -51,14 +51,14 @@
     <string name="description_grid_slide">Podgląd slajdu</string>
     <string name="description_empty_slide">Pusty slajd</string>
     <string name="preferences_volume_keys_actions_title">Czynności przycisków głośności</string>
-    <string name="preferences_volume_keys_actions_summary">Przełącza slajdy i aktywuje animacje za pomocą przycisków głośności.</string>
+    <string name="preferences_volume_keys_actions_summary">Przełącza slajdy i aktywuje animacje za pomocą przycisków głośności.</string>
     <string name="preferences_keep_screen_on_title">Utrzymuj włączony ekran</string>
-    <string name="preferences_keep_screen_on_summary">Zapobiega przejściu telefonu w tryb uśpienia podczas prezentacji.</string>
+    <string name="preferences_keep_screen_on_summary">Zapobiega przejściu telefonu w tryb uśpienia podczas prezentacji.</string>
     <string name="preferences_quiet_mode_title">Tryb cichy</string>
     <string name="preferences_quiet_mode_summary">Wycisza telefon (ale włącza wibracje) podczas prezentacji.</string>
-    <string name="requirements_libreoffice_version">LibreOffice w wersji 4.0.3 lub nowszej uruchomiony na komputerze.</string>
-    <string name="requirements_libreoffice_general_enabled">Impress Remote włączony w “Narzędzia → Opcje → LibreOffice Impress → Ogólne” w LibreOffice Impress.</string>
-    <string name="requirements_network_connection">Urządzenie z systemem Android oraz komputer podłączone do tej samej sieci.</string>
+    <string name="requirements_libreoffice_version">LibreOffice w wersji 4.0.3 lub nowszej uruchomiony na komputerze.</string>
+    <string name="requirements_libreoffice_general_enabled">Obsługa Impress Remote włączona w „Narzędzia → Opcje → LibreOffice Impress → Ogólne” w  programie LibreOffice Impress.</string>
+    <string name="requirements_network_connection">Urządzenie z systemem Android oraz komputer podłączone do tej samej sieci.</string>
     <string name="requirements_network_ports">Jeśli używasz zapory sieciowej, upewnij się, że porty 1598 oraz 1599 zostały otwarte.</string>
-    <string name="requirements_bluetooth_connection">Komputer z włączoną funkcją Bluetooth.</string>
+    <string name="requirements_bluetooth_connection">Komputer z włączoną funkcją Bluetooth.</string>
 </resources>

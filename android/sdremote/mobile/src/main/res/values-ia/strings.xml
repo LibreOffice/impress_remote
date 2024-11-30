@@ -3,18 +3,18 @@
     <string name="button_cancel">Cancellar</string>
     <string name="hint_name">Nomine (optional)</string>
     <string name="hint_ip_address">Adresse IP</string>
-    <string name="menu_settings">Parametros</string>
+    <string name="menu_settings">Configurationes</string>
     <string name="menu_timer">Temporisator</string>
     <string name="header_notes">Notas</string>
     <string name="message_learn_more"><a href="org.libreoffice.impressremote://requirements/">Apprender plus</a></string>
-    <string name="message_ip_address_validation">Insere un adresse IP valide.</string>
+    <string name="message_ip_address_validation">Entra un adresse IP valide.</string>
     <string name="button_remove">Remover</string>
     <string name="button_save">Salveguardar</string>
     <string name="button_start">Initiar</string>
     <string name="message_notes_empty">Nihil hic.</string>
     <string name="title_timer">Temporisator</string>
     <string name="message_paused">In pausa</string>
-    <string name="title_settings">Parametros</string>
+    <string name="title_settings">Configurationes</string>
     <string name="menu_resume_slide_show">Resumer le presentation</string>
     <string name="menu_slides_grid">Grillia de diapositivas</string>
     <string name="menu_start_discovery">Initiar le discoperta</string>
